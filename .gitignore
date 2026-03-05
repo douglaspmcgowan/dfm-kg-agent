@@ -1,0 +1,40 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment / secrets
+.env
+.streamlit/secrets.toml
+
+# Project: data pipeline intermediates (not needed for the app)
+archive/
+trash/
+BACKUP*/
+iterations/
+src/
+*.bak*
+extractions*.json
+se_posts_*.json
+stackexchange_posts_*.json
+
+# Project: runtime artifacts
+dfm_reports/
+token_tally.json
+qdrant_data/.lock
+_check_sizes.ps1
+_eval_agent.py
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Claude Code
+.claude/
