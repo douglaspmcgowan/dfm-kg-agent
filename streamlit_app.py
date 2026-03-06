@@ -14,6 +14,7 @@ import sys
 import io
 import json
 import pickle
+import hashlib
 import datetime
 from pathlib import Path
 
@@ -37,6 +38,10 @@ from dfm_agent import (
 )
 import dfm_agent as _agent_module
 from openai import OpenAI
+from dfm_report_schema import (
+    DFMReportV2, BackfillOutput, QueryDecomposition,
+    DECOMPOSE_PROMPT, SYNTHESIS_PROMPT_V2, BACKFILL_PROMPT,
+)
 
 
 # ─────────────────────────────────────────────
@@ -195,6 +200,21 @@ def get_graph_stats(_G):
     }
 
 
+_EXAMPLE_CACHE_FILE = Path(__file__).parent / "example_cache.json"
+
+
+@st.cache_resource
+def load_example_cache():
+    """Load pre-computed example answers (once per server lifetime)."""
+    if not _EXAMPLE_CACHE_FILE.exists():
+        return {}
+    try:
+        with open(_EXAMPLE_CACHE_FILE, "r") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+
 # ─────────────────────────────────────────────
 # SESSION STATE INIT
 # ─────────────────────────────────────────────
@@ -227,14 +247,17 @@ def _load_token_tally():
                 return json.load(f)
         except (json.JSONDecodeError, IOError):
             pass
-    return {
+    defaults = {
         "since": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "prompt_tokens": 0,
         "completion_tokens": 0,
         "embedding_tokens": 0,
         "total_tokens": 0,
         "queries": 0,
+        "unique_ips": [],
+        "page_views": 0,
     }
+    return defaults
 
 
 def _update_token_tally(token_usage):
@@ -245,6 +268,8 @@ def _update_token_tally(token_usage):
     tally["embedding_tokens"] += token_usage.get("embedding_tokens", 0)
     tally["total_tokens"] += token_usage.get("total_tokens", 0)
     tally["queries"] += 1
+    tally.setdefault("unique_ips", [])
+    tally.setdefault("page_views", 0)
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
 
@@ -258,10 +283,43 @@ def _reset_token_tally():
         "embedding_tokens": 0,
         "total_tokens": 0,
         "queries": 0,
+        "unique_ips": [],
+        "page_views": 0,
     }
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
     return tally
+
+
+def _get_visitor_ip_hash():
+    """Get a privacy-safe hash of the visitor's IP address."""
+    try:
+        ip = st.context.headers.get("X-Forwarded-For", "")
+        if ip:
+            ip = ip.split(",")[0].strip()
+        if not ip:
+            ip = st.context.headers.get("Host", "")
+        if not ip:
+            return None
+        return hashlib.sha256(ip.encode()).hexdigest()[:12]
+    except Exception:
+        return None
+
+
+def _record_visitor():
+    """Record a unique visitor (once per session)."""
+    if st.session_state.get("_visitor_recorded"):
+        return
+    st.session_state["_visitor_recorded"] = True
+    ip_hash = _get_visitor_ip_hash()
+    tally = _load_token_tally()
+    tally.setdefault("unique_ips", [])
+    tally.setdefault("page_views", 0)
+    tally["page_views"] += 1
+    if ip_hash and ip_hash not in tally["unique_ips"]:
+        tally["unique_ips"].append(ip_hash)
+    with open(_TOKEN_TALLY_FILE, "w") as f:
+        json.dump(tally, f, indent=2)
 
 
 # ─────────────────────────────────────────────
@@ -896,10 +954,19 @@ def main():
     # Load resources
     G = load_graph()
     client = get_openai_client()
+    example_cache = load_example_cache()
+
+    # Record visitor (once per session)
+    _record_visitor()
 
     # ── SIDEBAR ──
     with st.sidebar:
         st.title("\U0001f527 DFM KG Agent")
+
+        if st.session_state.get("active_idx", -1) >= 0:
+            if st.button("\u2190 Home", use_container_width=True):
+                st.session_state.active_idx = -1
+                st.rerun()
 
         if G is None:
             st.error("Graph not found. Run `build_graph.py` first.")
@@ -1092,10 +1159,6 @@ def main():
         if _reasoning_effort is not None:
             # Wrap LLM-calling functions to inject reasoning_effort
             from functools import wraps
-            from dfm_report_schema import (
-                QueryDecomposition, DFMReportV2, BackfillOutput,
-                DECOMPOSE_PROMPT, SYNTHESIS_PROMPT_V2, BACKFILL_PROMPT,
-            )
 
             _orig_decompose = _agent_module.decompose_query
             _orig_synth = _agent_module.synthesize_report_v2
@@ -1255,9 +1318,17 @@ def main():
                 })();
                 </script>
                 """, height=0)
-    elif not st.session_state.query_history:
-        # Welcome state
+    elif st.session_state.active_idx < 0:
+        # Home / welcome state
         st.markdown("---")
+
+        # Usage stats
+        tally = _load_token_tally()
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Total Queries", f"{tally.get('queries', 0):,}")
+        col2.metric("Total Tokens", f"{tally.get('total_tokens', 0):,}")
+        col3.metric("Unique Visitors", f"{len(tally.get('unique_ips', []))}")
+
         st.markdown("### Getting Started")
         st.markdown(
             "Type a design or manufacturing question above and click **Analyze**. "
@@ -1279,9 +1350,38 @@ def main():
             "What fixturing methods work best for thin flexible parts?",
         ]
         for ex in examples:
-            if st.button(ex, key=f"ex_{ex[:20]}", use_container_width=True):
-                st.session_state["_auto_query"] = ex
-                st.rerun()
+            cached = example_cache.get(ex)
+            label = f"{ex}  \u26a1" if cached else ex
+            if st.button(label, key=f"ex_{ex[:20]}", use_container_width=True):
+                if cached:
+                    # Serve pre-cached result instantly
+                    report = DFMReportV2.model_validate(cached["report"])
+                    backfill = (
+                        BackfillOutput.model_validate(cached["backfill_result"])
+                        if cached.get("backfill_result")
+                        else None
+                    )
+                    result = {
+                        "query": ex,
+                        "report": report,
+                        "enrichment": cached.get("enrichment", {}),
+                        "ranked": cached.get("ranked", []),
+                        "sub_aspects": cached.get("sub_aspects", []),
+                        "diagnostic": cached.get("diagnostic", {}),
+                        "backfill_result": backfill,
+                        "frame_details": cached.get("frame_details", []),
+                        "timestamp": datetime.datetime.now().strftime("%H:%M:%S"),
+                        "elapsed_s": cached.get("elapsed_s", 0),
+                        "token_usage": cached.get("token_usage", {}),
+                        "from_cache": True,
+                    }
+                    st.session_state.query_history.append(result)
+                    st.session_state.active_idx = len(st.session_state.query_history) - 1
+                    st.rerun()
+                else:
+                    # Fall back to live query
+                    st.session_state["_auto_query"] = ex
+                    st.rerun()
 
 
 if __name__ == "__main__":
