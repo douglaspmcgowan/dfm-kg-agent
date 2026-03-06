@@ -56,7 +56,7 @@ st.set_page_config(
 
 _CUSTOM_STYLES = """
 <style>
-/* ── Frame popover buttons: keep icon + number on one line, hide arrow ── */
+/* ── Frame popover buttons: keep icon + type label on one line, hide arrow ── */
 
 /* The trigger button (path: stPopover > div > button) */
 [data-testid="stPopoverButton"] {
@@ -126,7 +126,10 @@ def get_openai_client():
 
     Checks Streamlit secrets first (for Cloud deployment), then env var.
     """
-    api_key = st.secrets.get("OPENAI_API_KEY") if hasattr(st, "secrets") else None
+    try:
+        api_key = st.secrets.get("OPENAI_API_KEY")
+    except Exception:
+        api_key = None
     if not api_key:
         api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -323,7 +326,11 @@ ROLE_INDICATORS = {
 def render_frame_popover(frame_id, frame_lookup, short_label=None):
     """Render a frame_id as a clickable popover with full details."""
     detail = frame_lookup.get(frame_id)
-    label = short_label or frame_id
+    # Default label: frame_type from lookup, else frame_id
+    if short_label is None:
+        label = detail["frame_type"] if detail else frame_id
+    else:
+        label = short_label
 
     if not detail:
         st.caption(f"`{frame_id}`")
@@ -420,7 +427,7 @@ def render_design_rules(report, frame_lookup, concise=False):
         with col_text:
             st.markdown(f"**{i}.** {rule.claim}")
         with col_ref:
-            render_frame_popover(rule.frame_id, frame_lookup, short_label=rule.frame_id.split("-")[-1])
+            render_frame_popover(rule.frame_id, frame_lookup)
 
     if concise and len(rules) > 5:
         with st.expander(f"Show all {len(rules)} rules"):
@@ -429,7 +436,7 @@ def render_design_rules(report, frame_lookup, concise=False):
                 with col_text:
                     st.markdown(f"**{i}.** {rule.claim}")
                 with col_ref:
-                    render_frame_popover(rule.frame_id, frame_lookup, short_label=rule.frame_id.split("-")[-1])
+                    render_frame_popover(rule.frame_id, frame_lookup)
 
 
 def render_evidence(evidence_list, frame_lookup):
@@ -443,7 +450,7 @@ def render_evidence(evidence_list, frame_lookup):
         with col_text:
             st.markdown(f"- {ev.claim}")
         with col_ref:
-            render_frame_popover(ev.frame_id, frame_lookup, short_label=ev.frame_id.split("-")[-1])
+            render_frame_popover(ev.frame_id, frame_lookup)
 
 
 def render_reasoning_chains(chains, frame_lookup):
@@ -468,10 +475,7 @@ def render_reasoning_chains(chains, frame_lookup):
                         f"{indicator} **{role_label}**: {cf.claim}{edge_info}"
                     )
                 with col_ref:
-                    render_frame_popover(
-                        cf.frame_id, frame_lookup,
-                        short_label=cf.frame_id.split("-")[-1]
-                    )
+                    render_frame_popover(cf.frame_id, frame_lookup)
 
 
 def render_formulas(formulas):
@@ -555,12 +559,8 @@ def render_knowledge_gaps(report, backfill_result, concise=False):
 
     with st.expander(f"\U0001f50d Knowledge Gaps ({len(gaps)})", expanded=False):
         st.caption("Areas where the knowledge graph lacks coverage")
-        if concise:
-            # Compact: single line, comma-separated
-            st.markdown(" &bull; ".join(gaps))
-        else:
-            for gap in gaps:
-                st.markdown(f"- {gap}")
+        for gap in gaps:
+            st.markdown(f"- {gap}")
 
     # Backfill
     if backfill_result and backfill_result.backfills:
