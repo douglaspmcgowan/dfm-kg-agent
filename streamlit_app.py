@@ -50,6 +50,7 @@ ANALYSIS_MODES = {
         "icon": "\u26a1",
         "time_range": "1-2 min",
         "token_range": "~11K tokens",
+        "cost_estimate": "~$0.05",
         "description": "Fast, concise reports. Best for interactive use.",
     },
     "Efficient Thinking": {
@@ -58,6 +59,7 @@ ANALYSIS_MODES = {
         "icon": "\U0001f9e0",
         "time_range": "3-4 min",
         "token_range": "~15K tokens",
+        "cost_estimate": "~$0.39",
         "description": "Deeper analysis with more design rules and disciplines.",
     },
     "Deep Reasoning": {
@@ -66,6 +68,7 @@ ANALYSIS_MODES = {
         "icon": "\U0001f52c",
         "time_range": "7-10 min",
         "token_range": "~26K tokens",
+        "cost_estimate": "~$0.92",
         "description": "Most thorough analysis. Richest rules and knowledge gaps.",
     },
 }
@@ -928,7 +931,9 @@ def main():
         mode_cfg = ANALYSIS_MODES[selected_mode]
         st.caption(
             f"{mode_cfg['description']}  \n"
-            f"**{mode_cfg['time_range']}** &nbsp;|&nbsp; **{mode_cfg['token_range']}**"
+            f"**{mode_cfg['time_range']}** &nbsp;|&nbsp; "
+            f"**{mode_cfg['token_range']}** &nbsp;|&nbsp; "
+            f"**{mode_cfg['cost_estimate']}**/query"
         )
 
         top_k = st.slider("Top K (frames per query)", min_value=3, max_value=25, value=10, step=1,
