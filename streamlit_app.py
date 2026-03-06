@@ -941,7 +941,7 @@ def main():
                                 help="Break question into engineering sub-aspects for broader retrieval")
         backfill = st.checkbox("Backfill knowledge gaps", value=True,
                                help="Generate textbook answers for areas not covered by the knowledge graph")
-        concise = st.checkbox("Concise mode", value=False,
+        concise = st.checkbox("Concise output", value=False,
                               help="Shorter report: max 5 design rules, collapsed evidence, compact knowledge gaps")
         pin_popovers = st.checkbox("Pin popovers", value=False,
                                    help="Keep frame detail popovers open while scrolling (default: auto-dismiss on scroll)")
