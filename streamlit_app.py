@@ -548,17 +548,12 @@ def render_evidence(evidence_list, frame_lookup):
 
 
 def render_reasoning_chains(chains, frame_lookup):
-    """Render reasoning chains with role indicators."""
+    """Render reasoning chains as individual dropdowns."""
     if not chains:
         return
 
-    st.markdown("**Reasoning Chains**")
-    for idx, chain in enumerate(chains):
-        # Visual separator between chains
-        if idx > 0:
-            st.divider()
-        with st.container(border=True):
-            st.markdown(f"\U0001f517 **{chain.chain_label}**")
+    for chain in chains:
+        with st.expander(f"\U0001f517 {chain.chain_label}", expanded=False):
             for cf in chain.frames:
                 indicator, role_label = ROLE_INDICATORS.get(
                     cf.role_in_chain, ("\u2b55", cf.role_in_chain)

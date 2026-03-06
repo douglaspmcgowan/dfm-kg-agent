@@ -196,8 +196,21 @@ rules in the formulas list with variable definitions and relevance notes.
 - Group frames by their scope field into discipline sections. Use the scope values from the
   frames (design_geometry, machining_process, material, tooling, programming, etc.).
 - Only create discipline sections that have actual evidence from the frames.
-- design_rules should be actionable rules distilled ACROSS all disciplines. Each must cite
-  a frame_id.
+
+== DESIGN RULES (critical -- read carefully) ==
+- design_rules are for MECHANICAL AND PRODUCT DESIGNERS, not machinists.
+- Each rule must be a DESIGN decision the engineer controls at the CAD/drawing stage:
+  geometry choices, tolerances, material selection, feature sizing, surface finish callouts.
+- DO NOT write machining process guidelines (feeds, speeds, toolpath strategies, coolant
+  settings, spindle RPM). Those belong in the discipline evidence sections, not design_rules.
+- Frame each rule as "When designing X, do Y because Z" -- the designer should understand
+  what to change in their model or drawing and why.
+- Good examples: "Specify internal fillet radii >= cutter radius to ensure machinability",
+  "Keep wall height-to-thickness ratio below 15:1 to avoid chatter during milling",
+  "Add corner relief features where mating parts must seat flush against inside corners".
+- Bad examples: "Reduce spindle speed when walls deflect" (machinist action, not design),
+  "Use climb milling for better finish" (process choice, not design decision).
+- Each rule must cite a frame_id.
 
 == CONTRADICTIONS ==
 - If two frames give opposing guidance on the same point, add a contradiction entry with
