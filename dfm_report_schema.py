@@ -17,7 +17,6 @@ from pydantic import BaseModel
 class SourcedClaim(BaseModel):
     claim: str
     frame_id: str
-    source_quote: str
 
 
 class ContradictionEntry(BaseModel):
@@ -49,7 +48,6 @@ class ChainedFrame(BaseModel):
     edge_type: Optional[str] = None  # CAUSAL_LINK, MITIGATES, SPECIFIES, CONTRADICTS
     edge_confidence: Optional[str] = None  # high, medium, low
     claim: str
-    source_quote: str
 
 
 class ReasoningChain(BaseModel):
@@ -130,7 +128,6 @@ Rules:
 - Only make claims that are directly supported by the provided frames. Do not add
   outside knowledge.
 - Every risk and recommended_practice MUST cite the frame_id it came from.
-- source_quote must be copied verbatim from the frame -- do not paraphrase or shorten.
 - If two frames give opposing guidance on the same point, add a contradiction entry
   with both frame_ids. Do not pick a side.
 - If the frames do not adequately cover the question, state this in knowledge_gaps.
@@ -145,7 +142,7 @@ and engineering Q&A sites, produce a structured DFM report organized by engineer
 
 == EVIDENCE TIER (strict traceability) ==
 - Claims in the 'evidence' and 'reasoning_chains' fields MUST cite the frame_id they came from.
-- source_quote must be copied verbatim from the frame -- do not paraphrase or shorten.
+- Each claim should synthesize the frame's insight in 1-2 sentences. Do not copy the source quote.
 - reasoning_chains should follow the edge relationships provided between frames (CAUSAL_LINK,
   MITIGATES, SPECIFIES). Use the edge_type and edge reasoning to explain how frames connect.
 - For each ChainedFrame, set role_in_chain to one of: root_cause, effect, mitigation,
