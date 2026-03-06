@@ -459,8 +459,12 @@ def render_reasoning_chains(chains, frame_lookup):
         return
 
     st.markdown("**Reasoning Chains**")
-    for chain in chains:
-        with st.expander(f"\U0001f517 {chain.chain_label}"):
+    for idx, chain in enumerate(chains):
+        # Visual separator between chains
+        if idx > 0:
+            st.divider()
+        with st.container(border=True):
+            st.markdown(f"\U0001f517 **{chain.chain_label}**")
             for cf in chain.frames:
                 indicator, role_label = ROLE_INDICATORS.get(
                     cf.role_in_chain, ("\u2b55", cf.role_in_chain)
@@ -524,9 +528,10 @@ def render_disciplines(report, frame_lookup):
             # Formulas
             render_formulas(disc.formulas)
 
-            # Evidence
-            st.markdown("**Evidence**")
-            render_evidence(disc.evidence, frame_lookup)
+            # Evidence (collapsible)
+            if disc.evidence:
+                with st.expander(f"Evidence ({len(disc.evidence)} claims)", expanded=False):
+                    render_evidence(disc.evidence, frame_lookup)
 
             # Reasoning chains
             render_reasoning_chains(disc.reasoning_chains, frame_lookup)
@@ -680,14 +685,15 @@ def build_graph_figure(report, G, frame_lookup):
     ))
 
     fig.update_layout(
-        title="Cited Frames & Semantic Edges",
+        title=dict(text="Cited Frames & Semantic Edges", y=0.98, x=0.01,
+                   xanchor="left", yanchor="top"),
         showlegend=True,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False,
                    scaleanchor="x", scaleratio=1),
         height=600,
-        margin=dict(l=20, r=20, t=60, b=20),
+        margin=dict(l=20, r=20, t=80, b=20),
         plot_bgcolor="rgba(0,0,0,0)",
     )
 
@@ -719,9 +725,42 @@ def render_report(result, G, concise=False):
             for asp in sub_aspects:
                 st.markdown(f"- {asp}")
 
-    # Summary
+    # Summary -- improve readability by splitting into paragraphs
     st.markdown("### Summary")
-    st.markdown(report.summary)
+    _render_summary(report.summary)
+
+
+def _render_summary(text):
+    """Render summary text with improved readability.
+
+    Splits long text into paragraphs on sentence boundaries and
+    bolds the first sentence of each paragraph as a topic sentence.
+    """
+    import re
+    text = text.strip()
+    if not text:
+        return
+
+    # Split into sentences
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+    if len(sentences) <= 3:
+        # Short summary: just bold the first sentence
+        sentences[0] = f"**{sentences[0]}**"
+        st.markdown(" ".join(sentences))
+        return
+
+    # Group sentences into paragraphs of 2-3 sentences
+    paragraphs = []
+    i = 0
+    while i < len(sentences):
+        chunk_size = 3 if len(sentences) - i > 4 else 2
+        chunk = sentences[i:i + chunk_size]
+        # Bold the first sentence of each paragraph (topic sentence)
+        chunk[0] = f"**{chunk[0]}**"
+        paragraphs.append(" ".join(chunk))
+        i += chunk_size
+
+    st.markdown("\n\n".join(paragraphs))
 
     st.divider()
 
@@ -889,6 +928,25 @@ def main():
                      help="Reset the token counter and start a new tracking period"):
             _reset_token_tally()
             st.rerun()
+
+        # ── About the Developer ──
+        st.divider()
+        st.markdown("**About the Developer**")
+        st.markdown(
+            "**Douglas McGowan**  \n"
+            "Ph.D. Candidate, Mechanical Engineering  \n"
+            "[Co-Design Lab](https://codesign.berkeley.edu/), UC Berkeley  \n"
+            "Advisor: Dr. Kosa Goucher-Lambert"
+        )
+        st.caption(
+            "Research focus: computational design, AI/ML in product "
+            "development, and design for manufacturability."
+        )
+        st.markdown(
+            "\U0001f4e7 [dpm5970@berkeley.edu](mailto:dpm5970@berkeley.edu)  \n"
+            "\U0001f517 [LinkedIn](https://www.linkedin.com/in/douglas-mcgowan/) "
+            " | [Co-Design Lab](https://codesign.berkeley.edu/team/douglas-mcgowan/)"
+        )
 
     # ── MAIN AREA ──
 
