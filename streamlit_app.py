@@ -701,34 +701,8 @@ def build_graph_figure(report, G, frame_lookup):
 
 
 # ─────────────────────────────────────────────
-# RENDER FULL REPORT
+# SUMMARY FORMATTING
 # ─────────────────────────────────────────────
-
-def render_report(result, G, concise=False):
-    """Render a complete DFM report from a result dict."""
-    report = result["report"]
-    enrichment = result["enrichment"]
-    diagnostic = result["diagnostic"]
-    sub_aspects = result["sub_aspects"]
-    backfill_result = result["backfill_result"]
-    frame_lookup = {d["frame_id"]: d for d in result["frame_details"]}
-    query = result["query"]
-
-    # Diagnostic
-    render_diagnostic(diagnostic)
-
-    st.divider()
-
-    # Sub-aspects
-    if sub_aspects:
-        with st.expander("Query Decomposition", expanded=False):
-            for asp in sub_aspects:
-                st.markdown(f"- {asp}")
-
-    # Summary -- improve readability by splitting into paragraphs
-    st.markdown("### Summary")
-    _render_summary(report.summary)
-
 
 def _render_summary(text):
     """Render summary text with improved readability.
@@ -761,6 +735,36 @@ def _render_summary(text):
         i += chunk_size
 
     st.markdown("\n\n".join(paragraphs))
+
+
+# ─────────────────────────────────────────────
+# RENDER FULL REPORT
+# ─────────────────────────────────────────────
+
+def render_report(result, G, concise=False):
+    """Render a complete DFM report from a result dict."""
+    report = result["report"]
+    enrichment = result["enrichment"]
+    diagnostic = result["diagnostic"]
+    sub_aspects = result["sub_aspects"]
+    backfill_result = result["backfill_result"]
+    frame_lookup = {d["frame_id"]: d for d in result["frame_details"]}
+    query = result["query"]
+
+    # Diagnostic
+    render_diagnostic(diagnostic)
+
+    st.divider()
+
+    # Sub-aspects
+    if sub_aspects:
+        with st.expander("Query Decomposition", expanded=False):
+            for asp in sub_aspects:
+                st.markdown(f"- {asp}")
+
+    # Summary -- improve readability by splitting into paragraphs
+    st.markdown("### Summary")
+    _render_summary(report.summary)
 
     st.divider()
 
