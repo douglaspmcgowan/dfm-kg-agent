@@ -35,7 +35,40 @@ from dfm_agent import (
     SEMANTIC_EDGE_TYPES,
     MODEL,
 )
+import dfm_agent as _agent_module
 from openai import OpenAI
+
+
+# ─────────────────────────────────────────────
+# ANALYSIS MODE CONFIGS
+# ─────────────────────────────────────────────
+
+ANALYSIS_MODES = {
+    "Quick Search": {
+        "model": "gpt-4.1",
+        "reasoning_effort": None,
+        "icon": "\u26a1",
+        "time_range": "1-2 min",
+        "token_range": "~11K tokens",
+        "description": "Fast, concise reports. Best for interactive use.",
+    },
+    "Efficient Thinking": {
+        "model": "gpt-5",
+        "reasoning_effort": "low",
+        "icon": "\U0001f9e0",
+        "time_range": "3-4 min",
+        "token_range": "~15K tokens",
+        "description": "Deeper analysis with more design rules and disciplines.",
+    },
+    "Deep Reasoning": {
+        "model": "gpt-5",
+        "reasoning_effort": None,  # default = medium
+        "icon": "\U0001f52c",
+        "time_range": "7-10 min",
+        "token_range": "~26K tokens",
+        "description": "Most thorough analysis. Richest rules and knowledge gaps.",
+    },
+}
 
 
 # ─────────────────────────────────────────────
@@ -874,12 +907,29 @@ def main():
             f"**{stats['frames']:,}** frames &nbsp;|&nbsp; "
             f"**{stats['semantic_edges']:,}** semantic edges\n\n"
             f"**{stats['authors']:,}** authors &nbsp;|&nbsp; "
-            f"**{stats['threads']:,}** threads\n\n"
-            f"Model: `{MODEL}`"
+            f"**{stats['threads']:,}** threads"
         )
 
         st.divider()
         st.markdown("**Controls**")
+
+        # Analysis mode selector
+        mode_names = list(ANALYSIS_MODES.keys())
+        mode_labels = [
+            f"{ANALYSIS_MODES[m]['icon']} {m}" for m in mode_names
+        ]
+        selected_mode = st.radio(
+            "Analysis mode",
+            mode_names,
+            format_func=lambda m: f"{ANALYSIS_MODES[m]['icon']} {m}",
+            index=0,
+            help="Controls the LLM used for synthesis. Affects speed, depth, and cost.",
+        )
+        mode_cfg = ANALYSIS_MODES[selected_mode]
+        st.caption(
+            f"{mode_cfg['description']}  \n"
+            f"**{mode_cfg['time_range']}** &nbsp;|&nbsp; **{mode_cfg['token_range']}**"
+        )
 
         top_k = st.slider("Top K (frames per query)", min_value=3, max_value=25, value=10, step=1,
                           help="Number of frames to retrieve from the vector index per sub-aspect")
@@ -1029,6 +1079,99 @@ def main():
 
         _t0 = _time.time()
 
+        # Apply analysis mode: set model and patch reasoning_effort if needed
+        _agent_module.MODEL = mode_cfg["model"]
+        _reasoning_effort = mode_cfg["reasoning_effort"]
+        _originals = {}
+
+        if _reasoning_effort is not None:
+            # Wrap LLM-calling functions to inject reasoning_effort
+            from functools import wraps
+            from dfm_report_schema import (
+                QueryDecomposition, DFMReportV2, BackfillOutput,
+                DECOMPOSE_PROMPT, SYNTHESIS_PROMPT_V2, BACKFILL_PROMPT,
+            )
+
+            _orig_decompose = _agent_module.decompose_query
+            _orig_synth = _agent_module.synthesize_report_v2
+            _orig_backfill = _agent_module.backfill_knowledge_gaps
+            _originals = {"d": _orig_decompose, "s": _orig_synth, "b": _orig_backfill}
+
+            def _patched_decompose(client, question, tracker=None):
+                if len(question.split()) <= 5:
+                    return [question]
+                try:
+                    comp = client.beta.chat.completions.parse(
+                        model=_agent_module.MODEL,
+                        messages=[
+                            {"role": "system", "content": DECOMPOSE_PROMPT},
+                            {"role": "user", "content": question},
+                        ],
+                        response_format=QueryDecomposition,
+                        reasoning_effort=_reasoning_effort,
+                    )
+                    if tracker:
+                        tracker.record(comp.usage)
+                    r = comp.choices[0].message.parsed
+                    return r.sub_aspects if r and r.sub_aspects else [question]
+                except Exception:
+                    return [question]
+
+            def _patched_synth(client, query, ranked_frames, sub_aspects=None, tracker=None):
+                frame_blocks = "\n\n".join(
+                    _agent_module.format_frame_for_prompt(fid, info)
+                    for fid, _, info in ranked_frames
+                )
+                sub_line = ""
+                if sub_aspects and len(sub_aspects) > 1:
+                    sub_line = (
+                        f"\nSub-aspects investigated: {', '.join(sub_aspects)}\n"
+                        "Ensure the report covers findings for each sub-aspect "
+                        "where evidence exists.\n"
+                    )
+                user_msg = (
+                    f"Designer's question: {query}\n{sub_line}\n"
+                    f"Relevant knowledge frames ({len(ranked_frames)} total):\n\n"
+                    f"{frame_blocks}"
+                )
+                comp = client.beta.chat.completions.parse(
+                    model=_agent_module.MODEL,
+                    messages=[
+                        {"role": "system", "content": SYNTHESIS_PROMPT_V2},
+                        {"role": "user", "content": user_msg},
+                    ],
+                    response_format=DFMReportV2,
+                    reasoning_effort=_reasoning_effort,
+                )
+                if tracker:
+                    tracker.record(comp.usage)
+                return comp.choices[0].message.parsed
+
+            def _patched_backfill(client, report, tracker=None):
+                if not report.knowledge_gaps:
+                    return None
+                gaps_text = "\n".join(f"- {g}" for g in report.knowledge_gaps)
+                user_msg = f"Knowledge gaps to backfill:\n{gaps_text}"
+                try:
+                    comp = client.beta.chat.completions.parse(
+                        model=_agent_module.MODEL,
+                        messages=[
+                            {"role": "system", "content": BACKFILL_PROMPT},
+                            {"role": "user", "content": user_msg},
+                        ],
+                        response_format=BackfillOutput,
+                        reasoning_effort=_reasoning_effort,
+                    )
+                    if tracker:
+                        tracker.record(comp.usage)
+                    return comp.choices[0].message.parsed
+                except Exception:
+                    return None
+
+            _agent_module.decompose_query = _patched_decompose
+            _agent_module.synthesize_report_v2 = _patched_synth
+            _agent_module.backfill_knowledge_gaps = _patched_backfill
+
         try:
             report, enrichment, ranked, sub_aspects, diagnostic, backfill_result, tracker = query_dfm(
                 query,
@@ -1074,6 +1217,12 @@ def main():
             step_container.empty()
             st.error(f"**{type(e).__name__}:** {e}")
             st.stop()
+        finally:
+            # Restore original functions if patched
+            if _originals:
+                _agent_module.decompose_query = _originals["d"]
+                _agent_module.synthesize_report_v2 = _originals["s"]
+                _agent_module.backfill_knowledge_gaps = _originals["b"]
 
         # Clean up progress elements and rerun to show the report
         progress_bar.empty()
