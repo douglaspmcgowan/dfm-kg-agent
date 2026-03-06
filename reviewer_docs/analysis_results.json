@@ -1,0 +1,1221 @@
+{
+  "llm_descriptive": {
+    "extraction_accuracy": {
+      "n": 26,
+      "mean": 2.5,
+      "median": 2.5,
+      "std": 0.5099019513592785,
+      "min": 2.0,
+      "max": 3.0,
+      "distribution": {
+        "3": 13,
+        "2": 13
+      }
+    },
+    "tribal_knowledge": {
+      "n": 26,
+      "mean": 1.7307692307692308,
+      "median": 2.0,
+      "std": 0.533493565673837,
+      "min": 1.0,
+      "max": 3.0,
+      "distribution": {
+        "2": 17,
+        "1": 8,
+        "3": 1
+      }
+    },
+    "clarity": {
+      "n": 26,
+      "mean": 2.923076923076923,
+      "median": 3.0,
+      "std": 0.271746488194703,
+      "min": 2.0,
+      "max": 3.0,
+      "distribution": {
+        "3": 24,
+        "2": 2
+      }
+    },
+    "frame_type_rating": {
+      "n": 26,
+      "mean": 4.384615384615385,
+      "median": 5.0,
+      "std": 1.1340872303988994,
+      "min": 2.0,
+      "max": 5.0,
+      "distribution": {
+        "5": 19,
+        "4": 2,
+        "2": 4,
+        "3": 1
+      }
+    },
+    "post_role_rating": {
+      "n": 26,
+      "mean": 4.884615384615385,
+      "median": 5.0,
+      "std": 0.32581259360842113,
+      "min": 4.0,
+      "max": 5.0,
+      "distribution": {
+        "5": 23,
+        "4": 3
+      }
+    },
+    "scope_rating": {
+      "n": 26,
+      "mean": 3.6153846153846154,
+      "median": 4.0,
+      "std": 1.2985198674467195,
+      "min": 1.0,
+      "max": 5.0,
+      "distribution": {
+        "3": 4,
+        "2": 6,
+        "5": 9,
+        "4": 6,
+        "1": 1
+      }
+    },
+    "applicability_rating": {
+      "n": 26,
+      "mean": 4.153846153846154,
+      "median": 5.0,
+      "std": 1.2228591968761635,
+      "min": 1.0,
+      "max": 5.0,
+      "distribution": {
+        "5": 15,
+        "4": 5,
+        "3": 2,
+        "1": 1,
+        "2": 3
+      }
+    },
+    "main_point_quality": {
+      "n": 26,
+      "mean": 4.3076923076923075,
+      "median": 4.0,
+      "std": 0.6793662204867575,
+      "min": 3.0,
+      "max": 5.0,
+      "distribution": {
+        "5": 11,
+        "4": 12,
+        "3": 3
+      }
+    },
+    "epistemic_stance_rating": {
+      "n": 26,
+      "mean": 4.769230769230769,
+      "median": 5.0,
+      "std": 0.5144077999169381,
+      "min": 3.0,
+      "max": 5.0,
+      "distribution": {
+        "5": 21,
+        "4": 4,
+        "3": 1
+      }
+    },
+    "overall_judgment": {
+      "Keep": 12,
+      "Revise": 14
+    }
+  },
+  "llm_comments": {
+    "theme_counts": {
+      "scope_issue": 19,
+      "frame_type_issue": 18,
+      "applicability_issue": 23,
+      "quote_fidelity": 24,
+      "textbook_knowledge": 7,
+      "main_point_adds_info": 9
+    },
+    "theme_examples": {
+      "scope_issue": [
+        "Frame 1: Accurate paraphrase of the quote, including the hedged cost/availability claim. Frame type as observation fits, and post...",
+        "Frame 2: Accurate capture of the quote: V-cut depanelization tends to leave rounded edges that don't look premium. Frame type as ..."
+      ],
+      "frame_type_issue": [
+        "Frame 1: Accurate paraphrase of the quote, including the hedged cost/availability claim. Frame type as observation fits, and post...",
+        "Frame 2: Accurate capture of the quote: V-cut depanelization tends to leave rounded edges that don't look premium. Frame type as ..."
+      ],
+      "applicability_issue": [
+        "Frame 1: Accurate paraphrase of the quote, including the hedged cost/availability claim. Frame type as observation fits, and post...",
+        "Frame 2: Accurate capture of the quote: V-cut depanelization tends to leave rounded edges that don't look premium. Frame type as ..."
+      ],
+      "quote_fidelity": [
+        "Frame 1: Accurate paraphrase of the quote, including the hedged cost/availability claim. Frame type as observation fits, and post...",
+        "Frame 2: Accurate capture of the quote: V-cut depanelization tends to leave rounded edges that don't look premium. Frame type as ..."
+      ],
+      "textbook_knowledge": [
+        "Frame 4: Accurate distillation of the quote, including the 50k vs 500 example and the rationale about amortizing tooling cost. Th...",
+        "Frame 8: Accurate textbook beam theory relationship; clear and correct. Frame type and epistemic stance are appropriate; post rol..."
+      ],
+      "main_point_adds_info": [
+        "Frame 5: The quote supports the advice to buy large sheets and have a shop bandsaw them into 3-inch sections, but the main point ...",
+        "Frame 12: Main point matches the quote but adds a bit beyond it (performance/life) which, while reasonable, isn't stated. Frame ty..."
+      ]
+    },
+    "frames_with_comments": 26,
+    "total_frames": 26
+  },
+  "composite_scores": {
+    "content_quality": {
+      "mean": 0.6923076923076922,
+      "std": 0.1307440900921227,
+      "per_frame": [
+        0.8333333333333334,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.5,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.5,
+        0.6666666666666666,
+        0.3333333333333333,
+        0.5
+      ]
+    },
+    "metadata_quality": {
+      "mean": 0.8381410256410257,
+      "std": 0.08192723997287256,
+      "per_frame": [
+        0.9166666666666666,
+        0.875,
+        0.7916666666666666,
+        0.9583333333333334,
+        0.875,
+        0.7916666666666666,
+        0.7916666666666666,
+        0.7916666666666666,
+        0.7083333333333334,
+        0.875,
+        0.7083333333333334,
+        0.8333333333333334,
+        0.875,
+        0.875,
+        0.7083333333333334,
+        0.8333333333333334,
+        0.7083333333333334,
+        0.9583333333333334,
+        0.75,
+        0.8333333333333334,
+        0.7916666666666666,
+        0.8333333333333334,
+        0.9166666666666666,
+        0.875,
+        0.9166666666666666,
+        1.0
+      ]
+    }
+  },
+  "per_reviewer": {
+    "reviewer_1": {
+      "extraction_accuracy": {
+        "n": 26,
+        "mean": 2.8846153846153846,
+        "median": 3.0,
+        "std": 0.3258125936084211,
+        "min": 2.0,
+        "max": 3.0,
+        "distribution": {
+          "2": 3,
+          "3": 23
+        }
+      },
+      "tribal_knowledge": {
+        "n": 26,
+        "mean": 2.0,
+        "median": 2.0,
+        "std": 0.7483314773547883,
+        "min": 1.0,
+        "max": 3.0,
+        "distribution": {
+          "2": 12,
+          "3": 7,
+          "1": 7
+        }
+      },
+      "clarity": {
+        "n": 26,
+        "mean": 2.8846153846153846,
+        "median": 3.0,
+        "std": 0.32581259360842113,
+        "min": 2.0,
+        "max": 3.0,
+        "distribution": {
+          "3": 23,
+          "2": 3
+        }
+      },
+      "frame_type_rating": {
+        "n": 26,
+        "mean": 4.0,
+        "median": 4.0,
+        "std": 0.9797958971132712,
+        "min": 1.0,
+        "max": 5.0,
+        "distribution": {
+          "3": 6,
+          "1": 1,
+          "4": 10,
+          "5": 9
+        }
+      },
+      "post_role_rating": {
+        "n": 26,
+        "mean": 3.8076923076923075,
+        "median": 4.0,
+        "std": 0.8952868040680939,
+        "min": 2.0,
+        "max": 5.0,
+        "distribution": {
+          "4": 14,
+          "2": 3,
+          "3": 4,
+          "5": 5
+        }
+      },
+      "scope_rating": {
+        "n": 26,
+        "mean": 4.576923076923077,
+        "median": 5.0,
+        "std": 0.7027418828034614,
+        "min": 2.0,
+        "max": 5.0,
+        "distribution": {
+          "4": 8,
+          "5": 17,
+          "2": 1
+        }
+      },
+      "applicability_rating": {
+        "n": 26,
+        "mean": 4.5,
+        "median": 5.0,
+        "std": 0.648074069840786,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "4": 9,
+          "5": 15,
+          "3": 2
+        }
+      },
+      "main_point_quality": {
+        "n": 26,
+        "mean": 4.769230769230769,
+        "median": 5.0,
+        "std": 0.4296689244236597,
+        "min": 4.0,
+        "max": 5.0,
+        "distribution": {
+          "4": 6,
+          "5": 20
+        }
+      },
+      "epistemic_stance_rating": {
+        "n": 26,
+        "mean": 4.5,
+        "median": 5.0,
+        "std": 0.9055385138137416,
+        "min": 1.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 17,
+          "1": 1,
+          "4": 7,
+          "3": 1
+        }
+      },
+      "overall_judgment": {
+        "Keep": 21,
+        "Revise": 5
+      },
+      "comments_analysis": {
+        "theme_counts": {
+          "frame_type_issue": 3,
+          "scope_issue": 1,
+          "applicability_issue": 3,
+          "textbook_knowledge": 7,
+          "main_point_adds_info": 1
+        },
+        "theme_examples": {
+          "frame_type_issue": [
+            "Frame 1: Overall makes an accurate enough assessment, only being slightly inaccurate in Frame Type, which points more to workarou...",
+            "Frame 2: Post is not an observation, should be heuristic. Post role offers no solution to stated issue. Epistemic stance is not n..."
+          ],
+          "scope_issue": [
+            "Frame 7: Main Point appears correct, but post's purpose (scope, post role, applicability, etc.) seem off"
+          ],
+          "applicability_issue": [
+            "Frame 7: Main Point appears correct, but post's purpose (scope, post role, applicability, etc.) seem off",
+            "Frame 14: Appears more opinionated and context dependent than model predicts"
+          ],
+          "textbook_knowledge": [
+            "Frame 8: Good, textbook response",
+            "Frame 10: Good, seems textbook"
+          ],
+          "main_point_adds_info": [
+            "Frame 9: Good, adds some additional info in main point"
+          ]
+        },
+        "frames_with_comments": 26,
+        "total_frames": 26
+      }
+    },
+    "reviewer_2": {
+      "extraction_accuracy": {
+        "n": 25,
+        "mean": 2.96,
+        "median": 3.0,
+        "std": 0.2,
+        "min": 2.0,
+        "max": 3.0,
+        "distribution": {
+          "3": 24,
+          "2": 1
+        }
+      },
+      "tribal_knowledge": {
+        "n": 26,
+        "mean": 2.269230769230769,
+        "median": 2.0,
+        "std": 0.7243033788512826,
+        "min": 1.0,
+        "max": 3.0,
+        "distribution": {
+          "2": 11,
+          "1": 4,
+          "3": 11
+        }
+      },
+      "clarity": {
+        "n": 26,
+        "mean": 2.923076923076923,
+        "median": 3.0,
+        "std": 0.271746488194703,
+        "min": 2.0,
+        "max": 3.0,
+        "distribution": {
+          "3": 24,
+          "2": 2
+        }
+      },
+      "frame_type_rating": {
+        "n": 26,
+        "mean": 4.576923076923077,
+        "median": 5.0,
+        "std": 0.7575263387144726,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 19,
+          "3": 4,
+          "4": 3
+        }
+      },
+      "post_role_rating": {
+        "n": 26,
+        "mean": 4.730769230769231,
+        "median": 5.0,
+        "std": 0.6038339048243189,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 21,
+          "3": 2,
+          "4": 3
+        }
+      },
+      "scope_rating": {
+        "n": 26,
+        "mean": 4.730769230769231,
+        "median": 5.0,
+        "std": 0.6667948594698256,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "3": 3,
+          "5": 22,
+          "4": 1
+        }
+      },
+      "applicability_rating": {
+        "n": 26,
+        "mean": 4.730769230769231,
+        "median": 5.0,
+        "std": 0.6667948594698256,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 22,
+          "3": 3,
+          "4": 1
+        }
+      },
+      "main_point_quality": {
+        "n": 26,
+        "mean": 4.884615384615385,
+        "median": 5.0,
+        "std": 0.4314554973040049,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 24,
+          "3": 1,
+          "4": 1
+        }
+      },
+      "epistemic_stance_rating": {
+        "n": 26,
+        "mean": 4.884615384615385,
+        "median": 5.0,
+        "std": 0.4314554973040049,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 24,
+          "4": 1,
+          "3": 1
+        }
+      },
+      "overall_judgment": {
+        "Keep": 22,
+        "Revise": 4
+      },
+      "comments_analysis": {
+        "theme_counts": {},
+        "theme_examples": {},
+        "frames_with_comments": 0,
+        "total_frames": 26
+      }
+    },
+    "reviewer_4": {
+      "extraction_accuracy": {
+        "n": 26,
+        "mean": 2.923076923076923,
+        "median": 3.0,
+        "std": 0.271746488194703,
+        "min": 2.0,
+        "max": 3.0,
+        "distribution": {
+          "3": 24,
+          "2": 2
+        }
+      },
+      "tribal_knowledge": {
+        "n": 26,
+        "mean": 1.8461538461538463,
+        "median": 2.0,
+        "std": 0.8805592628464113,
+        "min": 1.0,
+        "max": 3.0,
+        "distribution": {
+          "2": 6,
+          "3": 8,
+          "1": 12
+        }
+      },
+      "clarity": {
+        "n": 26,
+        "mean": 2.923076923076923,
+        "median": 3.0,
+        "std": 0.392232270276368,
+        "min": 1.0,
+        "max": 3.0,
+        "distribution": {
+          "3": 25,
+          "1": 1
+        }
+      },
+      "frame_type_rating": {
+        "n": 26,
+        "mean": 4.230769230769231,
+        "median": 5.0,
+        "std": 1.106623415898735,
+        "min": 2.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 16,
+          "2": 3,
+          "4": 3,
+          "3": 4
+        }
+      },
+      "post_role_rating": {
+        "n": 26,
+        "mean": 4.961538461538462,
+        "median": 5.0,
+        "std": 0.19611613513818402,
+        "min": 4.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 25,
+          "4": 1
+        }
+      },
+      "scope_rating": {
+        "n": 26,
+        "mean": 4.115384615384615,
+        "median": 4.0,
+        "std": 0.6528046002854501,
+        "min": 3.0,
+        "max": 5.0,
+        "distribution": {
+          "3": 4,
+          "4": 15,
+          "5": 7
+        }
+      },
+      "applicability_rating": {
+        "n": 26,
+        "mean": 3.8076923076923075,
+        "median": 4.0,
+        "std": 0.9805806756909202,
+        "min": 1.0,
+        "max": 5.0,
+        "distribution": {
+          "4": 15,
+          "3": 3,
+          "1": 1,
+          "5": 5,
+          "2": 2
+        }
+      },
+      "main_point_quality": {
+        "n": 26,
+        "mean": 4.730769230769231,
+        "median": 5.0,
+        "std": 0.4523443208612048,
+        "min": 4.0,
+        "max": 5.0,
+        "distribution": {
+          "5": 19,
+          "4": 7
+        }
+      },
+      "epistemic_stance_rating": {
+        "n": 26,
+        "mean": 4.1923076923076925,
+        "median": 5.0,
+        "std": 1.233506571339797,
+        "min": 1.0,
+        "max": 5.0,
+        "distribution": {
+          "2": 3,
+          "5": 16,
+          "3": 2,
+          "4": 4,
+          "1": 1
+        }
+      },
+      "overall_judgment": {
+        "Keep": 22,
+        "Revise": 4
+      },
+      "comments_analysis": {
+        "theme_counts": {
+          "quote_fidelity": 2
+        },
+        "theme_examples": {
+          "quote_fidelity": [
+            "Frame 12: Again, not sure if the *\"These two properties drive electrode performance and life.\"* part of the summary was hallucinat...",
+            "Frame 20: Again, not sure if the *\"due to reduced disposal and new coolant costs.\"* part of the summary was hallucinated, as it do..."
+          ]
+        },
+        "frames_with_comments": 5,
+        "total_frames": 26
+      }
+    }
+  },
+  "human_irr": {
+    "extraction_accuracy": {
+      "krippendorff_alpha": 0.277,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.064,
+          "percent_agreement": 0.84,
+          "n": 25
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.339,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.648,
+          "percent_agreement": 0.96,
+          "n": 25
+        }
+      }
+    },
+    "tribal_knowledge": {
+      "krippendorff_alpha": 0.374,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.004,
+          "percent_agreement": 0.346,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.57,
+          "percent_agreement": 0.654,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.389,
+          "percent_agreement": 0.538,
+          "n": 26
+        }
+      }
+    },
+    "clarity": {
+      "krippendorff_alpha": 0.528,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.339,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.371,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.48,
+          "percent_agreement": 0.923,
+          "n": 26
+        }
+      }
+    },
+    "frame_type_rating": {
+      "krippendorff_alpha": 0.085,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.053,
+          "percent_agreement": 0.308,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.101,
+          "percent_agreement": 0.346,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.19,
+          "percent_agreement": 0.538,
+          "n": 26
+        }
+      }
+    },
+    "post_role_rating": {
+      "krippendorff_alpha": -0.097,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.099,
+          "percent_agreement": 0.269,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.013,
+          "percent_agreement": 0.192,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": -0.051,
+          "percent_agreement": 0.769,
+          "n": 26
+        }
+      }
+    },
+    "scope_rating": {
+      "krippendorff_alpha": 0.149,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.067,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.124,
+          "percent_agreement": 0.423,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.311,
+          "percent_agreement": 0.423,
+          "n": 26
+        }
+      }
+    },
+    "applicability_rating": {
+      "krippendorff_alpha": -0.062,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.01,
+          "percent_agreement": 0.5,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.131,
+          "percent_agreement": 0.462,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.005,
+          "percent_agreement": 0.192,
+          "n": 26
+        }
+      }
+    },
+    "main_point_quality": {
+      "krippendorff_alpha": 0.262,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.133,
+          "percent_agreement": 0.731,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.079,
+          "percent_agreement": 0.654,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.328,
+          "percent_agreement": 0.769,
+          "n": 26
+        }
+      }
+    },
+    "epistemic_stance_rating": {
+      "krippendorff_alpha": 0.176,
+      "pairwise": {
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.183,
+          "percent_agreement": 0.692,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.146,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.182,
+          "percent_agreement": 0.615,
+          "n": 26
+        }
+      }
+    },
+    "overall_judgment": {
+      "krippendorff_alpha": -0.002
+    }
+  },
+  "all_raters_irr": {
+    "extraction_accuracy": {
+      "krippendorff_alpha": 0.01,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": -0.077,
+          "percent_agreement": 0.462,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.086,
+          "percent_agreement": 0.56,
+          "n": 25
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.0,
+          "percent_agreement": 0.5,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.064,
+          "percent_agreement": 0.84,
+          "n": 25
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.339,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.648,
+          "percent_agreement": 0.96,
+          "n": 25
+        }
+      }
+    },
+    "tribal_knowledge": {
+      "krippendorff_alpha": 0.395,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": 0.504,
+          "percent_agreement": 0.654,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.033,
+          "percent_agreement": 0.308,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.476,
+          "percent_agreement": 0.577,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.004,
+          "percent_agreement": 0.346,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.57,
+          "percent_agreement": 0.654,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.389,
+          "percent_agreement": 0.538,
+          "n": 26
+        }
+      }
+    },
+    "clarity": {
+      "krippendorff_alpha": 0.322,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": -0.102,
+          "percent_agreement": 0.808,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.458,
+          "percent_agreement": 0.923,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": -0.04,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.339,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.371,
+          "percent_agreement": 0.885,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.48,
+          "percent_agreement": 0.923,
+          "n": 26
+        }
+      }
+    },
+    "frame_type_rating": {
+      "krippendorff_alpha": -0.002,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": -0.072,
+          "percent_agreement": 0.269,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": -0.06,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": -0.037,
+          "percent_agreement": 0.462,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.053,
+          "percent_agreement": 0.308,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.101,
+          "percent_agreement": 0.346,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.19,
+          "percent_agreement": 0.538,
+          "n": 26
+        }
+      }
+    },
+    "post_role_rating": {
+      "krippendorff_alpha": -0.068,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": 0.04,
+          "percent_agreement": 0.269,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": -0.13,
+          "percent_agreement": 0.692,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": -0.061,
+          "percent_agreement": 0.846,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.099,
+          "percent_agreement": 0.269,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.013,
+          "percent_agreement": 0.192,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": -0.051,
+          "percent_agreement": 0.769,
+          "n": 26
+        }
+      }
+    },
+    "scope_rating": {
+      "krippendorff_alpha": 0.151,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": 0.202,
+          "percent_agreement": 0.5,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.177,
+          "percent_agreement": 0.385,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.188,
+          "percent_agreement": 0.346,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": -0.067,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.124,
+          "percent_agreement": 0.423,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.311,
+          "percent_agreement": 0.423,
+          "n": 26
+        }
+      }
+    },
+    "applicability_rating": {
+      "krippendorff_alpha": -0.003,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": 0.233,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": -0.197,
+          "percent_agreement": 0.423,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.078,
+          "percent_agreement": 0.308,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.01,
+          "percent_agreement": 0.5,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.131,
+          "percent_agreement": 0.462,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.005,
+          "percent_agreement": 0.192,
+          "n": 26
+        }
+      }
+    },
+    "main_point_quality": {
+      "krippendorff_alpha": 0.166,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": -0.054,
+          "percent_agreement": 0.385,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.188,
+          "percent_agreement": 0.5,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.232,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.133,
+          "percent_agreement": 0.731,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.079,
+          "percent_agreement": 0.654,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.328,
+          "percent_agreement": 0.769,
+          "n": 26
+        }
+      }
+    },
+    "epistemic_stance_rating": {
+      "krippendorff_alpha": 0.243,
+      "pairwise": {
+        "llm_vs_reviewer_1": {
+          "kappa_linear": 0.444,
+          "percent_agreement": 0.769,
+          "n": 26
+        },
+        "llm_vs_reviewer_2": {
+          "kappa_linear": 0.387,
+          "percent_agreement": 0.808,
+          "n": 26
+        },
+        "llm_vs_reviewer_4": {
+          "kappa_linear": 0.163,
+          "percent_agreement": 0.577,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_2": {
+          "kappa_linear": 0.183,
+          "percent_agreement": 0.692,
+          "n": 26
+        },
+        "reviewer_1_vs_reviewer_4": {
+          "kappa_linear": 0.146,
+          "percent_agreement": 0.538,
+          "n": 26
+        },
+        "reviewer_2_vs_reviewer_4": {
+          "kappa_linear": 0.182,
+          "percent_agreement": 0.615,
+          "n": 26
+        }
+      }
+    },
+    "overall_judgment": {
+      "krippendorff_alpha": -0.04
+    }
+  },
+  "human_vs_llm": {
+    "extraction_accuracy": {
+      "llm_mean": 2.5,
+      "human_mean": 2.923,
+      "mean_diff": -0.423,
+      "std_diff": 0.546,
+      "n": 26
+    },
+    "tribal_knowledge": {
+      "llm_mean": 1.731,
+      "human_mean": 2.038,
+      "mean_diff": -0.308,
+      "std_diff": 0.461,
+      "n": 26
+    },
+    "clarity": {
+      "llm_mean": 2.923,
+      "human_mean": 2.91,
+      "mean_diff": 0.013,
+      "std_diff": 0.371,
+      "n": 26
+    },
+    "frame_type_rating": {
+      "llm_mean": 4.385,
+      "human_mean": 4.269,
+      "mean_diff": 0.115,
+      "std_diff": 1.36,
+      "n": 26
+    },
+    "post_role_rating": {
+      "llm_mean": 4.885,
+      "human_mean": 4.5,
+      "mean_diff": 0.385,
+      "std_diff": 0.514,
+      "n": 26
+    },
+    "scope_rating": {
+      "llm_mean": 3.615,
+      "human_mean": 4.474,
+      "mean_diff": -0.859,
+      "std_diff": 1.148,
+      "n": 26
+    },
+    "applicability_rating": {
+      "llm_mean": 4.154,
+      "human_mean": 4.346,
+      "mean_diff": -0.192,
+      "std_diff": 1.279,
+      "n": 26
+    },
+    "main_point_quality": {
+      "llm_mean": 4.308,
+      "human_mean": 4.795,
+      "mean_diff": -0.487,
+      "std_diff": 0.634,
+      "n": 26
+    },
+    "epistemic_stance_rating": {
+      "llm_mean": 4.769,
+      "human_mean": 4.526,
+      "mean_diff": 0.244,
+      "std_diff": 0.486,
+      "n": 26
+    }
+  }
+}

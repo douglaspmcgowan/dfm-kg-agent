@@ -1,0 +1,833 @@
+_neo4j_id,author_username,reputation,credibility_tier,user_type,accept_rate,profile_link
+author:BriBrain,BriBrain,11,low,registered,-1,https://engineering.stackexchange.com/users/21179/bribrain
+author:Entrepreneur,Entrepreneur,446,low,,-1,
+author:Brian Michalk,Brian Michalk,111,low,registered,-1,https://engineering.stackexchange.com/users/11243/brian-michalk
+author:Eph,Eph,1335,medium,registered,-1,https://engineering.stackexchange.com/users/1122/eph
+author:Sami Safarini,Sami Safarini,629,low,registered,-1,https://engineering.stackexchange.com/users/39623/sami-safarini
+author:danijar,danijar,299,low,,-1,
+author:ros666,ros666,1,low,registered,-1,https://robotics.stackexchange.com/users/36289/ros666
+author:user1814893,user1814893,131,low,registered,-1,https://engineering.stackexchange.com/users/13498/user1814893
+author:CaTx,CaTx,101,low,,-1,
+author:Gokce Mehmet AY,Gokce Mehmet AY,702,low,registered,-1,https://engineering.stackexchange.com/users/879/gokce-mehmet-ay
+author:spe4ker,spe4ker,409,low,registered,72,https://engineering.stackexchange.com/users/4088/spe4ker
+author:Albert H M,Albert H M,643,low,,-1,
+author:Jpe61,Jpe61,140,low,,-1,
+author:Arafat Asghar,Arafat Asghar,1,low,registered,-1,https://engineering.stackexchange.com/users/52539/arafat-asghar
+author:php_nub_qq,php_nub_qq,283,low,,-1,
+author:푸딩남작,푸딩남작,1,low,registered,-1,https://engineering.stackexchange.com/users/62725/%ed%91%b8%eb%94%a9%eb%82%a8%ec%9e%91
+author:C--,C--,45,low,,-1,
+author:vidarlo,vidarlo,140,low,registered,-1,https://engineering.stackexchange.com/users/12173/vidarlo
+author:Murali,Murali,1,low,registered,-1,https://engineering.stackexchange.com/users/47026/murali
+author:StayOnTarget,StayOnTarget,207,low,registered,-1,https://engineering.stackexchange.com/users/6489/stayontarget
+author:Greg Locock,Greg Locock,1332,medium,registered,-1,https://engineering.stackexchange.com/users/39973/greg-locock
+author:Italo Guedes,Italo Guedes,41,low,,-1,
+author:Ariser,Ariser,363,low,registered,67,https://engineering.stackexchange.com/users/3786/ariser
+author:user3614305,user3614305,31,low,registered,-1,https://engineering.stackexchange.com/users/5196/user3614305
+author:Robowizard,Robowizard,19,low,registered,-1,https://robotics.stackexchange.com/users/36979/robowizard
+author:Will.W,Will.W,117,low,registered,-1,https://engineering.stackexchange.com/users/512/will-w
+author:Perch Perkins,Perch Perkins,11,low,registered,-1,https://engineering.stackexchange.com/users/32558/perch-perkins
+author:CrimsonDark,CrimsonDark,123,low,registered,-1,https://engineering.stackexchange.com/users/27838/crimsondark
+author:Felix,Felix,151,low,registered,-1,https://engineering.stackexchange.com/users/2734/felix
+author:LiohAu,LiohAu,201,low,,-1,
+author:Pulkit Chaudhary,Pulkit Chaudhary,1,low,,-1,
+author:ARM_Breaker,ARM_Breaker,11,low,registered,-1,https://robotics.stackexchange.com/users/34686/arm-breaker
+author:Ron,Ron,101,low,registered,-1,https://engineering.stackexchange.com/users/42375/ron
+author:el-cheapo,el-cheapo,385,low,registered,-1,https://engineering.stackexchange.com/users/34112/el-cheapo
+author:geauser,geauser,103,low,registered,-1,https://engineering.stackexchange.com/users/29286/geauser
+author:Ellocomotive,Ellocomotive,279,low,registered,100,https://mechanics.stackexchange.com/users/4200/ellocomotive
+author:Ethan,Ethan,11,low,unregistered,-1,https://engineering.stackexchange.com/users/38185/ethan
+author:tinker102,tinker102,3,low,registered,-1,https://engineering.stackexchange.com/users/19989/tinker102
+author:Eric,Eric,111,low,registered,-1,https://engineering.stackexchange.com/users/64405/eric
+author:Shinu_John,Shinu_John,53,low,registered,-1,https://engineering.stackexchange.com/users/16206/shinu-john
+author:D. Richard,D. Richard,101,low,,-1,
+author:Craig Brown,Craig Brown,1,low,registered,-1,https://engineering.stackexchange.com/users/37044/craig-brown
+author:Allan Osborne,Allan Osborne,6749,medium,registered,-1,https://mechanics.stackexchange.com/users/3975/allan-osborne
+author:shocksofmighty,shocksofmighty,1,low,,-1,
+author:WildCat,WildCat,115,low,registered,-1,https://engineering.stackexchange.com/users/21445/wildcat
+author:user11449,user11449,19,low,unregistered,-1,https://engineering.stackexchange.com/users/11449/user11449
+author:Andy Braham,Andy Braham,131,low,,-1,
+author:david_10001,david_10001,275,low,registered,100,https://engineering.stackexchange.com/users/13810/david-10001
+author:Melanie,Melanie,211,low,registered,-1,https://engineering.stackexchange.com/users/23845/melanie
+author:Solar Mike,Solar Mike,34751,high,registered,-1,https://mechanics.stackexchange.com/users/10976/solar-mike
+author:Thomas Lukose,Thomas Lukose,1,low,,-1,
+author:DarkPh03n1X,DarkPh03n1X,141,low,registered,-1,https://engineering.stackexchange.com/users/37461/darkph03n1x
+author:Paul Uszak,Paul Uszak,926,low,registered,89,https://engineering.stackexchange.com/users/2947/paul-uszak
+author:Donald Gibson,Donald Gibson,1078,medium,registered,-1,https://engineering.stackexchange.com/users/7021/donald-gibson
+author:scriptfoo,scriptfoo,126,low,registered,-1,https://engineering.stackexchange.com/users/29696/scriptfoo
+author:Ram Rachum,Ram Rachum,289,low,registered,-1,https://engineering.stackexchange.com/users/11510/ram-rachum
+author:user1610950,user1610950,229,low,,-1,
+author:scrams,scrams,3,low,,-1,
+author:nicoguaro,nicoguaro,115,low,registered,-1,https://engineering.stackexchange.com/users/4753/nicoguaro
+author:Mason J,Mason J,1,low,registered,-1,https://engineering.stackexchange.com/users/54083/mason-j
+author:KDecker,KDecker,141,low,registered,-1,https://engineering.stackexchange.com/users/29302/kdecker
+author:Antek,Antek,131,low,registered,-1,https://engineering.stackexchange.com/users/1877/antek
+author:new2Ubuntu,new2Ubuntu,13,low,registered,-1,https://engineering.stackexchange.com/users/29448/new2ubuntu
+author:Joel Mason,Joel Mason,1,low,registered,-1,https://engineering.stackexchange.com/users/43770/joel-mason
+author:Ganesh Kumar,Ganesh Kumar,23,low,,-1,
+author:navidsafa,navidsafa,1,low,registered,-1,https://engineering.stackexchange.com/users/41597/navidsafa
+author:rmutalik,rmutalik,101,low,registered,-1,https://engineering.stackexchange.com/users/29449/rmutalik
+author:ratchet freak,ratchet freak,6872,medium,registered,-1,https://engineering.stackexchange.com/users/288/ratchet-freak
+author:elementiro,elementiro,305,low,registered,-1,https://engineering.stackexchange.com/users/33144/elementiro
+author:JMac,JMac,992,low,,-1,
+author:user63325,user63325,1,low,unregistered,-1,https://engineering.stackexchange.com/users/63325/user63325
+author:jpa,jpa,1963,medium,registered,-1,https://engineering.stackexchange.com/users/1290/jpa
+author:renegader11,renegader11,1,low,registered,-1,https://engineering.stackexchange.com/users/63888/renegader11
+author:Heatgunner,Heatgunner,221,low,registered,-1,https://mechanics.stackexchange.com/users/65157/heatgunner
+author:Flux,Flux,111,low,registered,-1,https://engineering.stackexchange.com/users/19669/flux
+author:ThePlanMan,ThePlanMan,133,low,registered,-1,https://engineering.stackexchange.com/users/3748/theplanman
+author:Y Anderson,Y Anderson,133,low,registered,-1,https://engineering.stackexchange.com/users/7993/y-anderson
+author:frodeborli,frodeborli,202,low,,-1,
+author:Smcc,Smcc,11,low,registered,-1,https://engineering.stackexchange.com/users/5718/smcc
+author:xchcui,xchcui,119,low,,-1,
+author:Buk,Buk,1,low,,-1,
+author:elano7,elano7,137,low,registered,-1,https://engineering.stackexchange.com/users/16984/elano7
+author:Rudra .G,Rudra .G,1,low,registered,-1,https://robotics.stackexchange.com/users/45134/rudra-g
+author:Mutant Bob,Mutant Bob,121,low,,-1,
+author:Kar,Kar,351,low,,-1,
+author:divinelemon,divinelemon,103,low,,-1,
+author:Nubnubbud,Nubnubbud,11,low,,-1,
+author:Shawn Laughlin,Shawn Laughlin,33,low,registered,-1,https://engineering.stackexchange.com/users/4755/shawn-laughlin
+author:RLil,RLil,11,low,registered,-1,https://engineering.stackexchange.com/users/16491/rlil
+author:Cheyne Bodington,Cheyne Bodington,1,low,unregistered,-1,https://robotics.stackexchange.com/users/24404/cheyne-bodington
+author:Christophe Gudlake,Christophe Gudlake,131,low,registered,-1,https://engineering.stackexchange.com/users/18657/christophe-gudlake
+author:efaa,efaa,13,low,,-1,
+author:Dale Mahalko,Dale Mahalko,226,low,registered,-1,https://engineering.stackexchange.com/users/3126/dale-mahalko
+author:noob life,noob life,11,low,,-1,
+author:HJCee,HJCee,113,low,registered,-1,https://engineering.stackexchange.com/users/1161/hjcee
+author:Fedor,Fedor,11,low,,-1,
+author:User2341,User2341,313,low,,-1,
+author:user37101,user37101,1,low,,-1,
+author:nick carraway,nick carraway,53,low,registered,-1,https://engineering.stackexchange.com/users/9573/nick-carraway
+author:Jim Fred,Jim Fred,11,low,unregistered,-1,https://engineering.stackexchange.com/users/11292/jim-fred
+author:Futurologist,Futurologist,226,low,registered,-1,https://engineering.stackexchange.com/users/27999/futurologist
+author:Shanki Bansal,Shanki Bansal,99,low,registered,-1,https://engineering.stackexchange.com/users/11212/shanki-bansal
+author:DeltaG,DeltaG,123,low,,-1,
+author:alexander,alexander,31,low,unregistered,-1,https://mechanics.stackexchange.com/users/35362/alexander
+author:stonecharioteer,stonecharioteer,141,low,registered,-1,https://engineering.stackexchange.com/users/4885/stonecharioteer
+author:Youssef Mohamed,Youssef Mohamed,173,low,registered,-1,https://engineering.stackexchange.com/users/36267/youssef-mohamed
+author:B.Shiff,B.Shiff,26,low,,-1,
+author:tonys,tonys,111,low,registered,-1,https://engineering.stackexchange.com/users/11760/tonys
+author:offgrid8,offgrid8,73,low,registered,-1,https://robotics.stackexchange.com/users/32836/offgrid8
+author:Greg Marsh,Greg Marsh,612,low,,-1,
+author:Ben Aston,Ben Aston,101,low,,-1,
+author:sultan,sultan,131,low,registered,-1,https://engineering.stackexchange.com/users/4872/sultan
+author:Daniel H.,Daniel H.,51,low,registered,-1,https://engineering.stackexchange.com/users/19438/daniel-h
+author:Mechanician,Mechanician,146,low,registered,-1,https://engineering.stackexchange.com/users/42306/mechanician
+author:Nick Chernuha,Nick Chernuha,75,low,registered,-1,https://engineering.stackexchange.com/users/24318/nick-chernuha
+author:PaulB,PaulB,151,low,registered,-1,https://engineering.stackexchange.com/users/4751/paulb
+author:useless-machine,useless-machine,894,low,registered,-1,https://engineering.stackexchange.com/users/8216/useless-machine
+author:nshoo,nshoo,111,low,,-1,
+author:Darren Simms,Darren Simms,1,low,registered,-1,https://engineering.stackexchange.com/users/57937/darren-simms
+author:pencerw,pencerw,41,low,registered,-1,https://engineering.stackexchange.com/users/24577/pencerw
+author:Rich,Rich,795,low,registered,-1,https://engineering.stackexchange.com/users/47141/rich
+author:Chris H,Chris H,829,low,registered,-1,https://mechanics.stackexchange.com/users/9374/chris-h
+author:Aditya Singh,Aditya Singh,11,low,registered,-1,https://engineering.stackexchange.com/users/31114/aditya-singh
+author:RichardAshAudacity,RichardAshAudacity,11,low,registered,-1,https://engineering.stackexchange.com/users/36023/richardashaudacity
+author:Pᴀᴜʟsᴛᴇʀ2,Pᴀᴜʟsᴛᴇʀ2,168411,high,moderator,93,https://mechanics.stackexchange.com/users/4152/p%e1%b4%80%e1%b4%9c%ca%9fs%e1%b4%9b%e1%b4%87%ca%802
+author:Sam,Sam,123,low,registered,-1,https://engineering.stackexchange.com/users/2624/sam
+author:Nathan Knutson,Nathan Knutson,115,low,,-1,
+author:user10192706,user10192706,1,low,registered,-1,https://engineering.stackexchange.com/users/21688/user10192706
+author:fragile-code,fragile-code,101,low,registered,-1,https://engineering.stackexchange.com/users/26386/fragile-code
+author:Ahmed,Ahmed,151,low,registered,-1,https://engineering.stackexchange.com/users/14893/ahmed
+author:janisa9,janisa9,-1,low,does_not_exist,-1,
+author:James Elder,James Elder,141,low,registered,-1,https://engineering.stackexchange.com/users/10772/james-elder
+author:Aram Alvarez,Aram Alvarez,3376,medium,,-1,
+author:LisaD,LisaD,1,low,unregistered,-1,https://engineering.stackexchange.com/users/56421/lisad
+author:Bizz Keryear,Bizz Keryear,1,low,registered,-1,https://engineering.stackexchange.com/users/47427/bizz-keryear
+author:ls91,ls91,1,low,,-1,
+author:WnGatRC456,WnGatRC456,162,low,registered,-1,https://engineering.stackexchange.com/users/18234/wngatrc456
+author:DJG,DJG,141,low,registered,-1,https://engineering.stackexchange.com/users/12968/djg
+author:Techrocket9,Techrocket9,103,low,,-1,
+author:ericnutsch,ericnutsch,8325,medium,registered,67,https://engineering.stackexchange.com/users/2819/ericnutsch
+author:Andy Ayr,Andy Ayr,232,low,registered,-1,https://engineering.stackexchange.com/users/24680/andy-ayr
+author:enea19,enea19,137,low,,-1,
+author:vasiqshair,vasiqshair,21,low,,-1,
+author:Beraben Systems,Beraben Systems,11,low,,-1,
+author:user3408085,user3408085,86,low,registered,-1,https://engineering.stackexchange.com/users/17286/user3408085
+author:Cyril_engineeringSE,Cyril_engineeringSE,43,low,,-1,
+author:Jonathan,Jonathan,1,low,,-1,
+author:user22356,user22356,103,low,registered,-1,https://engineering.stackexchange.com/users/2380/user22356
+author:RowanP,RowanP,339,low,,-1,
+author:Rick,Rick,155,low,registered,-1,https://engineering.stackexchange.com/users/17903/rick
+author:Greenonline,Greenonline,297,low,registered,-1,https://engineering.stackexchange.com/users/5899/greenonline
+author:runcyclexcski,runcyclexcski,58,low,registered,-1,https://engineering.stackexchange.com/users/35209/runcyclexcski
+author:Aaron Kimball,Aaron Kimball,105,low,,-1,
+author:blacksmith37,blacksmith37,6222,medium,registered,-1,https://engineering.stackexchange.com/users/11628/blacksmith37
+author:pixelpoems.de,pixelpoems.de,153,low,registered,-1,https://engineering.stackexchange.com/users/35884/pixelpoems-de
+author:sebastian323,sebastian323,120,low,registered,-1,https://engineering.stackexchange.com/users/39832/sebastian323
+author:AKKK24X7,AKKK24X7,11,low,,-1,
+author:Jagerber48,Jagerber48,143,low,registered,-1,https://engineering.stackexchange.com/users/18365/jagerber48
+author:Harsh Dobariya,Harsh Dobariya,101,low,,-1,
+author:user234324,user234324,11,low,registered,-1,https://engineering.stackexchange.com/users/39924/user234324
+author:Hobbes,Hobbes,746,low,registered,-1,https://engineering.stackexchange.com/users/11645/hobbes
+author:ravi,ravi,1,low,,-1,
+author:kene02,kene02,103,low,registered,-1,https://engineering.stackexchange.com/users/33590/kene02
+author:jimmymustang06,jimmymustang06,91,low,registered,-1,https://engineering.stackexchange.com/users/29952/jimmymustang06
+author:Tiger Guy,Tiger Guy,7801,medium,registered,-1,https://engineering.stackexchange.com/users/24351/tiger-guy
+author:berntyy,berntyy,1,low,registered,-1,https://robotics.stackexchange.com/users/36315/berntyy
+author:user7387653,user7387653,3,low,registered,-1,https://engineering.stackexchange.com/users/9508/user7387653
+author:NGrimberg,NGrimberg,25,low,registered,-1,https://engineering.stackexchange.com/users/28571/ngrimberg
+author:Slovakov,Slovakov,171,low,registered,-1,https://engineering.stackexchange.com/users/369/slovakov
+author:jessegerritsen,jessegerritsen,49,low,registered,-1,https://engineering.stackexchange.com/users/39168/jessegerritsen
+author:MechanicalMan,MechanicalMan,378,low,,-1,
+author:user391339,user391339,273,low,registered,-1,https://engineering.stackexchange.com/users/21120/user391339
+author:Golightly,Golightly,29,low,registered,-1,https://engineering.stackexchange.com/users/9143/golightly
+author:chaNcharge,chaNcharge,103,low,registered,-1,https://engineering.stackexchange.com/users/17965/chancharge
+author:Wei Xun He,Wei Xun He,11,low,,-1,
+author:CL40,CL40,283,low,registered,-1,https://engineering.stackexchange.com/users/18508/cl40
+author:Bob Warfield,Bob Warfield,71,low,registered,-1,https://robotics.stackexchange.com/users/15262/bob-warfield
+author:smollma,smollma,299,low,registered,-1,https://engineering.stackexchange.com/users/13673/smollma
+author:waspinator,waspinator,103,low,registered,-1,https://engineering.stackexchange.com/users/12222/waspinator
+author:QuadMcFly,QuadMcFly,141,low,registered,-1,https://robotics.stackexchange.com/users/24493/quadmcfly
+author:Marawan Hany,Marawan Hany,1,low,registered,-1,https://engineering.stackexchange.com/users/76762/marawan-hany
+author:user319862,user319862,111,low,,-1,
+author:Daneolog,Daneolog,131,low,registered,-1,https://engineering.stackexchange.com/users/33034/daneolog
+author:Brock Adams,Brock Adams,223,low,,-1,
+author:WKleinberg,WKleinberg,181,low,,-1,
+author:user3189626,user3189626,3,low,registered,-1,https://engineering.stackexchange.com/users/7223/user3189626
+author:ryan0270,ryan0270,2814,medium,,-1,
+author:Catherine,Catherine,131,low,,-1,
+author:user_1818839,user_1818839,1640,medium,,-1,
+author:Drew,Drew,2325,medium,moderator,-1,https://engineering.stackexchange.com/users/20490/drew
+author:Setdesigner,Setdesigner,11,low,,-1,
+author:Katarina,Katarina,324,low,registered,-1,https://engineering.stackexchange.com/users/13748/katarina
+author:Chuck,Chuck,16320,high,moderator,-1,https://robotics.stackexchange.com/users/9720/chuck
+author:user3352632,user3352632,169,low,registered,-1,https://engineering.stackexchange.com/users/14138/user3352632
+author:Tony ,Tony ,27,low,registered,-1,https://engineering.stackexchange.com/users/19071/tony
+author:Mauro Arcidiacono,Mauro Arcidiacono,1,low,registered,-1,https://engineering.stackexchange.com/users/53257/mauro-arcidiacono
+author:Newbie Noob,Newbie Noob,221,low,,-1,
+author:Hampus,Hampus,139,low,registered,-1,https://engineering.stackexchange.com/users/9188/hampus
+author:user148298,user148298,160,low,registered,-1,https://engineering.stackexchange.com/users/2248/user148298
+author:am304,am304,1841,medium,registered,50,https://engineering.stackexchange.com/users/334/am304
+author:cjenkins08,cjenkins08,1,low,,-1,
+author:TDHofstetter,TDHofstetter,101,low,registered,-1,https://robotics.stackexchange.com/users/27642/tdhofstetter
+author:Stephen,Stephen,31,low,registered,-1,https://robotics.stackexchange.com/users/21669/stephen
+author:gunter,gunter,321,low,registered,83,https://engineering.stackexchange.com/users/11039/gunter
+author:SAMI HASAN,SAMI HASAN,111,low,registered,-1,https://robotics.stackexchange.com/users/23645/sami-hasan
+author:hildred,hildred,206,low,registered,-1,https://engineering.stackexchange.com/users/803/hildred
+author:Travis T,Travis T,103,low,registered,25,https://engineering.stackexchange.com/users/8563/travis-t
+author:phreed,phreed,103,low,registered,-1,https://robotics.stackexchange.com/users/11047/phreed
+author:h22,h22,179,low,registered,-1,https://engineering.stackexchange.com/users/4835/h22
+author:Daniel Girardeau-Montaut,Daniel Girardeau-Montaut,1,low,registered,-1,https://engineering.stackexchange.com/users/22800/daniel-girardeau-montaut
+author:albseb,albseb,89,low,,-1,
+author:user402525,user402525,135,low,registered,-1,https://engineering.stackexchange.com/users/31218/user402525
+author:Zenzs,Zenzs,36,low,registered,-1,https://engineering.stackexchange.com/users/14451/zenzs
+author:Kevin Krumwiede,Kevin Krumwiede,467,low,registered,-1,https://engineering.stackexchange.com/users/2140/kevin-krumwiede
+author:Kaspars Andins,Kaspars Andins,1,low,,-1,
+author:Max Corbeau,Max Corbeau,111,low,,-1,
+author:G&#252;rkan &#199;etin,G&#252;rkan &#199;etin,906,low,,-1,
+author:Ashmark,Ashmark,134,low,registered,-1,https://engineering.stackexchange.com/users/27694/ashmark
+author:squarewav,squarewav,121,low,registered,-1,https://engineering.stackexchange.com/users/7727/squarewav
+author:Homunculus Reticulli,Homunculus Reticulli,367,low,,-1,
+author:Kunal Kumar,Kunal Kumar,11,low,registered,-1,https://engineering.stackexchange.com/users/33813/kunal-kumar
+author:SparseSolverCodes,SparseSolverCodes,21,low,,-1,
+author:LazyReader,LazyReader,635,low,registered,-1,https://engineering.stackexchange.com/users/30410/lazyreader
+author:Chris James,Chris James,11,low,,-1,
+author:Joe Beck,Joe Beck,101,low,registered,-1,https://engineering.stackexchange.com/users/28354/joe-beck
+author:ARJ,ARJ,115,low,registered,-1,https://engineering.stackexchange.com/users/20849/arj
+author:NeStack,NeStack,101,low,registered,-1,https://engineering.stackexchange.com/users/20173/nestack
+author:Kurt Schaefer,Kurt Schaefer,1,low,,-1,
+author:kellogs,kellogs,129,low,registered,-1,https://engineering.stackexchange.com/users/3412/kellogs
+author:Philip C,Philip C,21,low,registered,-1,https://engineering.stackexchange.com/users/24864/philip-c
+author:DJpotato,DJpotato,61,low,,-1,
+author:VoidShredder,VoidShredder,23,low,,-1,
+author:AndyZe,AndyZe,1003,medium,registered,-1,https://robotics.stackexchange.com/users/35238/andyze
+author:Iskander,Iskander,1,low,registered,-1,https://engineering.stackexchange.com/users/44180/iskander
+author:personal privacy advocate,personal privacy advocate,141,low,registered,-1,https://engineering.stackexchange.com/users/6915/personal-privacy-advocate
+author:Kutsubato,Kutsubato,23,low,,-1,
+author:Cletus,Cletus,9,low,registered,-1,https://engineering.stackexchange.com/users/48922/cletus
+author:Ben Trettel,Ben Trettel,996,low,registered,-1,https://engineering.stackexchange.com/users/49/ben-trettel
+author:Lewis Kelsey,Lewis Kelsey,111,low,registered,-1,https://engineering.stackexchange.com/users/38377/lewis-kelsey
+author:Dzyuv001,Dzyuv001,101,low,registered,-1,https://engineering.stackexchange.com/users/74519/dzyuv001
+author:jjpprr,jjpprr,13,low,registered,-1,https://engineering.stackexchange.com/users/23092/jjpprr
+author:Nyxynyx,Nyxynyx,101,low,registered,-1,https://engineering.stackexchange.com/users/13312/nyxynyx
+author:Bryan,Bryan,9,low,unregistered,-1,https://engineering.stackexchange.com/users/16396/bryan
+author:Michael Fakhoury,Michael Fakhoury,21,low,registered,-1,https://engineering.stackexchange.com/users/40809/michael-fakhoury
+author:galtor,galtor,181,low,,-1,
+author:Hasan D.,Hasan D.,3,low,registered,-1,https://engineering.stackexchange.com/users/41832/hasan-d
+author:user1213,user1213,-1,low,,-1,
+author:Mark Main,Mark Main,111,low,registered,-1,https://engineering.stackexchange.com/users/8189/mark-main
+author:Eric S,Eric S,915,low,registered,-1,https://engineering.stackexchange.com/users/9506/eric-s
+author:rfii,rfii,123,low,registered,-1,https://engineering.stackexchange.com/users/30371/rfii
+author:fred_dot_u,fred_dot_u,7552,medium,registered,-1,https://engineering.stackexchange.com/users/13297/fred-dot-u
+author:user3505140,user3505140,1,low,,-1,
+author:user41693,user41693,11,low,,-1,
+author:dcpria,dcpria,51,low,registered,-1,https://robotics.stackexchange.com/users/9589/dcpria
+author:BrianB,BrianB,41,low,,-1,
+author:J. Barca,J. Barca,111,low,registered,-1,https://engineering.stackexchange.com/users/29681/j-barca
+author:Zyleyus,Zyleyus,31,low,registered,-1,https://engineering.stackexchange.com/users/41133/zyleyus
+author:Mr.J 01,Mr.J 01,1,low,,-1,
+author:danzimmerman,danzimmerman,1031,medium,registered,-1,https://robotics.stackexchange.com/users/33390/danzimmerman
+author:Yuanqi Chau,Yuanqi Chau,11,low,registered,-1,https://engineering.stackexchange.com/users/32817/yuanqi-chau
+author:gimmegimme,gimmegimme,143,low,,-1,
+author:Ryan Griffith,Ryan Griffith,163,low,,-1,
+author:Ethan48,Ethan48,4571,medium,registered,67,https://engineering.stackexchange.com/users/122/ethan48
+author:Viktor Hedefalk,Viktor Hedefalk,111,low,registered,-1,https://engineering.stackexchange.com/users/19072/viktor-hedefalk
+author:YorkshireDave,YorkshireDave,21,low,,-1,
+author:JC ME,JC ME,170,low,registered,-1,https://engineering.stackexchange.com/users/21194/jc-me
+author:birdman3131,birdman3131,151,low,,-1,
+author:user1253692,user1253692,1,low,registered,-1,https://robotics.stackexchange.com/users/7105/user1253692
+author:Gwydionforge,Gwydionforge,452,low,registered,-1,https://engineering.stackexchange.com/users/10516/gwydionforge
+author:Martin,Martin,8669,medium,registered,100,https://mechanics.stackexchange.com/users/19901/martin
+author:DaveM2,DaveM2,84,low,,-1,
+author:Chris Johns,Chris Johns,15326,high,registered,-1,https://engineering.stackexchange.com/users/4357/chris-johns
+author:Peter Galambos,Peter Galambos,-1,low,does_not_exist,-1,
+author:Marco,Marco,189,low,registered,-1,https://engineering.stackexchange.com/users/8198/marco
+author:DrMrstheMonarch,DrMrstheMonarch,729,low,registered,-1,https://engineering.stackexchange.com/users/14318/drmrsthemonarch
+author:Lein UP,Lein UP,1,low,,-1,
+author:Matt,Matt,3,low,unregistered,-1,https://robotics.stackexchange.com/users/24239/matt
+author:William,William,166,low,registered,-1,https://engineering.stackexchange.com/users/25255/william
+author:Rumham,Rumham,21,low,,-1,
+author:Roland Kwee,Roland Kwee,115,low,,-1,
+author:DLS3141,DLS3141,2165,medium,registered,-1,https://engineering.stackexchange.com/users/2061/dls3141
+author:Phil Sweet,Phil Sweet,5264,medium,registered,-1,https://engineering.stackexchange.com/users/12754/phil-sweet
+author:Nick Bowyer,Nick Bowyer,1,low,,-1,
+author:user19816,user19816,1,low,unregistered,-1,https://engineering.stackexchange.com/users/19816/user19816
+author:Jedi Engineer,Jedi Engineer,145,low,,-1,
+author:matty_eng123,matty_eng123,13,low,registered,-1,https://engineering.stackexchange.com/users/33882/matty-eng123
+author:alephzero,alephzero,12568,high,registered,-1,https://engineering.stackexchange.com/users/683/alephzero
+author:pinq-,pinq-,101,low,registered,-1,https://engineering.stackexchange.com/users/6971/pinq
+author:Jaivishnu,Jaivishnu,111,low,registered,-1,https://engineering.stackexchange.com/users/24267/jaivishnu
+author:artem,artem,111,low,registered,-1,https://engineering.stackexchange.com/users/42296/artem
+author:Dale,Dale,193,low,registered,25,https://engineering.stackexchange.com/users/4214/dale
+author:Thomas McKelvey,Thomas McKelvey,101,low,,-1,
+author:孙传军,孙传军,11,low,registered,-1,https://engineering.stackexchange.com/users/41296/%e5%ad%99%e4%bc%a0%e5%86%9b
+author:4LPH4NUM3R1C,4LPH4NUM3R1C,66,low,registered,-1,https://engineering.stackexchange.com/users/9433/4lph4num3r1c
+author:user2475096,user2475096,111,low,,-1,
+author:Soonmyun Jang,Soonmyun Jang,105,low,registered,-1,https://robotics.stackexchange.com/users/23802/soonmyun-jang
+author:AdamSorrel,AdamSorrel,-1,low,does_not_exist,-1,
+author:Xaser,Xaser,103,low,,-1,
+author:amathia,amathia,1,low,,-1,
+author:Bernd,Bernd,11,low,unregistered,-1,https://engineering.stackexchange.com/users/4871/bernd
+author:NMech,NMech,24370,high,registered,-1,https://engineering.stackexchange.com/users/19906/nmech
+author:Khushal Badhan,Khushal Badhan,11,low,registered,-1,https://engineering.stackexchange.com/users/15698/khushal-badhan
+author:JustBeingHelpful,JustBeingHelpful,113,low,,-1,
+author:BarbalatsDilemma,BarbalatsDilemma,1210,medium,registered,-1,https://engineering.stackexchange.com/users/6695/barbalatsdilemma
+author:mix_dimmens,mix_dimmens,1,low,registered,-1,https://engineering.stackexchange.com/users/35164/mix-dimmens
+author:Colgate2004,Colgate2004,1,low,registered,-1,https://engineering.stackexchange.com/users/41506/colgate2004
+author:Sazedur Rahman,Sazedur Rahman,1,low,,-1,
+author:Omry Heller,Omry Heller,33,low,registered,-1,https://engineering.stackexchange.com/users/26435/omry-heller
+author:Omar,Omar,1,low,,-1,
+author:Alejandro Guzman,Alejandro Guzman,13,low,,-1,
+author:Mark Morgan Lloyd,Mark Morgan Lloyd,231,low,registered,-1,https://engineering.stackexchange.com/users/28873/mark-morgan-lloyd
+author:learnvst,learnvst,163,low,,-1,
+author:ahm_zahran,ahm_zahran,121,low,registered,-1,https://engineering.stackexchange.com/users/16505/ahm-zahran
+author:computercarguy,computercarguy,221,low,registered,-1,https://engineering.stackexchange.com/users/16686/computercarguy
+author:Huang,Huang,131,low,registered,-1,https://engineering.stackexchange.com/users/7460/huang
+author:Federico,Federico,113,low,registered,-1,https://engineering.stackexchange.com/users/32677/federico
+author:Braden E Peterson,Braden E Peterson,1,low,unregistered,-1,https://engineering.stackexchange.com/users/63243/braden-e-peterson
+author:user8908459,user8908459,163,low,,-1,
+author:Hamza Zaheer,Hamza Zaheer,1,low,registered,-1,https://engineering.stackexchange.com/users/40103/hamza-zaheer
+author:Fim Terris,Fim Terris,31,low,registered,-1,https://engineering.stackexchange.com/users/38807/fim-terris
+author:Ryan Feeley,Ryan Feeley,121,low,registered,-1,https://engineering.stackexchange.com/users/37260/ryan-feeley
+author:Jesse RJ,Jesse RJ,21,low,registered,-1,https://engineering.stackexchange.com/users/3683/jesse-rj
+author:Michael M,Michael M,121,low,,-1,
+author:fftk4323,fftk4323,71,low,registered,-1,https://engineering.stackexchange.com/users/3976/fftk4323
+author:sgwilliams,sgwilliams,76,low,,-1,
+author:hazzey,hazzey,10740,high,registered,49,https://engineering.stackexchange.com/users/33/hazzey
+author:Josie Colclough,Josie Colclough,41,low,registered,-1,https://engineering.stackexchange.com/users/6056/josie-colclough
+author:Teyash Arjun,Teyash Arjun,109,low,,-1,
+author:3Dave,3Dave,111,low,registered,-1,https://engineering.stackexchange.com/users/13612/3dave
+author:Karl Wolfschtagg,Karl Wolfschtagg,101,low,registered,-1,https://engineering.stackexchange.com/users/58010/karl-wolfschtagg
+author:Flywheel,Flywheel,21,low,,-1,
+author:Trolobezka,Trolobezka,13,low,,-1,
+author:hend,hend,11,low,,-1,
+author:Anivarth,Anivarth,139,low,registered,-1,https://engineering.stackexchange.com/users/24160/anivarth
+author:David Jiř&#237;ček,David Jiř&#237;ček,21,low,,-1,
+author:Naseeb Gill,Naseeb Gill,111,low,registered,-1,https://engineering.stackexchange.com/users/7235/naseeb-gill
+author:Shmulik e,Shmulik e,1,low,registered,-1,https://engineering.stackexchange.com/users/40954/shmulik-e
+author:CCTO,CCTO,1,low,registered,-1,https://engineering.stackexchange.com/users/38581/ccto
+author:laurens van Lieshout,laurens van Lieshout,165,low,registered,-1,https://engineering.stackexchange.com/users/29963/laurens-van-lieshout
+author:alexp9,alexp9,115,low,registered,-1,https://engineering.stackexchange.com/users/34913/alexp9
+author:CraigC,CraigC,125,low,,-1,
+author:User198,User198,125,low,registered,-1,https://engineering.stackexchange.com/users/41417/user198
+author:SF.,SF.,6115,medium,registered,80,https://engineering.stackexchange.com/users/203/sf
+author:Maxence,Maxence,225,low,registered,-1,https://engineering.stackexchange.com/users/4428/maxence
+author:Superuser,Superuser,121,low,registered,-1,https://engineering.stackexchange.com/users/25006/superuser
+author:Vladislav Merson,Vladislav Merson,1,low,registered,-1,https://engineering.stackexchange.com/users/20034/vladislav-merson
+author:EngineerOfAllThings,EngineerOfAllThings,16,low,registered,-1,https://engineering.stackexchange.com/users/24734/engineerofallthings
+author:EVARATE,EVARATE,11,low,registered,-1,https://engineering.stackexchange.com/users/35449/evarate
+author:Involute,Involute,1347,medium,,-1,
+author:regdoug,regdoug,1167,medium,registered,-1,https://engineering.stackexchange.com/users/709/regdoug
+author:jayt,jayt,101,low,registered,-1,https://engineering.stackexchange.com/users/10688/jayt
+author:Mohammad Nayef,Mohammad Nayef,198,low,registered,-1,https://engineering.stackexchange.com/users/9537/mohammad-nayef
+author:neuronet,neuronet,233,low,registered,-1,https://robotics.stackexchange.com/users/13827/neuronet
+author:Yaniv Ben David,Yaniv Ben David,477,low,registered,-1,https://engineering.stackexchange.com/users/16860/yaniv-ben-david
+author:Allen,Allen,23,low,,-1,
+author:Gabe Morris,Gabe Morris,121,low,,-1,
+author:electricviolin,electricviolin,331,low,,-1,
+author:Brent1409,Brent1409,21,low,,-1,
+author:Isa,Isa,298,low,,-1,
+author:cwd,cwd,143,low,registered,-1,https://engineering.stackexchange.com/users/43/cwd
+author:JeffB,JeffB,121,low,registered,-1,https://engineering.stackexchange.com/users/37921/jeffb
+author:J D,J D,1,low,,-1,
+author:Jon Watte,Jon Watte,113,low,registered,-1,https://mechanics.stackexchange.com/users/1649/jon-watte
+author:minto,minto,103,low,registered,-1,https://engineering.stackexchange.com/users/3277/minto
+author:Greg,Greg,11,low,,-1,
+author:user6335,user6335,-1,low,does_not_exist,-1,
+author:Trung Nguyen,Trung Nguyen,21,low,registered,-1,https://engineering.stackexchange.com/users/5850/trung-nguyen
+author:S10,S10,81,low,,-1,
+author:Myles,Myles,205,low,registered,-1,https://engineering.stackexchange.com/users/869/myles
+author:Will Tierney,Will Tierney,1,low,registered,-1,https://engineering.stackexchange.com/users/61828/will-tierney
+author:jhabbott,jhabbott,5990,medium,,-1,
+author:PaulDriver,PaulDriver,1,low,,-1,
+author:Air,Air,3211,medium,registered,20,https://engineering.stackexchange.com/users/368/air
+author:Paul,Paul,113,low,,-1,
+author:user54719,user54719,1,low,,-1,
+author:AlcubierreDrive,AlcubierreDrive,288,low,,-1,
+author:Curiousmarble,Curiousmarble,3,low,registered,-1,https://robotics.stackexchange.com/users/27400/curiousmarble
+author:pennstump,pennstump,121,low,,-1,
+author:David F.,David F.,3,low,registered,-1,https://engineering.stackexchange.com/users/19052/david-f
+author:Mark,Mark,1061,medium,,-1,
+author:HyperdriveMacGee,HyperdriveMacGee,111,low,registered,-1,https://engineering.stackexchange.com/users/51552/hyperdrivemacgee
+author:John Smith,John Smith,105,low,,-1,
+author:juniorsworld,juniorsworld,61,low,,-1,
+author:Richard,Richard,103,low,,-1,
+author:Sandon,Sandon,21,low,registered,-1,https://engineering.stackexchange.com/users/9186/sandon
+author:Leafk,Leafk,355,low,,-1,
+author:el-ss,el-ss,31,low,registered,-1,https://engineering.stackexchange.com/users/20064/el-ss
+author:Edgar,Edgar,113,low,,-1,
+author:One Way,One Way,1,low,registered,-1,https://engineering.stackexchange.com/users/54018/one-way
+author:elmuerto,elmuerto,3,low,registered,-1,https://engineering.stackexchange.com/users/19749/elmuerto
+author:loStraniero,loStraniero,187,low,registered,-1,https://engineering.stackexchange.com/users/27261/lostraniero
+author:Theodore Packard,Theodore Packard,31,low,,-1,
+author:Dims,Dims,213,low,registered,-1,https://engineering.stackexchange.com/users/24724/dims
+author:ashur668,ashur668,58,low,registered,-1,https://engineering.stackexchange.com/users/6956/ashur668
+author:David,David,101,low,,-1,
+author:CharlieRB,CharlieRB,9040,medium,,-1,
+author:Akash,Akash,41,low,registered,-1,https://engineering.stackexchange.com/users/31152/akash
+author:DailyReader,DailyReader,13,low,,-1,
+author:Ben Porter,Ben Porter,1,low,,-1,
+author:Georg W.,Georg W.,101,low,registered,-1,https://engineering.stackexchange.com/users/23415/georg-w
+author:alqaadi,alqaadi,1,low,,-1,
+author:Thriftie,Thriftie,21,low,,-1,
+author:user1302,user1302,29,low,unregistered,-1,https://engineering.stackexchange.com/users/1302/user1302
+author:carveone,carveone,347,low,registered,75,https://engineering.stackexchange.com/users/2555/carveone
+author:dinesh,dinesh,-1,low,does_not_exist,-1,
+author:Erithax,Erithax,3,low,registered,-1,https://engineering.stackexchange.com/users/33393/erithax
+author:blazingcannon,blazingcannon,121,low,registered,-1,https://engineering.stackexchange.com/users/20285/blazingcannon
+author:User1974,User1974,523,low,registered,100,https://engineering.stackexchange.com/users/10536/user1974
+author:Marian Paździoch,Marian Paździoch,271,low,,-1,
+author:John Doe,John Doe,101,low,registered,-1,https://engineering.stackexchange.com/users/47504/john-doe
+author:Craig Bennett II,Craig Bennett II,1,low,registered,-1,https://engineering.stackexchange.com/users/24269/craig-bennett-ii
+author:tolis,tolis,21,low,registered,-1,https://robotics.stackexchange.com/users/42960/tolis
+author:agentp,agentp,949,low,registered,-1,https://engineering.stackexchange.com/users/7461/agentp
+author:A Gomez,A Gomez,1,low,,-1,
+author:r-bryan,r-bryan,1401,medium,registered,-1,https://robotics.stackexchange.com/users/27618/r-bryan
+author:Jon Cage,Jon Cage,121,low,registered,-1,https://engineering.stackexchange.com/users/10517/jon-cage
+author:Ganish Ananth,Ganish Ananth,9,low,registered,-1,https://engineering.stackexchange.com/users/34486/ganish-ananth
+author:Andy Dent,Andy Dent,141,low,registered,-1,https://mechanics.stackexchange.com/users/7719/andy-dent
+author:prclinks,prclinks,31,low,,-1,
+author:Z_bruh,Z_bruh,21,low,unregistered,-1,https://engineering.stackexchange.com/users/65516/z-bruh
+author:Lefty,Lefty,237,low,registered,-1,https://engineering.stackexchange.com/users/2162/lefty
+author:Questions,Questions,3,low,registered,-1,https://engineering.stackexchange.com/users/38623/questions
+author:TimWescott,TimWescott,3044,medium,registered,-1,https://engineering.stackexchange.com/users/19776/timwescott
+author:Cecil Merrell,Cecil Merrell,101,low,registered,-1,https://robotics.stackexchange.com/users/7819/cecil-merrell
+author:hauptmech,hauptmech,4485,medium,registered,-1,https://robotics.stackexchange.com/users/184/hauptmech
+author:Chris Schmitz,Chris Schmitz,141,low,registered,-1,https://engineering.stackexchange.com/users/17325/chris-schmitz
+author:Biswajit Banerjee,Biswajit Banerjee,1453,medium,registered,-1,https://engineering.stackexchange.com/users/3488/biswajit-banerjee
+author:Ricardo Veloz Jr,Ricardo Veloz Jr,133,low,registered,-1,https://engineering.stackexchange.com/users/5312/ricardo-veloz-jr
+author:DKNguyen,DKNguyen,5659,medium,registered,-1,https://engineering.stackexchange.com/users/19778/dknguyen
+author:Craig Ringer,Craig Ringer,101,low,,-1,
+author:physicsboy,physicsboy,121,low,,-1,
+author:Brian Bell,Brian Bell,13,low,registered,-1,https://engineering.stackexchange.com/users/46003/brian-bell
+author:Rob,Rob,522,low,registered,-1,https://engineering.stackexchange.com/users/14556/rob
+author:Anniepoo,Anniepoo,161,low,,-1,
+author:bobtato,bobtato,161,low,,-1,
+author:fc25e,fc25e,3,low,,-1,
+author:Andrew.Wolphoe,Andrew.Wolphoe,101,low,,-1,
+author:ConjuringFrictionForces,ConjuringFrictionForces,700,low,registered,-1,https://engineering.stackexchange.com/users/7430/conjuringfrictionforces
+author:Stefan Merfu,Stefan Merfu,135,low,registered,-1,https://engineering.stackexchange.com/users/3807/stefan-merfu
+author:Red Dwarf,Red Dwarf,113,low,registered,-1,https://engineering.stackexchange.com/users/9311/red-dwarf
+author:Angus Murray,Angus Murray,47,low,,-1,
+author:bandybabboon,bandybabboon,111,low,,-1,
+author:World,World,111,low,registered,-1,https://robotics.stackexchange.com/users/2761/world
+author:eatscrayons,eatscrayons,726,low,,-1,
+author:hepe,hepe,61,low,,-1,
+author:Ingo,Ingo,191,low,,-1,
+author:ZOus7,ZOus7,3,low,,-1,
+author:Jirka Martinec,Jirka Martinec,11,low,registered,-1,https://engineering.stackexchange.com/users/45489/jirka-martinec
+author:sidd200970,sidd200970,11,low,registered,-1,https://engineering.stackexchange.com/users/41246/sidd200970
+author:user17332,user17332,-1,low,does_not_exist,-1,
+author:50k4,50k4,6712,medium,registered,-1,https://robotics.stackexchange.com/users/10748/50k4
+author:HandyHowie,HandyHowie,25736,high,registered,-1,https://mechanics.stackexchange.com/users/11847/handyhowie
+author:BillyBag2,BillyBag2,111,low,registered,-1,https://engineering.stackexchange.com/users/10421/billybag2
+author:Sharath Chandar,Sharath Chandar,11,low,registered,-1,https://engineering.stackexchange.com/users/12647/sharath-chandar
+author:Harper - Reinstate Monica,Harper - Reinstate Monica,1730,medium,registered,-1,https://engineering.stackexchange.com/users/11673/harper-reinstate-monica
+author:Abdullah Yasin,Abdullah Yasin,9,low,registered,-1,https://engineering.stackexchange.com/users/28363/abdullah-yasin
+author:Scrapper,Scrapper,11,low,registered,-1,https://engineering.stackexchange.com/users/9273/scrapper
+author:user21,user21,109,low,registered,-1,https://engineering.stackexchange.com/users/14867/user21
+author:Vladimir Bershov,Vladimir Bershov,133,low,registered,-1,https://engineering.stackexchange.com/users/27710/vladimir-bershov
+author:MrMike,MrMike,1,low,registered,-1,https://engineering.stackexchange.com/users/4246/mrmike
+author:flying_loaf_3,flying_loaf_3,115,low,,-1,
+author:uhoh,uhoh,430,low,registered,-1,https://engineering.stackexchange.com/users/6264/uhoh
+author:Tor Erik Haavik,Tor Erik Haavik,1,low,registered,-1,https://engineering.stackexchange.com/users/23775/tor-erik-haavik
+author:Matthew,Matthew,1,low,registered,-1,https://engineering.stackexchange.com/users/33295/matthew
+author:juggler,juggler,203,low,registered,25,https://engineering.stackexchange.com/users/13081/juggler
+author:David Bailey,David Bailey,517,low,registered,-1,https://engineering.stackexchange.com/users/36066/david-bailey
+author:user16,user16,-1,low,does_not_exist,-1,
+author:Zain Ul Abedin,Zain Ul Abedin,1,low,registered,-1,https://engineering.stackexchange.com/users/43991/zain-ul-abedin
+author:Arun John,Arun John,-1,low,,-1,
+author:Dean R,Dean R,1,low,registered,-1,https://engineering.stackexchange.com/users/23411/dean-r
+author:Benjamin,Benjamin,25,low,,-1,
+author:tharinduhd,tharinduhd,1,low,,-1,
+author:Anonymouse,Anonymouse,51,low,unregistered,-1,https://engineering.stackexchange.com/users/5781/anonymouse
+author:Jerry Coffin,Jerry Coffin,552,low,registered,-1,https://engineering.stackexchange.com/users/41368/jerry-coffin
+author:Alex Szatmary,Alex Szatmary,116,low,,-1,
+author:Matt Clark,Matt Clark,151,low,registered,-1,https://robotics.stackexchange.com/users/539/matt-clark
+author:JACK,JACK,471,low,registered,-1,https://engineering.stackexchange.com/users/21087/jack
+author:OpticalResonator,OpticalResonator,2008,medium,registered,-1,https://engineering.stackexchange.com/users/14629/opticalresonator
+author:Jim S.,Jim S.,298,low,registered,-1,https://engineering.stackexchange.com/users/3440/jim-s
+author:Kunal Vanjare,Kunal Vanjare,9,low,registered,-1,https://engineering.stackexchange.com/users/16020/kunal-vanjare
+author:PateshwarMaharaj,PateshwarMaharaj,11,low,registered,-1,https://engineering.stackexchange.com/users/23941/pateshwarmaharaj
+author:Steve Matthews,Steve Matthews,23494,high,,-1,
+author:Simon B,Simon B,214,low,,-1,
+author:enderland,enderland,151,low,registered,-1,https://engineering.stackexchange.com/users/4/enderland
+author:user33233,user33233,-1,low,does_not_exist,-1,
+author:MS-SPO,MS-SPO,201,low,,-1,
+author:huanyingkou,huanyingkou,1,low,,-1,
+author:Anonymous Penguin,Anonymous Penguin,599,low,,-1,
+author:chiral,chiral,1,low,registered,-1,https://engineering.stackexchange.com/users/32833/chiral
+author:GisMofx,GisMofx,1588,medium,registered,-1,https://engineering.stackexchange.com/users/2559/gismofx
+author:Daniel,Daniel,1,low,registered,-1,https://engineering.stackexchange.com/users/65649/daniel
+author:user3368561,user3368561,749,low,,-1,
+author:tectactoe,tectactoe,41,low,,-1,
+author:DragonflyRobotics,DragonflyRobotics,177,low,registered,-1,https://robotics.stackexchange.com/users/26747/dragonflyrobotics
+author:Kent,Kent,113,low,registered,-1,https://engineering.stackexchange.com/users/27376/kent
+author:kmartinho,kmartinho,26,low,,-1,
+author:Criggie,Criggie,3293,medium,registered,40,https://mechanics.stackexchange.com/users/12814/criggie
+author:joojaa,joojaa,3701,medium,registered,-1,https://engineering.stackexchange.com/users/1324/joojaa
+author:Josh,Josh,31,low,registered,-1,https://engineering.stackexchange.com/users/20894/josh
+author:Bennett Yeo,Bennett Yeo,152,low,registered,-1,https://engineering.stackexchange.com/users/3305/bennett-yeo
+author:J.Val&#225;šek,J.Val&#225;šek,1,low,registered,-1,https://engineering.stackexchange.com/users/19378/j-val%c3%a1%c5%a1ek
+author:Fulano,Fulano,51,low,registered,-1,https://engineering.stackexchange.com/users/38188/fulano
+author:Steve,Steve,942,low,registered,-1,https://robotics.stackexchange.com/users/7665/steve
+author:PDuarte,PDuarte,135,low,registered,-1,https://engineering.stackexchange.com/users/7086/pduarte
+author:tepalia,tepalia,46,low,registered,-1,https://engineering.stackexchange.com/users/68449/tepalia
+author:raisyn,raisyn,101,low,registered,-1,https://engineering.stackexchange.com/users/39854/raisyn
+author:Jakub Szurlej,Jakub Szurlej,21,low,registered,-1,https://engineering.stackexchange.com/users/32858/jakub-szurlej
+author:Jake,Jake,103,low,registered,-1,https://engineering.stackexchange.com/users/38610/jake
+author:Alfredo Maussa,Alfredo Maussa,186,low,,-1,
+author:afflux,afflux,3,low,registered,-1,https://engineering.stackexchange.com/users/52808/afflux
+author:Dick Tryon,Dick Tryon,11,low,registered,-1,https://engineering.stackexchange.com/users/27494/dick-tryon
+author:S Barry,S Barry,99,low,registered,-1,https://engineering.stackexchange.com/users/4708/s-barry
+author:CaptainCombo,CaptainCombo,1,low,,-1,
+author:JohnDoe,JohnDoe,48,low,,-1,
+author:brawner,brawner,-1,low,does_not_exist,-1,
+author:vonLuckner,vonLuckner,1,low,,-1,
+author:Vinay5forPrime,Vinay5forPrime,151,low,registered,-1,https://engineering.stackexchange.com/users/3856/vinay5forprime
+author:mr odus,mr odus,9,low,registered,-1,https://engineering.stackexchange.com/users/28864/mr-odus
+author:Ryan,Ryan,67,low,registered,-1,https://engineering.stackexchange.com/users/29345/ryan
+author:A K M Ishtyak Hossain,A K M Ishtyak Hossain,3,low,registered,-1,https://engineering.stackexchange.com/users/34403/a-k-m-ishtyak-hossain
+author:lovedrinking,lovedrinking,131,low,,-1,
+author:James Patterson,James Patterson,11,low,registered,-1,https://engineering.stackexchange.com/users/30341/james-patterson
+author:NullPointerException,NullPointerException,123,low,registered,-1,https://engineering.stackexchange.com/users/38440/nullpointerexception
+author:topherbuckley,topherbuckley,-1,low,does_not_exist,-1,
+author:Thomas,Thomas,165,low,,-1,
+author:Fff,Fff,1,low,,-1,
+author:Fusseldieb,Fusseldieb,133,low,registered,-1,https://engineering.stackexchange.com/users/14853/fusseldieb
+author:RoboKaren,RoboKaren,161,low,,-1,
+author:Wallace Park,Wallace Park,1635,medium,registered,14,https://engineering.stackexchange.com/users/1672/wallace-park
+author:Maxthecat,Maxthecat,113,low,,-1,
+author:Felipe Henrique,Felipe Henrique,660,low,registered,-1,https://robotics.stackexchange.com/users/22691/felipe-henrique
+author:Yassin,Yassin,1,low,,-1,
+author:John Lane,John Lane,209,low,,-1,
+author:Abeer,Abeer,11,low,registered,-1,https://engineering.stackexchange.com/users/28120/abeer
+author:pHred,pHred,176,low,,-1,
+author:TomS,TomS,103,low,registered,-1,https://engineering.stackexchange.com/users/21433/toms
+author:StainlessSteelRat,StainlessSteelRat,2582,medium,registered,-1,https://engineering.stackexchange.com/users/1592/stainlesssteelrat
+author:Sean,Sean,1,low,registered,-1,https://engineering.stackexchange.com/users/67981/sean
+author:Tim D,Tim D,366,low,registered,-1,https://engineering.stackexchange.com/users/35/tim-d
+author:Micah,Micah,11,low,,-1,
+author:als0052,als0052,111,low,registered,-1,https://engineering.stackexchange.com/users/19405/als0052
+author:Corey,Corey,404,low,registered,-1,https://engineering.stackexchange.com/users/11327/corey
+author:rockfort,rockfort,25,low,,-1,
+author:Ryan Dehmoubed,Ryan Dehmoubed,87,low,,-1,
+author:Fedor  Petrov,Fedor  Petrov,101,low,registered,-1,https://engineering.stackexchange.com/users/39677/fedor-petrov
+author:Ansel Dow,Ansel Dow,21,low,,-1,
+author:Xenox,Xenox,103,low,registered,-1,https://engineering.stackexchange.com/users/31047/xenox
+author:user37765,user37765,5,low,registered,-1,https://robotics.stackexchange.com/users/37765/user37765
+author:fullnitrous,fullnitrous,1,low,,-1,
+author:Pete W,Pete W,1746,medium,registered,-1,https://engineering.stackexchange.com/users/30144/pete-w
+author:Maximus Su,Maximus Su,1,low,registered,-1,https://engineering.stackexchange.com/users/37543/maximus-su
+author:bullfighter,bullfighter,121,low,registered,-1,https://engineering.stackexchange.com/users/23403/bullfighter
+author:FlakR,FlakR,131,low,registered,-1,https://engineering.stackexchange.com/users/38909/flakr
+author:Satya,Satya,422,low,registered,-1,https://engineering.stackexchange.com/users/28252/satya
+author:Ryan Norbauer,Ryan Norbauer,143,low,registered,-1,https://engineering.stackexchange.com/users/4264/ryan-norbauer
+author:Firobug,Firobug,101,low,,-1,
+author:Andrew Reid,Andrew Reid,1,low,,-1,
+author:r13,r13,8343,medium,registered,-1,https://engineering.stackexchange.com/users/30651/r13
+author:sumit808,sumit808,13,low,registered,-1,https://engineering.stackexchange.com/users/29308/sumit808
+author:Jonathan Pereira,Jonathan Pereira,13,low,registered,-1,https://robotics.stackexchange.com/users/15322/jonathan-pereira
+author:Airuno2L,Airuno2L,-1,low,does_not_exist,-1,
+author:irobot96,irobot96,1,low,registered,-1,https://engineering.stackexchange.com/users/17174/irobot96
+author:daddyblondlegs,daddyblondlegs,101,low,registered,-1,https://engineering.stackexchange.com/users/45326/daddyblondlegs
+author:Антон,Антон,121,low,registered,-1,https://engineering.stackexchange.com/users/30709/%d0%90%d0%bd%d1%82%d0%be%d0%bd
+author:Lavender,Lavender,161,low,registered,-1,https://engineering.stackexchange.com/users/1749/lavender
+author:Mk1_Oz,Mk1_Oz,21,low,,-1,
+author:HlfShell,HlfShell,33,low,,-1,
+author:FliegenderZirkus,FliegenderZirkus,131,low,registered,-1,https://engineering.stackexchange.com/users/24342/fliegenderzirkus
+author:user4978484,user4978484,13,low,,-1,
+author:DrTarr,DrTarr,153,low,,-1,
+author:Lukas L,Lukas L,31,low,registered,-1,https://engineering.stackexchange.com/users/36744/lukas-l
+author:oscarm,oscarm,121,low,,-1,
+author:gpuguy,gpuguy,131,low,registered,-1,https://engineering.stackexchange.com/users/13540/gpuguy
+author:Neil_UK,Neil_UK,420,low,registered,-1,https://engineering.stackexchange.com/users/8092/neil-uk
+author:Beacon of Wierd,Beacon of Wierd,169,low,,-1,
+author:zooid,zooid,21,low,registered,-1,https://engineering.stackexchange.com/users/35061/zooid
+author:Younes Boubker,Younes Boubker,1,low,registered,-1,https://engineering.stackexchange.com/users/34364/younes-boubker
+author:znbrito,znbrito,-1,low,does_not_exist,-1,
+author:Mike,Mike,101,low,,-1,
+author:BCS,BCS,189,low,registered,-1,https://engineering.stackexchange.com/users/22771/bcs
+author:user27920,user27920,-1,low,,-1,
+author:Bojangles,Bojangles,141,low,,-1,
+author:Aditya,Aditya,71,low,registered,-1,https://engineering.stackexchange.com/users/5700/aditya
+author:Omnistic,Omnistic,31,low,registered,-1,https://engineering.stackexchange.com/users/33425/omnistic
+author:Mattia,Mattia,11,low,unregistered,-1,https://engineering.stackexchange.com/users/19707/mattia
+author:Jason,Jason,281,low,registered,-1,https://engineering.stackexchange.com/users/20412/jason
+author:Chemomechanics,Chemomechanics,1654,medium,,-1,
+author:PJazz,PJazz,209,low,registered,-1,https://engineering.stackexchange.com/users/4403/pjazz
+author:Lluser,Lluser,131,low,,-1,
+author:feetwet,feetwet,1757,medium,registered,38,https://engineering.stackexchange.com/users/77/feetwet
+author:mongo,mongo,2115,medium,,-1,
+author:Peter Mitrano,Peter Mitrano,-1,low,does_not_exist,-1,
+author:Hannesh,Hannesh,153,low,registered,-1,https://engineering.stackexchange.com/users/16681/hannesh
+author:Blackwidow,Blackwidow,101,low,registered,-1,https://engineering.stackexchange.com/users/17201/blackwidow
+author:Evan,Evan,123,low,registered,-1,https://engineering.stackexchange.com/users/6770/evan
+author:Pragash Sangaran,Pragash Sangaran,33,low,registered,-1,https://engineering.stackexchange.com/users/24778/pragash-sangaran
+author:tempo3010,tempo3010,5,low,,-1,
+author:belza00,belza00,1,low,registered,-1,https://engineering.stackexchange.com/users/38994/belza00
+author:TwoWaySpeedOfLight,TwoWaySpeedOfLight,411,low,registered,-1,https://engineering.stackexchange.com/users/33509/twowayspeedoflight
+author:Imsa,Imsa,111,low,registered,-1,https://engineering.stackexchange.com/users/42524/imsa
+author:user2622,user2622,11,low,,-1,
+author:MG123456,MG123456,11,low,,-1,
+author:Auberron,Auberron,133,low,registered,-1,https://engineering.stackexchange.com/users/22829/auberron
+author:Yogi12,Yogi12,31,low,registered,100,https://engineering.stackexchange.com/users/15061/yogi12
+author:peter taylor,peter taylor,1,low,registered,-1,https://engineering.stackexchange.com/users/30035/peter-taylor
+author:Vince,Vince,11,low,unregistered,-1,https://engineering.stackexchange.com/users/16517/vince
+author:Rhinoceros555,Rhinoceros555,21,low,,-1,
+author:Hauligali22,Hauligali22,1,low,registered,-1,https://robotics.stackexchange.com/users/42689/hauligali22
+author:Ligon Liu,Ligon Liu,11,low,registered,-1,https://engineering.stackexchange.com/users/38287/ligon-liu
+author:Ken Williams,Ken Williams,101,low,,-1,
+author:scanny,scanny,198,low,,-1,
+author:Rodr&#237;guez Ayoze,Rodr&#237;guez Ayoze,3,low,registered,-1,https://engineering.stackexchange.com/users/34505/rodr%c3%adguez-ayoze
+author:Alexander Olikevich,Alexander Olikevich,21,low,,-1,
+author:StefanH,StefanH,101,low,,-1,
+author:Burt_Harris,Burt_Harris,217,low,,-1,
+author:Tony Stewart EE since 1975,Tony Stewart EE since 1975,422,low,registered,-1,https://engineering.stackexchange.com/users/8847/tony-stewart-ee-since-1975
+author:Jim,Jim,384,low,registered,-1,https://robotics.stackexchange.com/users/26046/jim
+author:Gloin the Dark,Gloin the Dark,11,low,,-1,
+author:Camion,Camion,139,low,registered,-1,https://engineering.stackexchange.com/users/14528/camion
+author:Pekka,Pekka,101,low,,-1,
+author:Carl Witthoft,Carl Witthoft,4289,medium,registered,-1,https://engineering.stackexchange.com/users/615/carl-witthoft
+author:Lizlodude,Lizlodude,3,low,,-1,
+author:VXR.,VXR.,15,low,,-1,
+author:Rocketmagnet,Rocketmagnet,6449,medium,,-1,
+author:David Cary,David Cary,4565,medium,registered,0,https://robotics.stackexchange.com/users/187/david-cary
+author:Gregory Leo,Gregory Leo,101,low,,-1,
+author:The Craftsman,The Craftsman,1,low,registered,-1,https://engineering.stackexchange.com/users/45611/the-craftsman
+author:Tawhiri,Tawhiri,66,low,registered,-1,https://engineering.stackexchange.com/users/7843/tawhiri
+author:Karl,Karl,1,low,,-1,
+author:Klik,Klik,247,low,,-1,
+author:jth_92,jth_92,133,low,registered,-1,https://engineering.stackexchange.com/users/29399/jth-92
+author:FlegmatoidZoid,FlegmatoidZoid,163,low,registered,-1,https://engineering.stackexchange.com/users/10268/flegmatoidzoid
+author:user12750,user12750,-1,low,does_not_exist,-1,
+author:Tim,Tim,237,low,registered,-1,https://engineering.stackexchange.com/users/21526/tim
+author:Vitalii Sadovshikov,Vitalii Sadovshikov,121,low,,-1,
+author:Alex,Alex,103,low,registered,-1,https://engineering.stackexchange.com/users/35280/alex
+author:OrCa,OrCa,151,low,,-1,
+author:Arseniy,Arseniy,101,low,registered,-1,https://engineering.stackexchange.com/users/40632/arseniy
+author:DMC05,DMC05,11,low,,-1,
+author:Steve Dutky,Steve Dutky,111,low,,-1,
+author:Farris,Farris,123,low,,-1,
+author:Blargian,Blargian,113,low,registered,-1,https://engineering.stackexchange.com/users/6459/blargian
+author:ginjaemocoes,ginjaemocoes,161,low,registered,-1,https://engineering.stackexchange.com/users/19384/ginjaemocoes
+author:TheTechGuy,TheTechGuy,101,low,registered,-1,https://engineering.stackexchange.com/users/37149/thetechguy
+author:Inf_E,Inf_E,87,low,,-1,
+author:101ToolAdvisor,101ToolAdvisor,1,low,registered,-1,https://engineering.stackexchange.com/users/11401/101tooladvisor
+author:Yanick Salzmann,Yanick Salzmann,195,low,registered,-1,https://engineering.stackexchange.com/users/28064/yanick-salzmann
+author:Daniel K,Daniel K,2666,medium,registered,-1,https://engineering.stackexchange.com/users/9275/daniel-k
+author:Thom Kouwen,Thom Kouwen,126,low,,-1,
+author:Mast,Mast,387,low,registered,-1,https://engineering.stackexchange.com/users/1070/mast
+author:velu,velu,13,low,,-1,
+author:Kitili Kisinguh,Kitili Kisinguh,1,low,,-1,
+author:User,User,11,low,registered,-1,https://engineering.stackexchange.com/users/53311/user
+author:dev4all12358,dev4all12358,-1,low,does_not_exist,-1,
+author:Dan,Dan,27,low,registered,-1,https://engineering.stackexchange.com/users/4092/dan
+author:Xlam,Xlam,113,low,registered,-1,https://engineering.stackexchange.com/users/14355/xlam
+author:Phil Young,Phil Young,21,low,registered,-1,https://engineering.stackexchange.com/users/14875/phil-young
+author:Gleb,Gleb,163,low,registered,20,https://engineering.stackexchange.com/users/5053/gleb
+author:epicycle,epicycle,1,low,registered,-1,https://engineering.stackexchange.com/users/37561/epicycle
+author:RocketScience,RocketScience,104,low,registered,-1,https://engineering.stackexchange.com/users/41996/rocketscience
+author:mactro,mactro,953,low,registered,-1,https://robotics.stackexchange.com/users/7360/mactro
+author:Sam Hammamy,Sam Hammamy,149,low,registered,-1,https://engineering.stackexchange.com/users/21402/sam-hammamy
+author:Brad,Brad,1,low,unregistered,-1,https://robotics.stackexchange.com/users/9028/brad
+author:user65864,user65864,1,low,registered,-1,https://engineering.stackexchange.com/users/65864/user65864
+author:Ian,Ian,11023,high,registered,75,https://robotics.stackexchange.com/users/350/ian
+author:Brian L.,Brian L.,11,low,,-1,
+author:Stephane Hatgis-Kessell,Stephane Hatgis-Kessell,129,low,registered,-1,https://engineering.stackexchange.com/users/17809/stephane-hatgis-kessell
+author:tueftla,tueftla,218,low,registered,-1,https://engineering.stackexchange.com/users/17780/tueftla
+author:Vitus,Vitus,31,low,,-1,
+author:Entity5,Entity5,31,low,registered,-1,https://engineering.stackexchange.com/users/16556/entity5
+author:user1717828,user1717828,133,low,,-1,
+author:Diesel,Diesel,629,low,registered,86,https://engineering.stackexchange.com/users/10590/diesel
+author:skibulk,skibulk,429,low,registered,83,https://engineering.stackexchange.com/users/3765/skibulk
+author:fabiprogramiert,fabiprogramiert,1,low,registered,-1,https://engineering.stackexchange.com/users/29773/fabiprogramiert
+author:ZachS,ZachS,133,low,,-1,
+author:Maarten -Monica for president,Maarten -Monica for president,217,low,registered,-1,https://engineering.stackexchange.com/users/10328/maarten-monica-for-president
+author:Kevin,Kevin,11,low,registered,-1,https://engineering.stackexchange.com/users/76791/kevin
+author:Derek Kuttikkat,Derek Kuttikkat,11,low,,-1,
+author:jko,jko,2347,medium,registered,-1,https://engineering.stackexchange.com/users/23871/jko
+author:Bal&#225;zs B&#250;r,Bal&#225;zs B&#250;r,21,low,registered,-1,https://engineering.stackexchange.com/users/17326/bal%c3%a1zs-b%c3%bar
+author:somers,somers,155,low,registered,86,https://robotics.stackexchange.com/users/7820/somers
+author:Jakey,Jakey,121,low,registered,-1,https://engineering.stackexchange.com/users/5797/jakey
+author:adrienlucca.net,adrienlucca.net,141,low,registered,-1,https://engineering.stackexchange.com/users/31187/adrienlucca-net
+author:Al504,Al504,1,low,unregistered,-1,https://engineering.stackexchange.com/users/69926/al504
+author:Sidhu S,Sidhu S,1,low,unregistered,-1,https://engineering.stackexchange.com/users/16552/sidhu-s
+author:henry,henry,215,low,registered,75,https://engineering.stackexchange.com/users/9038/henry
+author:Caleb Fowler,Caleb Fowler,1,low,registered,-1,https://engineering.stackexchange.com/users/47420/caleb-fowler
+author:ja on,ja on,1,low,registered,-1,https://engineering.stackexchange.com/users/65741/ja-on
+author:jeremy,jeremy,51,low,,-1,
+author:Simon,Simon,125,low,registered,-1,https://engineering.stackexchange.com/users/29846/simon
+author:Georges Kaufman,Georges Kaufman,1,low,,-1,
+author:gerrgheiser,gerrgheiser,201,low,,-1,
+author:Pyy,Pyy,103,low,,-1,
+author:skale,skale,1,low,registered,-1,https://engineering.stackexchange.com/users/39484/skale
+author:Michael Karas,Michael Karas,226,low,,-1,
+author:gvdhoorn-rse,gvdhoorn-rse,39403,high,registered,-1,https://robotics.stackexchange.com/users/34994/gvdhoorn-rse
+author:M lab,M lab,145,low,registered,-1,https://engineering.stackexchange.com/users/29571/m-lab
+author:Electro_Boomer,Electro_Boomer,11,low,registered,-1,https://robotics.stackexchange.com/users/26881/electro-boomer
+author:Nidershan Suguneswaran,Nidershan Suguneswaran,3,low,registered,-1,https://engineering.stackexchange.com/users/30788/nidershan-suguneswaran
+author:Steven,Steven,21,low,,-1,
+author:OzzWal,OzzWal,-1,low,,-1,
+author:Rhodie,Rhodie,1002,medium,,-1,
+author:Johnston,Johnston,167,low,,-1,
+author:Gil,Gil,121,low,,-1,
+author:user87284,user87284,1,low,registered,-1,https://engineering.stackexchange.com/users/30287/user87284
+author:Forward Ed,Forward Ed,1272,medium,registered,-1,https://engineering.stackexchange.com/users/6993/forward-ed
+author:geekly,geekly,206,low,registered,-1,https://engineering.stackexchange.com/users/11151/geekly
+author:user1477107,user1477107,131,low,registered,-1,https://engineering.stackexchange.com/users/21424/user1477107
+author:Dominic C Mazzola,Dominic C Mazzola,31,low,unregistered,-1,https://engineering.stackexchange.com/users/18330/dominic-c-mazzola
+author:Frido Emans,Frido Emans,141,low,registered,-1,https://engineering.stackexchange.com/users/16270/frido-emans
+author:lakeweb,lakeweb,153,low,,-1,
+author:TryingToTry,TryingToTry,143,low,registered,-1,https://engineering.stackexchange.com/users/9556/tryingtotry
+author:Ben,Ben,5975,medium,moderator,83,https://robotics.stackexchange.com/users/110/ben
+author:Brendan McBreen,Brendan McBreen,21,low,registered,-1,https://engineering.stackexchange.com/users/26561/brendan-mcbreen
+author:371273,371273,175,low,,-1,
+author:TehDrunkSailor,TehDrunkSailor,111,low,registered,-1,https://engineering.stackexchange.com/users/43506/tehdrunksailor
+author:RedGrittyBrick,RedGrittyBrick,925,low,,-1,
+author:Kinnikuman,Kinnikuman,1,low,registered,-1,https://engineering.stackexchange.com/users/40621/kinnikuman
+author:Jake Henry,Jake Henry,131,low,,-1,
+author:supvato,supvato,23,low,,-1,
+author:voices,voices,201,low,,-1,
+author:user5507535,user5507535,127,low,registered,-1,https://engineering.stackexchange.com/users/41219/user5507535
+author:Sam B,Sam B,334,low,registered,-1,https://engineering.stackexchange.com/users/17181/sam-b
+author:Transistor,Transistor,12458,high,registered,-1,https://engineering.stackexchange.com/users/3505/transistor
+author:Antoine,Antoine,31,low,registered,-1,https://engineering.stackexchange.com/users/14830/antoine
+author:tjcinnamon,tjcinnamon,111,low,registered,-1,https://engineering.stackexchange.com/users/12491/tjcinnamon
+author:John M.,John M.,1033,medium,registered,79,https://engineering.stackexchange.com/users/4302/john-m
+author:Efthymios Kalyviotis,Efthymios Kalyviotis,201,low,registered,-1,https://engineering.stackexchange.com/users/16386/efthymios-kalyviotis
+author:sys101,sys101,11,low,registered,-1,https://engineering.stackexchange.com/users/32580/sys101
+author:Digital Ghost,Digital Ghost,11,low,registered,-1,https://engineering.stackexchange.com/users/9624/digital-ghost
+author:Walter,Walter,427,low,registered,-1,https://engineering.stackexchange.com/users/270/walter
+author:JUZ Aviewer,JUZ Aviewer,11,low,registered,-1,https://engineering.stackexchange.com/users/17630/juz-aviewer
+author:guest123,guest123,21,low,,-1,
+author:JP19774028,JP19774028,31,low,registered,-1,https://engineering.stackexchange.com/users/20247/jp19774028
+author:Elon Musk,Elon Musk,129,low,registered,-1,https://engineering.stackexchange.com/users/23115/elon-musk
+author:tir38,tir38,147,low,registered,-1,https://engineering.stackexchange.com/users/3617/tir38
+author:Jason Easton,Jason Easton,21,low,,-1,
+author:Guy Sirton,Guy Sirton,1090,medium,,-1,
+author:Suryetto,Suryetto,119,low,registered,-1,https://engineering.stackexchange.com/users/31006/suryetto
+author:LostPecti,LostPecti,203,low,,-1,
+author:Petrichor,Petrichor,518,low,,-1,
+author:nwsteg,nwsteg,169,low,,-1,
+author:William Hird,William Hird,611,low,registered,-1,https://engineering.stackexchange.com/users/628/william-hird
+author:TotoposAndPicoDeGallo,TotoposAndPicoDeGallo,433,low,registered,80,https://engineering.stackexchange.com/users/3235/totoposandpicodegallo
+author:kiblykat,kiblykat,111,low,registered,-1,https://engineering.stackexchange.com/users/34240/kiblykat
+author:Fred,Fred,9782,medium,registered,-1,https://engineering.stackexchange.com/users/90/fred
+author:Nathan Wheeler,Nathan Wheeler,173,low,registered,-1,https://robotics.stackexchange.com/users/416/nathan-wheeler
+author:TQQQ,TQQQ,121,low,,-1,
+author:Dimitris,Dimitris,1,low,registered,-1,https://engineering.stackexchange.com/users/67617/dimitris
+author:George Menoutis,George Menoutis,103,low,,-1,
+author:joe-cormier,joe-cormier,31,low,,-1,
+author:Noobmaster69,Noobmaster69,11,low,registered,-1,https://robotics.stackexchange.com/users/27060/noobmaster69
+author:Jack B,Jack B,398,low,registered,-1,https://engineering.stackexchange.com/users/12022/jack-b
+author:Trevor Archibald,Trevor Archibald,2819,medium,registered,0,https://engineering.stackexchange.com/users/41/trevor-archibald
+author:Tom&#225;š L&#233;tal,Tom&#225;š L&#233;tal,1715,medium,registered,-1,https://engineering.stackexchange.com/users/21214/tom%c3%a1%c5%a1-l%c3%a9tal
+author:Vandel212,Vandel212,111,low,registered,-1,https://engineering.stackexchange.com/users/8440/vandel212
+author:Sianne,Sianne,1,low,unregistered,-1,https://engineering.stackexchange.com/users/77422/sianne
+author:Kjfull,Kjfull,33,low,registered,-1,https://engineering.stackexchange.com/users/12119/kjfull
+author:Guilherme,Guilherme,125,low,,-1,
+author:James Waldby - jwpat7,James Waldby - jwpat7,1991,medium,registered,-1,https://robotics.stackexchange.com/users/478/james-waldby-jwpat7
+author:Soheil Paper,Soheil Paper,317,low,registered,-1,https://engineering.stackexchange.com/users/2678/soheil-paper
+author:Gabe,Gabe,1,low,,-1,
+author:Srihari Yamanoor,Srihari Yamanoor,111,low,registered,-1,https://engineering.stackexchange.com/users/7989/srihari-yamanoor
+author:Java Weenis,Java Weenis,1,low,,-1,
+author:Ammar Hussein,Ammar Hussein,173,low,,-1,
+author:Peter Stoneham,Peter Stoneham,31,low,registered,-1,https://engineering.stackexchange.com/users/16980/peter-stoneham
+author:Benjamin Barney,Benjamin Barney,1,low,registered,-1,https://engineering.stackexchange.com/users/35604/benjamin-barney
+author:diydiy,diydiy,1,low,unregistered,-1,https://engineering.stackexchange.com/users/69110/diydiy
+author:Oak_3260548,Oak_3260548,121,low,,-1,
+author:amoose136,amoose136,1,low,registered,-1,https://robotics.stackexchange.com/users/15333/amoose136
+author:akauppi,akauppi,172,low,registered,-1,https://engineering.stackexchange.com/users/12827/akauppi
+author:Joseph Manard,Joseph Manard,1,low,unregistered,-1,https://engineering.stackexchange.com/users/38286/joseph-manard
+author:Patrik,Patrik,1,low,unregistered,-1,https://engineering.stackexchange.com/users/38631/patrik
+author:bebissig,bebissig,46,low,,-1,
+author:Adam,Adam,21,low,registered,-1,https://engineering.stackexchange.com/users/10261/adam
+author:Mike Waters,Mike Waters,796,low,registered,-1,https://engineering.stackexchange.com/users/20985/mike-waters
+author:user13416,user13416,-1,low,does_not_exist,-1,
+author:Josi Whitlock,Josi Whitlock,66,low,registered,-1,https://engineering.stackexchange.com/users/28055/josi-whitlock
+author:Mridul,Mridul,113,low,registered,-1,https://engineering.stackexchange.com/users/29581/mridul
+author:RickH,RickH,21,low,registered,-1,https://engineering.stackexchange.com/users/15805/rickh
+author:MGuzzi,MGuzzi,1,low,registered,-1,https://engineering.stackexchange.com/users/34856/mguzzi
+author:Justace Clutter,Justace Clutter,141,low,,-1,
+author:mikes,mikes,20131,high,,-1,
+author:kamran,kamran,24196,high,registered,-1,https://engineering.stackexchange.com/users/4816/kamran
+author:mart,mart,4811,medium,registered,42,https://engineering.stackexchange.com/users/61/mart
+author:monkey,monkey,176,low,registered,-1,https://engineering.stackexchange.com/users/30083/monkey
+author:emrys57,emrys57,155,low,registered,-1,https://engineering.stackexchange.com/users/16606/emrys57
+author:user6039980,user6039980,129,low,registered,-1,https://engineering.stackexchange.com/users/13157/user6039980
+author:jungduri,jungduri,-1,low,does_not_exist,-1,
+author:AShelly,AShelly,116,low,registered,-1,https://robotics.stackexchange.com/users/1245/ashelly
+author:Mohamad-Babaee,Mohamad-Babaee,1,low,registered,-1,https://engineering.stackexchange.com/users/41185/mohamad-babaee
+author:Frank Lang,Frank Lang,1,low,,-1,
+author:Austin Prater,Austin Prater,140,low,registered,-1,https://engineering.stackexchange.com/users/17105/austin-prater
+author:John Alexiou,John Alexiou,703,low,registered,-1,https://engineering.stackexchange.com/users/1051/john-alexiou
+author:zan,zan,41,low,registered,-1,https://engineering.stackexchange.com/users/3644/zan
+author:Jayy,Jayy,1304,medium,,-1,
+author:ExternCowWindows,ExternCowWindows,33,low,,-1,
+author:Naman Choradia,Naman Choradia,101,low,registered,-1,https://engineering.stackexchange.com/users/17480/naman-choradia
+author:TobiasK,TobiasK,1657,medium,registered,-1,https://robotics.stackexchange.com/users/6911/tobiask
+author:niels nielsen,niels nielsen,15608,high,registered,-1,https://engineering.stackexchange.com/users/13363/niels-nielsen
+author:xalpha,xalpha,111,low,,-1,
+author:Antigrammer,Antigrammer,11,low,,-1,
+author:tzahroof,tzahroof,-1,low,does_not_exist,-1,
+author:Dan Khan,Dan Khan,163,low,registered,-1,https://engineering.stackexchange.com/users/19105/dan-khan
+author:WildfootW,WildfootW,11,low,registered,-1,https://engineering.stackexchange.com/users/33956/wildfootw
+author:lesthemess,lesthemess,11,low,,-1,
+author:JCSB,JCSB,177,low,,-1,
+author:Jonathan R Swift,Jonathan R Swift,7841,medium,registered,-1,https://engineering.stackexchange.com/users/13311/jonathan-r-swift
+author:geeeeeeek,geeeeeeek,46,low,registered,-1,https://engineering.stackexchange.com/users/1342/geeeeeeek
+author:EEd,EEd,419,low,,-1,
+author:user797,user797,-1,low,does_not_exist,-1,
+author:shawnysh,shawnysh,-1,low,,-1,
+author:Pen Gerald,Pen Gerald,41,low,registered,-1,https://engineering.stackexchange.com/users/19244/pen-gerald
+author:auden,auden,153,low,registered,-1,https://engineering.stackexchange.com/users/10715/auden
+author:xuzhongxing,xuzhongxing,21,low,registered,-1,https://engineering.stackexchange.com/users/24448/xuzhongxing
+author:Bart,Bart,125,low,registered,-1,https://engineering.stackexchange.com/users/36819/bart
+author:Mark Dow,Mark Dow,21,low,,-1,
+author:Abel,Abel,1544,medium,registered,-1,https://engineering.stackexchange.com/users/29315/abel
+author:Raj Arjit,Raj Arjit,121,low,registered,-1,https://engineering.stackexchange.com/users/12092/raj-arjit
+author:Vino,Vino,155,low,,-1,
+author:John Spence,John Spence,135,low,registered,-1,https://engineering.stackexchange.com/users/7879/john-spence
+author:Andrej,Andrej,1,low,unregistered,-1,https://engineering.stackexchange.com/users/61887/andrej
+author:jimjim,jimjim,119,low,,-1,
+author:cdunn,cdunn,9346,medium,,-1,
+author:B&#233;renger,B&#233;renger,281,low,,-1,
+author:BetterSense,BetterSense,181,low,registered,-1,https://engineering.stackexchange.com/users/29350/bettersense
+author:katoz don,katoz don,1,low,registered,-1,https://engineering.stackexchange.com/users/10336/katoz-don
+author:rlt,rlt,-1,low,does_not_exist,-1,
+author:Ken Grimes,Ken Grimes,151,low,registered,-1,https://engineering.stackexchange.com/users/21516/ken-grimes
+author:Green,Green,285,low,registered,-1,https://engineering.stackexchange.com/users/5427/green
+author:statusfailed,statusfailed,133,low,registered,-1,https://engineering.stackexchange.com/users/37750/statusfailed
+author:blueturkey,blueturkey,3,low,registered,-1,https://engineering.stackexchange.com/users/43185/blueturkey

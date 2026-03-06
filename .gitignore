@@ -25,9 +25,21 @@ stackexchange_posts_*.json
 # Project: runtime artifacts
 dfm_reports/
 token_tally.json
-qdrant_data/.lock
+qdrant_data/
 _check_sizes.ps1
 _eval_agent.py
+
+# Large regenerable files
+subject_embeddings.npz
+umap_coords_cache.npz
+provenance_graph.gexf
+provenance_graph.graphml
+provenance_graph_slim*.gexf
+
+# Large external assets
+asmeconf.zip
+asmeconf/
+February Research/
 
 # IDE / OS
 .vscode/
@@ -35,6 +47,9 @@ _eval_agent.py
 *.swp
 Thumbs.db
 .DS_Store
+
+# Windows reserved name artifact
+nul
 
 # Claude Code
 .claude/

@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "source_file": "extractions_se_all.json",
+    "review_file": "reviews_test_100.json",
+    "model": "gpt-5",
+    "thresholds": {
+      "scope_rating": 2,
+      "main_point_quality": 3,
+      "extraction_accuracy": 1,
+      "frame_type_rating": 2,
+      "applicability_rating": 2,
+      "epistemic_stance_rating": 2
+    },
+    "total_frames_in_corpus": 3879,
+    "total_frames_reviewed": 100,
+    "frames_flagged_revise": 30,
+    "frames_passing_threshold": 26,
+    "frames_actually_revised": 26,
+    "frames_kept_by_reviser": 0,
+    "frames_removed": 0,
+    "errors": 0,
+    "timestamp": "2026-03-03T19:42:52.978476+00:00",
+    "elapsed_seconds": 63.8
+  },
+  "revisions": [
+    {
+      "post_id": "se-engineering-51534",
+      "frame_index": 2,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "frame_type",
+          "original_value": "risk",
+          "revised_value": "observation",
+          "justification": "This is a statement about the inherent behavior/limitation of the revolve tool, not a potential hazard or adverse outcome. It fits better as an observation (or principle), per review feedback."
+        }
+      ],
+      "revision_rationale": "Reviewer noted the frame was misclassified as a risk. The quote describes a tool limitation/definition: revolve won’t follow a non-circular path. Updated frame_type to observation as suggested. Other fields (scope, applicability, stance, main point) were appropriate and remain unchanged."
+    },
+    {
+      "post_id": "se-engineering-49276-a49287",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "tentative_subjective",
+          "revised_value": "direct_neutral",
+          "justification": "The quote presents a straightforward explanation of behavior with minimal hedging, aligning better with a neutral, factual tone."
+        }
+      ],
+      "revision_rationale": "Adjusted only the epistemic stance to direct_neutral per review feedback; all other labels and the main point were appropriate and fully supported by the quote."
+    },
+    {
+      "post_id": "se-engineering-61425-a61455",
+      "frame_index": 3,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "machining_process",
+          "revised_value": "material",
+          "justification": "The quote concerns the sequencing of heat treatment relative to shell/core removal for SX blades, which ties to material microstructure/heat treatment practices rather than a machining operation. Reviewer recommended 'material' as the best fit."
+        }
+      ],
+      "revision_rationale": "Reviewer noted the scope label was incorrect and should be 'material' rather than 'machining_process' because the content deals with heat treatment sequencing in SX investment casting. Other fields were assessed as appropriate; they are retained unchanged."
+    },
+    {
+      "post_id": "se-engineering-47321-a47338",
+      "frame_index": 3,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "shop_operations",
+          "revised_value": "other",
+          "justification": "The content describes a project/design management practice (modularizing work with fixed interfaces), not shop floor operations."
+        },
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "This approach relies on having fixed interfaces and functional requirements defined early; where that is not possible, the method may not apply."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Assign modules to separate teams but constrain them with fixed geometric interfaces and functional requirements. This enables independent progress while preserving assembly compatibility.",
+          "revised_value": "Assign modules to separate design teams to work within fixed geometrical interfaces and functional requirements.",
+          "justification": "Removed inferred benefits to ensure the statement is fully supported by the source quote."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "When a project has established fixed geometrical interfaces and functional requirements for modules early in the design process, enabling teams to proceed within those constraints.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Adjusted scope to 'other' per review, as this is general systems/project management rather than shop operations. Set applicability to 'context_dependent' because it assumes interfaces/requirements can be fixed early. Trimmed the main point to exclude implied outcomes and align strictly with the quoted statement."
+    },
+    {
+      "post_id": "se-engineering-53697-a53701",
+      "frame_index": 5,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "frame_type",
+          "original_value": "observation",
+          "revised_value": "heuristic",
+          "justification": "The quote recommends a course of action (use post-processing in GIMP or similar), making it a rule-of-thumb rather than a mere observation."
+        },
+        {
+          "field_name": "scope",
+          "original_value": "design_geometry",
+          "revised_value": "other",
+          "justification": "The content concerns CAD illustration/presentation capability and workflow, not geometry design."
+        },
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "hedged_emphatic",
+          "revised_value": "tentative_subjective",
+          "justification": "The author uses tentative language (“I think,” “likely”), indicating a subjective, tentative claim."
+        }
+      ],
+      "revision_rationale": "Aligned labels with review feedback: reframed as a heuristic due to the recommendation to use external post-processing, adjusted scope to ‘other’ since it’s about presentation capability rather than geometry, and set epistemic stance to tentative_subjective to match the quote’s tentative language. Main point and applicability were already appropriate."
+    },
+    {
+      "post_id": "se-engineering-58977",
+      "frame_index": 0,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "machining_process",
+          "revised_value": "tooling",
+          "justification": "This is about workholding materials/fixtures (tile gaskets vs. MDF spoilboard), which falls under tooling rather than the machining process itself."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Rubber tile gaskets often provide better hold-down than a bare MDF spoilboard because the gasket’s compliance and surface grip increase friction and sealing. This can improve workholding effectiveness",
+          "revised_value": "Tile gaskets often provide better hold-down than a bare MDF spoilboard, attributed to the gasket material’s sponginess and grip.",
+          "justification": "Removed the unstated claim about improved sealing to ensure the main point is fully supported by the source quote, which mentions only sponginess and grip."
+        }
+      ],
+      "revision_rationale": "Adjusted scope to tooling per reviewer feedback, as the content concerns workholding gaskets vs. an MDF spoilboard. Tightened the main point to remove the inference about sealing so it aligns strictly with the quoted support (sponginess and grip). Other labels were appropriate and left unchanged."
+    },
+    {
+      "post_id": "se-engineering-43271-a43316",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "direct_neutral",
+          "revised_value": "absolute_authoritative",
+          "justification": "The quote uses imperative language (“cannot,” “must”), indicating strong, prescriptive guidance rather than a neutral description."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Successful photogrammetry requires carefully controlled lighting and target prep: eliminate shadows and gloss, apply a high-contrast nonrepeating texture, and capture many images from sufficiently var",
+          "revised_value": "Successful photogrammetry requires carefully controlled lighting and target prep: eliminate shadows and gloss, apply a high-contrast nonrepeating texture, and capture many images from sufficiently var",
+          "justification": "Revised the epistemic stance to absolute_authoritative per review feedback, reflecting the quote’s prescriptive wording. Other fields (frame type, scope, applicability, and main point) align with the content and reviewer comments, so they were retained."
+        }
+      ],
+      "revision_rationale": "Revised the epistemic stance to absolute_authoritative per review feedback, reflecting the quote’s prescriptive wording. Other fields (frame type, scope, applicability, and main point) align with the content and reviewer comments, so they were retained."
+    },
+    {
+      "post_id": "se-engineering-42233-a42282",
+      "frame_index": 7,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "shop_operations",
+          "revised_value": "design_geometry",
+          "justification": "The risk concerns noise inherent to gear train layout/number of meshes, which is a design geometry consideration rather than a shop operations issue."
+        }
+      ],
+      "revision_rationale": "Reviewer noted only a scope mismatch. The frame discusses noise as a function of gear train design (more meshes = more noise), aligning better with design_geometry than shop_operations. All other labels and the main point are supported by the source quote and were retained."
+    },
+    {
+      "post_id": "se-engineering-37502-a37509",
+      "frame_index": 6,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "direct_neutral",
+          "revised_value": "tentative_subjective",
+          "justification": "The author states the convention but immediately expresses uncertainty about when to apply it elsewhere in the post, indicating a tentative/subjective stance rather than neutral assertion."
+        }
+      ],
+      "revision_rationale": "Per review feedback, the content and labels are sound except the stance. The author conveys uncertainty about the applicability of the rule, so epistemic_stance is adjusted to tentative_subjective. Other fields remain as originally labeled since they accurately reflect the quote and context."
+    },
+    {
+      "post_id": "se-engineering-36413-a36414",
+      "frame_index": 2,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "The source says “most companies,” indicating it is common but not universal."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "Organizations that use standardized drawing templates and maintain drafting standards; per the author’s experience this is common in many companies but not universal.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "The reviewer noted the main issue is applicability since the quote states “most companies,” not all. Updated applicability to context_dependent and added an example context describing organizations with standardized drawing templates. Other labels and the main point remain appropriate."
+    },
+    {
+      "post_id": "se-engineering-41157-a41162",
+      "frame_index": 3,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "frame_type",
+          "original_value": "workaround",
+          "revised_value": "heuristic",
+          "justification": "The quote offers a general practical tip for installation rather than a fix for a specific failure; better categorized as a heuristic."
+        },
+        {
+          "field_name": "scope",
+          "original_value": "machining_process",
+          "revised_value": "shop_operations",
+          "justification": "This concerns installation/assembly practice and handling parts using thermal fit principles, not a machining process."
+        }
+      ],
+      "revision_rationale": "Aligned labels with reviewer guidance: changed frame type to heuristic and scope to shop_operations. Main point, applicability, and epistemic stance already matched the quote and were retained."
+    },
+    {
+      "post_id": "se-engineering-32304-a32315",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "hedged_emphatic",
+          "revised_value": "direct_neutral",
+          "justification": "The quote states the need plainly without hedging language; a neutral, direct stance best reflects the source."
+        }
+      ],
+      "revision_rationale": "Per review feedback, the frame accurately captures the quote, with scope, frame type, and applicability appropriate. The only needed adjustment is epistemic_stance to direct_neutral, since the quote presents the point straightforwardly without hedging."
+    },
+    {
+      "post_id": "se-engineering-31385-a37542",
+      "frame_index": 2,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "This practice applies in situations where high hardness would reduce machinability; it is not universally applicable to all machining and heat-treatment sequences."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "When the required heat treatment significantly increases hardness or serves as a finishing step, apply it after machining to avoid cutting hardened material, which is less machinable. This sequencing ",
+          "revised_value": "Apply heat treatments after CNC machining because high hardness reduces machinability; this is standard practice when machining “device steel” parts.",
+          "justification": "Removed conditions not explicitly present in the source quote and aligned the example phrasing with the quote."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "When machining materials where high hardness would reduce machinability; for example, as noted, standard practice for “device steel” parts.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Changed applicability to context_dependent per review, since the practice applies in cases where high hardness would impair machinability, not universally. Tightened the main_point to stay fully within the source quote (removed unstated conditions and matched the example term to the quote). Added example_context to specify when the heuristic applies."
+    },
+    {
+      "post_id": "se-engineering-15007-a16482",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "The quote reflects personal experience rather than a universal standard; terminology varies by region/industry."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "This feature is commonly referred to as a locating pin, a location feature, or simply mating in mechanical design terminology.",
+          "revised_value": "Per the author's experience, this feature is referred to as a 'locating pin', 'location', or 'mating'.",
+          "justification": "Softens “commonly referred to” to match the hedged first-person phrasing in the quote and avoid implying universality."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "Terminology for this feature depends on region, industry, or shop conventions; in the author's context these terms are used.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Reviewer noted that the original main point overstated the universality of the terminology. I softened the claim to reflect the author's personal experience and changed applicability to context_dependent, adding an example context about regional/industry variation. Frame type and scope remain appropriate, and the epistemic stance stays tentative/subjective to match the quote."
+    },
+    {
+      "post_id": "se-robotics-24357-a24369",
+      "frame_index": 0,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "cost",
+          "revised_value": "shop_operations",
+          "justification": "The guidance concerns project focus and operational decision-making (what work to take on vs. outsource), not primarily cost."
+        },
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "direct_neutral",
+          "revised_value": "absolute_authoritative",
+          "justification": "The quote is a clear directive (“don’t do it”), reflecting a strong, prescriptive stance."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Avoid designing and fabricating components that are not the core focus of your project; default to buying existing solutions rather than making them in-house.",
+          "revised_value": "Do not take on tasks or component work that is not the central focus of your project.",
+          "justification": "Removed the “buy existing solutions” clause, which is not explicitly in the source quote; retained only what is directly supported by the quote."
+        }
+      ],
+      "revision_rationale": "Per review, the scope should not be cost; it addresses project/shop decision-making, so changed to shop_operations. The stance is directive, so updated to absolute_authoritative. The main point previously included guidance to buy off-the-shelf, which extends beyond the exact quote; revised to match the quote exactly, as required by rule 4. Applicability and frame type remain appropriate."
+    },
+    {
+      "post_id": "se-engineering-54734",
+      "frame_index": 0,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "main_point",
+          "original_value": "For external snap rings on shafts, the free inner diameter is intentionally smaller than the groove diameter so that, once installed, the ring is stretched and held in hoop tension. This preload provi",
+          "revised_value": "For external snap rings on shafts, the free inner diameter is smaller than the groove diameter so that, once installed, the ring is stretched and under slight tension. This preload keeps the ring seat",
+          "justification": "The original overstated causality by claiming the preload provides the retaining force. The quote only supports that the ring is under tension due to smaller free ID; revising to say the preload keeps the ring seated aligns with the quote and reviewer guidance. Also removed 'intentionally' and 'hoop' to avoid unstated specifics."
+        }
+      ],
+      "revision_rationale": "Adjusted the main point per reviewer feedback to avoid implying that preload provides axial retaining force. The revised statement stays within what the source quote supports and clarifies that the tension keeps the ring seated. Labels and applicability remain appropriate."
+    },
+    {
+      "post_id": "se-engineering-51998-a52002",
+      "frame_index": 4,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "Whether a tip is brazed and whether it is apparent depends on the specific probe’s construction and the visibility of the joint, not a universal condition."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Some thermocouple probe tips that may look monolithic are actually brazed onto the tube. Visual inspection can reveal a brazed joint.",
+          "revised_value": "On the thermocouple probes the poster is holding, the tip is clearly brazed on.",
+          "justification": "Removed unsupported inferences about monolithic appearance and generalized claims; constrained to the direct observation in the quote."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "When examining specific thermocouple probes in hand where a brazed joint is discernible, indicating the tip was joined by brazing.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Adjusted applicability per review: this observation depends on specific probe construction and joint visibility. Revised main_point to remove the added inference about monolithic appearance and limit the claim to what the quote directly supports."
+    },
+    {
+      "post_id": "se-engineering-63677-a63683",
+      "frame_index": 0,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "Render speed can also be influenced by software/renderer choice and settings; the advice is not universally true across all workflows and tools."
+        },
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "tentative_subjective",
+          "revised_value": "absolute_authoritative",
+          "justification": "The quote uses directive language (“you need a better hardware, not software”), which is closer to an absolute/direct stance than tentative."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "Applies when using the same renderer and comparable quality settings, where render time is primarily limited by compute resources (CPU/GPU/RAM). May not hold if switching to a more efficient rendering engine or enabling GPU acceleration/optimized settings that significantly change software performance.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Aligned with reviewer feedback: kept frame type and scope; main point already matches the quote. Updated applicability to context_dependent because software choice/settings can materially affect render speed. Adjusted epistemic stance to absolute_authoritative to reflect the directive phrasing in the quote."
+    },
+    {
+      "post_id": "se-electronics-55836-a172007",
+      "frame_index": 2,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "programming",
+          "revised_value": "other",
+          "justification": "This is about CAM/export configuration for EAGLE PCB files (Gerber/Excellon resolutions), not programming logic or G-code generation. \"Other\" better fits the content."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "To align drill and artwork scales, you can choose to increase the RS274X Gerber resolution instead of decreasing the EXCELLON drill resolution, based on board and fabricator requirements.",
+          "revised_value": "Instead of reducing EXCELLON resolution, you may increase GERBER_RS274X resolution, depending on your needs, board, or board manufacturer.",
+          "justification": "Removed the added rationale about aligning drill and artwork scales to ensure the main point is fully supported by the quoted text."
+        }
+      ],
+      "revision_rationale": "Reviewer correctly noted the scope label was ill-suited; this frame concerns EAGLE CAM/format resolution settings rather than programming. Updated scope to \"other.\" Also trimmed the main point to match the quote exactly, removing unstated motivation while preserving the guidance and its conditional nature. Other labels (frame type, applicability, stance) remain appropriate."
+    },
+    {
+      "post_id": "se-electronics-551280-a551308",
+      "frame_index": 9,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "direct_neutral",
+          "revised_value": "tentative_subjective",
+          "justification": "The quote uses \"suggests,\" indicating an inference rather than a certainty."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "If a ferrite ring on the grounding wire improves interference, it indicates a grounding current loop with unbalanced current that acts like an air‑cored transformer coupling energy between circuits.",
+          "revised_value": "If a ferrite ring on the grounding wire reduces EMI, it suggests a grounding current loop with unbalanced current that effectively acts like an air‑cored transformer coupling energy between circuits.",
+          "justification": "Clarified phrasing per review (\"reduces EMI\" vs. \"improves interference\") and aligned modality with the quote by using \"suggests.\""
+        }
+      ],
+      "revision_rationale": "Adjusted epistemic stance to tentative_subjective because the author presents the conclusion as suggestive, not definitive. Revised main_point for clarity as requested (\"reduces EMI\") and to match the tentative language. Other labels were already appropriate per review."
+    },
+    {
+      "post_id": "se-electronics-30577-a30624",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "tentative_subjective",
+          "revised_value": "direct_neutral",
+          "justification": "The source quote states these behaviors as direct facts (one step per pulse; higher pulse frequency increases speed) without tentativeness."
+        }
+      ],
+      "revision_rationale": "Aligned the epistemic stance with the quote, which presents factual, unqualified statements about step/direction driver behavior. Other fields were appropriate. Did not add microstepping details to the main point since they are not in the quoted text."
+    },
+    {
+      "post_id": "se-electronics-304309-a304315",
+      "frame_index": 1,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "machine_capability",
+          "revised_value": "other",
+          "justification": "This is an electronics/component design risk (resistor value causing LED overcurrent and SMD resistor overheating), not a machine capability issue. Aligns with reviewer’s note to label as 'other.'"
+        }
+      ],
+      "revision_rationale": "Revised only the scope per review feedback; the content concerns component-level design, not machine capability. Other labels and the main point are already fully supported by the source quote and were rated as correct."
+    },
+    {
+      "post_id": "se-electronics-364080-a364098",
+      "frame_index": 5,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "This requires machines with motion rails and the ability to mount and read inductive sensors; not universally applicable."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "Install two inductive sensors on an axis at a fixed separation so you can verify and recalibrate the machine’s travel distance as part of each milling operation.",
+          "revised_value": "Add inductive sensors on the motion rails at a fixed spacing so you can verify the travel distance during each milling job as part of the calibration process.",
+          "justification": "Removed the unstated claim about recalibration and aligned wording precisely with the quote (verify distance each time)."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "CNC or milling machines with accessible motion rails where inductive sensors can be mounted and read by the control or a simple I/O to check a known spacing during each job.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "The reviewer noted the main point added an unstated claim about recalibrating. Revised to focus only on verifying distance each job, which matches the quote. Applicability updated to context_dependent because the suggestion assumes machines with motion rails and provisions to mount/read inductive sensors. Frame type and scope remain appropriate."
+    },
+    {
+      "post_id": "se-electronics-29746-a29747",
+      "frame_index": 3,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "scope",
+          "original_value": "design_geometry",
+          "revised_value": "material",
+          "justification": "The risk described arises from the conductive aluminum substrate and its interaction with the milling operation, not from geometry. Labeling the scope as material better captures the source of the shorting risk."
+        },
+        {
+          "field_name": "epistemic_stance",
+          "original_value": "tentative_subjective",
+          "revised_value": "hedged_emphatic",
+          "justification": "The quote uses a hedge (“probably”) combined with strong language (“extremely easy”), which aligns with a hedged_emphatic stance."
+        }
+      ],
+      "revision_rationale": "Adjusted scope from design_geometry to material per review feedback since the shorting risk stems from the conductive aluminum substrate in the milling context. Updated epistemic stance to hedged_emphatic to reflect the quoted phrasing. Main point and other fields were kept as they were already accurate and aligned with the quote."
+    },
+    {
+      "post_id": "se-electronics-580194-a580198",
+      "frame_index": 0,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "frame_type",
+          "original_value": "risk",
+          "revised_value": "observation",
+          "justification": "The quote states a factual incompatibility (USB protocol vs servo) rather than a potential failure mode, so it fits better as an observation."
+        },
+        {
+          "field_name": "applicability",
+          "original_value": "context_dependent",
+          "revised_value": "universal",
+          "justification": "Within the subject’s scope of modern PCs and USB, the statement is presented as universally true in the quote."
+        },
+        {
+          "field_name": "main_point",
+          "original_value": "You cannot directly connect and control a servo from a modern PC’s USB port because USB is a specialized protocol and not compatible with direct servo signaling. An intermediate interface specifically",
+          "revised_value": "You cannot directly attach a servo to a modern PC’s USB port because the USB protocol is not compatible.",
+          "justification": "Removed the unstated claim that an intermediate interface is required to adhere strictly to what the quote asserts."
+        }
+      ],
+      "revision_rationale": "Per review, changed frame_type to observation to reflect a stated incompatibility rather than a risk. Adjusted applicability to universal given the quote’s absolute wording about modern PCs and USB. Tightened the main point to remove the extra inference about needing an intermediate interface, keeping only what is directly supported by the quote."
+    },
+    {
+      "post_id": "se-electronics-30577-a30624",
+      "frame_index": 5,
+      "action": "revise",
+      "actual_changes": [
+        {
+          "field_name": "applicability",
+          "original_value": "universal",
+          "revised_value": "context_dependent",
+          "justification": "Reviewer noted that benefits like improved acceleration and resonance suppression vary with motor/drive/load and tuning; not universally guaranteed."
+        },
+        {
+          "field_name": "example_context",
+          "original_value": "None",
+          "revised_value": "Effects of microstepping on acceleration and resonance depend on the specific motor, driver implementation and settings, load inertia, and system tuning. For example, a high-inertia axis with a basic chopper driver may still show mid-band resonance or limited acceleration gains, while a well-tuned current-mode microstepping driver on a lightly loaded axis can yield smoother motion and better acceleration.",
+          "justification": "Added or corrected example_context for applicability"
+        }
+      ],
+      "revision_rationale": "Adjusted applicability per review: the stated benefits of microstepping are not universal and depend on system specifics. Other labels and the main point accurately reflect the quote and were kept."
+    }
+  ]
+}
