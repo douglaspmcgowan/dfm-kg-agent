@@ -1,0 +1,4241 @@
+Loading frames from extractions_se_all.json...
+  Loaded 3879 frames
+  Found 3870 unique subjects
+Loaded cached embeddings from subject_embeddings.npz (3870 subjects)
+Computing cosine distance matrix (3870 x 3870)...
+Running AgglomerativeClustering (threshold=0.3, linkage=average)...
+  Found 3284 clusters
+
+Saved to subject_clusters.json
+
+============================================================
+SUBJECT NORMALIZATION SUMMARY
+============================================================
+Total unique subjects : 3870
+Total clusters        : 3284
+Singleton clusters    : 2848
+Multi-member clusters : 436
+Distance threshold    : 0.3
+Cosine similarity     : 0.70
+Embedding model       : text-embedding-3-large
+
+Largest clusters (top 20 of 436):
+
+  [6 members] canonical: 'breaking helicoil tang'
+      * 'breaking helicoil tang'
+        'handling helicoil during installation'
+        'helicoil installed from opposite side'
+        'helicoil tang interference with bolt'
+        'helicoil tang orientation when installed from wrong side'
+        'tang orientation when installing helicoil from back side'
+
+  [6 members] canonical: 'microstepping benefits'
+      * 'microstepping benefits'
+        'microstepping mechanism'
+        'microstepping resolution effect'
+        'microstepping to reduce resonance'
+        'microstepping torque behavior'
+        'microstepping tradeoff between resolution and torque'
+
+  [6 members] canonical: 'sharp internal corners in milling'
+        'CNC router rabbet corners with square end cutter'
+        'inside square corners with CNC router'
+        'internal 90-degree corners in CNC milling/routing'
+        'removing rounded internal corners after CNC routing'
+      * 'sharp internal corners in milling'
+        'square internal corners with a router'
+
+  [6 members] canonical: 'stepper driver current setting'
+        'stepper driver current limit adjustment'
+        'stepper driver current matching'
+      * 'stepper driver current setting'
+        'stepper driver current setting interface'
+        'stepper driver idle current reduction disablement'
+        'stepper driver idle-current reduction configurability'
+
+  [5 members] canonical: 'achievable CNC tolerance'
+      * 'achievable CNC tolerance'
+        'achievable tolerance by good machine shops'
+        'achievable tolerances for machined parts'
+        'multi-axis CNC machining center tolerances'
+        'typical CNC machine tolerance capability'
+
+  [5 members] canonical: 'boring vs reaming for hole sizing'
+        'boring versus reaming ease and finish'
+        'boring vs reaming for hole accuracy'
+      * 'boring vs reaming for hole sizing'
+        'boring vs reaming vs drilling for hole quality'
+        'use of boring/reaming for screw holes'
+
+  [5 members] canonical: 'clearance hole sizing for external threads'
+        'clearance hole drill sizing to screw major diameter'
+        'clearance hole enlargement when upsizing screws'
+        'clearance hole sizing for M7 panel-mount threads'
+      * 'clearance hole sizing for external threads'
+        'clearance hole sizing standards for threaded fasteners'
+
+  [5 members] canonical: 'gear tooth profile scaling'
+        'gear standards covering tooth profile details'
+        'gear tooth profile below base circle'
+      * 'gear tooth profile scaling'
+        'small gear tooth profile tolerance'
+        'standardized gear tooth profiles'
+
+  [4 members] canonical: 'EAGLE EXCELLON ResX/ResY settings'
+        "EAGLE 'EXCELLON' device drill output format"
+      * 'EAGLE EXCELLON ResX/ResY settings'
+        'EAGLE EXCELLON_24 device selection'
+        'Eagle Excellon output convenience'
+
+  [4 members] canonical: 'G-code verification with viewer/editor'
+      * 'G-code verification with viewer/editor'
+        'G-code visualization for verification/learning'
+        'Reading G-code to debug/verify CAM output'
+        'reading G-code to debug/verify CAM-posted programs'
+
+  [4 members] canonical: 'Mach4–PoKeys connection in standard Windows session'
+        'Effect of kiosk registry changes on Mach4–PoKeys connectivity'
+        'Mach4–PoKeys connection after repeated sign-in/out cycles'
+        'Mach4–PoKeys connection behavior under Windows kiosk shell'
+      * 'Mach4–PoKeys connection in standard Windows session'
+
+  [4 members] canonical: 'PLC role in CNC machines'
+      * 'PLC role in CNC machines'
+        'PLC vs CNC for coordinated multi-axis motion'
+        'PLC vs CNC for synchronized motion control'
+        'integrated PLC functionality in CNC controllers'
+
+  [4 members] canonical: 'Whitworth thread angle'
+        'Whitworth TPI per diameter specification'
+      * 'Whitworth thread angle'
+        'Whitworth thread depth-to-pitch ratio'
+        'Whitworth thread standardization method'
+
+  [4 members] canonical: 'aluminum thermal expansion at ~200C'
+        'aluminum thermal expansion affecting hole size'
+      * 'aluminum thermal expansion at ~200C'
+        'aluminum thermal expansion coefficient'
+        'aluminum thermal expansion limits for interference-fit sizing'
+
+  [4 members] canonical: 'cable gland M20 hole sizing'
+      * 'cable gland M20 hole sizing'
+        'cable gland mounting hole type'
+        'cable gland sizing by cable diameter'
+        'panel hole sizing for cable glands'
+
+  [4 members] canonical: 'dual-motor gantry synchronization'
+        'dual-motor gantry implementation ease'
+      * 'dual-motor gantry synchronization'
+        'geared single-motor gantry drive economics'
+        'single-motor gantry transmission options'
+
+  [4 members] canonical: 'editing a feature sketch via FeatureManager in Solidworks'
+        'Editing sketches by clicking a face in complex SolidWorks parts'
+      * 'editing a feature sketch via FeatureManager in Solidworks'
+        "editing a feature's sketch via face selection (SOLIDWORKS)"
+        'editing sketches via FeatureManager design tree (SOLIDWORKS)'
+
+  [4 members] canonical: 'fillet order of operations'
+        'fillet application order in CAD models'
+        'fillet feature order of operations (SolidWorks)'
+      * 'fillet order of operations'
+        'order of fillet and pocket operations in FreeCAD'
+
+  [4 members] canonical: 'flat root spline definition'
+        'fillet root spline definition'
+        'fillet root vs flat root spline root geometry'
+      * 'flat root spline definition'
+        'flat root spline fillet presence'
+
+  [4 members] canonical: 'general tolerances on drawings'
+        'default general tolerances on drawing templates'
+      * 'general tolerances on drawings'
+        'tolerance specification on drawings'
+        'tolerances on drawings as minimum documentation'
+
+Cluster size distribution:
+  Size   1:  2848 clusters
+  Size   2:   328 clusters
+  Size   3:    78 clusters
+  Size   4:    22 clusters
+  Size   5:     4 clusters
+  Size   6:     4 clusters
+============================================================
+
+============================================================
+CLUSTER REVIEW (436 multi-member clusters)
+============================================================
+
+--- Cluster 1/436 ---
+  Canonical: 'breaking helicoil tang'
+  Members (6):
+    * 'breaking helicoil tang'
+      'handling helicoil during installation'
+      'helicoil installed from opposite side'
+      'helicoil tang interference with bolt'
+      'helicoil tang orientation when installed from wrong side'
+      'tang orientation when installing helicoil from back side'
+  Scopes: design_geometry, machining_process, tooling
+  Frame types: case, heuristic, observation, risk
+  Total frames: 6
+
+--- Cluster 2/436 ---
+  Canonical: 'microstepping benefits'
+  Members (6):
+    * 'microstepping benefits'
+      'microstepping mechanism'
+      'microstepping resolution effect'
+      'microstepping to reduce resonance'
+      'microstepping torque behavior'
+      'microstepping tradeoff between resolution and torque'
+  Scopes: machine_capability
+  Frame types: heuristic, observation, principle
+  Total frames: 6
+
+--- Cluster 3/436 ---
+  Canonical: 'sharp internal corners in milling'
+  Members (6):
+      'CNC router rabbet corners with square end cutter'
+      'inside square corners with CNC router'
+      'internal 90-degree corners in CNC milling/routing'
+      'removing rounded internal corners after CNC routing'
+    * 'sharp internal corners in milling'
+      'square internal corners with a router'
+  Scopes: design_geometry, machine_capability, machining_process
+  Frame types: heuristic, observation, risk, workaround
+  Total frames: 6
+
+--- Cluster 4/436 ---
+  Canonical: 'stepper driver current setting'
+  Members (6):
+      'stepper driver current limit adjustment'
+      'stepper driver current matching'
+    * 'stepper driver current setting'
+      'stepper driver current setting interface'
+      'stepper driver idle current reduction disablement'
+      'stepper driver idle-current reduction configurability'
+  Scopes: machine_capability
+  Frame types: case, heuristic, observation, workaround
+  Total frames: 6
+
+--- Cluster 5/436 ---
+  Canonical: 'achievable CNC tolerance'
+  Members (5):
+    * 'achievable CNC tolerance'
+      'achievable tolerance by good machine shops'
+      'achievable tolerances for machined parts'
+      'multi-axis CNC machining center tolerances'
+      'typical CNC machine tolerance capability'
+  Scopes: machine_capability, quality
+  Frame types: observation
+  Total frames: 5
+
+--- Cluster 6/436 ---
+  Canonical: 'boring vs reaming for hole sizing'
+  Members (5):
+      'boring versus reaming ease and finish'
+      'boring vs reaming for hole accuracy'
+    * 'boring vs reaming for hole sizing'
+      'boring vs reaming vs drilling for hole quality'
+      'use of boring/reaming for screw holes'
+  Scopes: machining_process, tooling
+  Frame types: comparison, heuristic
+  Total frames: 5
+
+--- Cluster 7/436 ---
+  Canonical: 'clearance hole sizing for external threads'
+  Members (5):
+      'clearance hole drill sizing to screw major diameter'
+      'clearance hole enlargement when upsizing screws'
+      'clearance hole sizing for M7 panel-mount threads'
+    * 'clearance hole sizing for external threads'
+      'clearance hole sizing standards for threaded fasteners'
+  Scopes: design_geometry
+  Frame types: heuristic, observation, risk
+  Total frames: 5
+
+--- Cluster 8/436 ---
+  Canonical: 'gear tooth profile scaling'
+  Members (5):
+      'gear standards covering tooth profile details'
+      'gear tooth profile below base circle'
+    * 'gear tooth profile scaling'
+      'small gear tooth profile tolerance'
+      'standardized gear tooth profiles'
+  Scopes: design_geometry, quality
+  Frame types: heuristic, observation
+  Total frames: 5
+
+--- Cluster 9/436 ---
+  Canonical: 'EAGLE EXCELLON ResX/ResY settings'
+  Members (4):
+      "EAGLE 'EXCELLON' device drill output format"
+    * 'EAGLE EXCELLON ResX/ResY settings'
+      'EAGLE EXCELLON_24 device selection'
+      'Eagle Excellon output convenience'
+  Scopes: programming
+  Frame types: comparison, heuristic, risk, workaround
+  Total frames: 4
+
+--- Cluster 10/436 ---
+  Canonical: 'G-code verification with viewer/editor'
+  Members (4):
+    * 'G-code verification with viewer/editor'
+      'G-code visualization for verification/learning'
+      'Reading G-code to debug/verify CAM output'
+      'reading G-code to debug/verify CAM-posted programs'
+  Scopes: programming
+  Frame types: heuristic
+  Total frames: 4
+
+--- Cluster 11/436 ---
+  Canonical: 'Mach4–PoKeys connection in standard Windows session'
+  Members (4):
+      'Effect of kiosk registry changes on Mach4–PoKeys connectivity'
+      'Mach4–PoKeys connection after repeated sign-in/out cycles'
+      'Mach4–PoKeys connection behavior under Windows kiosk shell'
+    * 'Mach4–PoKeys connection in standard Windows session'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 4
+
+--- Cluster 12/436 ---
+  Canonical: 'PLC role in CNC machines'
+  Members (4):
+    * 'PLC role in CNC machines'
+      'PLC vs CNC for coordinated multi-axis motion'
+      'PLC vs CNC for synchronized motion control'
+      'integrated PLC functionality in CNC controllers'
+  Scopes: machine_capability
+  Frame types: comparison, heuristic, observation
+  Total frames: 4
+
+--- Cluster 13/436 ---
+  Canonical: 'Whitworth thread angle'
+  Members (4):
+      'Whitworth TPI per diameter specification'
+    * 'Whitworth thread angle'
+      'Whitworth thread depth-to-pitch ratio'
+      'Whitworth thread standardization method'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 4
+
+--- Cluster 14/436 ---
+  Canonical: 'aluminum thermal expansion at ~200C'
+  Members (4):
+      'aluminum thermal expansion affecting hole size'
+    * 'aluminum thermal expansion at ~200C'
+      'aluminum thermal expansion coefficient'
+      'aluminum thermal expansion limits for interference-fit sizing'
+  Scopes: material
+  Frame types: observation, risk
+  Total frames: 4
+
+--- Cluster 15/436 ---
+  Canonical: 'cable gland M20 hole sizing'
+  Members (4):
+    * 'cable gland M20 hole sizing'
+      'cable gland mounting hole type'
+      'cable gland sizing by cable diameter'
+      'panel hole sizing for cable glands'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 4
+
+--- Cluster 16/436 ---
+  Canonical: 'dual-motor gantry synchronization'
+  Members (4):
+      'dual-motor gantry implementation ease'
+    * 'dual-motor gantry synchronization'
+      'geared single-motor gantry drive economics'
+      'single-motor gantry transmission options'
+  Scopes: cost, design_geometry, machine_capability
+  Frame types: heuristic, risk
+  Total frames: 4
+
+--- Cluster 17/436 ---
+  Canonical: 'editing a feature sketch via FeatureManager in Solidworks'
+  Members (4):
+      'Editing sketches by clicking a face in complex SolidWorks parts'
+    * 'editing a feature sketch via FeatureManager in Solidworks'
+      "editing a feature's sketch via face selection (SOLIDWORKS)"
+      'editing sketches via FeatureManager design tree (SOLIDWORKS)'
+  Scopes: design_geometry, other
+  Frame types: heuristic, risk
+  Total frames: 4
+
+--- Cluster 18/436 ---
+  Canonical: 'fillet order of operations'
+  Members (4):
+      'fillet application order in CAD models'
+      'fillet feature order of operations (SolidWorks)'
+    * 'fillet order of operations'
+      'order of fillet and pocket operations in FreeCAD'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 4
+
+--- Cluster 19/436 ---
+  Canonical: 'flat root spline definition'
+  Members (4):
+      'fillet root spline definition'
+      'fillet root vs flat root spline root geometry'
+    * 'flat root spline definition'
+      'flat root spline fillet presence'
+  Scopes: design_geometry
+  Frame types: comparison, observation
+  Total frames: 4
+
+--- Cluster 20/436 ---
+  Canonical: 'general tolerances on drawings'
+  Members (4):
+      'default general tolerances on drawing templates'
+    * 'general tolerances on drawings'
+      'tolerance specification on drawings'
+      'tolerances on drawings as minimum documentation'
+  Scopes: design_geometry, quality
+  Frame types: heuristic, observation
+  Total frames: 4
+
+--- Cluster 21/436 ---
+  Canonical: 'hot melt glue for temporary fixturing'
+  Members (4):
+      'clamping for temporary PVA glue fixturing'
+    * 'hot melt glue for temporary fixturing'
+      'temporary wood fixturing with PVA glue (Titebond Original)'
+      'temporary wood fixturing with PVA glue dots'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 4
+
+--- Cluster 22/436 ---
+  Canonical: 'inadequate adhesive bond line thickness'
+  Members (4):
+      'adhesive bond line thickness typical range'
+      'cyanoacrylate adhesive bond line thickness effect'
+    * 'inadequate adhesive bond line thickness'
+      'two-component (2K) adhesives bond line thickness limits'
+  Scopes: design_geometry, material
+  Frame types: observation, risk
+  Total frames: 4
+
+--- Cluster 23/436 ---
+  Canonical: 'injection/compression mold cost'
+  Members (4):
+      'injection molding cost structure'
+      'injection molding setup economics'
+    * 'injection/compression mold cost'
+      'small-scale injection molding cost/complexity'
+  Scopes: cost
+  Frame types: heuristic, observation
+  Total frames: 4
+
+--- Cluster 24/436 ---
+  Canonical: 'open-loop stepper step loss'
+  Members (4):
+      'open-loop stepper homing after lost position'
+      'open-loop stepper missed steps in lathe threading'
+      'open-loop stepper position loss'
+    * 'open-loop stepper step loss'
+  Scopes: machine_capability
+  Frame types: principle, risk, workaround
+  Total frames: 4
+
+--- Cluster 25/436 ---
+  Canonical: 'power supply sizing for stepper systems'
+  Members (4):
+      'power calculation for stepper motor supply'
+      'power supply current capacity for stepper systems'
+      'power supply sizing for multi-axis stepper systems'
+    * 'power supply sizing for stepper systems'
+  Scopes: machine_capability
+  Frame types: heuristic, principle
+  Total frames: 4
+
+--- Cluster 26/436 ---
+  Canonical: 'preferred minimum tooth count for small gear'
+  Members (4):
+      'integer tooth count and common tooth profile constraints on gear ratios'
+      'integer tooth count constraint on gear diameter'
+      'minimum gear diameter for given tooth profile and tooth count'
+    * 'preferred minimum tooth count for small gear'
+  Scopes: design_geometry
+  Frame types: heuristic, observation, risk
+  Total frames: 4
+
+--- Cluster 27/436 ---
+  Canonical: 'press nut terminology'
+  Members (4):
+      'press nut hole requirement'
+      'press nut hole size relative to clinching end'
+      'press nut preformed hole requirement'
+    * 'press nut terminology'
+  Scopes: design_geometry, other
+  Frame types: observation
+  Total frames: 4
+
+--- Cluster 28/436 ---
+  Canonical: 'snap ring groove depth'
+  Members (4):
+      'snap ring free ID vs groove diameter'
+      'snap ring gap design variants'
+    * 'snap ring groove depth'
+      'snap ring groove width'
+  Scopes: design_geometry
+  Frame types: observation, principle, risk
+  Total frames: 4
+
+--- Cluster 29/436 ---
+  Canonical: 'stepper motor torque–speed curve'
+  Members (4):
+      'stepper motor torque-speed relationship'
+    * 'stepper motor torque–speed curve'
+      'stepper motor torque–speed curve specification'
+      'stepper torque-speed with constant-voltage drive'
+  Scopes: machine_capability
+  Frame types: heuristic, observation, principle
+  Total frames: 4
+
+--- Cluster 30/436 ---
+  Canonical: 'tolerance stack-up and cancellation'
+  Members (4):
+      'tolerance stack-up affecting hole edge location'
+    * 'tolerance stack-up and cancellation'
+      'tolerance stack-up from half-dimensioning'
+      'tolerance stack-up when zeroing from a surrogate surface'
+  Scopes: design_geometry, machining_process, quality
+  Frame types: principle, risk
+  Total frames: 4
+
+--- Cluster 31/436 ---
+  Canonical: '2D contour-to-G-code free tools'
+  Members (3):
+    * '2D contour-to-G-code free tools'
+      'availability of image-to-G-code converters'
+      'free 2D-to-G-code converters suitability'
+  Scopes: programming
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 32/436 ---
+  Canonical: 'EMC-2-Arduino microstepping support'
+  Members (3):
+    * 'EMC-2-Arduino microstepping support'
+      'EMC-2-Arduino multi-axis stepper control capability'
+      'EMC2 direct-to-stepper connection limitation'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 3
+
+--- Cluster 33/436 ---
+  Canonical: 'Fusion 360 free version'
+  Members (3):
+      'Fusion 360 free licensing and annual renewal for hobbyists/students'
+    * 'Fusion 360 free version'
+      'Fusion 360 licensing (student/hobbyist)'
+  Scopes: cost, shop_operations
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 34/436 ---
+  Canonical: 'Gerber vs Excellon for PCB drilling'
+  Members (3):
+      'Excellon drill file format choice for PCB drilling'
+      'Excellon vs GERBER_RS274X resolution mismatch'
+    * 'Gerber vs Excellon for PCB drilling'
+  Scopes: programming
+  Frame types: comparison, heuristic, principle
+  Total frames: 3
+
+--- Cluster 35/436 ---
+  Canonical: 'Hall effect current sensors'
+  Members (3):
+      'Hall effect current sensor output types'
+    * 'Hall effect current sensors'
+      'hall-effect current sensing for larger currents'
+  Scopes: other
+  Frame types: comparison, heuristic, observation
+  Total frames: 3
+
+--- Cluster 36/436 ---
+  Canonical: 'ISO 2768 applicability'
+  Members (3):
+    * 'ISO 2768 applicability'
+      'ISO 2768 tolerance grade selection'
+      'applying ISO 2768 on drawings'
+  Scopes: cost, design_geometry
+  Frame types: heuristic, risk
+  Total frames: 3
+
+--- Cluster 37/436 ---
+  Canonical: 'Manually drawing projection symbols in SolidWorks'
+  Members (3):
+    * 'Manually drawing projection symbols in SolidWorks'
+      'Reusing projection symbols from SolidWorks default templates'
+      'SolidWorks default templates contain projection symbols'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 38/436 ---
+  Canonical: 'Mating to external references in SolidWorks assemblies'
+  Members (3):
+    * 'Mating to external references in SolidWorks assemblies'
+      'Using assembly-level inter-part references in SolidWorks'
+      'external references to align assembly sketch holes with STEP part holes in SolidWorks'
+  Scopes: design_geometry, other
+  Frame types: heuristic, risk
+  Total frames: 3
+
+--- Cluster 39/436 ---
+  Canonical: 'NC limit switch wiring fail-safe'
+  Members (3):
+    * 'NC limit switch wiring fail-safe'
+      'Series-wired NC limit switches for fail-safe interlock'
+      'fail-safe behavior of NC-wired limit switches'
+  Scopes: machine_capability
+  Frame types: principle
+  Total frames: 3
+
+--- Cluster 40/436 ---
+  Canonical: 'Onshape browser-based CAD delivery'
+  Members (3):
+    * 'Onshape browser-based CAD delivery'
+      'Onshape browser-based parametric CAD'
+      'Onshape modeling and drafting capabilities'
+  Scopes: design_geometry, machine_capability, programming
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 41/436 ---
+  Canonical: 'SOLIDWORKS mesh body editing methods'
+  Members (3):
+      'Converting mesh to BREP in SOLIDWORKS'
+    * 'SOLIDWORKS mesh body editing methods'
+      'SolidWorks mesh body conversion enabling Boolean operations'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 42/436 ---
+  Canonical: 'Sketching on mesh bodies in SolidWorks'
+  Members (3):
+      'Adding features to mesh bodies in SOLIDWORKS'
+      'Cutting features from mesh bodies in SOLIDWORKS'
+    * 'Sketching on mesh bodies in SolidWorks'
+  Scopes: design_geometry
+  Frame types: heuristic, risk
+  Total frames: 3
+
+--- Cluster 43/436 ---
+  Canonical: 'SolidWorks Combine feature multibody requirement'
+  Members (3):
+      'Parametric updates in SolidWorks multibody and Combine workflow'
+    * 'SolidWorks Combine feature multibody requirement'
+      'SolidWorks multibody combine-subtract to propagate fillet between parts'
+  Scopes: design_geometry, other
+  Frame types: observation, risk, workaround
+  Total frames: 3
+
+--- Cluster 44/436 ---
+  Canonical: 'SolidWorks Thread Minor Diameter computation'
+  Members (3):
+    * 'SolidWorks Thread Minor Diameter computation'
+      "Solidworks 'Thread Minor Diameter Inside' mapping to DIN 13-1 D1"
+      'Thread Minor Diameter Inside mapping to DIN D1'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 45/436 ---
+  Canonical: 'SolidWorks base vs boss feature definition'
+  Members (3):
+    * 'SolidWorks base vs boss feature definition'
+      'SolidWorks first feature labeling (base vs boss)'
+      'base vs boss extrude equivalence in SolidWorks'
+  Scopes: design_geometry, other
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 46/436 ---
+  Canonical: 'SolidWorks cavity cut at assembly level'
+  Members (3):
+      'Procedure to trim a part by another using SolidWorks Cavity feature'
+    * 'SolidWorks cavity cut at assembly level'
+      'Using SolidWorks Cavity to subtract one part from another in an assembly'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 47/436 ---
+  Canonical: 'SolidWorks hole table CSV line breaks for complex holes'
+  Members (3):
+      'Preprocessing embedded newlines in SolidWorks hole table CSV for parsing'
+    * 'SolidWorks hole table CSV line breaks for complex holes'
+      'SolidWorks hole table CSV newline characters in callouts'
+  Scopes: programming
+  Frame types: observation, workaround
+  Total frames: 3
+
+--- Cluster 48/436 ---
+  Canonical: 'SolidWorks sketch text linked to dimension'
+  Members (3):
+      'Linking sketch text via dimension vs Custom Property in SolidWorks'
+    * 'SolidWorks sketch text linked to dimension'
+      'linking SolidWorks sketch text to a dimension via a custom property'
+  Scopes: other
+  Frame types: comparison, heuristic
+  Total frames: 3
+
+--- Cluster 49/436 ---
+  Canonical: 'SolidWorks variables and equations'
+  Members (3):
+      'SolidWorks equation-driven dimension indicator'
+      'SolidWorks global variables in Smart Dimensions'
+    * 'SolidWorks variables and equations'
+  Scopes: design_geometry, programming
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 50/436 ---
+  Canonical: 'SolidWorks-to-Blender via STL'
+  Members (3):
+      'SolidWorks to FreeCAD file conversion via STL'
+    * 'SolidWorks-to-Blender via STL'
+      'SolidWorks-to-FreeCAD via STEP for meshing'
+  Scopes: design_geometry, other
+  Frame types: heuristic, workaround
+  Total frames: 3
+
+--- Cluster 51/436 ---
+  Canonical: 'URDF Exporter moments of inertia mismatch with Solidworks'
+  Members (3):
+    * 'URDF Exporter moments of inertia mismatch with Solidworks'
+      'URDF Exporter vs Solidworks Mass Properties mass/COM discrepancy'
+      'mass property parity between SolidWorks and URDF exporter'
+  Scopes: design_geometry, programming
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 52/436 ---
+  Canonical: "Wood's metal as machining filler"
+  Members (3):
+    * "Wood's metal as machining filler"
+      "Wood's metal filler use and removal"
+      "Wood's metal vs wax filler stability"
+  Scopes: machining_process
+  Frame types: comparison, heuristic, observation
+  Total frames: 3
+
+--- Cluster 53/436 ---
+  Canonical: 'acrylic panel sag with insufficient fasteners'
+  Members (3):
+      'acrylic panel out-of-plane deflection despite fasteners'
+    * 'acrylic panel sag with insufficient fasteners'
+      'increasing acrylic panel stiffness and hiding fasteners'
+  Scopes: design_geometry, material
+  Frame types: heuristic, observation, risk
+  Total frames: 3
+
+--- Cluster 54/436 ---
+  Canonical: 'continuum robot control complexity for CNC'
+  Members (3):
+    * 'continuum robot control complexity for CNC'
+      'continuum robots vs rigid CNC economic efficiency'
+      'precision limitations of continuum robots for CNC machining'
+  Scopes: cost, machine_capability
+  Frame types: comparison, risk
+  Total frames: 3
+
+--- Cluster 55/436 ---
+  Canonical: 'continuum robot rigidity limitation'
+  Members (3):
+      'continuum robot motion speed vs rigid robots'
+    * 'continuum robot rigidity limitation'
+      'continuum robot rigidity limitations'
+  Scopes: machine_capability
+  Frame types: comparison, risk
+  Total frames: 3
+
+--- Cluster 56/436 ---
+  Canonical: 'crankpin grinding setup method'
+  Members (3):
+    * 'crankpin grinding setup method'
+      'indexing per crankpin during grinding'
+      'off-center mounting for crankpin grinding'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 57/436 ---
+  Canonical: 'current-controlled stepper drives'
+  Members (3):
+      'constant-current stepper drivers and power supply wattage'
+    * 'current-controlled stepper drives'
+      'stepper motor current-controlled driving'
+  Scopes: machine_capability
+  Frame types: principle
+  Total frames: 3
+
+--- Cluster 58/436 ---
+  Canonical: 'custom measurement fixtures'
+  Members (3):
+    * 'custom measurement fixtures'
+      'fixturing for accurate shape capture during measurement'
+      'investment in fixturing for measurement'
+  Scopes: quality
+  Frame types: heuristic, workaround
+  Total frames: 3
+
+--- Cluster 59/436 ---
+  Canonical: 'cycle time for SX blade heat treatment'
+  Members (3):
+    * 'cycle time for SX blade heat treatment'
+      'heat treatment of single-crystal (SX) turbine blades'
+      'homogenization and solutionizing in SX blade heat treatment'
+  Scopes: cost, material
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 60/436 ---
+  Canonical: 'dimension callout syntax (ANSI vs ISO)'
+  Members (3):
+    * 'dimension callout syntax (ANSI vs ISO)'
+      'dimension text orientation (ANSI vs ISO)'
+      'dimension text placement relative to dimension line (ANSI vs ISO)'
+  Scopes: design_geometry
+  Frame types: comparison
+  Total frames: 3
+
+--- Cluster 61/436 ---
+  Canonical: 'dimensioned drawings for outsourced machining'
+  Members (3):
+      'dimensioned drawings as manufacturing requirement'
+    * 'dimensioned drawings for outsourced machining'
+      'requirement for mechanical drawings in machining'
+  Scopes: design_geometry, quality
+  Frame types: heuristic
+  Total frames: 3
+
+--- Cluster 62/436 ---
+  Canonical: 'double-sided tape fixturing for PCB milling'
+  Members (3):
+      'double-sided tape as workholding for small parts'
+    * 'double-sided tape fixturing for PCB milling'
+      'double-sided tape for temporary workholding'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 63/436 ---
+  Canonical: 'dowel pins for precise alignment'
+  Members (3):
+      'dowel pins for alignment with clearance bolts'
+    * 'dowel pins for precise alignment'
+      'dowel pins vs screw holes for alignment'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 64/436 ---
+  Canonical: 'drilling thin sheet metal'
+  Members (3):
+    * 'drilling thin sheet metal'
+      'large twist drill hazards in thin metal'
+      'twist drill behavior in thin sheet'
+  Scopes: machining_process, tooling
+  Frame types: observation, risk
+  Total frames: 3
+
+--- Cluster 65/436 ---
+  Canonical: 'frictional torque transfer in bolted joints'
+  Members (3):
+      'bolt torque and load direction in clamped joints'
+    * 'frictional torque transfer in bolted joints'
+      'shear-loaded bolts vs friction-clamped joints'
+  Scopes: design_geometry
+  Frame types: comparison, heuristic
+  Total frames: 3
+
+--- Cluster 66/436 ---
+  Canonical: 'gear module'
+  Members (3):
+    * 'gear module'
+      'gear module definition'
+      'gear module formula'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 67/436 ---
+  Canonical: 'gear pitch vs backlash'
+  Members (3):
+    * 'gear pitch vs backlash'
+      'proportional effect of gear pitch on backlash'
+      'proportionality of pitch to designed backlash'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 4
+
+--- Cluster 68/436 ---
+  Canonical: 'gear tooth flank geometry from hobbing'
+  Members (3):
+    * 'gear tooth flank geometry from hobbing'
+      'gear tooth root geometry below involute flank'
+      'rack tooth flank flatness in involute meshing'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 69/436 ---
+  Canonical: 'hand reaming hole straightness'
+  Members (3):
+    * 'hand reaming hole straightness'
+      'reaming for hole diameter and straightness'
+      'reaming for speed on multiple holes'
+  Scopes: machining_process, tooling
+  Frame types: heuristic, observation, risk
+  Total frames: 3
+
+--- Cluster 70/436 ---
+  Canonical: 'heat treatment after CNC milling'
+  Members (3):
+    * 'heat treatment after CNC milling'
+      'post-machining heat treatment in demanding industries'
+      'post-machining heat treatment to avoid hard machining'
+  Scopes: machining_process, material
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 71/436 ---
+  Canonical: 'hidden lines in section views'
+  Members (3):
+      'hidden line convention in drawings'
+      'hidden lines in hatched metal sections'
+    * 'hidden lines in section views'
+  Scopes: design_geometry, other
+  Frame types: heuristic, observation
+  Total frames: 4
+
+--- Cluster 72/436 ---
+  Canonical: 'jaw position rotation on three-jaw chuck'
+  Members (3):
+      'independent 4-jaw chuck jaw position relevance'
+    * 'jaw position rotation on three-jaw chuck'
+      'non-independent chuck jaw insertion sequence'
+  Scopes: tooling
+  Frame types: observation, risk
+  Total frames: 3
+
+--- Cluster 73/436 ---
+  Canonical: 'laser cutting kerf (pierce diameter)'
+  Members (3):
+      'accounting for laser kerf when sizing holes'
+    * 'laser cutting kerf (pierce diameter)'
+      'laser kerf and CAD representation of cuts'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic, observation, principle
+  Total frames: 3
+
+--- Cluster 74/436 ---
+  Canonical: 'low feed rate heat buildup'
+  Members (3):
+      'heat mitigation via speed and feed reduction'
+    * 'low feed rate heat buildup'
+      'reducing feed rate to lower load risking overheating'
+  Scopes: machining_process
+  Frame types: heuristic, principle, risk
+  Total frames: 3
+
+--- Cluster 75/436 ---
+  Canonical: 'magnetic actuator compactness'
+  Members (3):
+    * 'magnetic actuator compactness'
+      'magnetic actuator control simplicity'
+      'magnetic actuators for two-position motion'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 76/436 ---
+  Canonical: 'maximum depth of cut'
+  Members (3):
+      'excessive depth of cut'
+      'machine-specific maximum depth of cut'
+    * 'maximum depth of cut'
+  Scopes: machine_capability, machining_process
+  Frame types: observation, risk
+  Total frames: 3
+
+--- Cluster 77/436 ---
+  Canonical: 'minimum teeth to avoid undercutting'
+  Members (3):
+      'minimum teeth to avoid undercut in 20° PA gears'
+    * 'minimum teeth to avoid undercutting'
+      'minimum tooth count to avoid undercut in gears'
+  Scopes: design_geometry
+  Frame types: heuristic, principle, risk
+  Total frames: 3
+
+--- Cluster 78/436 ---
+  Canonical: 'multi-stage gear train drawbacks'
+  Members (3):
+    * 'multi-stage gear train drawbacks'
+      'multi-stage gearing wear advantages'
+      'multi-stage vs two-gear ratio precision and tooth wear'
+  Scopes: cost, design_geometry
+  Frame types: comparison, observation
+  Total frames: 3
+
+--- Cluster 79/436 ---
+  Canonical: 'negative lead-angle turning tools'
+  Members (3):
+      'handed positive lead-angle tool strength'
+    * 'negative lead-angle turning tools'
+      'positive lead-angle tool application'
+  Scopes: machining_process, tooling
+  Frame types: heuristic, principle
+  Total frames: 3
+
+--- Cluster 80/436 ---
+  Canonical: 'overconstraining boundary conditions in FEA'
+  Members (3):
+      'boundary condition strategy to prevent overconstraint in FEA'
+      'over-constrained boundary conditions near contact edges'
+    * 'overconstraining boundary conditions in FEA'
+  Scopes: other
+  Frame types: heuristic, observation, risk
+  Total frames: 3
+
+--- Cluster 81/436 ---
+  Canonical: 'pantograph belt'
+  Members (3):
+    * 'pantograph belt'
+      'pantograph belt construction'
+      'pantograph belt industrial use'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 82/436 ---
+  Canonical: 'parametric CAD parameters'
+  Members (3):
+      'parametric CAD design intent'
+    * 'parametric CAD parameters'
+      'parametric modeling in CAD'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 83/436 ---
+  Canonical: 'percent thread depth definition'
+  Members (3):
+      'percent thread depth calculation constant'
+    * 'percent thread depth definition'
+      'percent thread depth selection in hard materials'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 84/436 ---
+  Canonical: 'polycarbonate (Lexan) sheet for router table plate'
+  Members (3):
+      'plexiglass (acrylic) stiffness for router table plates'
+    * 'polycarbonate (Lexan) sheet for router table plate'
+      'support requirement for plexiglass router table plates'
+  Scopes: design_geometry, material
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 85/436 ---
+  Canonical: 'preferred EDM electrode materials'
+  Members (3):
+      'EDM electrode material selection criteria'
+      'lead or solder as EDM electrode materials'
+    * 'preferred EDM electrode materials'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 86/436 ---
+  Canonical: 'press-fit or captive nuts'
+  Members (3):
+      'captive nuts in wood assemblies'
+    * 'press-fit or captive nuts'
+      'sourcing press-fit/captive nuts from McMaster-Carr'
+  Scopes: design_geometry, other
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 87/436 ---
+  Canonical: 'revolve sketch axis as construction line'
+  Members (3):
+      'master sketch to define axis and sketch plane for revolves'
+    * 'revolve sketch axis as construction line'
+      'revolve sketch geometry kept to one side of axis'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 3
+
+--- Cluster 88/436 ---
+  Canonical: 'ring-sun-planet tooth count relation'
+  Members (3):
+      'ring and sun tooth count common divisor vs number of planets'
+    * 'ring-sun-planet tooth count relation'
+      'sun+ring teeth sum divisibility by planet count'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 4
+
+--- Cluster 89/436 ---
+  Canonical: 'rotary broach lathe use'
+  Members (3):
+    * 'rotary broach lathe use'
+      'rotary broach tooling cost and kit alternatives'
+      'rotary broaching vs conventional broaching'
+  Scopes: cost, machining_process, tooling
+  Frame types: comparison, observation
+  Total frames: 3
+
+--- Cluster 90/436 ---
+  Canonical: 'routed PCB outline tolerance'
+  Members (3):
+      'PCB outline size tolerance options and cost premium'
+      'PCB routed outline size tolerance (CNC routing)'
+    * 'routed PCB outline tolerance'
+  Scopes: design_geometry, quality
+  Frame types: observation, risk
+  Total frames: 4
+
+--- Cluster 91/436 ---
+  Canonical: 'screws for locating parts'
+  Members (3):
+    * 'screws for locating parts'
+      'using multiple screws for locating parts'
+      'using screws to locate heavy/tight-tolerance assemblies during lowering'
+  Scopes: design_geometry
+  Frame types: observation, risk
+  Total frames: 3
+
+--- Cluster 92/436 ---
+  Canonical: 'shear stress concentration at fillets'
+  Members (3):
+      'fillet radius effect on torsional stress concentration at a shoulder'
+      're-entrant fillet radius stress concentration'
+    * 'shear stress concentration at fillets'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 93/436 ---
+  Canonical: 'snubber resistor value trade-offs'
+  Members (3):
+      'snubber capacitance selection range'
+      'snubber resistance selection range'
+    * 'snubber resistor value trade-offs'
+  Scopes: machine_capability
+  Frame types: heuristic, principle
+  Total frames: 3
+
+--- Cluster 94/436 ---
+  Canonical: 'spline shaft connection for high torque'
+  Members (3):
+      'spline definition relative to torque transmission'
+    * 'spline shaft connection for high torque'
+      'splined shaft axial motion with torque transmission'
+  Scopes: design_geometry
+  Frame types: heuristic, observation, principle
+  Total frames: 3
+
+--- Cluster 95/436 ---
+  Canonical: 'spur gear ratio limit'
+  Members (3):
+      'parallel-axis spur gear ratio limit'
+      'spur gear meshing criteria'
+    * 'spur gear ratio limit'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 96/436 ---
+  Canonical: 'steel drill bits drilling fiberglass PCBs'
+  Members (3):
+      'carbide drill selection for fiberglass PCBs'
+      'carbide vs HSS drill bits for PCB drilling'
+    * 'steel drill bits drilling fiberglass PCBs'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 97/436 ---
+  Canonical: 'stepper phase inductance and current rise'
+  Members (3):
+      'inductance-driven current ramp in motor windings'
+      'inductance-limited current ramp in stepper windings'
+    * 'stepper phase inductance and current rise'
+  Scopes: machine_capability, other
+  Frame types: principle
+  Total frames: 3
+
+--- Cluster 98/436 ---
+  Canonical: 'stepper torque vs coil current'
+  Members (3):
+      'stepper coil duty cycle and holding current practices'
+      'stepper hold torque via continuous drive current'
+    * 'stepper torque vs coil current'
+  Scopes: machine_capability, programming
+  Frame types: heuristic, observation, principle
+  Total frames: 3
+
+--- Cluster 99/436 ---
+  Canonical: 'tap drill size selection'
+  Members (3):
+      'tap drill size calculation using thread percentage'
+      'tap drill size effect on thread percentage'
+    * 'tap drill size selection'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic, observation, principle
+  Total frames: 3
+
+--- Cluster 100/436 ---
+  Canonical: 'tapping in thin materials'
+  Members (3):
+    * 'tapping in thin materials'
+      'tapping technique in aluminum'
+      'tapping technique in aluminum from reverse side'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 3
+
+--- Cluster 101/436 ---
+  Canonical: 'three plate method'
+  Members (3):
+    * 'three plate method'
+      'three plate method consumables'
+      'three-plate method for generating flatness'
+  Scopes: machining_process, quality
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 102/436 ---
+  Canonical: 'thrust bearing shaft washer fit'
+  Members (3):
+      'thrust bearing housing washer clearance and housing press fit'
+    * 'thrust bearing shaft washer fit'
+      'thrust washer bearing against sheave land'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 103/436 ---
+  Canonical: 'tolerance-cost tradeoff'
+  Members (3):
+      'tolerance selection strategy'
+      'tolerance selection tradeoffs'
+    * 'tolerance-cost tradeoff'
+  Scopes: cost
+  Frame types: heuristic, principle
+  Total frames: 3
+
+--- Cluster 104/436 ---
+  Canonical: 'tolerancing strategy with basic dimensions'
+  Members (3):
+      'geometric tolerance requirement for basic dimensions'
+      'mixed use of basic and directly toleranced dimensions'
+    * 'tolerancing strategy with basic dimensions'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 3
+
+--- Cluster 105/436 ---
+  Canonical: 'traceable working thread gauges'
+  Members (3):
+    * 'traceable working thread gauges'
+      'use of thread gauge sets for measurement'
+      'use of thread gauges (etalons) for repetitive QC'
+  Scopes: quality
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 106/436 ---
+  Canonical: 'wear of ball screws vs lead screws vs timing belts'
+  Members (3):
+      'ball screws vs belt drives for positioning accuracy'
+      'lead screws vs timing belts vs ball screws (speed and accuracy)'
+    * 'wear of ball screws vs lead screws vs timing belts'
+  Scopes: machine_capability
+  Frame types: comparison
+  Total frames: 3
+
+--- Cluster 107/436 ---
+  Canonical: 'welding motor lamination stacks'
+  Members (3):
+      'adhesive bonding for motor lamination stacks'
+      'rivet stacking for motor laminations'
+    * 'welding motor lamination stacks'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 108/436 ---
+  Canonical: 'wrench clearance'
+  Members (3):
+    * 'wrench clearance'
+      'wrench clearance allowances'
+      'wrench clearance cutout sizing'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 3
+
+--- Cluster 109/436 ---
+  Canonical: '0.075 mm diameter tolerance achievability on a lathe'
+  Members (2):
+    * '0.075 mm diameter tolerance achievability on a lathe'
+      'standard lathe accuracy across a range of shaft diameters'
+  Scopes: machine_capability, quality
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 110/436 ---
+  Canonical: '5-axis CNC for complex angled features'
+  Members (2):
+      '3-axis CNC milling capability for sloped/angled features'
+    * '5-axis CNC for complex angled features'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 111/436 ---
+  Canonical: 'Autodesk vs Solidworks product focus'
+  Members (2):
+      'Autodesk Suite vs SolidWorks product scope'
+    * 'Autodesk vs Solidworks product focus'
+  Scopes: other
+  Frame types: comparison, observation
+  Total frames: 2
+
+--- Cluster 112/436 ---
+  Canonical: 'Boelube for cutting aluminum'
+  Members (2):
+    * 'Boelube for cutting aluminum'
+      'lubrication for sawing aluminum'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 113/436 ---
+  Canonical: 'CAD PDM/version control workflow'
+  Members (2):
+    * 'CAD PDM/version control workflow'
+      'Version control system for CAD when no PDM'
+  Scopes: other, shop_operations
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 114/436 ---
+  Canonical: 'CAD student licensing availability'
+  Members (2):
+    * 'CAD student licensing availability'
+      'student licenses for professional CAD'
+  Scopes: cost, other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 115/436 ---
+  Canonical: 'CAD vs CAM roles'
+  Members (2):
+      'CAD vs CAM responsibility for manufacturing details'
+    * 'CAD vs CAM roles'
+  Scopes: programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 116/436 ---
+  Canonical: 'CNC mill performance priorities'
+  Members (2):
+      '3D printer performance priorities'
+    * 'CNC mill performance priorities'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 117/436 ---
+  Canonical: 'CNC router vs CNC mill axis motion'
+  Members (2):
+    * 'CNC router vs CNC mill axis motion'
+      'CNC router vs CNC mill spindle speed and torque'
+  Scopes: machine_capability
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 118/436 ---
+  Canonical: 'CNC suitability for small rectangular cutouts in chipboard'
+  Members (2):
+    * 'CNC suitability for small rectangular cutouts in chipboard'
+      'method for cutting small rectangular openings in chipboard'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 119/436 ---
+  Canonical: 'CNC vs manual mill pricing drivers'
+  Members (2):
+    * 'CNC vs manual mill pricing drivers'
+      'manual mill mechanical complexity vs CNC electronics cost'
+  Scopes: cost
+  Frame types: comparison, principle
+  Total frames: 2
+
+--- Cluster 120/436 ---
+  Canonical: 'Creo student vs professional file compatibility'
+  Members (2):
+    * 'Creo student vs professional file compatibility'
+      'Opening Creo professional parts with the student edition'
+  Scopes: machine_capability
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 121/436 ---
+  Canonical: 'Cross-file coordinate alignment of separate STEP parts'
+  Members (2):
+    * 'Cross-file coordinate alignment of separate STEP parts'
+      'coordinate alignment procedure for separate STEP parts'
+  Scopes: design_geometry, programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 122/436 ---
+  Canonical: 'DC motor startup surge'
+  Members (2):
+    * 'DC motor startup surge'
+      'hysteretic current limiting for motor startup'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 123/436 ---
+  Canonical: 'DIN 874 flatness grades for steel rules'
+  Members (2):
+    * 'DIN 874 flatness grades for steel rules'
+      'DIN 874 straightness tolerance for 300 mm sharp-edged rule'
+  Scopes: quality
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 124/436 ---
+  Canonical: 'E-stop actuation de-energizes control relay'
+  Members (2):
+    * 'E-stop actuation de-energizes control relay'
+      'E-stop cutting control power to contactor coils'
+  Scopes: machine_capability
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 125/436 ---
+  Canonical: 'EDM for precise small-motor laminations'
+  Members (2):
+    * 'EDM for precise small-motor laminations'
+      'EDM for prototype lamination cutting and bonding'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 126/436 ---
+  Canonical: 'Editability: saved view vs Relative To Model'
+  Members (2):
+    * 'Editability: saved view vs Relative To Model'
+      'Relative To Model view editability and reuse limitations'
+  Scopes: design_geometry
+  Frame types: comparison, risk
+  Total frames: 2
+
+--- Cluster 127/436 ---
+  Canonical: 'FEA for key stress analysis'
+  Members (2):
+    * 'FEA for key stress analysis'
+      'need for FEA in cylinder head stress analysis'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 128/436 ---
+  Canonical: 'FEM stress singularity at sharp corners'
+  Members (2):
+    * 'FEM stress singularity at sharp corners'
+      'interpreting FEA results near singular corners'
+  Scopes: design_geometry
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 129/436 ---
+  Canonical: 'FR4 tool wear'
+  Members (2):
+    * 'FR4 tool wear'
+      'carbide wear resistance in FR4'
+  Scopes: material, tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 130/436 ---
+  Canonical: 'Fillet tool for rounded edges'
+  Members (2):
+    * 'Fillet tool for rounded edges'
+      'fillet application to part edges'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 131/436 ---
+  Canonical: 'Forstner bits and pilot holes'
+  Members (2):
+      'Forstner bit produces flat-bottom holes'
+    * 'Forstner bits and pilot holes'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 132/436 ---
+  Canonical: 'FreeCAD assembly support'
+  Members (2):
+      'FreeCAD 0.16 assembly capability'
+    * 'FreeCAD assembly support'
+  Scopes: other
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 133/436 ---
+  Canonical: 'Fusion 360 CAD software'
+  Members (2):
+    * 'Fusion 360 CAD software'
+      'Fusion 360 integrated CAD/CAM toolpath generation'
+  Scopes: other, programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 134/436 ---
+  Canonical: 'Fusion 360 export formats'
+  Members (2):
+    * 'Fusion 360 export formats'
+      'Fusion 360 export to industry-standard formats'
+  Scopes: other, programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 135/436 ---
+  Canonical: 'Fusion 360 modeling paradigms'
+  Members (2):
+    * 'Fusion 360 modeling paradigms'
+      'Fusion 360 parametric modeling and dimensioning'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 136/436 ---
+  Canonical: 'G-code snippets for setup tasks'
+  Members (2):
+    * 'G-code snippets for setup tasks'
+      'shop-floor G-code snippets for setup tasks'
+  Scopes: programming
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 137/436 ---
+  Canonical: 'G-code usage on NC machines'
+  Members (2):
+      'G-code usage by CNC machines'
+    * 'G-code usage on NC machines'
+  Scopes: programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 138/436 ---
+  Canonical: 'GM215 idle holding current behavior'
+  Members (2):
+    * 'GM215 idle holding current behavior'
+      'GM215 standby current reduction switch'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 139/436 ---
+  Canonical: 'GRBL open-loop step assumption'
+  Members (2):
+    * 'GRBL open-loop step assumption'
+      'stepper-based CNC step integrity assumption'
+  Scopes: machine_capability, programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 140/436 ---
+  Canonical: 'Gerber to G-code conversion'
+  Members (2):
+    * 'Gerber to G-code conversion'
+      'PCB-GCODE conversion from EAGLE to G-code'
+  Scopes: programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 141/436 ---
+  Canonical: 'GrabCAD cross-license commercial use restriction'
+  Members (2):
+    * 'GrabCAD cross-license commercial use restriction'
+      'Obtaining permission for commercial use of GrabCAD models'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 142/436 ---
+  Canonical: 'Hole Wizard saving custom hole settings'
+  Members (2):
+      'Hole Wizard custom hole size and tolerance'
+    * 'Hole Wizard saving custom hole settings'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 143/436 ---
+  Canonical: 'ISO 286 IT grades'
+  Members (2):
+    * 'ISO 286 IT grades'
+      'ISO preferred tolerance grades'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 144/436 ---
+  Canonical: 'IT grade number vs tolerance range'
+  Members (2):
+      'IT grade magnitude vs tolerance width'
+    * 'IT grade number vs tolerance range'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 145/436 ---
+  Canonical: 'Importance of G-code literacy vs job variety'
+  Members (2):
+      'G-code literacy for machine capability understanding'
+    * 'Importance of G-code literacy vs job variety'
+  Scopes: programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 146/436 ---
+  Canonical: 'Inserting program stops and simple automation edits'
+  Members (2):
+    * 'Inserting program stops and simple automation edits'
+      'inserting program stops for in-process interventions'
+  Scopes: programming
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 147/436 ---
+  Canonical: 'L297 stepper driver stepping modes'
+  Members (2):
+    * 'L297 stepper driver stepping modes'
+      'stepper motor stepping mode selection'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 148/436 ---
+  Canonical: 'L298 microstepping support'
+  Members (2):
+    * 'L298 microstepping support'
+      'chopper controller microstepping capability'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 149/436 ---
+  Canonical: 'Lego knob diameter'
+  Members (2):
+      '5 mm drilled socket fit for Lego knob'
+    * 'Lego knob diameter'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 150/436 ---
+  Canonical: 'LineGrinder Excellon drill import'
+  Members (2):
+      'GC-Prevue Excellon NC drill import settings'
+    * 'LineGrinder Excellon drill import'
+  Scopes: programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 151/436 ---
+  Canonical: 'LineGrinder for PCB CAM'
+  Members (2):
+      'LineGrinder Gerber file support'
+    * 'LineGrinder for PCB CAM'
+  Scopes: programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 152/436 ---
+  Canonical: 'M5 nut compatibility with a specific 2020 extrusion profile'
+  Members (2):
+    * 'M5 nut compatibility with a specific 2020 extrusion profile'
+      'T-slot nut compatibility with OpenBuilds V-Slot 2020 extrusions'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 153/436 ---
+  Canonical: 'M6 helicoil drill size'
+  Members (2):
+      'M1.6 metric tap drill size'
+    * 'M6 helicoil drill size'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 154/436 ---
+  Canonical: 'NEMA stepper motor size adoption'
+  Members (2):
+      'International usage of NEMA sizes for stepper motors'
+    * 'NEMA stepper motor size adoption'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 155/436 ---
+  Canonical: 'NPT thread engagement depth variability'
+  Members (2):
+    * 'NPT thread engagement depth variability'
+      'NPT thread gauge engagement turns for tapping depth'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 156/436 ---
+  Canonical: 'Onshape import and conversion of SolidWorks files'
+  Members (2):
+    * 'Onshape import and conversion of SolidWorks files'
+      'online SolidWorks platform for file format conversion'
+  Scopes: other
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 157/436 ---
+  Canonical: 'Onshape integrated version control'
+  Members (2):
+    * 'Onshape integrated version control'
+      'Onshape software-like versioning approach'
+  Scopes: programming, shop_operations
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 158/436 ---
+  Canonical: 'Onshape learning curve relative to typical CAD'
+  Members (2):
+    * 'Onshape learning curve relative to typical CAD'
+      'transition from SolidWorks to Onshape vs other CAD'
+  Scopes: design_geometry, shop_operations
+  Frame types: comparison, observation
+  Total frames: 2
+
+--- Cluster 159/436 ---
+  Canonical: 'PCB contour routing tool choice'
+  Members (2):
+    * 'PCB contour routing tool choice'
+      'PCB routing/end-mill equipment for outlines and interior cut-outs'
+  Scopes: machine_capability, tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 160/436 ---
+  Canonical: 'QCTP sizing by lathe swing'
+  Members (2):
+      'QCTP size code to lathe swing mapping'
+    * 'QCTP sizing by lathe swing'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 161/436 ---
+  Canonical: 'RC snubber use for switch arcing'
+  Members (2):
+      'RC snubber effectiveness on compressor switch interference'
+    * 'RC snubber use for switch arcing'
+  Scopes: machine_capability
+  Frame types: case, heuristic
+  Total frames: 2
+
+--- Cluster 162/436 ---
+  Canonical: 'SVG as CAM input for hobbyist CNC'
+  Members (2):
+    * 'SVG as CAM input for hobbyist CNC'
+      'SVG import support in CAM programs'
+  Scopes: programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 163/436 ---
+  Canonical: 'Save As SLDPRT geometry inclusion options'
+  Members (2):
+    * 'Save As SLDPRT geometry inclusion options'
+      'Saving assemblies as SLDPRT for insertion'
+  Scopes: design_geometry, other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 164/436 ---
+  Canonical: 'Scan-To-3D remodeling workflow'
+  Members (2):
+      '3D scanning workflow complexity'
+    * 'Scan-To-3D remodeling workflow'
+  Scopes: design_geometry, shop_operations
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 165/436 ---
+  Canonical: 'SimLab Collada Exporter version support'
+  Members (2):
+      'SimLab Collada Exporter appearance export limitation'
+    * 'SimLab Collada Exporter version support'
+  Scopes: other
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 166/436 ---
+  Canonical: 'SolidWorks "Rotate About Scene Floor" rotation setting'
+  Members (2):
+    * 'SolidWorks "Rotate About Scene Floor" rotation setting'
+      "SolidWorks rotation behavior vs rendering packages when 'Rotate About Scene Floor' is enabled"
+  Scopes: other
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 167/436 ---
+  Canonical: 'SolidWorks Intersection Curve tool'
+  Members (2):
+      'SolidWorks Cavity tool intersection workaround'
+    * 'SolidWorks Intersection Curve tool'
+  Scopes: design_geometry
+  Frame types: observation, workaround
+  Total frames: 2
+
+--- Cluster 168/436 ---
+  Canonical: 'SolidWorks curve driven pattern surface requirement'
+  Members (2):
+      "SolidWorks 'Up to Surface' end condition in linear patterns"
+    * 'SolidWorks curve driven pattern surface requirement'
+  Scopes: design_geometry
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 169/436 ---
+  Canonical: 'SolidWorks diameter dimensions from centerline-based revolve sketch'
+  Members (2):
+    * 'SolidWorks diameter dimensions from centerline-based revolve sketch'
+      'using infinite centerline to enable diameter dimensions in revolve sketch'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 170/436 ---
+  Canonical: 'SolidWorks multi-body approach for mirrored component'
+  Members (2):
+      "SolidWorks 'Save As' and mirror workflow for mirrored part creation"
+    * 'SolidWorks multi-body approach for mirrored component'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 171/436 ---
+  Canonical: 'SolidWorks path mate'
+  Members (2):
+      'SolidWorks limit mate'
+    * 'SolidWorks path mate'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 172/436 ---
+  Canonical: 'SolidWorks patterning requires merging features'
+  Members (2):
+      'SolidWorks geometry pattern limitation on merged features'
+    * 'SolidWorks patterning requires merging features'
+  Scopes: design_geometry, programming
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 173/436 ---
+  Canonical: 'SolidWorks sidebar visibility control for solid bodies'
+  Members (2):
+    * 'SolidWorks sidebar visibility control for solid bodies'
+      'SolidWorks sidebar visibility toggles for reference geometry and sketches'
+  Scopes: other
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 174/436 ---
+  Canonical: 'SolidWorks2URDF exporter Collada support limitation'
+  Members (2):
+      'SolidWorks2URDF COLLADA export limitation and alternative'
+    * 'SolidWorks2URDF exporter Collada support limitation'
+  Scopes: other
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 175/436 ---
+  Canonical: 'Sourcing strategy for specialized PCB milling capability'
+  Members (2):
+    * 'Sourcing strategy for specialized PCB milling capability'
+      'Vendor selection for tight tolerance in controlled-depth PCB milling'
+  Scopes: quality, shop_operations
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 176/436 ---
+  Canonical: 'URDF exporter error about missing sketch in SolidWorks'
+  Members (2):
+    * 'URDF exporter error about missing sketch in SolidWorks'
+      'using URDF exporter with newer SolidWorks versions (unsupported)'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 177/436 ---
+  Canonical: 'Using Insert Part constraints to locate via 3D sketch points'
+  Members (2):
+    * 'Using Insert Part constraints to locate via 3D sketch points'
+      'Using three 3D sketch points to constrain inserted part location'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 178/436 ---
+  Canonical: 'V-scoring on MCPCB panels'
+  Members (2):
+      'V-scoring for PCB depanelization'
+    * 'V-scoring on MCPCB panels'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 3
+
+--- Cluster 179/436 ---
+  Canonical: "Wood's metal cost"
+  Members (2):
+      "Wood's metal cadmium content"
+    * "Wood's metal cost"
+  Scopes: cost, material
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 180/436 ---
+  Canonical: 'XY-only hand–eye calibration DOF'
+  Members (2):
+      'Using standard hand–eye calibration for reduced-DOF systems'
+    * 'XY-only hand–eye calibration DOF'
+  Scopes: quality
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 181/436 ---
+  Canonical: 'acceleration planning for steppers'
+  Members (2):
+    * 'acceleration planning for steppers'
+      'stepper motor acceleration handling location'
+  Scopes: machine_capability, programming
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 182/436 ---
+  Canonical: 'acceleration-induced stepper slip'
+  Members (2):
+    * 'acceleration-induced stepper slip'
+      'stepper slip vs acceleration and inertia'
+  Scopes: machine_capability
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 183/436 ---
+  Canonical: 'acceptable clearance magnitude for shaft–hub fit'
+  Members (2):
+    * 'acceptable clearance magnitude for shaft–hub fit'
+      'minimum clearance calculation for shaft–hole fits'
+  Scopes: design_geometry
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 184/436 ---
+  Canonical: 'adding optical encoders to leadscrews'
+  Members (2):
+    * 'adding optical encoders to leadscrews'
+      'optical encoders for linear position feedback'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 185/436 ---
+  Canonical: 'adhesive choice for paper interleaf joint'
+  Members (2):
+    * 'adhesive choice for paper interleaf joint'
+      'paper interleaf joint for temporary lamination'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 186/436 ---
+  Canonical: 'along-grain glue joint visibility'
+  Members (2):
+    * 'along-grain glue joint visibility'
+      'bent lamination end joint visibility'
+  Scopes: quality
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 187/436 ---
+  Canonical: 'aluminum 356 alloy usage in engines'
+  Members (2):
+    * 'aluminum 356 alloy usage in engines'
+      'aluminum cylinder head alloy selection (casting alloys 356/319 vs wrought 6061)'
+  Scopes: material
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 188/436 ---
+  Canonical: 'aluminum flexibility vs carbon fiber rigidity'
+  Members (2):
+    * 'aluminum flexibility vs carbon fiber rigidity'
+      'aluminum vs carbon fiber tradeoffs for multirotor frames'
+  Scopes: material
+  Frame types: comparison, principle
+  Total frames: 2
+
+--- Cluster 189/436 ---
+  Canonical: 'aluminum foil cutting behavior'
+  Members (2):
+    * 'aluminum foil cutting behavior'
+      'manual cutting preference for aluminum foil'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 190/436 ---
+  Canonical: 'aluminum vs steel injection mold tooling'
+  Members (2):
+    * 'aluminum vs steel injection mold tooling'
+      'mold material selection (aluminum vs hard-chromed tool steel)'
+  Scopes: tooling
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 191/436 ---
+  Canonical: 'anti-rotation bumps alignment for panel-mounted potentiometers'
+  Members (2):
+    * 'anti-rotation bumps alignment for panel-mounted potentiometers'
+      'presence of anti-rotation bumps vs panel-mount threaded bushing'
+  Scopes: design_geometry
+  Frame types: comparison, principle
+  Total frames: 2
+
+--- Cluster 192/436 ---
+  Canonical: 'automated lamination stacking and cleating'
+  Members (2):
+    * 'automated lamination stacking and cleating'
+      'avoid manual stacking in lamination production'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 193/436 ---
+  Canonical: 'bandsaw blade squareness setup'
+  Members (2):
+    * 'bandsaw blade squareness setup'
+      'bandsaw straight-cut skill requirement'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 194/436 ---
+  Canonical: 'basic dimensions (GD&T)'
+  Members (2):
+    * 'basic dimensions (GD&T)'
+      'basic dimensions and tolerance accumulation'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 195/436 ---
+  Canonical: 'bearing inner race interference fit selection'
+  Members (2):
+      'bearing fit selection based on load and ISO clearances'
+    * 'bearing inner race interference fit selection'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 196/436 ---
+  Canonical: 'bearing installation methods'
+  Members (2):
+      'bearing installation impact damage'
+    * 'bearing installation methods'
+  Scopes: machining_process
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 197/436 ---
+  Canonical: 'bearing ring interference effects'
+  Members (2):
+      'bearing housing interference fit effect on bearing rotation'
+    * 'bearing ring interference effects'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 198/436 ---
+  Canonical: 'belt drive misalignment'
+  Members (2):
+    * 'belt drive misalignment'
+      'belt drive misalignment tolerance'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 199/436 ---
+  Canonical: 'blocking delay on Arduino'
+  Members (2):
+    * 'blocking delay on Arduino'
+      'non-blocking delay support in Arduino'
+  Scopes: programming
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 200/436 ---
+  Canonical: 'bolt hole clearance'
+  Members (2):
+    * 'bolt hole clearance'
+      'clearance hole diameter for pass-through bolts'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 201/436 ---
+  Canonical: 'breakaway torque approximation via static friction'
+  Members (2):
+    * 'breakaway torque approximation via static friction'
+      'summation of component friction torques for breakaway'
+  Scopes: machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 202/436 ---
+  Canonical: 'broached keyway dimensional sensitivity'
+  Members (2):
+    * 'broached keyway dimensional sensitivity'
+      'engineering drawings for keyways with tolerances'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 203/436 ---
+  Canonical: 'built-in gear generator in CAD software'
+  Members (2):
+    * 'built-in gear generator in CAD software'
+      'outside/pitch diameter input in CAD gear generators'
+  Scopes: other
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 204/436 ---
+  Canonical: 'cable gland compression sealing mechanism'
+  Members (2):
+    * 'cable gland compression sealing mechanism'
+      'sealing grommet/cable gland that fastens into a hole'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 205/436 ---
+  Canonical: 'cam-ground piston ellipticity'
+  Members (2):
+    * 'cam-ground piston ellipticity'
+      'cam-ground piston thermal expansion rationale'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 206/436 ---
+  Canonical: 'cantilever beam tip-load deflection'
+  Members (2):
+    * 'cantilever beam tip-load deflection'
+      'simply supported beam point-load deflection'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 207/436 ---
+  Canonical: 'carbide vs HSS performance under heat'
+  Members (2):
+      'HSS vs carbide heat resistance and wear'
+    * 'carbide vs HSS performance under heat'
+  Scopes: tooling
+  Frame types: comparison, principle
+  Total frames: 2
+
+--- Cluster 208/436 ---
+  Canonical: 'center punching for PCB drilling'
+  Members (2):
+    * 'center punching for PCB drilling'
+      'hammer force during PCB center punching'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 209/436 ---
+  Canonical: 'ceramic-filled PCB substrates abrasiveness'
+  Members (2):
+    * 'ceramic-filled PCB substrates abrasiveness'
+      'fiberglass PCB abrasiveness on cutting tools'
+  Scopes: material, tooling
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 210/436 ---
+  Canonical: 'chamfer feature definition'
+  Members (2):
+    * 'chamfer feature definition'
+      'chamfer on varying-angle surface'
+  Scopes: design_geometry
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 211/436 ---
+  Canonical: 'chamfering jig for hand planing'
+  Members (2):
+      'center-pivot jig for circular chamfers'
+    * 'chamfering jig for hand planing'
+  Scopes: machining_process, tooling
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 212/436 ---
+  Canonical: 'chlorinated cutting fluid for titanium machining'
+  Members (2):
+    * 'chlorinated cutting fluid for titanium machining'
+      'drilling titanium with HSS and chlorinated fluid'
+  Scopes: machining_process
+  Frame types: case, heuristic
+  Total frames: 2
+
+--- Cluster 213/436 ---
+  Canonical: 'chopper PWM current regulation'
+  Members (2):
+    * 'chopper PWM current regulation'
+      'chopper stepper driver with PWM current control'
+  Scopes: machine_capability
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 214/436 ---
+  Canonical: 'clearance during move from machine zero to work zero'
+  Members (2):
+    * 'clearance during move from machine zero to work zero'
+      'relocating machine zero to avoid clamps when clearance is limited'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 215/436 ---
+  Canonical: 'clearance fit retention under vibration'
+  Members (2):
+    * 'clearance fit retention under vibration'
+      'clearance fit-induced vibration in cycloidal gears'
+  Scopes: design_geometry
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 216/436 ---
+  Canonical: 'clearance holes for screws in acrylic'
+  Members (2):
+      'clearance hole sizing in acrylic for pass-through screws'
+    * 'clearance holes for screws in acrylic'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 217/436 ---
+  Canonical: 'cloud-based CAD collaboration benefits'
+  Members (2):
+    * 'cloud-based CAD collaboration benefits'
+      'collaboration features availability in CAD'
+  Scopes: shop_operations
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 218/436 ---
+  Canonical: 'collet run-out causing tool breakage'
+  Members (2):
+      'collet grip integrity and runout when using improvised shims'
+    * 'collet run-out causing tool breakage'
+  Scopes: tooling
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 219/436 ---
+  Canonical: 'collet terminology'
+  Members (2):
+    * 'collet terminology'
+      'collet usage for holding'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 220/436 ---
+  Canonical: 'compound cross slide angular adjustment'
+  Members (2):
+      'angular slide with adjustment and locking screws for tensioning'
+    * 'compound cross slide angular adjustment'
+  Scopes: machine_capability, other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 221/436 ---
+  Canonical: 'compound stamping sequence for laminations'
+  Members (2):
+      'compound stamping for motor lamination stacks'
+    * 'compound stamping sequence for laminations'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 222/436 ---
+  Canonical: 'condition for 0% thread engagement'
+  Members (2):
+    * 'condition for 0% thread engagement'
+      'condition for 100% thread engagement'
+  Scopes: design_geometry
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 223/436 ---
+  Canonical: 'constant-force excitation displacement behavior'
+  Members (2):
+    * 'constant-force excitation displacement behavior'
+      'force scaling under fixed-displacement excitation'
+  Scopes: other
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 224/436 ---
+  Canonical: 'coolant requirement for metalworking'
+  Members (2):
+    * 'coolant requirement for metalworking'
+      'coolant/lubrication in metal cutting'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 225/436 ---
+  Canonical: 'coolant use when drilling plastics'
+  Members (2):
+      'coolant use to extend tool life in high‑volume, high‑feed drilling'
+    * 'coolant use when drilling plastics'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 226/436 ---
+  Canonical: 'coprime gear tooth counts for even wear'
+  Members (2):
+    * 'coprime gear tooth counts for even wear'
+      'relative prime tooth counts for uniform wear'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 227/436 ---
+  Canonical: 'cordless copper tubing cutter used on stainless steel'
+  Members (2):
+    * 'cordless copper tubing cutter used on stainless steel'
+      'manual tubing cutter performance on thin-wall stainless tubing'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 228/436 ---
+  Canonical: 'cosine error in lever indicators'
+  Members (2):
+    * 'cosine error in lever indicators'
+      'cosine error when adding lever to drive plunger indicator'
+  Scopes: quality
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 229/436 ---
+  Canonical: 'cost drivers for PCB edge rounding requests'
+  Members (2):
+      'PCB edge beveling availability and cost impact'
+    * 'cost drivers for PCB edge rounding requests'
+  Scopes: cost
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 230/436 ---
+  Canonical: 'counterbored and plugged screw visibility'
+  Members (2):
+    * 'counterbored and plugged screw visibility'
+      'hiding screw heads with plugs or filler after counterbore'
+  Scopes: design_geometry
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 231/436 ---
+  Canonical: 'cross-process CAD model reuse'
+  Members (2):
+    * 'cross-process CAD model reuse'
+      'multi-user CAD via referenced models'
+  Scopes: programming, shop_operations
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 232/436 ---
+  Canonical: 'cross-slide table for drill press PCB drilling'
+  Members (2):
+      'X/Y table or cross slide for drill press PCB work'
+    * 'cross-slide table for drill press PCB drilling'
+  Scopes: cost, machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 233/436 ---
+  Canonical: 'cube corner fillet vertex patch type (equal radii)'
+  Members (2):
+    * 'cube corner fillet vertex patch type (equal radii)'
+      'cube corner fillet vertex patch type (two radii smaller than third)'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 234/436 ---
+  Canonical: 'custom color scale creation (CloudCompare)'
+  Members (2):
+    * 'custom color scale creation (CloudCompare)'
+      'scalar field color scale symmetry and saturation (CloudCompare)'
+  Scopes: quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 235/436 ---
+  Canonical: 'cutter radius compensation activation codes'
+  Members (2):
+    * 'cutter radius compensation activation codes'
+      'cutter radius compensation toolpath offset behavior'
+  Scopes: programming
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 236/436 ---
+  Canonical: 'cutting tap predrill size vs chip removal'
+  Members (2):
+    * 'cutting tap predrill size vs chip removal'
+      'forming tap predrill size and material displacement'
+  Scopes: machining_process
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 237/436 ---
+  Canonical: 'datum selection with tolerance stack-up check'
+  Members (2):
+      'datum selection for tolerance measurement of linked parts with pin'
+    * 'datum selection with tolerance stack-up check'
+  Scopes: machining_process, quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 238/436 ---
+  Canonical: 'default curve rendering detail in SolidWorks'
+  Members (2):
+      'adjusting SolidWorks Image Options for curve detail'
+    * 'default curve rendering detail in SolidWorks'
+  Scopes: other
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 239/436 ---
+  Canonical: 'default pull-up resistor value'
+  Members (2):
+    * 'default pull-up resistor value'
+      'pull-up resistor value trade-off'
+  Scopes: machine_capability
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 240/436 ---
+  Canonical: 'definition of CNC trajectory'
+  Members (2):
+      'CNC trajectory planner responsibility'
+    * 'definition of CNC trajectory'
+  Scopes: programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 241/436 ---
+  Canonical: 'diameter and tolerance notation on drawing'
+  Members (2):
+    * 'diameter and tolerance notation on drawing'
+      'drawing notation for hole count, diameter, and tolerance'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 242/436 ---
+  Canonical: 'dimensioning to center of mass'
+  Members (2):
+    * 'dimensioning to center of mass'
+      'manual point placement at center of mass'
+  Scopes: design_geometry
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 243/436 ---
+  Canonical: 'dowel pin fixture repeatability'
+  Members (2):
+    * 'dowel pin fixture repeatability'
+      'dowel pinning for repeatable fence location'
+  Scopes: machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 244/436 ---
+  Canonical: "draftsmen's pre-CAD duties"
+  Members (2):
+    * "draftsmen's pre-CAD duties"
+      "mechanical engineers' pre-CAD duties"
+  Scopes: shop_operations
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 245/436 ---
+  Canonical: 'draw-wire sensors (yo-yo encoder)'
+  Members (2):
+      'draw-wire encoder placement for stepper-driven CNC feedback'
+    * 'draw-wire sensors (yo-yo encoder)'
+  Scopes: machine_capability, quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 246/436 ---
+  Canonical: 'drill bit extension wobble'
+  Members (2):
+    * 'drill bit extension wobble'
+      'drill bit extensions straightness limitation'
+  Scopes: tooling
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 247/436 ---
+  Canonical: 'drill press as milling machine'
+  Members (2):
+    * 'drill press as milling machine'
+      'using an end mill in a drill press'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 248/436 ---
+  Canonical: 'drill press for depth control'
+  Members (2):
+      'drill press depth/travel control on thin parts'
+    * 'drill press for depth control'
+  Scopes: machining_process, tooling
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 249/436 ---
+  Canonical: 'drill press lateral load capability'
+  Members (2):
+      'drill press lateral force capability'
+    * 'drill press lateral load capability'
+  Scopes: machine_capability
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 250/436 ---
+  Canonical: 'drill press-guided heat-set insert installation'
+  Members (2):
+    * 'drill press-guided heat-set insert installation'
+      'installing self-clinching inserts with an arbor press'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 251/436 ---
+  Canonical: 'drill vs end mill flute geometry'
+  Members (2):
+    * 'drill vs end mill flute geometry'
+      'drill vs milling bit cutting directions'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 252/436 ---
+  Canonical: 'drilling after laser pilot marking'
+  Members (2):
+    * 'drilling after laser pilot marking'
+      'laser punch-marking centers then drilling to final size'
+  Scopes: machining_process
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 253/436 ---
+  Canonical: 'drivetrain swap cost tradeoff'
+  Members (2):
+      'custom gearbox swap cost viability'
+    * 'drivetrain swap cost tradeoff'
+  Scopes: cost
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 254/436 ---
+  Canonical: 'driving dependent sketch angle from master profile dimensions'
+  Members (2):
+    * 'driving dependent sketch angle from master profile dimensions'
+      'equation-driven dependent sketch dimensions (master modeling)'
+  Scopes: design_geometry
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 255/436 ---
+  Canonical: 'eDrawings Linux support'
+  Members (2):
+      'Running eDrawings on Linux via Android emulator'
+    * 'eDrawings Linux support'
+  Scopes: other
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 256/436 ---
+  Canonical: 'effect of bonding shields to plasma work clamp under HF EMI'
+  Members (2):
+      'effect of bonding shields to mains safety ground under HF EMI'
+    * 'effect of bonding shields to plasma work clamp under HF EMI'
+  Scopes: other
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 257/436 ---
+  Canonical: 'etching vs milling cost'
+  Members (2):
+    * 'etching vs milling cost'
+      'etching vs milling throughput'
+  Scopes: cost, shop_operations
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 258/436 ---
+  Canonical: 'fit categories for holes and shafts'
+  Members (2):
+    * 'fit categories for holes and shafts'
+      'fit notation uppercase/lowercase for holes vs shafts'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 259/436 ---
+  Canonical: 'fixturing small parts for drilling'
+  Members (2):
+      'dedicated fixturing for repeat parts'
+    * 'fixturing small parts for drilling'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 260/436 ---
+  Canonical: 'fixturing spheres in rotary attachments'
+  Members (2):
+    * 'fixturing spheres in rotary attachments'
+      'rotary attachment suitability: cylinders vs spheres'
+  Scopes: machine_capability, machining_process
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 261/436 ---
+  Canonical: 'flanged threaded insert alignment'
+  Members (2):
+    * 'flanged threaded insert alignment'
+      'installation method for flanged inserts'
+  Scopes: design_geometry, machining_process
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 262/436 ---
+  Canonical: 'focused ion beam depth limitation'
+  Members (2):
+    * 'focused ion beam depth limitation'
+      'focused ion beam suitability for micro-feature accuracy'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 263/436 ---
+  Canonical: 'functional limits in tolerancing'
+  Members (2):
+    * 'functional limits in tolerancing'
+      'functional limits to set tolerance upper bound'
+  Scopes: design_geometry, quality
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 264/436 ---
+  Canonical: 'gear backlash'
+  Members (2):
+    * 'gear backlash'
+      'gear backlash design allowance'
+  Scopes: design_geometry, quality
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 265/436 ---
+  Canonical: 'gear pitch vs torque capacity'
+  Members (2):
+    * 'gear pitch vs torque capacity'
+      'gear thickness and torque capacity'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 266/436 ---
+  Canonical: 'gear profile shift'
+  Members (2):
+      'center distance vs gear ratio with profile shift'
+    * 'gear profile shift'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 267/436 ---
+  Canonical: 'gear ratio by tooth count in module system'
+  Members (2):
+    * 'gear ratio by tooth count in module system'
+      'gear tooth size compatibility (module consistency)'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 268/436 ---
+  Canonical: 'global support in physical drafting splines'
+  Members (2):
+    * 'global support in physical drafting splines'
+      'local support in NURBS/subdivision modeling'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 269/436 ---
+  Canonical: 'ground bounce triggering optocoupler'
+  Members (2):
+    * 'ground bounce triggering optocoupler'
+      'ground loop diagnostic via optocoupler LED short'
+  Scopes: other
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 270/436 ---
+  Canonical: 'hand drilling/tapping of micro holes'
+  Members (2):
+    * 'hand drilling/tapping of micro holes'
+      'tapping very small holes in tiny parts'
+  Scopes: machining_process
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 271/436 ---
+  Canonical: 'head gasket sealing surface flatness'
+  Members (2):
+      'head gasket sealing failure risk from uneven head surface'
+    * 'head gasket sealing surface flatness'
+  Scopes: design_geometry, quality
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 272/436 ---
+  Canonical: 'hex fastener dimension standardization across suppliers'
+  Members (2):
+    * 'hex fastener dimension standardization across suppliers'
+      'sourcing standard fastener dimensions from supplier datasheets'
+  Scopes: design_geometry, shop_operations
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 273/436 ---
+  Canonical: 'high-voltage, current-limited stepper drives'
+  Members (2):
+      'high-voltage supply with chopper current limiting for steppers'
+    * 'high-voltage, current-limited stepper drives'
+  Scopes: machine_capability
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 274/436 ---
+  Canonical: 'hole-basis fits for bearings'
+  Members (2):
+      'hole finishing for low-cost bearings'
+    * 'hole-basis fits for bearings'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 275/436 ---
+  Canonical: 'homing switch location at axis extremity'
+  Members (2):
+    * 'homing switch location at axis extremity'
+      'homing to switches for rough positioning'
+  Scopes: machine_capability, machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 276/436 ---
+  Canonical: 'hoop vs axial stress in thin-walled cylinders'
+  Members (2):
+    * 'hoop vs axial stress in thin-walled cylinders'
+      'hoop vs axial stress ratio in thin-walled cylinders'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 277/436 ---
+  Canonical: 'hydraulic actuation suitability for CNC axes'
+  Members (2):
+    * 'hydraulic actuation suitability for CNC axes'
+      'hydraulic stepper motors and gear-reduced hydraulic drives for CNC axes'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 278/436 ---
+  Canonical: 'hydraulic positioning precision capability'
+  Members (2):
+      'control complexity for hydraulic positioning'
+    * 'hydraulic positioning precision capability'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 279/436 ---
+  Canonical: 'inch-to-millimeter exact conversion'
+  Members (2):
+    * 'inch-to-millimeter exact conversion'
+      'millimeter to inch conversion factor'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 280/436 ---
+  Canonical: 'industry-specific general tolerances'
+  Members (2):
+    * 'industry-specific general tolerances'
+      'manufacturer-specified component tolerances'
+  Scopes: quality
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 281/436 ---
+  Canonical: 'injection mold thickness'
+  Members (2):
+      'constant wall thickness in injection molding'
+    * 'injection mold thickness'
+  Scopes: design_geometry
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 282/436 ---
+  Canonical: 'inserting and mating the dumb SLDPRT in an assembly'
+  Members (2):
+      "creating a 'dumb' SolidWorks assembly via Save As SLDPRT"
+    * 'inserting and mating the dumb SLDPRT in an assembly'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 283/436 ---
+  Canonical: 'insulating laminations to reduce eddy currents'
+  Members (2):
+    * 'insulating laminations to reduce eddy currents'
+      'laminated steel stator cores to reduce eddy currents'
+  Scopes: material
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 284/436 ---
+  Canonical: 'integer condition for equal planet spacing'
+  Members (2):
+      'equal planet spacing divisibility condition'
+    * 'integer condition for equal planet spacing'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 285/436 ---
+  Canonical: 'interference fit member stiffness'
+  Members (2):
+      'effect of outer member stiffness on interference fit stresses'
+    * 'interference fit member stiffness'
+  Scopes: design_geometry, material
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 286/436 ---
+  Canonical: 'involute geometry at infinite base circle'
+  Members (2):
+    * 'involute geometry at infinite base circle'
+      'involute of infinite base circle interpretation for racks'
+  Scopes: design_geometry
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 287/436 ---
+  Canonical: 'involute spline required parameters'
+  Members (2):
+      'involute spline measurability limitation'
+    * 'involute spline required parameters'
+  Scopes: design_geometry, quality
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 288/436 ---
+  Canonical: 'jigsaw blade wander on bevel cuts'
+  Members (2):
+      'jigsaw blade deflection in curves on thick stock'
+    * 'jigsaw blade wander on bevel cuts'
+  Scopes: machining_process
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 289/436 ---
+  Canonical: 'keyway use for alignment'
+  Members (2):
+      'key/keyway anti-rotation function'
+    * 'keyway use for alignment'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 290/436 ---
+  Canonical: 'large-part vacuum hold-down effectiveness'
+  Members (2):
+    * 'large-part vacuum hold-down effectiveness'
+      'small-part vacuum hold-down without gasketing'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 291/436 ---
+  Canonical: 'laser and waterjet feature size limits'
+  Members (2):
+    * 'laser and waterjet feature size limits'
+      'laser cutting/waterjet geometry constraint'
+  Scopes: design_geometry, machining_process
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 292/436 ---
+  Canonical: 'laser cutting for prototype laminations'
+  Members (2):
+      'laser cutting for low-volume laminations'
+    * 'laser cutting for prototype laminations'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 293/436 ---
+  Canonical: 'laser power vs travel speed impact'
+  Members (2):
+      'laser cutting throughput vs laser power'
+    * 'laser power vs travel speed impact'
+  Scopes: machining_process
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 294/436 ---
+  Canonical: 'latching start/stop control circuit'
+  Members (2):
+      'latching circuit for E-stop in relay logic'
+    * 'latching start/stop control circuit'
+  Scopes: machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 295/436 ---
+  Canonical: 'lathe scroll chuck jaw-to-scroll engagement mechanism'
+  Members (2):
+    * 'lathe scroll chuck jaw-to-scroll engagement mechanism'
+      'logarithmic spiral groove spacing vs toothed jaw engagement in scroll chucks'
+  Scopes: design_geometry
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 296/436 ---
+  Canonical: 'lathe toolpost locating nubbin'
+  Members (2):
+      'adapting QC toolposts to compounds with locating nubbin'
+    * 'lathe toolpost locating nubbin'
+  Scopes: tooling
+  Frame types: heuristic, principle
+  Total frames: 2
+
+--- Cluster 297/436 ---
+  Canonical: 'leaded brass machinability (MO-59)'
+  Members (2):
+      'leaded alloy machinability improvement'
+    * 'leaded brass machinability (MO-59)'
+  Scopes: material
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 298/436 ---
+  Canonical: 'leaded steel machinability vs weldability (e.g., 12L14)'
+  Members (2):
+      'leaded steel effects on machinability vs toughness/ductility'
+    * 'leaded steel machinability vs weldability (e.g., 12L14)'
+  Scopes: material
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 299/436 ---
+  Canonical: 'level wind groove geometry'
+  Members (2):
+    * 'level wind groove geometry'
+      'level wind mechanism groove'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 300/436 ---
+  Canonical: 'machinable wax vs paraffin strength'
+  Members (2):
+      'DIY machinable wax composition (paraffin + polythene)'
+    * 'machinable wax vs paraffin strength'
+  Scopes: material
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 301/436 ---
+  Canonical: 'machine rigidity in machining'
+  Members (2):
+    * 'machine rigidity in machining'
+      'rigidity requirement in CNC machining'
+  Scopes: machine_capability
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 302/436 ---
+  Canonical: 'machining a shaft collar ID to fit pipe'
+  Members (2):
+    * 'machining a shaft collar ID to fit pipe'
+      'shaft vs pipe size mismatch for shaft collars'
+  Scopes: machining_process, tooling
+  Frame types: observation, workaround
+  Total frames: 2
+
+--- Cluster 303/436 ---
+  Canonical: 'machining selection for moderately stressed parts'
+  Members (2):
+      'die casting selection for low-stress, cost-sensitive parts'
+    * 'machining selection for moderately stressed parts'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 304/436 ---
+  Canonical: 'manual G-code speed vs CAD/CAM'
+  Members (2):
+      'hand-written G-code vs CAD/CAM time-to-program'
+    * 'manual G-code speed vs CAD/CAM'
+  Scopes: programming
+  Frame types: comparison, observation
+  Total frames: 2
+
+--- Cluster 305/436 ---
+  Canonical: 'manual chiseling to square CNC-routed corners'
+  Members (2):
+    * 'manual chiseling to square CNC-routed corners'
+      'manual chiseling to square corners when no automatic tool change'
+  Scopes: machining_process
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 306/436 ---
+  Canonical: 'manual squaring of inside corners'
+  Members (2):
+    * 'manual squaring of inside corners'
+      'squaring routed internal corners with a chisel'
+  Scopes: machining_process, tooling
+  Frame types: observation, workaround
+  Total frames: 2
+
+--- Cluster 307/436 ---
+  Canonical: 'manufacturing drawing definition'
+  Members (2):
+      'design/engineering drawing definition'
+    * 'manufacturing drawing definition'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 308/436 ---
+  Canonical: 'manufacturing drawings for purchased components'
+  Members (2):
+    * 'manufacturing drawings for purchased components'
+      'supplier manufacturing drawings vs engineering drawings'
+  Scopes: shop_operations
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 309/436 ---
+  Canonical: 'material choice for quadcopter frame (low crash rate)'
+  Members (2):
+      'material choice for quadcopter frame (frequent changes/high stress)'
+    * 'material choice for quadcopter frame (low crash rate)'
+  Scopes: material
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 310/436 ---
+  Canonical: 'materials datasheet machinability ratings'
+  Members (2):
+      'machinability rating resources for aluminum alloys'
+    * 'materials datasheet machinability ratings'
+  Scopes: material
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 311/436 ---
+  Canonical: 'merging parts to enable cross-part fillet'
+  Members (2):
+    * 'merging parts to enable cross-part fillet'
+      'temporary geometry to create inter-part fillet'
+  Scopes: design_geometry
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 312/436 ---
+  Canonical: 'mesh coarseness in FEA'
+  Members (2):
+    * 'mesh coarseness in FEA'
+      'mesh density (node count) in FEA'
+  Scopes: other
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 313/436 ---
+  Canonical: 'metal vs plastic for torque transmission'
+  Members (2):
+      'material and geometry choice for torque-carrying parts'
+    * 'metal vs plastic for torque transmission'
+  Scopes: design_geometry, material
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 314/436 ---
+  Canonical: 'methods for axial shaft retention at inner race'
+  Members (2):
+    * 'methods for axial shaft retention at inner race'
+      'methods to secure bearing races to shaft/housing'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 315/436 ---
+  Canonical: 'metric gear module system'
+  Members (2):
+    * 'metric gear module system'
+      'module system for gear specification'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 316/436 ---
+  Canonical: 'milled internal corner radius from round end mill'
+  Members (2):
+    * 'milled internal corner radius from round end mill'
+      'outside edge fillet tooling (corner rounding end mill/radius cutter)'
+  Scopes: machining_process, tooling
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 317/436 ---
+  Canonical: 'milling cutters beyond standard end mills'
+  Members (2):
+    * 'milling cutters beyond standard end mills'
+      'sourcing small-diameter long-reach cutters as end mills'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 318/436 ---
+  Canonical: 'milling workholding clamps'
+  Members (2):
+    * 'milling workholding clamps'
+      'spring clamps for milling workholding'
+  Scopes: machining_process, tooling
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 319/436 ---
+  Canonical: 'minimum plywood thickness for bolt/nut joints'
+  Members (2):
+      'bolt/nut joinery suitability in plywood thickness'
+    * 'minimum plywood thickness for bolt/nut joints'
+  Scopes: design_geometry
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 320/436 ---
+  Canonical: 'motor cooling at high current'
+  Members (2):
+    * 'motor cooling at high current'
+      'motor overheating due to excessive current'
+  Scopes: machine_capability
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 321/436 ---
+  Canonical: 'motor heating with bipolar chopper stepper drivers'
+  Members (2):
+      'control cabinet heat extraction for stepper drivers'
+    * 'motor heating with bipolar chopper stepper drivers'
+  Scopes: machine_capability
+  Frame types: case, observation
+  Total frames: 2
+
+--- Cluster 322/436 ---
+  Canonical: 'motor selection for CNC/plotter'
+  Members (2):
+    * 'motor selection for CNC/plotter'
+      'stepper driver selection for CNC controller'
+  Scopes: machine_capability
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 323/436 ---
+  Canonical: 'motor sizing based on cutting forces'
+  Members (2):
+    * 'motor sizing based on cutting forces'
+      'motor sizing for hobby machine tools'
+  Scopes: cost, machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 324/436 ---
+  Canonical: 'non-marine plywood outdoor durability risk'
+  Members (2):
+      'marine-grade plywood selection for exterior use'
+    * 'non-marine plywood outdoor durability risk'
+  Scopes: material
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 325/436 ---
+  Canonical: 'off-center keyway load simplification'
+  Members (2):
+      'key/keyway contact load distribution assumption'
+    * 'off-center keyway load simplification'
+  Scopes: other
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 326/436 ---
+  Canonical: 'on-machine G-code edits vs returning to CAD/CAM'
+  Members (2):
+      'On-machine edits vs returning to CAD/CAM for small changes'
+    * 'on-machine G-code edits vs returning to CAD/CAM'
+  Scopes: programming
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 327/436 ---
+  Canonical: 'optical mouse sensor accuracy sensitivity to standoff'
+  Members (2):
+    * 'optical mouse sensor accuracy sensitivity to standoff'
+      'optical mouse suitability for micron-scale measurement'
+  Scopes: machine_capability, quality
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 328/436 ---
+  Canonical: 'optocoupler threshold adjustment procedure (R2)'
+  Members (2):
+    * 'optocoupler threshold adjustment procedure (R2)'
+      'optocoupler turn-off speed resistor adjustment (R1)'
+  Scopes: other
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 329/436 ---
+  Canonical: 'orthogonal reference frame for XY measurement'
+  Members (2):
+      'DIY metrology frame with orthogonal references'
+    * 'orthogonal reference frame for XY measurement'
+  Scopes: quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 330/436 ---
+  Canonical: 'panel retention during PCB edge rounding'
+  Members (2):
+      'board stacking during PCB edge-rounding operations'
+    * 'panel retention during PCB edge rounding'
+  Scopes: machining_process
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 331/436 ---
+  Canonical: 'phenolic plastic use in router plate inserts'
+  Members (2):
+    * 'phenolic plastic use in router plate inserts'
+      'phenolic/engineering plastics vs plexiglass for router plate inserts'
+  Scopes: material
+  Frame types: comparison, observation
+  Total frames: 2
+
+--- Cluster 332/436 ---
+  Canonical: 'photogrammetry capture setup'
+  Members (2):
+    * 'photogrammetry capture setup'
+      'photogrammetry stability and camera settings'
+  Scopes: quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 333/436 ---
+  Canonical: 'pilot hole depth for pointed wood screws'
+  Members (2):
+      'pilot hole depth for blunt machine screws'
+    * 'pilot hole depth for pointed wood screws'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 334/436 ---
+  Canonical: 'piston ring sealing function'
+  Members (2):
+    * 'piston ring sealing function'
+      'use of piston rings for sealing and maintenance economy'
+  Scopes: cost, design_geometry
+  Frame types: observation, principle
+  Total frames: 3
+
+--- Cluster 335/436 ---
+  Canonical: 'piston-to-cylinder fit for slow-moving pistons'
+  Members (2):
+      'piston-to-cylinder clearance for fast-moving pistons'
+    * 'piston-to-cylinder fit for slow-moving pistons'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 336/436 ---
+  Canonical: 'pitch point angular spacing on involute gears'
+  Members (2):
+      'angular displacement from base to pitch point on involute'
+    * 'pitch point angular spacing on involute gears'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 337/436 ---
+  Canonical: 'planetary gear pitch circle tangency'
+  Members (2):
+      'planetary gear interface pressure angles'
+    * 'planetary gear pitch circle tangency'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 338/436 ---
+  Canonical: 'planetary ring gear tooth count relationship'
+  Members (2):
+      'planetary gear tooth count relationship (R = S + 2P)'
+    * 'planetary ring gear tooth count relationship'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 339/436 ---
+  Canonical: 'plywood edge appearance under paint'
+  Members (2):
+      'plywood edge appearance in exterior applications'
+    * 'plywood edge appearance under paint'
+  Scopes: material, quality
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 340/436 ---
+  Canonical: 'plywood face vs edge screw holding strength'
+  Members (2):
+      'laminating plywood to allow face-driven screws'
+    * 'plywood face vs edge screw holding strength'
+  Scopes: design_geometry, material
+  Frame types: observation, workaround
+  Total frames: 2
+
+--- Cluster 341/436 ---
+  Canonical: 'pneumatic cylinder repairability'
+  Members (2):
+    * 'pneumatic cylinder repairability'
+      'pneumatic cylinder service method'
+  Scopes: other
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 342/436 ---
+  Canonical: 'pocket optical comparator'
+  Members (2):
+      'etched glass plates in pocket optical comparators'
+    * 'pocket optical comparator'
+  Scopes: quality
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 343/436 ---
+  Canonical: 'positive lead-angle advantages'
+  Members (2):
+    * 'positive lead-angle advantages'
+      'positive lead-angle cutting forces and stability'
+  Scopes: tooling
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 344/436 ---
+  Canonical: 'potentiometer input range limiting'
+  Members (2):
+    * 'potentiometer input range limiting'
+      'resistor sizing for pot range limit'
+  Scopes: machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 345/436 ---
+  Canonical: 'pressed fit assembly method'
+  Members (2):
+      'press-fit assembly deformation'
+    * 'pressed fit assembly method'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 346/436 ---
+  Canonical: 'production-readiness mindset for small batches'
+  Members (2):
+    * 'production-readiness mindset for small batches'
+      'transition to small-batch production priorities'
+  Scopes: shop_operations
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 347/436 ---
+  Canonical: 'pull dowel with side vent for blind holes'
+  Members (2):
+    * 'pull dowel with side vent for blind holes'
+      'regular dowel in blind hole removal difficulty'
+  Scopes: design_geometry, tooling
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 348/436 ---
+  Canonical: 'quadrature sensors in optical encoders'
+  Members (2):
+      'digital outputs of optical quadrature detectors'
+    * 'quadrature sensors in optical encoders'
+  Scopes: machine_capability, programming
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 349/436 ---
+  Canonical: 'quick exhaust valve purpose'
+  Members (2):
+      'quick exhaust valve exhaust blast'
+    * 'quick exhaust valve purpose'
+  Scopes: tooling
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 350/436 ---
+  Canonical: 'radial depth of cut in turning'
+  Members (2):
+      'depth of cut definition in turning'
+    * 'radial depth of cut in turning'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 351/436 ---
+  Canonical: 'reamers following existing hole path'
+  Members (2):
+      'deep hole reaming guided by short bored section'
+    * 'reamers following existing hole path'
+  Scopes: machining_process, tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 352/436 ---
+  Canonical: 'reaming for small H7 holes'
+  Members (2):
+      'availability of standard H7 reamers limits hole size options'
+    * 'reaming for small H7 holes'
+  Scopes: tooling
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 353/436 ---
+  Canonical: 'reduced thread engagement for tapping tough materials'
+  Members (2):
+    * 'reduced thread engagement for tapping tough materials'
+      'thread percentage selection for tapping hard materials'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 354/436 ---
+  Canonical: 'reference frames for URDF joints in SolidWorks exporter'
+  Members (2):
+      'auto-generated reference coordinate systems in SolidWorks URDF exporter'
+    * 'reference frames for URDF joints in SolidWorks exporter'
+  Scopes: other
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 355/436 ---
+  Canonical: 'relay input isolation test'
+  Members (2):
+    * 'relay input isolation test'
+      'using isolator to drive relay directly'
+  Scopes: other
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 356/436 ---
+  Canonical: 'residual stresses from machining'
+  Members (2):
+      'residual stresses from CNC milling'
+    * 'residual stresses from machining'
+  Scopes: machining_process
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 357/436 ---
+  Canonical: 'retaining compounds in interference fits'
+  Members (2):
+    * 'retaining compounds in interference fits'
+      'tightness requirement for interference fits'
+  Scopes: design_geometry, quality
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 358/436 ---
+  Canonical: 'retaining ring grooves in bearings and pillow blocks'
+  Members (2):
+    * 'retaining ring grooves in bearings and pillow blocks'
+      'retaining rings securing bearing outer races in pillow blocks'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 359/436 ---
+  Canonical: 'reversing contactor state logic'
+  Members (2):
+    * 'reversing contactor state logic'
+      'reversing contactors simultaneous energization'
+  Scopes: machine_capability
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 360/436 ---
+  Canonical: 'rotary attachment workpiece size limitation'
+  Members (2):
+      'rotary attachment requirement for curved surface engraving'
+    * 'rotary attachment workpiece size limitation'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 361/436 ---
+  Canonical: 'router inside-corner rounding'
+  Members (2):
+      'router bit radius limits internal corners'
+    * 'router inside-corner rounding'
+  Scopes: design_geometry, machining_process
+  Frame types: risk
+  Total frames: 2
+
+--- Cluster 362/436 ---
+  Canonical: 'router vs mill motion distinction (common usage)'
+  Members (2):
+      'router vs mill classification by head motion or spindle type'
+    * 'router vs mill motion distinction (common usage)'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 363/436 ---
+  Canonical: 'scaling gear drawings across sizes'
+  Members (2):
+    * 'scaling gear drawings across sizes'
+      'scaling measurements from drawings'
+  Scopes: design_geometry, quality
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 364/436 ---
+  Canonical: 'second moment of area for rectangular section'
+  Members (2):
+    * 'second moment of area for rectangular section'
+      'second moment of area for solid circular section'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 365/436 ---
+  Canonical: 'secondary assembly layout to generate drawings'
+  Members (2):
+    * 'secondary assembly layout to generate drawings'
+      'using exploded state for assembly layout in drawings'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 366/436 ---
+  Canonical: 'series resistor selection for optocoupler input'
+  Members (2):
+      'double series resistor limiting optocoupler current'
+    * 'series resistor selection for optocoupler input'
+  Scopes: machine_capability
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 367/436 ---
+  Canonical: 'servo feedback requirement'
+  Members (2):
+      'analog servo feedback and homing'
+    * 'servo feedback requirement'
+  Scopes: machine_capability
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 368/436 ---
+  Canonical: 'set screws on shaft flats'
+  Members (2):
+      'set screw placement relative to D-flat'
+    * 'set screws on shaft flats'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 369/436 ---
+  Canonical: 'shear stress line visualization'
+  Members (2):
+    * 'shear stress line visualization'
+      'visualizing shear stress using torque vector notation'
+  Scopes: other
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 370/436 ---
+  Canonical: 'sheet metal hole punchers'
+  Members (2):
+      'punch press hole making in sheet metal'
+    * 'sheet metal hole punchers'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 371/436 ---
+  Canonical: 'shrink fit assembly requirements'
+  Members (2):
+    * 'shrink fit assembly requirements'
+      'shrink fitting interference requirement'
+  Scopes: machining_process
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 372/436 ---
+  Canonical: 'silicone mold measurement in production'
+  Members (2):
+      'silicone mold impressions for measurement'
+    * 'silicone mold measurement in production'
+  Scopes: quality
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 373/436 ---
+  Canonical: 'simultaneous axis motion'
+  Members (2):
+      'simultaneous axis loading in CNC machines'
+    * 'simultaneous axis motion'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 374/436 ---
+  Canonical: 'single worm drive for 1:50 with minimal backlash'
+  Members (2):
+    * 'single worm drive for 1:50 with minimal backlash'
+      'single-stage 1:50 gear size vs backlash tradeoff'
+  Scopes: other
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 375/436 ---
+  Canonical: 'single-direction approach to mitigate backlash'
+  Members (2):
+    * 'single-direction approach to mitigate backlash'
+      'single-direction toolpath to neutralize backlash'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 376/436 ---
+  Canonical: 'sketch planes for loft operations'
+  Members (2):
+      'orthogonal reference planes to define a loft rail'
+    * 'sketch planes for loft operations'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 377/436 ---
+  Canonical: 'sketch text for labeling'
+  Members (2):
+      'sketch annotations for labels'
+    * 'sketch text for labeling'
+  Scopes: design_geometry
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 378/436 ---
+  Canonical: 'sliding fit clearance'
+  Members (2):
+    * 'sliding fit clearance'
+      'slip fit clearance starting value'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 379/436 ---
+  Canonical: 'sliding motor without spring trade-off'
+  Members (2):
+      'choosing sliding motor without spring for precision'
+    * 'sliding motor without spring trade-off'
+  Scopes: other
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 380/436 ---
+  Canonical: 'slip ring connectors'
+  Members (2):
+    * 'slip ring connectors'
+      'slip ring selection criteria'
+  Scopes: machine_capability
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 381/436 ---
+  Canonical: 'small DIY/desktop CNC suitability for production'
+  Members (2):
+      'CNC vs manual suitability by production scale and task'
+    * 'small DIY/desktop CNC suitability for production'
+  Scopes: machine_capability, shop_operations
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 382/436 ---
+  Canonical: 'small-quantity fabrication cost'
+  Members (2):
+      'low-quantity custom fabrication cost for hobby projects'
+    * 'small-quantity fabrication cost'
+  Scopes: cost
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 383/436 ---
+  Canonical: 'sources of false triggering in limit switches'
+  Members (2):
+    * 'sources of false triggering in limit switches'
+      'vibration-induced false triggering of limit switches'
+  Scopes: machine_capability, other
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 384/436 ---
+  Canonical: 'specific metal removal rate (SMRR)'
+  Members (2):
+      'specific material removal rate (grinding)'
+    * 'specific metal removal rate (SMRR)'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 385/436 ---
+  Canonical: 'spherical fillet tangency at trihedral corner'
+  Members (2):
+      'spherical fillet limitation in 4+ edge corners'
+    * 'spherical fillet tangency at trihedral corner'
+  Scopes: design_geometry
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 386/436 ---
+  Canonical: 'spiral-wrapped finning on round tubes'
+  Members (2):
+      'fin strip geometry for spiral-wrapped tubes'
+    * 'spiral-wrapped finning on round tubes'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 387/436 ---
+  Canonical: 'spline specification parameters'
+  Members (2):
+      'spline specification baseline parameters'
+    * 'spline specification parameters'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 388/436 ---
+  Canonical: 'square keyway/shaft torque joint strength'
+  Members (2):
+      'drilled round keyways for torque transmission'
+    * 'square keyway/shaft torque joint strength'
+  Scopes: design_geometry, machining_process
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 389/436 ---
+  Canonical: 'squareness checking with machinist square'
+  Members (2):
+      'machinist square for small mating surfaces'
+    * 'squareness checking with machinist square'
+  Scopes: quality
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 390/436 ---
+  Canonical: 'step drill for enlarging enclosure holes'
+  Members (2):
+    * 'step drill for enlarging enclosure holes'
+      'step drills for drilling enclosure holes'
+  Scopes: tooling
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 391/436 ---
+  Canonical: 'step drill undersize tendency'
+  Members (2):
+    * 'step drill undersize tendency'
+      'twist drill undersize relative to nominal'
+  Scopes: tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 392/436 ---
+  Canonical: 'step resolution of 5-phase vs 2-phase stepper motors'
+  Members (2):
+      'performance tradeoffs: 5-phase vs 2-phase stepper motors'
+    * 'step resolution of 5-phase vs 2-phase stepper motors'
+  Scopes: machine_capability
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 393/436 ---
+  Canonical: 'stepper full-step resolution limit'
+  Members (2):
+      'achievable resolution with microstepped steppers'
+    * 'stepper full-step resolution limit'
+  Scopes: machine_capability
+  Frame types: observation, risk
+  Total frames: 2
+
+--- Cluster 394/436 ---
+  Canonical: 'stepper motion requirements'
+  Members (2):
+      'stepper controller steps-per-unit requirement'
+    * 'stepper motion requirements'
+  Scopes: machine_capability, programming
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 395/436 ---
+  Canonical: 'stepper motor holding torque rating'
+  Members (2):
+    * 'stepper motor holding torque rating'
+      'stepper motor torque at max power vs holding torque'
+  Scopes: machine_capability
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 396/436 ---
+  Canonical: 'stepper supply voltage selection within driver limits'
+  Members (2):
+      'stepper driver current limiting/chopper vs motor voltage rating'
+    * 'stepper supply voltage selection within driver limits'
+  Scopes: machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 397/436 ---
+  Canonical: 'stepper torque margin'
+  Members (2):
+      'open-loop stepper torque margin'
+    * 'stepper torque margin'
+  Scopes: machine_capability
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 398/436 ---
+  Canonical: 'stepper with feedback vs DC servo'
+  Members (2):
+      'stepper vs DC motor motion control'
+    * 'stepper with feedback vs DC servo'
+  Scopes: machine_capability
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 399/436 ---
+  Canonical: 'string-based translation between G-code and eV+'
+  Members (2):
+      'coordinate-based motion command mapping between G-code and eV+'
+    * 'string-based translation between G-code and eV+'
+  Scopes: programming
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 400/436 ---
+  Canonical: 'supporting long, slender turning work (L/D > 10)'
+  Members (2):
+      'supporting long workpieces during machining/grinding'
+    * 'supporting long, slender turning work (L/D > 10)'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 401/436 ---
+  Canonical: 'surface-first modeling workflow for angled pipe with chamfer'
+  Members (2):
+      'blended-surface method to model a constant-angle chamfer on an angled pipe'
+    * 'surface-first modeling workflow for angled pipe with chamfer'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 402/436 ---
+  Canonical: 'sweep profile twist along path'
+  Members (2):
+      'sweep profile orientation on helical path'
+    * 'sweep profile twist along path'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 403/436 ---
+  Canonical: 'tab-and-slot edge stress concentration'
+  Members (2):
+      'edge stress concentrations around cutouts'
+    * 'tab-and-slot edge stress concentration'
+  Scopes: design_geometry
+  Frame types: observation, principle
+  Total frames: 2
+
+--- Cluster 404/436 ---
+  Canonical: 'table saw blade tilt for chamfers'
+  Members (2):
+      'large chamfering method using table saw and sanding'
+    * 'table saw blade tilt for chamfers'
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 405/436 ---
+  Canonical: 'table saw vs router for slotting boards'
+  Members (2):
+    * 'table saw vs router for slotting boards'
+      'table saw vs router risk for chamfering'
+  Scopes: machining_process
+  Frame types: comparison
+  Total frames: 2
+
+--- Cluster 406/436 ---
+  Canonical: 'telescoping steel tubing availability'
+  Members (2):
+    * 'telescoping steel tubing availability'
+      'telescoping tube clearance using standard sizes'
+  Scopes: design_geometry, material
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 407/436 ---
+  Canonical: 'terminology for locating/mating feature on shafts'
+  Members (2):
+    * 'terminology for locating/mating feature on shafts'
+      'terminology for rotating shafts with parallel-edge engagement'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 408/436 ---
+  Canonical: 'thermal assembly of interference fits by cooling'
+  Members (2):
+    * 'thermal assembly of interference fits by cooling'
+      'thermal methods for assembling interference fits'
+  Scopes: machining_process, material
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 409/436 ---
+  Canonical: 'thermal expansion effect on reamed hole size (cooled workpiece)'
+  Members (2):
+      'heating workpiece before reaming reduces final hole size after cooling'
+    * 'thermal expansion effect on reamed hole size (cooled workpiece)'
+  Scopes: machining_process
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 410/436 ---
+  Canonical: 'thickness from deflection criterion for simply supported beam with central load'
+  Members (2):
+      'minimum thickness from bending stress for simply supported beam with central load'
+    * 'thickness from deflection criterion for simply supported beam with central load'
+  Scopes: design_geometry
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 411/436 ---
+  Canonical: 'thread manufacturing method (cut vs formed)'
+  Members (2):
+      'thread forming vs cutting for very small threads'
+    * 'thread manufacturing method (cut vs formed)'
+  Scopes: machining_process
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 412/436 ---
+  Canonical: 'thread specification on drawings'
+  Members (2):
+      'missing thread specification on vendor drawing'
+    * 'thread specification on drawings'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 413/436 ---
+  Canonical: 'threaded joint misalignment'
+  Members (2):
+      'pre-thread alignment feature for threaded joints'
+    * 'threaded joint misalignment'
+  Scopes: design_geometry
+  Frame types: principle
+  Total frames: 2
+
+--- Cluster 414/436 ---
+  Canonical: 'through-hole clearance tolerance'
+  Members (2):
+      'position tolerance limit set by pin/hole clearance'
+    * 'through-hole clearance tolerance'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 415/436 ---
+  Canonical: 'toggle clamps'
+  Members (2):
+    * 'toggle clamps'
+      'toggle clamps (low-profile)'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 416/436 ---
+  Canonical: 'tolerance classes within standards'
+  Members (2):
+      'tolerance classes for interchangeable components'
+    * 'tolerance classes within standards'
+  Scopes: quality
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 417/436 ---
+  Canonical: 'tolerance tighter than process capability'
+  Members (2):
+      'default tolerancing baseline from process capability'
+    * 'tolerance tighter than process capability'
+  Scopes: cost, quality
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 418/436 ---
+  Canonical: 'transition fit for accurate location'
+  Members (2):
+    * 'transition fit for accurate location'
+      'transition fit selection for high-accuracy components'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 419/436 ---
+  Canonical: 'triangular (60°) hole lattice in perforated sheets'
+  Members (2):
+      'symmetrical periodic hole patterns (honeycomb/hex) for perforated sheets'
+    * 'triangular (60°) hole lattice in perforated sheets'
+  Scopes: design_geometry
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 420/436 ---
+  Canonical: "turner's tape residue management"
+  Members (2):
+      "turner's tape for temporary workholding"
+    * "turner's tape residue management"
+  Scopes: machining_process
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 421/436 ---
+  Canonical: 'two-piece shaft collar mounting method'
+  Members (2):
+    * 'two-piece shaft collar mounting method'
+      'using clamping shaft collars as flange mounts'
+  Scopes: design_geometry
+  Frame types: heuristic, workaround
+  Total frames: 2
+
+--- Cluster 422/436 ---
+  Canonical: 'unit selection in CAD/SVG for CNC'
+  Members (2):
+      'SVG unit selection for CNC layouts'
+    * 'unit selection in CAD/SVG for CNC'
+  Scopes: design_geometry, programming
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 423/436 ---
+  Canonical: 'unstable power supply during CNC/router operation'
+  Members (2):
+    * 'unstable power supply during CNC/router operation'
+      'using a voltage stabilizer for CNC/router power quality'
+  Scopes: machine_capability
+  Frame types: risk, workaround
+  Total frames: 2
+
+--- Cluster 424/436 ---
+  Canonical: 'use of adhesive for axial shaft retention'
+  Members (2):
+      'adhesive with clearance hole for shaft retention'
+    * 'use of adhesive for axial shaft retention'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 425/436 ---
+  Canonical: 'use of free-machining steels in consumer fasteners'
+  Members (2):
+    * 'use of free-machining steels in consumer fasteners'
+      'use of free-machining steels in industrial fasteners'
+  Scopes: material
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 426/436 ---
+  Canonical: 'use of undersized dowel pins for sliding fits in bearings'
+  Members (2):
+    * 'use of undersized dowel pins for sliding fits in bearings'
+      'using drilled undersize holes for interference-fit bearing insertion'
+  Scopes: design_geometry
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 427/436 ---
+  Canonical: 'using homing switch position as machine zero'
+  Members (2):
+      'manual machine zero setting on machines without homing switches'
+    * 'using homing switch position as machine zero'
+  Scopes: programming
+  Frame types: heuristic
+  Total frames: 2
+
+--- Cluster 428/436 ---
+  Canonical: 'using laminate-flooring blades for MDF'
+  Members (2):
+      'PCD-tipped low-tooth-count blades for MDF/laminate'
+    * 'using laminate-flooring blades for MDF'
+  Scopes: tooling
+  Frame types: heuristic, observation
+  Total frames: 2
+
+--- Cluster 429/436 ---
+  Canonical: 'using metal milling cutters on wood'
+  Members (2):
+      'running milling cutters at high SFM in wood'
+    * 'using metal milling cutters on wood'
+  Scopes: machining_process, tooling
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 430/436 ---
+  Canonical: 'using spring-loaded idler for torque sensing'
+  Members (2):
+      'spring-loaded idler oscillation under varying torque'
+    * 'using spring-loaded idler for torque sensing'
+  Scopes: other
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 431/436 ---
+  Canonical: 'vendor pre-sales technical support'
+  Members (2):
+    * 'vendor pre-sales technical support'
+      'vendor technical support requirements'
+  Scopes: shop_operations
+  Frame types: observation
+  Total frames: 2
+
+--- Cluster 432/436 ---
+  Canonical: 'warping during laser micro-drilling of thin metal film'
+  Members (2):
+      'thermal conductivity effect on HAZ and warping in laser micro-drilling'
+    * 'warping during laser micro-drilling of thin metal film'
+  Scopes: machining_process, material
+  Frame types: principle, risk
+  Total frames: 2
+
+--- Cluster 433/436 ---
+  Canonical: 'weld-fill and re-tap repair for stripped hole'
+  Members (2):
+      'plugging and re-tapping a damaged threaded hole'
+    * 'weld-fill and re-tap repair for stripped hole'
+  Scopes: machining_process
+  Frame types: workaround
+  Total frames: 2
+
+--- Cluster 434/436 ---
+  Canonical: 'wide vs narrow slot for disc potentiometer'
+  Members (2):
+      'traditional wide slot for disc potentiometer dials'
+    * 'wide vs narrow slot for disc potentiometer'
+  Scopes: design_geometry
+  Frame types: comparison, heuristic
+  Total frames: 2
+
+--- Cluster 435/436 ---
+  Canonical: 'wood router spindle speed vs metal cutting'
+  Members (2):
+      'maximum RPM limits of metal-cutting tools vs woodworking tools'
+    * 'wood router spindle speed vs metal cutting'
+  Scopes: machine_capability, tooling
+  Frame types: heuristic, risk
+  Total frames: 2
+
+--- Cluster 436/436 ---
+  Canonical: 'worm gear hobbing kinematics'
+  Members (2):
+      'hob cutter movement in gear hobbing'
+    * 'worm gear hobbing kinematics'
+  Scopes: machining_process
+  Frame types: observation
+  Total frames: 2

@@ -1,0 +1,5626 @@
+{
+  "source_file": "src/scraping_logic/stackexchange_posts_filtered.json",
+  "total_authors": 562,
+  "author_frames": [
+    {
+      "author_username": "Pᴀᴜʟsᴛᴇʀ2",
+      "user_id": 4152,
+      "account_id": 2777358,
+      "reputation": 168411,
+      "user_type": "moderator",
+      "accept_rate": 93,
+      "profile_link": "https://mechanics.stackexchange.com/users/4152/p%e1%b4%80%e1%b4%9c%ca%9fs%e1%b4%9b%e1%b4%87%ca%802",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "gvdhoorn-rse",
+      "user_id": 34994,
+      "account_id": 28641111,
+      "reputation": 39403,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/34994/gvdhoorn-rse",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Solar Mike",
+      "user_id": 10976,
+      "account_id": 6397988,
+      "reputation": 34751,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/10976/solar-mike",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "HandyHowie",
+      "user_id": 11847,
+      "account_id": 6808265,
+      "reputation": 25736,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/11847/handyhowie",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "NMech",
+      "user_id": 19906,
+      "account_id": 2194374,
+      "reputation": 24370,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19906/nmech",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "kamran",
+      "user_id": 4816,
+      "account_id": 4704137,
+      "reputation": 24196,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4816/kamran",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Chuck",
+      "user_id": 9720,
+      "account_id": 6303769,
+      "reputation": 16320,
+      "user_type": "moderator",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/9720/chuck",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "niels nielsen",
+      "user_id": 13363,
+      "account_id": 3992177,
+      "reputation": 15608,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13363/niels-nielsen",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Chris Johns",
+      "user_id": 4357,
+      "account_id": 6165985,
+      "reputation": 15326,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4357/chris-johns",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "alephzero",
+      "user_id": 683,
+      "account_id": 5815521,
+      "reputation": 12568,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/683/alephzero",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Transistor",
+      "user_id": 3505,
+      "account_id": 4867217,
+      "reputation": 12458,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3505/transistor",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Ian",
+      "user_id": 350,
+      "account_id": 2023740,
+      "reputation": 11023,
+      "user_type": "registered",
+      "accept_rate": 75,
+      "profile_link": "https://robotics.stackexchange.com/users/350/ian",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "hazzey",
+      "user_id": 33,
+      "account_id": 96173,
+      "reputation": 10740,
+      "user_type": "registered",
+      "accept_rate": 49,
+      "profile_link": "https://engineering.stackexchange.com/users/33/hazzey",
+      "author_credibility_tier": "high"
+    },
+    {
+      "author_username": "Fred",
+      "user_id": 90,
+      "account_id": 4345372,
+      "reputation": 9782,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/90/fred",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Martin",
+      "user_id": 19901,
+      "account_id": 8848365,
+      "reputation": 8669,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_link": "https://mechanics.stackexchange.com/users/19901/martin",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "r13",
+      "user_id": 30651,
+      "account_id": 20672242,
+      "reputation": 8343,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30651/r13",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "ericnutsch",
+      "user_id": 2819,
+      "account_id": 4780240,
+      "reputation": 8325,
+      "user_type": "registered",
+      "accept_rate": 67,
+      "profile_link": "https://engineering.stackexchange.com/users/2819/ericnutsch",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Jonathan R Swift",
+      "user_id": 13311,
+      "account_id": 5315228,
+      "reputation": 7841,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13311/jonathan-r-swift",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Tiger Guy",
+      "user_id": 24351,
+      "account_id": 8621486,
+      "reputation": 7801,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24351/tiger-guy",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "fred_dot_u",
+      "user_id": 13297,
+      "account_id": 7988400,
+      "reputation": 7552,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13297/fred-dot-u",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "ratchet freak",
+      "user_id": 288,
+      "account_id": 378721,
+      "reputation": 6872,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/288/ratchet-freak",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Allan Osborne",
+      "user_id": 3975,
+      "account_id": 3593900,
+      "reputation": 6749,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/3975/allan-osborne",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "50k4",
+      "user_id": 10748,
+      "account_id": 5986638,
+      "reputation": 6712,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/10748/50k4",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "blacksmith37",
+      "user_id": 11628,
+      "account_id": 10731084,
+      "reputation": 6222,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11628/blacksmith37",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "SF.",
+      "user_id": 203,
+      "account_id": 90733,
+      "reputation": 6115,
+      "user_type": "registered",
+      "accept_rate": 80,
+      "profile_link": "https://engineering.stackexchange.com/users/203/sf",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Ben",
+      "user_id": 110,
+      "account_id": 53400,
+      "reputation": 5975,
+      "user_type": "moderator",
+      "accept_rate": 83,
+      "profile_link": "https://robotics.stackexchange.com/users/110/ben",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "DKNguyen",
+      "user_id": 19778,
+      "account_id": 12551299,
+      "reputation": 5659,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19778/dknguyen",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Phil Sweet",
+      "user_id": 12754,
+      "account_id": 7855995,
+      "reputation": 5264,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12754/phil-sweet",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "mart",
+      "user_id": 61,
+      "account_id": 1247986,
+      "reputation": 4811,
+      "user_type": "registered",
+      "accept_rate": 42,
+      "profile_link": "https://engineering.stackexchange.com/users/61/mart",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Ethan48",
+      "user_id": 122,
+      "account_id": 1925982,
+      "reputation": 4571,
+      "user_type": "registered",
+      "accept_rate": 67,
+      "profile_link": "https://engineering.stackexchange.com/users/122/ethan48",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "David Cary",
+      "user_id": 187,
+      "account_id": 85496,
+      "reputation": 4565,
+      "user_type": "registered",
+      "accept_rate": 0,
+      "profile_link": "https://robotics.stackexchange.com/users/187/david-cary",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "hauptmech",
+      "user_id": 184,
+      "account_id": 380404,
+      "reputation": 4485,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/184/hauptmech",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Carl Witthoft",
+      "user_id": 615,
+      "account_id": 474597,
+      "reputation": 4289,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/615/carl-witthoft",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "joojaa",
+      "user_id": 1324,
+      "account_id": 1407800,
+      "reputation": 3701,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1324/joojaa",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Criggie",
+      "user_id": 12814,
+      "account_id": 2049851,
+      "reputation": 3293,
+      "user_type": "registered",
+      "accept_rate": 40,
+      "profile_link": "https://mechanics.stackexchange.com/users/12814/criggie",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Air",
+      "user_id": 368,
+      "account_id": 2736748,
+      "reputation": 3211,
+      "user_type": "registered",
+      "accept_rate": 20,
+      "profile_link": "https://engineering.stackexchange.com/users/368/air",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "TimWescott",
+      "user_id": 19776,
+      "account_id": 2842254,
+      "reputation": 3044,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19776/timwescott",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Trevor Archibald",
+      "user_id": 41,
+      "account_id": 5558864,
+      "reputation": 2819,
+      "user_type": "registered",
+      "accept_rate": 0,
+      "profile_link": "https://engineering.stackexchange.com/users/41/trevor-archibald",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Daniel K",
+      "user_id": 9275,
+      "account_id": 9780171,
+      "reputation": 2666,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9275/daniel-k",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "StainlessSteelRat",
+      "user_id": 1592,
+      "account_id": 4140869,
+      "reputation": 2582,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1592/stainlesssteelrat",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "jko",
+      "user_id": 23871,
+      "account_id": 17288309,
+      "reputation": 2347,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23871/jko",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Drew",
+      "user_id": 20490,
+      "account_id": 1714914,
+      "reputation": 2325,
+      "user_type": "moderator",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20490/drew",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "DLS3141",
+      "user_id": 2061,
+      "account_id": 6404493,
+      "reputation": 2165,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2061/dls3141",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "OpticalResonator",
+      "user_id": 14629,
+      "account_id": 12590436,
+      "reputation": 2008,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14629/opticalresonator",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "James Waldby - jwpat7",
+      "user_id": 478,
+      "account_id": 445412,
+      "reputation": 1991,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/478/james-waldby-jwpat7",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "jpa",
+      "user_id": 1290,
+      "account_id": 492960,
+      "reputation": 1963,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1290/jpa",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "am304",
+      "user_id": 334,
+      "account_id": 2606275,
+      "reputation": 1841,
+      "user_type": "registered",
+      "accept_rate": 50,
+      "profile_link": "https://engineering.stackexchange.com/users/334/am304",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "feetwet",
+      "user_id": 77,
+      "account_id": 3149072,
+      "reputation": 1757,
+      "user_type": "registered",
+      "accept_rate": 38,
+      "profile_link": "https://engineering.stackexchange.com/users/77/feetwet",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Pete W",
+      "user_id": 30144,
+      "account_id": 20243107,
+      "reputation": 1746,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30144/pete-w",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Harper - Reinstate Monica",
+      "user_id": 11673,
+      "account_id": 7546260,
+      "reputation": 1730,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11673/harper-reinstate-monica",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Tom&#225;š L&#233;tal",
+      "user_id": 21214,
+      "account_id": 11436848,
+      "reputation": 1715,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21214/tom%c3%a1%c5%a1-l%c3%a9tal",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "TobiasK",
+      "user_id": 6911,
+      "account_id": 4180281,
+      "reputation": 1657,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/6911/tobiask",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Wallace Park",
+      "user_id": 1672,
+      "account_id": 1821810,
+      "reputation": 1635,
+      "user_type": "registered",
+      "accept_rate": 14,
+      "profile_link": "https://engineering.stackexchange.com/users/1672/wallace-park",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "GisMofx",
+      "user_id": 2559,
+      "account_id": 975856,
+      "reputation": 1588,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2559/gismofx",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Abel",
+      "user_id": 29315,
+      "account_id": 19463513,
+      "reputation": 1544,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29315/abel",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Biswajit Banerjee",
+      "user_id": 3488,
+      "account_id": 4158419,
+      "reputation": 1453,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3488/biswajit-banerjee",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "r-bryan",
+      "user_id": 27618,
+      "account_id": 20258868,
+      "reputation": 1401,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/27618/r-bryan",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Eph",
+      "user_id": 1122,
+      "account_id": 1981571,
+      "reputation": 1335,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1122/eph",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Greg Locock",
+      "user_id": 39973,
+      "account_id": 27057424,
+      "reputation": 1332,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39973/greg-locock",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Forward Ed",
+      "user_id": 6993,
+      "account_id": 6955919,
+      "reputation": 1272,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6993/forward-ed",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "BarbalatsDilemma",
+      "user_id": 6695,
+      "account_id": 8568453,
+      "reputation": 1210,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6695/barbalatsdilemma",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "regdoug",
+      "user_id": 709,
+      "account_id": 2195412,
+      "reputation": 1167,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/709/regdoug",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Donald Gibson",
+      "user_id": 7021,
+      "account_id": 8705094,
+      "reputation": 1078,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7021/donald-gibson",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "John M.",
+      "user_id": 4302,
+      "account_id": 6565646,
+      "reputation": 1033,
+      "user_type": "registered",
+      "accept_rate": 79,
+      "profile_link": "https://engineering.stackexchange.com/users/4302/john-m",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "danzimmerman",
+      "user_id": 33390,
+      "account_id": 14502410,
+      "reputation": 1031,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/33390/danzimmerman",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "AndyZe",
+      "user_id": 35238,
+      "account_id": 4279674,
+      "reputation": 1003,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/35238/andyze",
+      "author_credibility_tier": "medium"
+    },
+    {
+      "author_username": "Ben Trettel",
+      "user_id": 49,
+      "account_id": 1098548,
+      "reputation": 996,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/49/ben-trettel",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "mactro",
+      "user_id": 7360,
+      "account_id": 3168120,
+      "reputation": 953,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/7360/mactro",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "agentp",
+      "user_id": 7461,
+      "account_id": 911923,
+      "reputation": 949,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7461/agentp",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Steve",
+      "user_id": 7665,
+      "account_id": 5470816,
+      "reputation": 942,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/7665/steve",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Paul Uszak",
+      "user_id": 2947,
+      "account_id": 4562221,
+      "reputation": 926,
+      "user_type": "registered",
+      "accept_rate": 89,
+      "profile_link": "https://engineering.stackexchange.com/users/2947/paul-uszak",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Eric S",
+      "user_id": 9506,
+      "account_id": 525981,
+      "reputation": 915,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9506/eric-s",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "useless-machine",
+      "user_id": 8216,
+      "account_id": 9264918,
+      "reputation": 894,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8216/useless-machine",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Chris H",
+      "user_id": 9374,
+      "account_id": 2618090,
+      "reputation": 829,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/9374/chris-h",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mike Waters",
+      "user_id": 20985,
+      "account_id": 4749299,
+      "reputation": 796,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20985/mike-waters",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Rich",
+      "user_id": 47141,
+      "account_id": 30245628,
+      "reputation": 795,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/47141/rich",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hobbes",
+      "user_id": 11645,
+      "account_id": 3319200,
+      "reputation": 746,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11645/hobbes",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "DrMrstheMonarch",
+      "user_id": 14318,
+      "account_id": 10847823,
+      "reputation": 729,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14318/drmrsthemonarch",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "John Alexiou",
+      "user_id": 1051,
+      "account_id": 160373,
+      "reputation": 703,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1051/john-alexiou",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Gokce Mehmet AY",
+      "user_id": 879,
+      "account_id": 5921627,
+      "reputation": 702,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/879/gokce-mehmet-ay",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ConjuringFrictionForces",
+      "user_id": 7430,
+      "account_id": 8909304,
+      "reputation": 700,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7430/conjuringfrictionforces",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Felipe Henrique",
+      "user_id": 22691,
+      "account_id": 15499847,
+      "reputation": 660,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/22691/felipe-henrique",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "LazyReader",
+      "user_id": 30410,
+      "account_id": 14185629,
+      "reputation": 635,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30410/lazyreader",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Diesel",
+      "user_id": 10590,
+      "account_id": 8662443,
+      "reputation": 629,
+      "user_type": "registered",
+      "accept_rate": 86,
+      "profile_link": "https://engineering.stackexchange.com/users/10590/diesel",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sami Safarini",
+      "user_id": 39623,
+      "account_id": 9068950,
+      "reputation": 629,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39623/sami-safarini",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "William Hird",
+      "user_id": 628,
+      "account_id": 550172,
+      "reputation": 611,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/628/william-hird",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jerry Coffin",
+      "user_id": 41368,
+      "account_id": 60200,
+      "reputation": 552,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41368/jerry-coffin",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "User1974",
+      "user_id": 10536,
+      "account_id": 7320617,
+      "reputation": 523,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_link": "https://engineering.stackexchange.com/users/10536/user1974",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Rob",
+      "user_id": 14556,
+      "account_id": 4485506,
+      "reputation": 522,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14556/rob",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "David Bailey",
+      "user_id": 36066,
+      "account_id": 1749292,
+      "reputation": 517,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/36066/david-bailey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Yaniv Ben David",
+      "user_id": 16860,
+      "account_id": 13776934,
+      "reputation": 477,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16860/yaniv-ben-david",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "JACK",
+      "user_id": 21087,
+      "account_id": 5605711,
+      "reputation": 471,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21087/jack",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kevin Krumwiede",
+      "user_id": 2140,
+      "account_id": 2211999,
+      "reputation": 467,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2140/kevin-krumwiede",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Gwydionforge",
+      "user_id": 10516,
+      "account_id": 10484893,
+      "reputation": 452,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10516/gwydionforge",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TotoposAndPicoDeGallo",
+      "user_id": 3235,
+      "account_id": 1300508,
+      "reputation": 433,
+      "user_type": "registered",
+      "accept_rate": 80,
+      "profile_link": "https://engineering.stackexchange.com/users/3235/totoposandpicodegallo",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "uhoh",
+      "user_id": 6264,
+      "account_id": 4794992,
+      "reputation": 430,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6264/uhoh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "skibulk",
+      "user_id": 3765,
+      "account_id": 1003063,
+      "reputation": 429,
+      "user_type": "registered",
+      "accept_rate": 83,
+      "profile_link": "https://engineering.stackexchange.com/users/3765/skibulk",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Walter",
+      "user_id": 270,
+      "account_id": 3548912,
+      "reputation": 427,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/270/walter",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Satya",
+      "user_id": 28252,
+      "account_id": 18397178,
+      "reputation": 422,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28252/satya",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tony Stewart EE since 1975",
+      "user_id": 8847,
+      "account_id": 503251,
+      "reputation": 422,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8847/tony-stewart-ee-since-1975",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Neil_UK",
+      "user_id": 8092,
+      "account_id": 1369709,
+      "reputation": 420,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8092/neil-uk",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TwoWaySpeedOfLight",
+      "user_id": 33509,
+      "account_id": 21829548,
+      "reputation": 411,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33509/twowayspeedoflight",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "spe4ker",
+      "user_id": 4088,
+      "account_id": 7443868,
+      "reputation": 409,
+      "user_type": "registered",
+      "accept_rate": 72,
+      "profile_link": "https://engineering.stackexchange.com/users/4088/spe4ker",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Corey",
+      "user_id": 11327,
+      "account_id": 10904456,
+      "reputation": 404,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11327/corey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jack B",
+      "user_id": 12022,
+      "account_id": 5939475,
+      "reputation": 398,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12022/jack-b",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mast",
+      "user_id": 1070,
+      "account_id": 999385,
+      "reputation": 387,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1070/mast",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "el-cheapo",
+      "user_id": 34112,
+      "account_id": 21782529,
+      "reputation": 385,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34112/el-cheapo",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jim",
+      "user_id": 26046,
+      "account_id": 10562573,
+      "reputation": 384,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/26046/jim",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tim D",
+      "user_id": 35,
+      "account_id": 5513024,
+      "reputation": 366,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35/tim-d",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ariser",
+      "user_id": 3786,
+      "account_id": 5149772,
+      "reputation": 363,
+      "user_type": "registered",
+      "accept_rate": 67,
+      "profile_link": "https://engineering.stackexchange.com/users/3786/ariser",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "carveone",
+      "user_id": 2555,
+      "account_id": 1164856,
+      "reputation": 347,
+      "user_type": "registered",
+      "accept_rate": 75,
+      "profile_link": "https://engineering.stackexchange.com/users/2555/carveone",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sam B",
+      "user_id": 17181,
+      "account_id": 14167750,
+      "reputation": 334,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17181/sam-b",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Katarina",
+      "user_id": 13748,
+      "account_id": 11764008,
+      "reputation": 324,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13748/katarina",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "gunter",
+      "user_id": 11039,
+      "account_id": 2520645,
+      "reputation": 321,
+      "user_type": "registered",
+      "accept_rate": 83,
+      "profile_link": "https://engineering.stackexchange.com/users/11039/gunter",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Soheil Paper",
+      "user_id": 2678,
+      "account_id": 5461701,
+      "reputation": 317,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2678/soheil-paper",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "elementiro",
+      "user_id": 33144,
+      "account_id": 19581725,
+      "reputation": 305,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33144/elementiro",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "smollma",
+      "user_id": 13673,
+      "account_id": 5230311,
+      "reputation": 299,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13673/smollma",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jim S.",
+      "user_id": 3440,
+      "account_id": 1012169,
+      "reputation": 298,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3440/jim-s",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Greenonline",
+      "user_id": 5899,
+      "account_id": 5324953,
+      "reputation": 297,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5899/greenonline",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ram Rachum",
+      "user_id": 11510,
+      "account_id": 28642,
+      "reputation": 289,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11510/ram-rachum",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Green",
+      "user_id": 5427,
+      "account_id": 370332,
+      "reputation": 285,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5427/green",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "CL40",
+      "user_id": 18508,
+      "account_id": 1157572,
+      "reputation": 283,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/18508/cl40",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jason",
+      "user_id": 20412,
+      "account_id": 5087251,
+      "reputation": 281,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20412/jason",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ellocomotive",
+      "user_id": 4200,
+      "account_id": 3761715,
+      "reputation": 279,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_link": "https://mechanics.stackexchange.com/users/4200/ellocomotive",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "david_10001",
+      "user_id": 13810,
+      "account_id": 10981636,
+      "reputation": 275,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_link": "https://engineering.stackexchange.com/users/13810/david-10001",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user391339",
+      "user_id": 21120,
+      "account_id": 166893,
+      "reputation": 273,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21120/user391339",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tim",
+      "user_id": 21526,
+      "account_id": 668931,
+      "reputation": 237,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21526/tim",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Lefty",
+      "user_id": 2162,
+      "account_id": 4706555,
+      "reputation": 237,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2162/lefty",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "neuronet",
+      "user_id": 13827,
+      "account_id": 2123624,
+      "reputation": 233,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/13827/neuronet",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Andy Ayr",
+      "user_id": 24680,
+      "account_id": 15569152,
+      "reputation": 232,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24680/andy-ayr",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mark Morgan Lloyd",
+      "user_id": 28873,
+      "account_id": 18996241,
+      "reputation": 231,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28873/mark-morgan-lloyd",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dale Mahalko",
+      "user_id": 3126,
+      "account_id": 2092320,
+      "reputation": 226,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3126/dale-mahalko",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Futurologist",
+      "user_id": 27999,
+      "account_id": 6596239,
+      "reputation": 226,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27999/futurologist",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Maxence",
+      "user_id": 4428,
+      "account_id": 68765,
+      "reputation": 225,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4428/maxence",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "computercarguy",
+      "user_id": 16686,
+      "account_id": 2059508,
+      "reputation": 221,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16686/computercarguy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Heatgunner",
+      "user_id": 65157,
+      "account_id": 7553617,
+      "reputation": 221,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/65157/heatgunner",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tueftla",
+      "user_id": 17780,
+      "account_id": 8632436,
+      "reputation": 218,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17780/tueftla",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Maarten -Monica for president",
+      "user_id": 10328,
+      "account_id": 9021956,
+      "reputation": 217,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10328/maarten-monica-for-president",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "henry",
+      "user_id": 9038,
+      "account_id": 8053515,
+      "reputation": 215,
+      "user_type": "registered",
+      "accept_rate": 75,
+      "profile_link": "https://engineering.stackexchange.com/users/9038/henry",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dims",
+      "user_id": 24724,
+      "account_id": 94736,
+      "reputation": 213,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24724/dims",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Melanie",
+      "user_id": 23845,
+      "account_id": 11607084,
+      "reputation": 211,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23845/melanie",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "PJazz",
+      "user_id": 4403,
+      "account_id": 5957568,
+      "reputation": 209,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4403/pjazz",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "StayOnTarget",
+      "user_id": 6489,
+      "account_id": 3523863,
+      "reputation": 207,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6489/stayontarget",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "hildred",
+      "user_id": 803,
+      "account_id": 3551017,
+      "reputation": 206,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/803/hildred",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "geekly",
+      "user_id": 11151,
+      "account_id": 397234,
+      "reputation": 206,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11151/geekly",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Myles",
+      "user_id": 869,
+      "account_id": 4758103,
+      "reputation": 205,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/869/myles",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "juggler",
+      "user_id": 13081,
+      "account_id": 2536846,
+      "reputation": 203,
+      "user_type": "registered",
+      "accept_rate": 25,
+      "profile_link": "https://engineering.stackexchange.com/users/13081/juggler",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Efthymios Kalyviotis",
+      "user_id": 16386,
+      "account_id": 7959824,
+      "reputation": 201,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16386/efthymios-kalyviotis",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mohammad Nayef",
+      "user_id": 9537,
+      "account_id": 6948191,
+      "reputation": 198,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9537/mohammad-nayef",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Yanick Salzmann",
+      "user_id": 28064,
+      "account_id": 6586068,
+      "reputation": 195,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28064/yanick-salzmann",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dale",
+      "user_id": 4214,
+      "account_id": 347212,
+      "reputation": 193,
+      "user_type": "registered",
+      "accept_rate": 25,
+      "profile_link": "https://engineering.stackexchange.com/users/4214/dale",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "BCS",
+      "user_id": 22771,
+      "account_id": 1012,
+      "reputation": 189,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/22771/bcs",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Marco",
+      "user_id": 8198,
+      "account_id": 325954,
+      "reputation": 189,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8198/marco",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "loStraniero",
+      "user_id": 27261,
+      "account_id": 18571167,
+      "reputation": 187,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27261/lostraniero",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "BetterSense",
+      "user_id": 29350,
+      "account_id": 3367479,
+      "reputation": 181,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29350/bettersense",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "h22",
+      "user_id": 4835,
+      "account_id": 167824,
+      "reputation": 179,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4835/h22",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "DragonflyRobotics",
+      "user_id": 26747,
+      "account_id": 18962104,
+      "reputation": 177,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/26747/dragonflyrobotics",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "monkey",
+      "user_id": 30083,
+      "account_id": 12526161,
+      "reputation": 176,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30083/monkey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Youssef Mohamed",
+      "user_id": 36267,
+      "account_id": 23451402,
+      "reputation": 173,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/36267/youssef-mohamed",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Nathan Wheeler",
+      "user_id": 416,
+      "account_id": 66021,
+      "reputation": 173,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/416/nathan-wheeler",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "akauppi",
+      "user_id": 12827,
+      "account_id": 8131,
+      "reputation": 172,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12827/akauppi",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Slovakov",
+      "user_id": 369,
+      "account_id": 5286912,
+      "reputation": 171,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/369/slovakov",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "JC ME",
+      "user_id": 21194,
+      "account_id": 16344089,
+      "reputation": 170,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21194/jc-me",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user3352632",
+      "user_id": 14138,
+      "account_id": 4082491,
+      "reputation": 169,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14138/user3352632",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "William",
+      "user_id": 25255,
+      "account_id": 10826759,
+      "reputation": 166,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/25255/william",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "laurens van Lieshout",
+      "user_id": 29963,
+      "account_id": 20283172,
+      "reputation": 165,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29963/laurens-van-lieshout",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Gleb",
+      "user_id": 5053,
+      "account_id": 231000,
+      "reputation": 163,
+      "user_type": "registered",
+      "accept_rate": 20,
+      "profile_link": "https://engineering.stackexchange.com/users/5053/gleb",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dan Khan",
+      "user_id": 19105,
+      "account_id": 6981424,
+      "reputation": 163,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19105/dan-khan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "FlegmatoidZoid",
+      "user_id": 10268,
+      "account_id": 423720,
+      "reputation": 163,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10268/flegmatoidzoid",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "WnGatRC456",
+      "user_id": 18234,
+      "account_id": 7750599,
+      "reputation": 162,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/18234/wngatrc456",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ginjaemocoes",
+      "user_id": 19384,
+      "account_id": 12741167,
+      "reputation": 161,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19384/ginjaemocoes",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Lavender",
+      "user_id": 1749,
+      "account_id": 5862204,
+      "reputation": 161,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1749/lavender",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user148298",
+      "user_id": 2248,
+      "account_id": 49760,
+      "reputation": 160,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2248/user148298",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Rick",
+      "user_id": 17903,
+      "account_id": 91808,
+      "reputation": 155,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17903/rick",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "emrys57",
+      "user_id": 16606,
+      "account_id": 1153296,
+      "reputation": 155,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16606/emrys57",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "somers",
+      "user_id": 7820,
+      "account_id": 2288331,
+      "reputation": 155,
+      "user_type": "registered",
+      "accept_rate": 86,
+      "profile_link": "https://robotics.stackexchange.com/users/7820/somers",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hannesh",
+      "user_id": 16681,
+      "account_id": 210483,
+      "reputation": 153,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16681/hannesh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "pixelpoems.de",
+      "user_id": 35884,
+      "account_id": 9619961,
+      "reputation": 153,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35884/pixelpoems-de",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "auden",
+      "user_id": 10715,
+      "account_id": 8655359,
+      "reputation": 153,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10715/auden",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bennett Yeo",
+      "user_id": 3305,
+      "account_id": 3273853,
+      "reputation": 152,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3305/bennett-yeo",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ken Grimes",
+      "user_id": 21516,
+      "account_id": 16394674,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21516/ken-grimes",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ahmed",
+      "user_id": 14893,
+      "account_id": 9950072,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14893/ahmed",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Vinay5forPrime",
+      "user_id": 3856,
+      "account_id": 4534855,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3856/vinay5forprime",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "enderland",
+      "user_id": 4,
+      "account_id": 1042917,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4/enderland",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Matt Clark",
+      "user_id": 539,
+      "account_id": 526476,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/539/matt-clark",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Felix",
+      "user_id": 2734,
+      "account_id": 2939936,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2734/felix",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "PaulB",
+      "user_id": 4751,
+      "account_id": 4940382,
+      "reputation": 151,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4751/paulb",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sam Hammamy",
+      "user_id": 21402,
+      "account_id": 1184795,
+      "reputation": 149,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21402/sam-hammamy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tir38",
+      "user_id": 3617,
+      "account_id": 1782787,
+      "reputation": 147,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3617/tir38",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mechanician",
+      "user_id": 42306,
+      "account_id": 28854686,
+      "reputation": 146,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/42306/mechanician",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "M lab",
+      "user_id": 29571,
+      "account_id": 11534533,
+      "reputation": 145,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29571/m-lab",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ryan Norbauer",
+      "user_id": 4264,
+      "account_id": 1262241,
+      "reputation": 143,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4264/ryan-norbauer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jagerber48",
+      "user_id": 18365,
+      "account_id": 8267872,
+      "reputation": 143,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/18365/jagerber48",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TryingToTry",
+      "user_id": 9556,
+      "account_id": 8650873,
+      "reputation": 143,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9556/tryingtotry",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "cwd",
+      "user_id": 43,
+      "account_id": 108540,
+      "reputation": 143,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/43/cwd",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "DarkPh03n1X",
+      "user_id": 37461,
+      "account_id": 4188805,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37461/darkph03n1x",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "James Elder",
+      "user_id": 10772,
+      "account_id": 2012542,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10772/james-elder",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "adrienlucca.net",
+      "user_id": 31187,
+      "account_id": 1921857,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31187/adrienlucca-net",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "KDecker",
+      "user_id": 29302,
+      "account_id": 1377597,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29302/kdecker",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "personal privacy advocate",
+      "user_id": 6915,
+      "account_id": 7349225,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6915/personal-privacy-advocate",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "DJG",
+      "user_id": 12968,
+      "account_id": 4499336,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12968/djg",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Chris Schmitz",
+      "user_id": 17325,
+      "account_id": 2068173,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17325/chris-schmitz",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Frido Emans",
+      "user_id": 16270,
+      "account_id": 2764607,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16270/frido-emans",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Andy Dent",
+      "user_id": 7719,
+      "account_id": 21984,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/7719/andy-dent",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "QuadMcFly",
+      "user_id": 24493,
+      "account_id": 15571632,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/24493/quadmcfly",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "stonecharioteer",
+      "user_id": 4885,
+      "account_id": 4741027,
+      "reputation": 141,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4885/stonecharioteer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Austin Prater",
+      "user_id": 17105,
+      "account_id": 11534186,
+      "reputation": 140,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17105/austin-prater",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "vidarlo",
+      "user_id": 12173,
+      "account_id": 10229986,
+      "reputation": 140,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12173/vidarlo",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hampus",
+      "user_id": 9188,
+      "account_id": 4470694,
+      "reputation": 139,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9188/hampus",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Camion",
+      "user_id": 14528,
+      "account_id": 12454021,
+      "reputation": 139,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14528/camion",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Anivarth",
+      "user_id": 24160,
+      "account_id": 4202714,
+      "reputation": 139,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24160/anivarth",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "elano7",
+      "user_id": 16984,
+      "account_id": 9907939,
+      "reputation": 137,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16984/elano7",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Stefan Merfu",
+      "user_id": 3807,
+      "account_id": 4965491,
+      "reputation": 135,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3807/stefan-merfu",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "John Spence",
+      "user_id": 7879,
+      "account_id": 7653370,
+      "reputation": 135,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7879/john-spence",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user402525",
+      "user_id": 31218,
+      "account_id": 6757584,
+      "reputation": 135,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31218/user402525",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "PDuarte",
+      "user_id": 7086,
+      "account_id": 4746778,
+      "reputation": 135,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7086/pduarte",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ashmark",
+      "user_id": 27694,
+      "account_id": 15447694,
+      "reputation": 134,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27694/ashmark",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Vladimir Bershov",
+      "user_id": 27710,
+      "account_id": 5185274,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27710/vladimir-bershov",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "statusfailed",
+      "user_id": 37750,
+      "account_id": 2321257,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37750/statusfailed",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Fusseldieb",
+      "user_id": 14853,
+      "account_id": 4315914,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14853/fusseldieb",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Auberron",
+      "user_id": 22829,
+      "account_id": 16117461,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/22829/auberron",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jth_92",
+      "user_id": 29399,
+      "account_id": 1479934,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29399/jth-92",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ricardo Veloz Jr",
+      "user_id": 5312,
+      "account_id": 4956378,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5312/ricardo-veloz-jr",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ThePlanMan",
+      "user_id": 3748,
+      "account_id": 1753338,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3748/theplanman",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Y Anderson",
+      "user_id": 7993,
+      "account_id": 7719384,
+      "reputation": 133,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7993/y-anderson",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "FlakR",
+      "user_id": 38909,
+      "account_id": 25482519,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38909/flakr",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Huang",
+      "user_id": 7460,
+      "account_id": 392680,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7460/huang",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user1477107",
+      "user_id": 21424,
+      "account_id": 1594622,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21424/user1477107",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Christophe Gudlake",
+      "user_id": 18657,
+      "account_id": 11539997,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/18657/christophe-gudlake",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "FliegenderZirkus",
+      "user_id": 24342,
+      "account_id": 4763194,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24342/fliegenderzirkus",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "gpuguy",
+      "user_id": 13540,
+      "account_id": 225751,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13540/gpuguy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Daneolog",
+      "user_id": 33034,
+      "account_id": 8471326,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33034/daneolog",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "sultan",
+      "user_id": 4872,
+      "account_id": 2579936,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4872/sultan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user1814893",
+      "user_id": 13498,
+      "account_id": 2031253,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13498/user1814893",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Antek",
+      "user_id": 1877,
+      "account_id": 2103470,
+      "reputation": 131,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1877/antek",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Elon Musk",
+      "user_id": 23115,
+      "account_id": 6482859,
+      "reputation": 129,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23115/elon-musk",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Stephane Hatgis-Kessell",
+      "user_id": 17809,
+      "account_id": 6009540,
+      "reputation": 129,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17809/stephane-hatgis-kessell",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "kellogs",
+      "user_id": 3412,
+      "account_id": 88053,
+      "reputation": 129,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3412/kellogs",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user6039980",
+      "user_id": 13157,
+      "account_id": 6919698,
+      "reputation": 129,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13157/user6039980",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user5507535",
+      "user_id": 41219,
+      "account_id": 7214577,
+      "reputation": 127,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41219/user5507535",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "scriptfoo",
+      "user_id": 29696,
+      "account_id": 7123325,
+      "reputation": 126,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29696/scriptfoo",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bart",
+      "user_id": 36819,
+      "account_id": 23644880,
+      "reputation": 125,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/36819/bart",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "User198",
+      "user_id": 41417,
+      "account_id": 27941617,
+      "reputation": 125,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41417/user198",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Simon",
+      "user_id": 29846,
+      "account_id": 3804666,
+      "reputation": 125,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29846/simon",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "CrimsonDark",
+      "user_id": 27838,
+      "account_id": 1976028,
+      "reputation": 123,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27838/crimsondark",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "rfii",
+      "user_id": 30371,
+      "account_id": 18854578,
+      "reputation": 123,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30371/rfii",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sam",
+      "user_id": 2624,
+      "account_id": 5321798,
+      "reputation": 123,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2624/sam",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Evan",
+      "user_id": 6770,
+      "account_id": 2341431,
+      "reputation": 123,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6770/evan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "NullPointerException",
+      "user_id": 38440,
+      "account_id": 14490915,
+      "reputation": 123,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38440/nullpointerexception",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "bullfighter",
+      "user_id": 23403,
+      "account_id": 14672494,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23403/bullfighter",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Raj Arjit",
+      "user_id": 12092,
+      "account_id": 5670346,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12092/raj-arjit",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ahm_zahran",
+      "user_id": 16505,
+      "account_id": 5829443,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16505/ahm-zahran",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "JeffB",
+      "user_id": 37921,
+      "account_id": 2173050,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37921/jeffb",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jon Cage",
+      "user_id": 10517,
+      "account_id": 8502,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10517/jon-cage",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ryan Feeley",
+      "user_id": 37260,
+      "account_id": 6510425,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37260/ryan-feeley",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Superuser",
+      "user_id": 25006,
+      "account_id": 5616329,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/25006/superuser",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Антон",
+      "user_id": 30709,
+      "account_id": 18835909,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30709/%d0%90%d0%bd%d1%82%d0%be%d0%bd",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "blazingcannon",
+      "user_id": 20285,
+      "account_id": 13962339,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20285/blazingcannon",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "squarewav",
+      "user_id": 7727,
+      "account_id": 1010291,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7727/squarewav",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jakey",
+      "user_id": 5797,
+      "account_id": 7728498,
+      "reputation": 121,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5797/jakey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "sebastian323",
+      "user_id": 39832,
+      "account_id": 25549620,
+      "reputation": 120,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39832/sebastian323",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Suryetto",
+      "user_id": 31006,
+      "account_id": 16991576,
+      "reputation": 119,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31006/suryetto",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Will.W",
+      "user_id": 512,
+      "account_id": 4165782,
+      "reputation": 117,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/512/will-w",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "AShelly",
+      "user_id": 1245,
+      "account_id": 6227,
+      "reputation": 116,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/1245/ashelly",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "WildCat",
+      "user_id": 21445,
+      "account_id": 14594514,
+      "reputation": 115,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21445/wildcat",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ARJ",
+      "user_id": 20849,
+      "account_id": 13581337,
+      "reputation": 115,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20849/arj",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "nicoguaro",
+      "user_id": 4753,
+      "account_id": 4089929,
+      "reputation": 115,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4753/nicoguaro",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "alexp9",
+      "user_id": 34913,
+      "account_id": 10229200,
+      "reputation": 115,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34913/alexp9",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Xlam",
+      "user_id": 14355,
+      "account_id": 8437582,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14355/xlam",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "HJCee",
+      "user_id": 1161,
+      "account_id": 3681444,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1161/hjcee",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mridul",
+      "user_id": 29581,
+      "account_id": 20074357,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29581/mridul",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Federico",
+      "user_id": 32677,
+      "account_id": 1881521,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32677/federico",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kent",
+      "user_id": 27376,
+      "account_id": 1344084,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27376/kent",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Red Dwarf",
+      "user_id": 9311,
+      "account_id": 1897160,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9311/red-dwarf",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Blargian",
+      "user_id": 6459,
+      "account_id": 3304124,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6459/blargian",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jon Watte",
+      "user_id": 1649,
+      "account_id": 32240,
+      "reputation": 113,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/1649/jon-watte",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tjcinnamon",
+      "user_id": 12491,
+      "account_id": 2280798,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12491/tjcinnamon",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "3Dave",
+      "user_id": 13612,
+      "account_id": 45994,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13612/3dave",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Viktor Hedefalk",
+      "user_id": 19072,
+      "account_id": 120431,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19072/viktor-hedefalk",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Vandel212",
+      "user_id": 8440,
+      "account_id": 1557095,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8440/vandel212",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "als0052",
+      "user_id": 19405,
+      "account_id": 14834534,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19405/als0052",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Imsa",
+      "user_id": 42524,
+      "account_id": 25742229,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/42524/imsa",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Flux",
+      "user_id": 19669,
+      "account_id": 5065111,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19669/flux",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "J. Barca",
+      "user_id": 29681,
+      "account_id": 3304943,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29681/j-barca",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tonys",
+      "user_id": 11760,
+      "account_id": 16342,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11760/tonys",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Lewis Kelsey",
+      "user_id": 38377,
+      "account_id": 8743571,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38377/lewis-kelsey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TehDrunkSailor",
+      "user_id": 43506,
+      "account_id": 18793002,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/43506/tehdrunksailor",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "BillyBag2",
+      "user_id": 10421,
+      "account_id": 2512119,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10421/billybag2",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "artem",
+      "user_id": 42296,
+      "account_id": 232352,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/42296/artem",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jaivishnu",
+      "user_id": 24267,
+      "account_id": 17531244,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24267/jaivishnu",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "kiblykat",
+      "user_id": 34240,
+      "account_id": 18513300,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34240/kiblykat",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Naseeb Gill",
+      "user_id": 7235,
+      "account_id": 7106911,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7235/naseeb-gill",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Brian Michalk",
+      "user_id": 11243,
+      "account_id": 1324943,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11243/brian-michalk",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "World",
+      "user_id": 2761,
+      "account_id": 371837,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/2761/world",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "SAMI HASAN",
+      "user_id": 23645,
+      "account_id": 15773687,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/23645/sami-hasan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Srihari Yamanoor",
+      "user_id": 7989,
+      "account_id": 1301838,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7989/srihari-yamanoor",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mark Main",
+      "user_id": 8189,
+      "account_id": 1350695,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/8189/mark-main",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Eric",
+      "user_id": 64405,
+      "account_id": 41321940,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/64405/eric",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "HyperdriveMacGee",
+      "user_id": 51552,
+      "account_id": 9908410,
+      "reputation": 111,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/51552/hyperdrivemacgee",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user21",
+      "user_id": 14867,
+      "account_id": 4731197,
+      "reputation": 109,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14867/user21",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Soonmyun Jang",
+      "user_id": 23802,
+      "account_id": 8612104,
+      "reputation": 105,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/23802/soonmyun-jang",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "RocketScience",
+      "user_id": 41996,
+      "account_id": 28771430,
+      "reputation": 104,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41996/rocketscience",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user22356",
+      "user_id": 2380,
+      "account_id": 2537980,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/2380/user22356",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Alex",
+      "user_id": 35280,
+      "account_id": 158367,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35280/alex",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Travis T",
+      "user_id": 8563,
+      "account_id": 9526284,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": 25,
+      "profile_link": "https://engineering.stackexchange.com/users/8563/travis-t",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TomS",
+      "user_id": 21433,
+      "account_id": 1281509,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21433/toms",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jake",
+      "user_id": 38610,
+      "account_id": 2797745,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38610/jake",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "minto",
+      "user_id": 3277,
+      "account_id": 5715035,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3277/minto",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "geauser",
+      "user_id": 29286,
+      "account_id": 6754207,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29286/geauser",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "kene02",
+      "user_id": 33590,
+      "account_id": 19860299,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33590/kene02",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "waspinator",
+      "user_id": 12222,
+      "account_id": 474540,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12222/waspinator",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "chaNcharge",
+      "user_id": 17965,
+      "account_id": 13077526,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17965/chancharge",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "phreed",
+      "user_id": 11047,
+      "account_id": 139677,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/11047/phreed",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Xenox",
+      "user_id": 31047,
+      "account_id": 9506789,
+      "reputation": 103,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31047/xenox",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ron",
+      "user_id": 42375,
+      "account_id": 6451841,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/42375/ron",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Fedor  Petrov",
+      "user_id": 39677,
+      "account_id": 6629278,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39677/fedor-petrov",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Arseniy",
+      "user_id": 40632,
+      "account_id": 13943873,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/40632/arseniy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "NeStack",
+      "user_id": 20173,
+      "account_id": 7429271,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20173/nestack",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "pinq-",
+      "user_id": 6971,
+      "account_id": 4883392,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6971/pinq",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "raisyn",
+      "user_id": 39854,
+      "account_id": 99222,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39854/raisyn",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "daddyblondlegs",
+      "user_id": 45326,
+      "account_id": 23090840,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/45326/daddyblondlegs",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Georg W.",
+      "user_id": 23415,
+      "account_id": 11753793,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23415/georg-w",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "rmutalik",
+      "user_id": 29449,
+      "account_id": 3521107,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29449/rmutalik",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "fragile-code",
+      "user_id": 26386,
+      "account_id": 18138515,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/26386/fragile-code",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jayt",
+      "user_id": 10688,
+      "account_id": 9163563,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10688/jayt",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "John Doe",
+      "user_id": 47504,
+      "account_id": 10469727,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/47504/john-doe",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Nyxynyx",
+      "user_id": 13312,
+      "account_id": 384520,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/13312/nyxynyx",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TheTechGuy",
+      "user_id": 37149,
+      "account_id": 407736,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37149/thetechguy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Joe Beck",
+      "user_id": 28354,
+      "account_id": 19177758,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28354/joe-beck",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Naman Choradia",
+      "user_id": 17480,
+      "account_id": 5336417,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17480/naman-choradia",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Blackwidow",
+      "user_id": 17201,
+      "account_id": 12551160,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17201/blackwidow",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "TDHofstetter",
+      "user_id": 27642,
+      "account_id": 4521760,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/27642/tdhofstetter",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Cecil Merrell",
+      "user_id": 7819,
+      "account_id": 4872719,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/7819/cecil-merrell",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dzyuv001",
+      "user_id": 74519,
+      "account_id": 2204878,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/74519/dzyuv001",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Karl Wolfschtagg",
+      "user_id": 58010,
+      "account_id": 18274232,
+      "reputation": 101,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/58010/karl-wolfschtagg",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Shanki Bansal",
+      "user_id": 11212,
+      "account_id": 3239773,
+      "reputation": 99,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11212/shanki-bansal",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "S Barry",
+      "user_id": 4708,
+      "account_id": 6920722,
+      "reputation": 99,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4708/s-barry",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jimmymustang06",
+      "user_id": 29952,
+      "account_id": 20279814,
+      "reputation": 91,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29952/jimmymustang06",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user3408085",
+      "user_id": 17286,
+      "account_id": 4157093,
+      "reputation": 86,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17286/user3408085",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Nick Chernuha",
+      "user_id": 24318,
+      "account_id": 7497472,
+      "reputation": 75,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24318/nick-chernuha",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "offgrid8",
+      "user_id": 32836,
+      "account_id": 22229662,
+      "reputation": 73,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/32836/offgrid8",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "fftk4323",
+      "user_id": 3976,
+      "account_id": 2479188,
+      "reputation": 71,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3976/fftk4323",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Aditya",
+      "user_id": 5700,
+      "account_id": 8090922,
+      "reputation": 71,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5700/aditya",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bob Warfield",
+      "user_id": 15262,
+      "account_id": 9621551,
+      "reputation": 71,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/15262/bob-warfield",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ryan",
+      "user_id": 29345,
+      "account_id": 16007808,
+      "reputation": 67,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29345/ryan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "4LPH4NUM3R1C",
+      "user_id": 9433,
+      "account_id": 9896023,
+      "reputation": 66,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9433/4lph4num3r1c",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Josi Whitlock",
+      "user_id": 28055,
+      "account_id": 18100127,
+      "reputation": 66,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28055/josi-whitlock",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tawhiri",
+      "user_id": 7843,
+      "account_id": 9081355,
+      "reputation": 66,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7843/tawhiri",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ashur668",
+      "user_id": 6956,
+      "account_id": 6326988,
+      "reputation": 58,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6956/ashur668",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "runcyclexcski",
+      "user_id": 35209,
+      "account_id": 6134944,
+      "reputation": 58,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35209/runcyclexcski",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "nick carraway",
+      "user_id": 9573,
+      "account_id": 4679974,
+      "reputation": 53,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9573/nick-carraway",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Shinu_John",
+      "user_id": 16206,
+      "account_id": 13645894,
+      "reputation": 53,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16206/shinu-john",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Fulano",
+      "user_id": 38188,
+      "account_id": 15191612,
+      "reputation": 51,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38188/fulano",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Daniel H.",
+      "user_id": 19438,
+      "account_id": 15339559,
+      "reputation": 51,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19438/daniel-h",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Anonymouse",
+      "user_id": 5781,
+      "account_id": 8133146,
+      "reputation": 51,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5781/anonymouse",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "dcpria",
+      "user_id": 9589,
+      "account_id": 5917664,
+      "reputation": 51,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/9589/dcpria",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jessegerritsen",
+      "user_id": 39168,
+      "account_id": 16504228,
+      "reputation": 49,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39168/jessegerritsen",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tepalia",
+      "user_id": 68449,
+      "account_id": 31105987,
+      "reputation": 46,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/68449/tepalia",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "geeeeeeek",
+      "user_id": 1342,
+      "account_id": 3813106,
+      "reputation": 46,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1342/geeeeeeek",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "pencerw",
+      "user_id": 24577,
+      "account_id": 3320484,
+      "reputation": 41,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24577/pencerw",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Akash",
+      "user_id": 31152,
+      "account_id": 19212449,
+      "reputation": 41,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31152/akash",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Pen Gerald",
+      "user_id": 19244,
+      "account_id": 10290312,
+      "reputation": 41,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19244/pen-gerald",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "zan",
+      "user_id": 3644,
+      "account_id": 7250506,
+      "reputation": 41,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3644/zan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Josie Colclough",
+      "user_id": 6056,
+      "account_id": 8272688,
+      "reputation": 41,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/6056/josie-colclough",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Zenzs",
+      "user_id": 14451,
+      "account_id": 10057462,
+      "reputation": 36,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14451/zenzs",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kjfull",
+      "user_id": 12119,
+      "account_id": 11306819,
+      "reputation": 33,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12119/kjfull",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Omry Heller",
+      "user_id": 26435,
+      "account_id": 5863461,
+      "reputation": 33,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/26435/omry-heller",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Pragash Sangaran",
+      "user_id": 24778,
+      "account_id": 17859717,
+      "reputation": 33,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24778/pragash-sangaran",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Shawn Laughlin",
+      "user_id": 4755,
+      "account_id": 7739204,
+      "reputation": 33,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4755/shawn-laughlin",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Lukas L",
+      "user_id": 36744,
+      "account_id": 15989815,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/36744/lukas-l",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Fim Terris",
+      "user_id": 38807,
+      "account_id": 25962879,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38807/fim-terris",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Antoine",
+      "user_id": 14830,
+      "account_id": 9731561,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14830/antoine",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Stephen",
+      "user_id": 21669,
+      "account_id": 11208318,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/21669/stephen",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Josh",
+      "user_id": 20894,
+      "account_id": 12517438,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20894/josh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Entity5",
+      "user_id": 16556,
+      "account_id": 12120167,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16556/entity5",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dominic C Mazzola",
+      "user_id": 18330,
+      "account_id": 14776777,
+      "reputation": 31,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/18330/dominic-c-mazzola",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Zyleyus",
+      "user_id": 41133,
+      "account_id": 18417930,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41133/zyleyus",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Omnistic",
+      "user_id": 33425,
+      "account_id": 18142384,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33425/omnistic",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "el-ss",
+      "user_id": 20064,
+      "account_id": 5695806,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20064/el-ss",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "alexander",
+      "user_id": 35362,
+      "account_id": 12885763,
+      "reputation": 31,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://mechanics.stackexchange.com/users/35362/alexander",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Peter Stoneham",
+      "user_id": 16980,
+      "account_id": 14068957,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16980/peter-stoneham",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Yogi12",
+      "user_id": 15061,
+      "account_id": 12999716,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_link": "https://engineering.stackexchange.com/users/15061/yogi12",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "JP19774028",
+      "user_id": 20247,
+      "account_id": 5225728,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20247/jp19774028",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user3614305",
+      "user_id": 5196,
+      "account_id": 4439390,
+      "reputation": 31,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5196/user3614305",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Golightly",
+      "user_id": 9143,
+      "account_id": 9520195,
+      "reputation": 29,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9143/golightly",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user1302",
+      "user_id": 1302,
+      "account_id": 6149734,
+      "reputation": 29,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/1302/user1302",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dan",
+      "user_id": 4092,
+      "account_id": 7451256,
+      "reputation": 27,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4092/dan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tony ",
+      "user_id": 19071,
+      "account_id": 15179354,
+      "reputation": 27,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19071/tony",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "NGrimberg",
+      "user_id": 28571,
+      "account_id": 13974022,
+      "reputation": 25,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28571/ngrimberg",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "RickH",
+      "user_id": 15805,
+      "account_id": 12580294,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/15805/rickh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Trung Nguyen",
+      "user_id": 5850,
+      "account_id": 8170637,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5850/trung-nguyen",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jesse RJ",
+      "user_id": 3683,
+      "account_id": 2509837,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/3683/jesse-rj",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "zooid",
+      "user_id": 35061,
+      "account_id": 16461571,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35061/zooid",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Adam",
+      "user_id": 10261,
+      "account_id": 10355066,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10261/adam",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Phil Young",
+      "user_id": 14875,
+      "account_id": 9231360,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/14875/phil-young",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Z_bruh",
+      "user_id": 65516,
+      "account_id": 41782386,
+      "reputation": 21,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/65516/z-bruh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Michael Fakhoury",
+      "user_id": 40809,
+      "account_id": 27795396,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/40809/michael-fakhoury",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Brendan McBreen",
+      "user_id": 26561,
+      "account_id": 17135673,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/26561/brendan-mcbreen",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bal&#225;zs B&#250;r",
+      "user_id": 17326,
+      "account_id": 5953710,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17326/bal%c3%a1zs-b%c3%bar",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tolis",
+      "user_id": 42960,
+      "account_id": 35517505,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/42960/tolis",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Philip C",
+      "user_id": 24864,
+      "account_id": 8897287,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24864/philip-c",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sandon",
+      "user_id": 9186,
+      "account_id": 9340520,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9186/sandon",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "xuzhongxing",
+      "user_id": 24448,
+      "account_id": 5350387,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24448/xuzhongxing",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jakub Szurlej",
+      "user_id": 32858,
+      "account_id": 17815811,
+      "reputation": 21,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32858/jakub-szurlej",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user11449",
+      "user_id": 11449,
+      "account_id": 10965785,
+      "reputation": 19,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11449/user11449",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Robowizard",
+      "user_id": 36979,
+      "account_id": 29764100,
+      "reputation": 19,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/36979/robowizard",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "EngineerOfAllThings",
+      "user_id": 24734,
+      "account_id": 17833085,
+      "reputation": 16,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24734/engineerofallthings",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "new2Ubuntu",
+      "user_id": 29448,
+      "account_id": 12478666,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29448/new2ubuntu",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jjpprr",
+      "user_id": 23092,
+      "account_id": 16027832,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23092/jjpprr",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Brian Bell",
+      "user_id": 46003,
+      "account_id": 30611996,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/46003/brian-bell",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "sumit808",
+      "user_id": 29308,
+      "account_id": 9208361,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29308/sumit808",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "matty_eng123",
+      "user_id": 33882,
+      "account_id": 22049383,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33882/matty-eng123",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jonathan Pereira",
+      "user_id": 15322,
+      "account_id": 6685575,
+      "reputation": 13,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/15322/jonathan-pereira",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "孙传军",
+      "user_id": 41296,
+      "account_id": 28174758,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41296/%e5%ad%99%e4%bc%a0%e5%86%9b",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ligon Liu",
+      "user_id": 38287,
+      "account_id": 1260525,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38287/ligon-liu",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Smcc",
+      "user_id": 5718,
+      "account_id": 8098044,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/5718/smcc",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Perch Perkins",
+      "user_id": 32558,
+      "account_id": 21195028,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32558/perch-perkins",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "JUZ Aviewer",
+      "user_id": 17630,
+      "account_id": 12163852,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17630/juz-aviewer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "PateshwarMaharaj",
+      "user_id": 23941,
+      "account_id": 17340721,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23941/pateshwarmaharaj",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jim Fred",
+      "user_id": 11292,
+      "account_id": 10889280,
+      "reputation": 11,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11292/jim-fred",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kevin",
+      "user_id": 76791,
+      "account_id": 32754172,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/76791/kevin",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "EVARATE",
+      "user_id": 35449,
+      "account_id": 7747160,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35449/evarate",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kunal Kumar",
+      "user_id": 33813,
+      "account_id": 12427417,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33813/kunal-kumar",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mattia",
+      "user_id": 19707,
+      "account_id": 15526968,
+      "reputation": 11,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19707/mattia",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bernd",
+      "user_id": 4871,
+      "account_id": 7788788,
+      "reputation": 11,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4871/bernd",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Yuanqi Chau",
+      "user_id": 32817,
+      "account_id": 19954165,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32817/yuanqi-chau",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ethan",
+      "user_id": 38185,
+      "account_id": 25498613,
+      "reputation": 11,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38185/ethan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Scrapper",
+      "user_id": 9273,
+      "account_id": 9595083,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9273/scrapper",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "BriBrain",
+      "user_id": 21179,
+      "account_id": 11426336,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21179/bribrain",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sharath Chandar",
+      "user_id": 12647,
+      "account_id": 11613732,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/12647/sharath-chandar",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Jirka Martinec",
+      "user_id": 45489,
+      "account_id": 27855774,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/45489/jirka-martinec",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "sidd200970",
+      "user_id": 41246,
+      "account_id": 22392390,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41246/sidd200970",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "RichardAshAudacity",
+      "user_id": 36023,
+      "account_id": 4067296,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/36023/richardashaudacity",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "WildfootW",
+      "user_id": 33956,
+      "account_id": 9610606,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33956/wildfootw",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Aditya Singh",
+      "user_id": 31114,
+      "account_id": 19753948,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/31114/aditya-singh",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Abeer",
+      "user_id": 28120,
+      "account_id": 11526726,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28120/abeer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "RLil",
+      "user_id": 16491,
+      "account_id": 13805978,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16491/rlil",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Digital Ghost",
+      "user_id": 9624,
+      "account_id": 10060938,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9624/digital-ghost",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Electro_Boomer",
+      "user_id": 26881,
+      "account_id": 18468117,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/26881/electro-boomer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ARM_Breaker",
+      "user_id": 34686,
+      "account_id": 27273762,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/34686/arm-breaker",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Noobmaster69",
+      "user_id": 27060,
+      "account_id": 17057443,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/27060/noobmaster69",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "James Patterson",
+      "user_id": 30341,
+      "account_id": 12924081,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30341/james-patterson",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user234324",
+      "user_id": 39924,
+      "account_id": 7822232,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39924/user234324",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Vince",
+      "user_id": 16517,
+      "account_id": 13816922,
+      "reputation": 11,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16517/vince",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Khushal Badhan",
+      "user_id": 15698,
+      "account_id": 11984703,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/15698/khushal-badhan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "User",
+      "user_id": 53311,
+      "account_id": 36099211,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/53311/user",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "sys101",
+      "user_id": 32580,
+      "account_id": 19209920,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32580/sys101",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dick Tryon",
+      "user_id": 27494,
+      "account_id": 18834437,
+      "reputation": 11,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/27494/dick-tryon",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kunal Vanjare",
+      "user_id": 16020,
+      "account_id": 13541392,
+      "reputation": 9,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16020/kunal-vanjare",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Ganish Ananth",
+      "user_id": 34486,
+      "account_id": 19047355,
+      "reputation": 9,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34486/ganish-ananth",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bryan",
+      "user_id": 16396,
+      "account_id": 13751032,
+      "reputation": 9,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16396/bryan",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "mr odus",
+      "user_id": 28864,
+      "account_id": 178878,
+      "reputation": 9,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28864/mr-odus",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Cletus",
+      "user_id": 48922,
+      "account_id": 33281388,
+      "reputation": 9,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/48922/cletus",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Abdullah Yasin",
+      "user_id": 28363,
+      "account_id": 11923670,
+      "reputation": 9,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/28363/abdullah-yasin",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user37765",
+      "user_id": 37765,
+      "account_id": 30171150,
+      "reputation": 5,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/37765/user37765",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Rodr&#237;guez Ayoze",
+      "user_id": 34505,
+      "account_id": 20892892,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34505/rodr%c3%adguez-ayoze",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "David F.",
+      "user_id": 19052,
+      "account_id": 15148231,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19052/david-f",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user7387653",
+      "user_id": 9508,
+      "account_id": 9986780,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/9508/user7387653",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "blueturkey",
+      "user_id": 43185,
+      "account_id": 21860124,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/43185/blueturkey",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user3189626",
+      "user_id": 7223,
+      "account_id": 3849032,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/7223/user3189626",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "afflux",
+      "user_id": 52808,
+      "account_id": 2329623,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/52808/afflux",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "elmuerto",
+      "user_id": 19749,
+      "account_id": 15549568,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19749/elmuerto",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Questions",
+      "user_id": 38623,
+      "account_id": 1087610,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38623/questions",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hasan D.",
+      "user_id": 41832,
+      "account_id": 22214983,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41832/hasan-d",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Erithax",
+      "user_id": 33393,
+      "account_id": 19924483,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33393/erithax",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Curiousmarble",
+      "user_id": 27400,
+      "account_id": 10054965,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/27400/curiousmarble",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Matt",
+      "user_id": 24239,
+      "account_id": 17162359,
+      "reputation": 3,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/24239/matt",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tinker102",
+      "user_id": 19989,
+      "account_id": 3687934,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19989/tinker102",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "A K M Ishtyak Hossain",
+      "user_id": 34403,
+      "account_id": 22366681,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34403/a-k-m-ishtyak-hossain",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Nidershan Suguneswaran",
+      "user_id": 30788,
+      "account_id": 20150881,
+      "reputation": 3,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30788/nidershan-suguneswaran",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user65864",
+      "user_id": 65864,
+      "account_id": 41920870,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/65864/user65864",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Andrej",
+      "user_id": 61887,
+      "account_id": 40216558,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/61887/andrej",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user87284",
+      "user_id": 30287,
+      "account_id": 17384278,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30287/user87284",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "skale",
+      "user_id": 39484,
+      "account_id": 5931017,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/39484/skale",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Joseph Manard",
+      "user_id": 38286,
+      "account_id": 25574286,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38286/joseph-manard",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sidhu S",
+      "user_id": 16552,
+      "account_id": 13832285,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/16552/sidhu-s",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Arafat Asghar",
+      "user_id": 52539,
+      "account_id": 35701117,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/52539/arafat-asghar",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Maximus Su",
+      "user_id": 37543,
+      "account_id": 19161304,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37543/maximus-su",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "The Craftsman",
+      "user_id": 45611,
+      "account_id": 30339035,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/45611/the-craftsman",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hamza Zaheer",
+      "user_id": 40103,
+      "account_id": 27205731,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/40103/hamza-zaheer",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Benjamin Barney",
+      "user_id": 35604,
+      "account_id": 6296331,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35604/benjamin-barney",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Craig Bennett II",
+      "user_id": 24269,
+      "account_id": 7901358,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/24269/craig-bennett-ii",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Shmulik e",
+      "user_id": 40954,
+      "account_id": 27509252,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/40954/shmulik-e",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "MrMike",
+      "user_id": 4246,
+      "account_id": 7527146,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/4246/mrmike",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Daniel Girardeau-Montaut",
+      "user_id": 22800,
+      "account_id": 350962,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/22800/daniel-girardeau-montaut",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Marawan Hany",
+      "user_id": 76762,
+      "account_id": 45184381,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/76762/marawan-hany",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "One Way",
+      "user_id": 54018,
+      "account_id": 30702957,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/54018/one-way",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Kinnikuman",
+      "user_id": 40621,
+      "account_id": 23531865,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/40621/kinnikuman",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "belza00",
+      "user_id": 38994,
+      "account_id": 16210249,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38994/belza00",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mauro Arcidiacono",
+      "user_id": 53257,
+      "account_id": 19691840,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/53257/mauro-arcidiacono",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Zain Ul Abedin",
+      "user_id": 43991,
+      "account_id": 29983866,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/43991/zain-ul-abedin",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "katoz don",
+      "user_id": 10336,
+      "account_id": 10397200,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/10336/katoz-don",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Craig Brown",
+      "user_id": 37044,
+      "account_id": 24324628,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37044/craig-brown",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Iskander",
+      "user_id": 44180,
+      "account_id": 29955634,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/44180/iskander",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "101ToolAdvisor",
+      "user_id": 11401,
+      "account_id": 10938409,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/11401/101tooladvisor",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Will Tierney",
+      "user_id": 61828,
+      "account_id": 40153865,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/61828/will-tierney",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "epicycle",
+      "user_id": 37561,
+      "account_id": 24918107,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/37561/epicycle",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "diydiy",
+      "user_id": 69110,
+      "account_id": 42826185,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/69110/diydiy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Colgate2004",
+      "user_id": 41506,
+      "account_id": 28389283,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41506/colgate2004",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Darren Simms",
+      "user_id": 57937,
+      "account_id": 38305991,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/57937/darren-simms",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Joel Mason",
+      "user_id": 43770,
+      "account_id": 16746906,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/43770/joel-mason",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "CCTO",
+      "user_id": 38581,
+      "account_id": 20194226,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38581/ccto",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "fabiprogramiert",
+      "user_id": 29773,
+      "account_id": 19312146,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/29773/fabiprogramiert",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sianne",
+      "user_id": 77422,
+      "account_id": 45464909,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/77422/sianne",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "renegader11",
+      "user_id": 63888,
+      "account_id": 41081036,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/63888/renegader11",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Caleb Fowler",
+      "user_id": 47420,
+      "account_id": 31206294,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/47420/caleb-fowler",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Matthew",
+      "user_id": 33295,
+      "account_id": 21661483,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/33295/matthew",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Braden E Peterson",
+      "user_id": 63243,
+      "account_id": 40793811,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/63243/braden-e-peterson",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Al504",
+      "user_id": 69926,
+      "account_id": 43160772,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/69926/al504",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ja on",
+      "user_id": 65741,
+      "account_id": 41865415,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/65741/ja-on",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dimitris",
+      "user_id": 67617,
+      "account_id": 42226542,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/67617/dimitris",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user63325",
+      "user_id": 63325,
+      "account_id": 40829896,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/63325/user63325",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "푸딩남작",
+      "user_id": 62725,
+      "account_id": 40578487,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/62725/%ed%91%b8%eb%94%a9%eb%82%a8%ec%9e%91",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mason J",
+      "user_id": 54083,
+      "account_id": 27474184,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/54083/mason-j",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "navidsafa",
+      "user_id": 41597,
+      "account_id": 3972623,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41597/navidsafa",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "mix_dimmens",
+      "user_id": 35164,
+      "account_id": 18385401,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/35164/mix-dimmens",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Mohamad-Babaee",
+      "user_id": 41185,
+      "account_id": 28081162,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/41185/mohamad-babaee",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Tor Erik Haavik",
+      "user_id": 23775,
+      "account_id": 12570735,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23775/tor-erik-haavik",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Younes Boubker",
+      "user_id": 34364,
+      "account_id": 10544466,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34364/younes-boubker",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "chiral",
+      "user_id": 32833,
+      "account_id": 21390947,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/32833/chiral",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Vladislav Merson",
+      "user_id": 20034,
+      "account_id": 15696692,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/20034/vladislav-merson",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user19816",
+      "user_id": 19816,
+      "account_id": 15583870,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19816/user19816",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "J.Val&#225;šek",
+      "user_id": 19378,
+      "account_id": 4285565,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/19378/j-val%c3%a1%c5%a1ek",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "irobot96",
+      "user_id": 17174,
+      "account_id": 5967449,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/17174/irobot96",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Bizz Keryear",
+      "user_id": 47427,
+      "account_id": 5388413,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/47427/bizz-keryear",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Hauligali22",
+      "user_id": 42689,
+      "account_id": 35108709,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/42689/hauligali22",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user1253692",
+      "user_id": 7105,
+      "account_id": 1304439,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/7105/user1253692",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Cheyne Bodington",
+      "user_id": 24404,
+      "account_id": 17373619,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/24404/cheyne-bodington",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "amoose136",
+      "user_id": 15333,
+      "account_id": 6484022,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/15333/amoose136",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Brad",
+      "user_id": 9028,
+      "account_id": 5740022,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/9028/brad",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Rudra .G",
+      "user_id": 45134,
+      "account_id": 31276925,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/45134/rudra-g",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "ros666",
+      "user_id": 36289,
+      "account_id": 29399051,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/36289/ros666",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "berntyy",
+      "user_id": 36315,
+      "account_id": 16255908,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://robotics.stackexchange.com/users/36315/berntyy",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Patrik",
+      "user_id": 38631,
+      "account_id": 25839618,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/38631/patrik",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "LisaD",
+      "user_id": 56421,
+      "account_id": 37558564,
+      "reputation": 1,
+      "user_type": "unregistered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/56421/lisad",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Murali",
+      "user_id": 47026,
+      "account_id": 30633338,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/47026/murali",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Sean",
+      "user_id": 67981,
+      "account_id": 6836451,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/67981/sean",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Dean R",
+      "user_id": 23411,
+      "account_id": 17040252,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/23411/dean-r",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Daniel",
+      "user_id": 65649,
+      "account_id": 13013060,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/65649/daniel",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "MGuzzi",
+      "user_id": 34856,
+      "account_id": 22672162,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/34856/mguzzi",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "peter taylor",
+      "user_id": 30035,
+      "account_id": 5827059,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/30035/peter-taylor",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user10192706",
+      "user_id": 21688,
+      "account_id": 14109450,
+      "reputation": 1,
+      "user_type": "registered",
+      "accept_rate": null,
+      "profile_link": "https://engineering.stackexchange.com/users/21688/user10192706",
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user12750",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user16",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user13416",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user6335",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "rlt",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user33233",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "dev4all12358",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Peter Mitrano",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user797",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "topherbuckley",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "brawner",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "jungduri",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "tzahroof",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "dinesh",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "znbrito",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Peter Galambos",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "AdamSorrel",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "janisa9",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "Airuno2L",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    },
+    {
+      "author_username": "user17332",
+      "user_id": null,
+      "account_id": null,
+      "reputation": null,
+      "user_type": "does_not_exist",
+      "accept_rate": null,
+      "profile_link": null,
+      "author_credibility_tier": "low"
+    }
+  ]
+}

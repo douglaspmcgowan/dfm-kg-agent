@@ -1,0 +1,1448 @@
+_neo4j_id,post_type,post_position,post_date,post_score,is_accepted_answer,se_tags,se_site,has_relevant_content,skip_reason
+se-engineering-51725,question,1,2022-07-15T06:56:41+00:00,1,,"aluminum,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-51725-a51726,answer,2,2022-07-15T07:57:17+00:00,0,False,"aluminum,lathe",engineering,True,
+se-engineering-53951,question,1,2023-01-20T20:45:05+00:00,1,,"machining,robotics,machine-design,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-53951-a53952,answer,2,2023-01-20T21:11:21+00:00,2,True,"machining,robotics,machine-design,cnc",engineering,True,
+se-engineering-53951-a54789,answer,3,2023-04-06T02:04:41+00:00,-1,False,"machining,robotics,machine-design,cnc",engineering,True,
+se-engineering-53951-a63110,answer,4,2025-05-12T02:27:00+00:00,0,False,"machining,robotics,machine-design,cnc",engineering,True,
+se-engineering-62582,question,1,2025-02-16T15:10:28+00:00,0,,"mechanical-engineering,mechanical",engineering,False,Model indicated no relevant content.
+se-engineering-55872,question,1,2023-07-28T17:44:52+00:00,0,,"machining,cutting",engineering,False,Model indicated no relevant content.
+se-engineering-55872-a55873,answer,2,2023-07-28T18:05:02+00:00,1,False,"machining,cutting",engineering,True,
+se-engineering-55305,question,1,2023-05-20T18:07:29+00:00,2,,"mechanical-engineering,materials,metallurgy,machining,material-science",engineering,True,
+se-engineering-54734,question,1,2023-04-01T21:55:50+00:00,0,,"machining,tolerance,machine-elements",engineering,True,
+se-engineering-54734-a54736,answer,2,2023-04-02T00:49:04+00:00,1,False,"machining,tolerance,machine-elements",engineering,True,
+se-engineering-51190,question,1,2022-06-03T11:47:45+00:00,1,,"mechanical-engineering,design,machining,lathe,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-51190-a51191,answer,2,2022-06-03T11:56:02+00:00,2,True,"mechanical-engineering,design,machining,lathe,metalwork",engineering,True,
+se-engineering-51190-a52781,answer,3,2022-10-06T18:20:03+00:00,0,False,"mechanical-engineering,design,machining,lathe,metalwork",engineering,True,
+se-engineering-51401,question,1,2022-06-16T17:56:10+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-51401-a51403,answer,2,2022-06-16T21:34:35+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-51401-a51416,answer,3,2022-06-18T10:46:56+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-51293,question,1,2022-06-09T00:17:30+00:00,0,,"machining,cnc,tools",engineering,False,Model indicated no relevant content.
+se-engineering-49506,question,1,2022-01-28T22:07:53+00:00,3,,"materials,manufacturing-engineering,material-science",engineering,False,Model indicated no relevant content.
+se-engineering-39204,question,1,2020-12-19T15:55:33+00:00,0,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-39204-a39206,answer,2,2020-12-19T16:10:28+00:00,1,False,machining,engineering,False,Model indicated no relevant content.
+se-engineering-24165,question,1,2018-10-14T19:54:17+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-24165-a24167,answer,2,2018-10-14T21:00:20+00:00,-1,False,mechanical-engineering,engineering,True,
+se-engineering-24165-a24168,answer,3,2018-10-14T21:35:03+00:00,3,False,mechanical-engineering,engineering,True,
+se-engineering-24165-a24178,answer,4,2018-10-15T18:46:31+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-23439,question,1,2018-08-24T18:42:45+00:00,1,,"mechanical-engineering,stresses,machining",engineering,True,
+se-engineering-9,question,1,2015-01-20T20:31:25+00:00,13,,"mechanical-engineering,machining,aluminum,quality-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-9-a10975,answer,2,2016-08-05T22:48:57+00:00,1,False,"mechanical-engineering,machining,aluminum,quality-engineering",engineering,True,
+se-engineering-9-a22437,answer,3,2018-06-24T10:59:19+00:00,0,False,"mechanical-engineering,machining,aluminum,quality-engineering",engineering,True,
+se-engineering-18651,question,1,2017-12-31T07:28:20+00:00,0,,"mechanical-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-18651-a18667,answer,2,2018-01-01T19:04:19+00:00,1,False,"mechanical-engineering,machining",engineering,True,
+se-engineering-18651-a18789,answer,3,2018-01-08T21:51:26+00:00,1,True,"mechanical-engineering,machining",engineering,True,
+se-engineering-18284,question,1,2017-12-01T07:02:21+00:00,0,,"measurements,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-18284-a18288,answer,2,2017-12-01T11:50:34+00:00,2,False,"measurements,lathe",engineering,True,
+se-engineering-13001,question,1,2016-12-28T15:46:36+00:00,3,,"materials,machining",engineering,True,
+se-engineering-13001-a13002,answer,2,2016-12-28T16:53:57+00:00,2,False,"materials,machining",engineering,True,
+se-engineering-13001-a13036,answer,3,2016-12-31T00:21:51+00:00,2,False,"materials,machining",engineering,True,
+se-engineering-10488,question,1,2016-06-27T11:58:14+00:00,1,,metallurgy,engineering,True,
+se-engineering-10488-a10492,answer,2,2016-06-27T15:20:10+00:00,1,True,metallurgy,engineering,True,
+se-engineering-10488-a11795,answer,3,2016-10-08T18:11:20+00:00,0,False,metallurgy,engineering,True,
+se-engineering-8269,question,1,2016-04-03T07:08:22+00:00,2,,"materials,machining,aluminum,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-3234,question,1,2015-06-17T20:57:46+00:00,6,,"machining,project-management",engineering,False,Model indicated no relevant content.
+se-engineering-42483,question,1,2021-04-08T21:54:48+00:00,1,,"cnc,noise",engineering,True,
+se-engineering-61576,question,1,2024-09-17T11:37:22+00:00,0,,"automotive-engineering,cad,manufacturing-engineering,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-61175,question,1,2024-07-23T15:05:56+00:00,0,,"mechanical-engineering,electrical-engineering,civil-engineering,solid-mechanics,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-58655,question,1,2024-01-16T02:10:58+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-58655-a58658,answer,2,2024-01-16T10:02:31+00:00,1,False,cnc,engineering,True,
+se-engineering-16706,question,1,2017-08-10T18:06:17+00:00,0,,"modeling,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-16706-a16708,answer,2,2017-08-10T18:57:33+00:00,1,True,"modeling,cnc",engineering,True,
+se-engineering-16706-a17288,answer,3,2017-09-26T19:19:03+00:00,0,False,"modeling,cnc",engineering,True,
+se-engineering-55762,question,1,2023-07-14T23:43:55+00:00,0,,"cnc,drilling",engineering,False,Model indicated no relevant content.
+se-engineering-55522,question,1,2023-06-15T04:54:52+00:00,0,,"bearings,cnc,holes",engineering,True,
+se-engineering-55522-a55536,answer,2,2023-06-15T22:36:32+00:00,1,True,"bearings,cnc,holes",engineering,True,
+se-engineering-55522-a55544,answer,3,2023-06-17T23:58:36+00:00,1,False,"bearings,cnc,holes",engineering,True,
+se-engineering-55024,question,1,2023-04-25T10:27:54+00:00,1,,"mechanical-engineering,manufacturing-engineering,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-55024-a55027,answer,2,2023-04-25T17:44:23+00:00,0,True,"mechanical-engineering,manufacturing-engineering,cnc",engineering,True,
+se-engineering-54188,question,1,2023-02-10T22:08:58+00:00,0,,"mechanical-engineering,solid-mechanics,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-53495,question,1,2022-12-09T21:48:08+00:00,0,,"mechanical-engineering,cnc,tools,cutting,forces",engineering,True,
+se-engineering-52979,question,1,2022-10-26T08:09:23+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-50417,question,1,2022-03-31T11:55:59+00:00,2,,"machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-50417-a50420,answer,2,2022-03-31T19:00:45+00:00,2,True,"machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-47710,question,1,2021-10-14T16:22:45+00:00,-1,,"mechanical-engineering,machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-47710-a47729,answer,2,2021-10-15T21:08:58+00:00,0,False,"mechanical-engineering,machining,cnc",engineering,True,
+se-engineering-48831,question,1,2021-12-19T17:50:58+00:00,0,,"steel,cnc,bending",engineering,False,Model indicated no relevant content.
+se-engineering-48831-a48833,answer,2,2021-12-19T18:02:02+00:00,1,True,"steel,cnc,bending",engineering,True,
+se-engineering-47993,question,1,2021-10-31T16:31:36+00:00,0,,"3d-printing,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-31385,question,1,2019-10-04T15:45:45+00:00,0,,manufacturing-engineering,engineering,True,
+se-engineering-31385-a33204,answer,2,2020-02-12T18:17:49+00:00,4,False,manufacturing-engineering,engineering,True,
+se-engineering-31385-a37542,answer,3,2020-09-08T07:47:55+00:00,1,False,manufacturing-engineering,engineering,True,
+se-engineering-31385-a47819,answer,4,2021-10-21T22:27:26+00:00,0,False,manufacturing-engineering,engineering,True,
+se-engineering-37124,question,1,2020-08-12T10:10:47+00:00,-3,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-37124-a37249,answer,2,2020-08-20T12:21:46+00:00,0,False,cnc,engineering,True,
+se-engineering-31438,question,1,2019-10-09T22:54:25+00:00,1,,"mechanical-engineering,fluid-mechanics,hydraulics,machining",engineering,False,Model indicated no relevant content.
+se-engineering-31438-a31445,answer,2,2019-10-10T06:33:38+00:00,1,False,"mechanical-engineering,fluid-mechanics,hydraulics,machining",engineering,True,
+se-engineering-31438-a31870,answer,3,2019-11-09T18:59:33+00:00,0,True,"mechanical-engineering,fluid-mechanics,hydraulics,machining",engineering,True,
+se-engineering-31438-a45543,answer,4,2021-08-10T22:31:19+00:00,0,False,"mechanical-engineering,fluid-mechanics,hydraulics,machining",engineering,True,
+se-engineering-42843,question,1,2021-04-28T04:26:25+00:00,2,,"mechanical-engineering,manufacturing-engineering,cnc,product-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-40868,question,1,2021-03-09T10:29:57+00:00,1,,"mechanical-engineering,cad,mechanical,cnc,machine-design",engineering,True,
+se-engineering-39856,question,1,2021-01-20T21:26:02+00:00,2,,"machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-39856-a39861,answer,2,2021-01-21T12:51:43+00:00,4,False,"machining,cnc",engineering,True,
+se-engineering-39856-a39865,answer,3,2021-01-21T19:18:05+00:00,1,True,"machining,cnc",engineering,True,
+se-engineering-38853,question,1,2020-11-28T15:51:52+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-38853-a38858,answer,2,2020-11-28T19:57:27+00:00,1,False,cnc,engineering,True,
+se-engineering-37994,question,1,2020-10-03T16:29:48+00:00,1,,"mechanical-engineering,bearings,cnc,linear-motion,linear-motors",engineering,False,Model indicated no relevant content.
+se-engineering-37994-a37995,answer,2,2020-10-03T17:06:29+00:00,1,False,"mechanical-engineering,bearings,cnc,linear-motion,linear-motors",engineering,True,
+se-engineering-26125,question,1,2019-02-24T17:49:52+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-26125-a26135,answer,2,2019-02-25T10:56:24+00:00,1,False,cnc,engineering,True,
+se-engineering-26125-a36852,answer,3,2020-07-24T15:53:20+00:00,0,True,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-31106,question,1,2019-09-12T02:52:32+00:00,-1,,"machining,cnc",engineering,True,
+se-engineering-31106-a31123,answer,2,2019-09-12T23:43:22+00:00,0,False,"machining,cnc",engineering,True,
+se-engineering-33077,question,1,2020-02-05T07:07:48+00:00,-1,,coupling,engineering,False,Model indicated no relevant content.
+se-engineering-33077-a33078,answer,2,2020-02-05T08:17:50+00:00,2,False,coupling,engineering,True,
+se-engineering-32778,question,1,2020-01-15T06:35:39+00:00,-1,,"3d-printing,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-32778-a32846,answer,2,2020-01-20T16:14:10+00:00,0,True,"3d-printing,cnc",engineering,True,
+se-engineering-14658,question,1,2017-04-06T15:37:14+00:00,4,,"vacuum,vacuum-pumps",engineering,True,
+se-engineering-14658-a14672,answer,2,2017-04-07T06:17:26+00:00,0,False,"vacuum,vacuum-pumps",engineering,True,
+se-engineering-14658-a21195,answer,3,2018-04-04T22:06:59+00:00,1,False,"vacuum,vacuum-pumps",engineering,True,
+se-engineering-32455,question,1,2019-12-20T08:22:02+00:00,0,,"manufacturing-engineering,cnc",engineering,True,
+se-engineering-32455-a32456,answer,2,2019-12-20T08:35:02+00:00,2,False,"manufacturing-engineering,cnc",engineering,True,
+se-engineering-32455-a32459,answer,3,2019-12-20T11:45:18+00:00,2,False,"manufacturing-engineering,cnc",engineering,True,
+se-engineering-32455-a32469,answer,4,2019-12-20T22:40:13+00:00,2,True,"manufacturing-engineering,cnc",engineering,True,
+se-engineering-32359,question,1,2019-12-13T22:49:14+00:00,2,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-32359-a32426,answer,2,2019-12-18T22:21:00+00:00,1,False,cnc,engineering,True,
+se-engineering-26000,question,1,2019-02-15T19:11:35+00:00,1,,"lasers,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-26000-a26039,answer,2,2019-02-18T21:37:06+00:00,2,False,"lasers,cnc",engineering,True,
+se-engineering-32168,question,1,2019-12-02T16:10:33+00:00,1,,"cad,cnc,surface-modelling",engineering,True,
+se-engineering-25630,question,1,2019-01-21T14:14:58+00:00,0,,"machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-25630-a26281,answer,2,2019-03-07T17:25:57+00:00,0,True,"machining,cnc",engineering,True,
+se-engineering-25920,question,1,2019-02-11T11:03:40+00:00,1,,"mechanical-engineering,tolerance,cnc,prototyping",engineering,True,
+se-engineering-25920-a25921,answer,2,2019-02-11T11:37:20+00:00,1,True,"mechanical-engineering,tolerance,cnc,prototyping",engineering,True,
+se-engineering-25655,question,1,2019-01-23T09:10:58+00:00,1,,cnc,engineering,True,
+se-engineering-25121,question,1,2018-12-16T22:29:42+00:00,1,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-24571,question,1,2018-11-07T06:04:00+00:00,1,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-24571-a24576,answer,2,2018-11-07T13:03:38+00:00,4,False,cnc,engineering,True,
+se-engineering-24207,question,1,2018-10-17T20:27:39+00:00,0,,pneumatic,engineering,True,
+se-engineering-24207-a24217,answer,2,2018-10-18T16:51:56+00:00,1,True,pneumatic,engineering,True,
+se-engineering-15168,question,1,2017-05-06T17:54:50+00:00,-1,,"mechanical-engineering,machining,cnc,cutting,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-15168-a15172,answer,2,2017-05-06T20:38:17+00:00,1,False,"mechanical-engineering,machining,cnc,cutting,lathe",engineering,True,
+se-engineering-6078,question,1,2015-11-09T09:22:13+00:00,2,,"computer-aided-design,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-13164,question,1,2017-01-09T14:21:34+00:00,3,,"machining,safety,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-13164-a13165,answer,2,2017-01-09T14:45:03+00:00,5,True,"machining,safety,cnc",engineering,True,
+se-engineering-13164-a13180,answer,3,2017-01-10T10:59:12+00:00,2,False,"machining,safety,cnc",engineering,True,
+se-engineering-13164-a15286,answer,4,2017-05-13T03:47:11+00:00,1,False,"machining,safety,cnc",engineering,True,
+se-engineering-13772,question,1,2017-02-15T10:08:39+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-13772-a13775,answer,2,2017-02-15T18:15:37+00:00,0,True,cnc,engineering,True,
+se-engineering-13418,question,1,2017-01-24T13:03:58+00:00,1,,"design,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-13418-a13420,answer,2,2017-01-24T13:20:24+00:00,1,False,"design,cnc",engineering,True,
+se-engineering-13418-a13422,answer,3,2017-01-24T13:51:55+00:00,2,False,"design,cnc",engineering,True,
+se-engineering-12789,question,1,2016-12-11T17:45:29+00:00,1,,cnc,engineering,True,
+se-engineering-12789-a12801,answer,2,2016-12-12T11:33:26+00:00,0,False,cnc,engineering,True,
+se-engineering-12789-a12814,answer,3,2016-12-12T20:13:35+00:00,2,False,cnc,engineering,True,
+se-engineering-56396,question,1,2023-09-21T19:29:21+00:00,0,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-56396-a56398,answer,2,2023-09-21T20:03:00+00:00,1,False,cad,engineering,True,
+se-engineering-54374,question,1,2023-02-24T15:47:47+00:00,0,,"mechanical-engineering,design",engineering,False,Model indicated no relevant content.
+se-engineering-52443,question,1,2022-09-11T22:14:24+00:00,0,,"mechanical-engineering,design,mechanisms,machine-design,machine-elements",engineering,True,
+se-engineering-52443-a52447,answer,2,2022-09-12T01:26:54+00:00,1,False,"mechanical-engineering,design,mechanisms,machine-design,machine-elements",engineering,True,
+se-engineering-52443-a52449,answer,3,2022-09-12T01:35:05+00:00,3,True,"mechanical-engineering,design,mechanisms,machine-design,machine-elements",engineering,True,
+se-engineering-40593,question,1,2021-02-25T17:13:31+00:00,0,,"mechanisms,solid-mechanics",engineering,False,Model indicated no relevant content.
+se-engineering-14806,question,1,2017-04-15T19:36:29+00:00,2,,torque,engineering,False,Model indicated no relevant content.
+se-engineering-14806-a14812,answer,2,2017-04-16T13:55:40+00:00,4,True,torque,engineering,True,
+se-engineering-37945,question,1,2020-10-02T03:47:38+00:00,2,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-26030,question,1,2019-02-17T21:40:31+00:00,1,,"design,kinematics",engineering,False,Model indicated no relevant content.
+se-engineering-26030-a26031,answer,2,2019-02-17T23:22:58+00:00,1,False,"design,kinematics",engineering,True,
+se-engineering-7305,question,1,2016-02-06T20:07:07+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-6170,question,1,2015-11-16T02:37:53+00:00,6,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-65206,question,1,2026-01-09T21:24:38+00:00,1,,"mechanical-engineering,design,gears,cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-31121,question,1,2019-09-12T22:12:34+00:00,0,,cad,engineering,True,
+se-engineering-31121-a31128,answer,2,2019-09-13T08:58:28+00:00,0,False,cad,engineering,True,
+se-engineering-65179,question,1,2026-01-03T17:06:16+00:00,0,,"mechanical-engineering,design,mechanisms,cad,electronics",engineering,False,Model indicated no relevant content.
+se-engineering-61756,question,1,2024-10-11T21:18:51+00:00,0,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-61756-a61757,answer,2,2024-10-11T21:45:11+00:00,2,False,cad,engineering,True,
+se-engineering-61854,question,1,2024-10-25T03:03:02+00:00,0,,"cad,mathematics,matlab,geometry",engineering,False,Model indicated no relevant content.
+se-engineering-61122,question,1,2024-07-16T14:51:26+00:00,0,,"mechanical-engineering,measurements,cad,lasers",engineering,True,
+se-engineering-60072,question,1,2024-03-02T20:06:15+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-60072-a60074,answer,2,2024-03-02T22:46:45+00:00,2,False,cad,engineering,True,
+se-engineering-60015,question,1,2024-02-26T23:15:06+00:00,0,,"cad,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-58758,question,1,2024-01-27T06:53:18+00:00,0,,"design,cad,bending,metal-folding,metalwork",engineering,True,
+se-engineering-58758-a58759,answer,2,2024-01-27T07:01:33+00:00,0,True,"design,cad,bending,metal-folding,metalwork",engineering,True,
+se-engineering-58464,question,1,2023-12-27T06:46:42+00:00,0,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-54875,question,1,2023-04-12T21:44:15+00:00,0,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-54875-a54878,answer,2,2023-04-13T06:48:30+00:00,2,True,cad,engineering,True,
+se-engineering-53288,question,1,2022-11-22T10:44:55+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-53288-a53309,answer,2,2022-11-24T13:20:34+00:00,1,False,cad,engineering,True,
+se-engineering-52491,question,1,2022-09-14T13:17:06+00:00,0,,"modeling,solidworks,3d-printing",engineering,True,
+se-engineering-51966,question,1,2022-08-03T01:55:01+00:00,3,,"mechanical-engineering,electrical-engineering,cad,solidworks,project-management",engineering,False,Model indicated no relevant content.
+se-engineering-47321,question,1,2021-09-22T13:36:32+00:00,9,,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,False,Model indicated no relevant content.
+se-engineering-47321-a47322,answer,2,2021-09-22T13:51:29+00:00,3,False,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-47321-a47323,answer,3,2021-09-22T13:56:15+00:00,12,True,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-47321-a47331,answer,4,2021-09-22T19:58:11+00:00,2,False,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-47321-a47336,answer,5,2021-09-22T22:19:20+00:00,1,False,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-47321-a47338,answer,6,2021-09-22T23:10:03+00:00,4,False,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-47321-a47350,answer,7,2021-09-23T13:34:49+00:00,1,False,"mechanical-engineering,design,manufacturing-engineering,cad,project-management",engineering,True,
+se-engineering-50448,question,1,2022-04-03T19:49:16+00:00,0,,"structural-engineering,cad,technical-drawing,3d-printing,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-44748,question,1,2021-06-20T18:06:10+00:00,1,,"design,cad",engineering,False,Model indicated no relevant content.
+se-engineering-42600,question,1,2021-04-15T03:13:36+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-42600-a42619,answer,2,2021-04-16T03:32:18+00:00,1,True,cad,engineering,True,
+se-engineering-41016,question,1,2021-03-17T13:38:12+00:00,0,,"cad,cnc",engineering,True,
+se-engineering-41016-a41213,answer,2,2021-03-26T11:06:50+00:00,1,True,"cad,cnc",engineering,True,
+se-engineering-38951,question,1,2020-12-06T01:26:34+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-36473,question,1,2020-06-30T21:50:55+00:00,2,,"design,modeling,cad,autodesk-inventor",engineering,True,
+se-engineering-28622,question,1,2019-05-31T21:30:40+00:00,0,,"cad,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-28622-a28631,answer,2,2019-06-01T14:39:15+00:00,1,False,"cad,autodesk-inventor",engineering,True,
+se-engineering-32878,question,1,2020-01-23T14:15:27+00:00,3,,"finite-element-method,cad,cfd",engineering,False,Model indicated no relevant content.
+se-engineering-32264,question,1,2019-12-07T20:31:29+00:00,-2,,"cad,software",engineering,False,Model indicated no relevant content.
+se-engineering-32264-a32267,answer,2,2019-12-07T21:47:33+00:00,2,True,"cad,software",engineering,False,Model indicated no relevant content.
+se-engineering-29601,question,1,2019-08-11T18:08:52+00:00,0,,technical-drawing,engineering,False,Model indicated no relevant content.
+se-engineering-29601-a31783,answer,2,2019-11-04T03:12:34+00:00,1,False,technical-drawing,engineering,True,
+se-engineering-29601-a31802,answer,3,2019-11-04T19:17:42+00:00,1,False,technical-drawing,engineering,False,Model indicated no relevant content.
+se-engineering-29601-a31812,answer,4,2019-11-05T12:05:55+00:00,6,True,technical-drawing,engineering,False,Model indicated no relevant content.
+se-engineering-29601-a31813,answer,5,2019-11-05T13:03:38+00:00,2,False,technical-drawing,engineering,True,
+se-engineering-26976,question,1,2019-04-19T13:18:19+00:00,0,,"mechanical-engineering,cad,bearings,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-26976-a26977,answer,2,2019-04-19T14:22:33+00:00,0,True,"mechanical-engineering,cad,bearings,3d-printing",engineering,True,
+se-engineering-26372,question,1,2019-03-14T07:23:39+00:00,1,,"mechanical-engineering,cad",engineering,True,
+se-engineering-26372-a26374,answer,2,2019-03-14T08:24:34+00:00,1,False,"mechanical-engineering,cad",engineering,True,
+se-engineering-24119,question,1,2018-10-10T22:17:26+00:00,2,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-21318,question,1,2018-04-14T03:21:03+00:00,1,,"mechanical-engineering,dynamics,simulation,computer-aided-design",engineering,True,
+se-engineering-17896,question,1,2017-11-03T18:51:44+00:00,3,,"cad,autocad,3d-printing,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-17896-a17902,answer,2,2017-11-04T20:05:53+00:00,2,False,"cad,autocad,3d-printing,computer-aided-design",engineering,True,
+se-engineering-15657,question,1,2017-06-03T09:41:40+00:00,2,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-14010,question,1,2017-02-28T22:03:14+00:00,2,,"gears,cad,3d-printing,solidworks",engineering,True,
+se-engineering-13153,question,1,2017-01-08T19:51:24+00:00,0,,"autocad,cad,geometry",engineering,False,Model indicated no relevant content.
+se-engineering-13153-a13157,answer,2,2017-01-09T09:10:18+00:00,0,True,"autocad,cad,geometry",engineering,True,
+se-engineering-11524,question,1,2016-09-13T12:57:52+00:00,3,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-10427,question,1,2016-06-22T08:16:26+00:00,0,,"simulation,cad",engineering,False,Model indicated no relevant content.
+se-engineering-6823,question,1,2016-01-07T16:55:29+00:00,5,,"mechanical-engineering,computer-aided-design,3d-printing,solidworks,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-2488,question,1,2015-04-16T01:08:23+00:00,4,,"design,computer-aided-design,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-19342,question,1,2018-02-09T15:17:20+00:00,2,,"simulation,abaqus",engineering,False,Model indicated no relevant content.
+se-engineering-19342-a61677,answer,2,2024-09-30T10:05:26+00:00,0,False,"simulation,abaqus",engineering,True,
+se-engineering-63033,question,1,2025-04-27T18:44:37+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-57112,question,1,2023-11-23T04:40:40+00:00,0,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-57112-a57142,answer,2,2023-11-25T05:36:19+00:00,-1,False,machining,engineering,False,Model indicated no relevant content.
+se-engineering-55277,question,1,2023-05-18T18:56:43+00:00,0,,machining,engineering,True,
+se-engineering-55277-a55280,answer,2,2023-05-18T19:30:12+00:00,1,True,machining,engineering,True,
+se-engineering-45487,question,1,2021-08-07T04:23:37+00:00,0,,tools,engineering,False,Model indicated no relevant content.
+se-engineering-13807,question,1,2017-02-17T20:50:42+00:00,1,,"machining,cnc,composite",engineering,True,
+se-engineering-13807-a14093,answer,2,2017-03-06T13:19:29+00:00,-1,False,"machining,cnc,composite",engineering,True,
+se-engineering-33637,question,1,2020-03-13T20:46:02+00:00,2,,aluminum,engineering,False,Model indicated no relevant content.
+se-engineering-33637-a33649,answer,2,2020-03-15T00:07:56+00:00,3,True,aluminum,engineering,True,
+se-engineering-33637-a39274,answer,3,2020-12-22T21:18:56+00:00,1,False,aluminum,engineering,True,
+se-engineering-31608,question,1,2019-10-21T13:24:15+00:00,0,,"mechanical-engineering,metals,tools,cutting",engineering,True,
+se-engineering-31608-a31609,answer,2,2019-10-21T15:23:41+00:00,1,False,"mechanical-engineering,metals,tools,cutting",engineering,True,
+se-engineering-14213,question,1,2017-03-12T14:22:38+00:00,1,,lathe,engineering,False,Model indicated no relevant content.
+se-engineering-14213-a49881,answer,2,2022-02-21T03:23:42+00:00,0,False,lathe,engineering,True,
+se-engineering-61327,question,1,2024-08-11T09:39:49+00:00,-1,,"machining,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-61327-a61328,answer,2,2024-08-11T13:08:15+00:00,0,False,"machining,lathe",engineering,True,
+se-engineering-56442,question,1,2023-09-26T08:56:13+00:00,0,,torque,engineering,False,Model indicated no relevant content.
+se-engineering-56442-a56445,answer,2,2023-09-26T13:17:59+00:00,0,True,torque,engineering,False,Model indicated no relevant content.
+se-engineering-54396,question,1,2023-02-26T18:59:08+00:00,1,,"tools,lathe",engineering,True,
+se-engineering-54396-a54405,answer,2,2023-02-28T05:16:40+00:00,2,True,"tools,lathe",engineering,True,
+se-engineering-49640,question,1,2022-02-06T19:22:46+00:00,3,,lathe,engineering,True,
+se-engineering-49640-a49655,answer,2,2022-02-08T05:15:47+00:00,0,True,lathe,engineering,True,
+se-engineering-41017,question,1,2021-03-17T17:49:44+00:00,0,,"mechanical-engineering,design,torque,strength",engineering,False,Model indicated no relevant content.
+se-engineering-41017-a41018,answer,2,2021-03-17T18:46:08+00:00,6,True,"mechanical-engineering,design,torque,strength",engineering,False,Model indicated no relevant content.
+se-engineering-41017-a42358,answer,3,2021-04-02T04:09:38+00:00,1,False,"mechanical-engineering,design,torque,strength",engineering,True,
+se-engineering-45521,question,1,2021-08-09T19:51:18+00:00,0,,"manufacturing-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-45521-a45522,answer,2,2021-08-09T22:57:13+00:00,1,False,"manufacturing-engineering,machining",engineering,True,
+se-engineering-43244,question,1,2021-05-19T03:49:25+00:00,4,,"machining,lathe,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-43244-a43245,answer,2,2021-05-19T04:08:07+00:00,5,False,"machining,lathe,metalwork",engineering,True,
+se-engineering-25835,question,1,2019-02-04T21:07:25+00:00,1,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-8309,question,1,2016-04-06T01:10:40+00:00,3,,motors,engineering,True,
+se-engineering-8309-a45550,answer,2,2021-08-11T10:26:33+00:00,2,False,motors,engineering,True,
+se-engineering-58351,question,1,2023-12-15T01:48:53+00:00,0,,"machining,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-58351-a58387,answer,2,2023-12-17T16:19:04+00:00,2,True,"machining,machine-design",engineering,True,
+se-engineering-52304,question,1,2022-08-31T01:48:50+00:00,0,,"materials,torque,power,machining",engineering,False,Model indicated no relevant content.
+se-engineering-52118,question,1,2022-08-14T12:59:24+00:00,0,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-52118-a52119,answer,2,2022-08-14T15:23:42+00:00,1,False,machining,engineering,True,
+se-engineering-51750,question,1,2022-07-17T12:21:11+00:00,2,,"machining,threads",engineering,True,
+se-engineering-51750-a52026,answer,2,2022-08-07T15:28:38+00:00,2,False,"machining,threads",engineering,True,
+se-engineering-50224,question,1,2022-03-18T12:55:39+00:00,0,,"mechanical-engineering,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-15484,question,1,2017-05-24T06:17:10+00:00,1,,mechanical-engineering,engineering,True,
+se-engineering-15484-a15493,answer,2,2017-05-24T13:20:53+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-36080,question,1,2020-06-03T17:10:34+00:00,1,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-36080-a36323,answer,2,2020-06-19T15:26:32+00:00,1,True,machining,engineering,True,
+se-engineering-7303,question,1,2016-02-06T16:37:14+00:00,-1,,drilling,engineering,False,Model indicated no relevant content.
+se-engineering-7303-a22197,answer,2,2018-06-11T03:38:40+00:00,0,False,drilling,engineering,True,
+se-engineering-3367,question,1,2015-06-28T21:49:59+00:00,7,,"mechanical-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-3367-a15424,answer,2,2017-05-20T01:55:29+00:00,0,False,"mechanical-engineering,machining",engineering,True,
+se-engineering-8166,question,1,2016-03-25T23:29:31+00:00,-1,,"machining,drilling,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-6923,question,1,2015-11-28T18:33:59+00:00,4,,machining,engineering,True,
+se-engineering-5686,question,1,2015-10-08T00:25:27+00:00,5,,"machining,microfluidics",engineering,False,Model indicated no relevant content.
+se-engineering-42746,question,1,2021-04-23T15:32:44+00:00,1,,"mechanical-engineering,measurements,cad,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-42746-a42749,answer,2,2021-04-23T17:24:11+00:00,0,False,"mechanical-engineering,measurements,cad,tolerance",engineering,True,
+se-engineering-62502,question,1,2025-02-03T23:27:02+00:00,0,,"mechanical-engineering,design,technical-drawing,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-62502-a62579,answer,2,2025-02-15T07:53:01+00:00,0,False,"mechanical-engineering,design,technical-drawing,tolerance",engineering,True,
+se-engineering-56084,question,1,2023-08-19T21:35:35+00:00,0,,"mechanical-engineering,materials,cad,technical-drawing,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-53172,question,1,2022-11-14T20:01:08+00:00,0,,"mechanical-engineering,technical-drawing,cnc,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-53172-a53175,answer,2,2022-11-14T22:04:51+00:00,2,False,"mechanical-engineering,technical-drawing,cnc,tolerance",engineering,True,
+se-engineering-51269,question,1,2022-06-07T15:58:57+00:00,1,,"bearings,tolerance",engineering,True,
+se-engineering-50563,question,1,2022-04-13T00:40:37+00:00,0,,"mechanical-engineering,design,machining,drafting,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-50563-a50574,answer,2,2022-04-14T02:52:00+00:00,1,False,"mechanical-engineering,design,machining,drafting,tolerance",engineering,True,
+se-engineering-43163,question,1,2021-05-14T18:18:52+00:00,0,,"machining,bearings,tolerance,surface-preparation",engineering,True,
+se-engineering-43163-a43164,answer,2,2021-05-14T18:58:26+00:00,2,False,"machining,bearings,tolerance,surface-preparation",engineering,True,
+se-engineering-43163-a43165,answer,3,2021-05-14T19:09:23+00:00,3,False,"machining,bearings,tolerance,surface-preparation",engineering,True,
+se-engineering-43163-a43248,answer,4,2021-05-19T05:45:39+00:00,0,False,"machining,bearings,tolerance,surface-preparation",engineering,True,
+se-engineering-42531,question,1,2021-04-11T18:48:54+00:00,0,,"mechanical-engineering,technical-drawing,machine-design,machine-elements",engineering,False,Model indicated no relevant content.
+se-engineering-42531-a42533,answer,2,2021-04-11T19:23:18+00:00,1,True,"mechanical-engineering,technical-drawing,machine-design,machine-elements",engineering,True,
+se-engineering-18024,question,1,2017-11-14T12:01:18+00:00,1,,"mechanical,technical-drawing,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-18024-a18026,answer,2,2017-11-14T15:58:43+00:00,3,False,"mechanical,technical-drawing,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-18024-a18028,answer,3,2017-11-14T16:44:24+00:00,4,False,"mechanical,technical-drawing,tolerance",engineering,True,
+se-engineering-35718,question,1,2020-05-12T13:59:40+00:00,1,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-35718-a35722,answer,2,2020-05-12T17:22:22+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-28873,question,1,2019-06-20T00:58:27+00:00,2,,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-10661,question,1,2016-07-12T15:02:01+00:00,0,,"mechanical-engineering,design",engineering,False,Model indicated no relevant content.
+se-engineering-406,question,1,2015-02-02T16:13:17+00:00,3,,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-6667,question,1,2015-12-27T15:29:02+00:00,4,,"mechanical-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-58977,question,1,2024-02-23T00:12:47+00:00,1,,"cnc,vacuum",engineering,True,
+se-engineering-58977-a58978,answer,2,2024-02-23T02:19:03+00:00,1,True,"cnc,vacuum",engineering,True,
+se-engineering-62968,question,1,2025-04-16T11:44:35+00:00,0,,"machining,tools",engineering,False,Model indicated no relevant content.
+se-engineering-62968-a62982,answer,2,2025-04-18T23:31:27+00:00,0,False,"machining,tools",engineering,True,
+se-engineering-55549,question,1,2023-06-18T18:53:27+00:00,1,,"machining,technical-drawing,autodesk-inventor",engineering,True,
+se-engineering-55549-a55553,answer,2,2023-06-19T09:01:29+00:00,2,True,"machining,technical-drawing,autodesk-inventor",engineering,True,
+se-engineering-54936,question,1,2023-04-17T21:50:18+00:00,1,,"cnc,carbon-fiber",engineering,False,Model indicated no relevant content.
+se-engineering-54936-a54939,answer,2,2023-04-17T22:14:06+00:00,1,True,"cnc,carbon-fiber",engineering,True,
+se-engineering-50752,question,1,2022-04-27T13:08:01+00:00,0,,"machining,cnc",engineering,True,
+se-engineering-50752-a50753,answer,2,2022-04-27T13:13:26+00:00,1,False,"machining,cnc",engineering,True,
+se-engineering-44965,question,1,2021-07-02T16:55:56+00:00,1,,"machining,tools",engineering,True,
+se-engineering-23947,question,1,2018-09-27T12:42:05+00:00,1,,"machining,cnc,drilling",engineering,False,Model indicated no relevant content.
+se-engineering-23947-a23954,answer,2,2018-09-27T15:50:03+00:00,2,False,"machining,cnc,drilling",engineering,True,
+se-engineering-17855,question,1,2017-11-01T11:26:22+00:00,5,,"mechanical-engineering,threads",engineering,False,Model indicated no relevant content.
+se-engineering-17855-a22892,answer,2,2018-07-26T13:54:47+00:00,0,False,"mechanical-engineering,threads",engineering,True,
+se-engineering-17855-a22898,answer,3,2018-07-26T16:39:38+00:00,0,False,"mechanical-engineering,threads",engineering,True,
+se-engineering-63371,question,1,2025-07-01T19:41:53+00:00,0,,"design,mathematics,forces",engineering,False,Model indicated no relevant content.
+se-engineering-63371-a63372,answer,2,2025-07-02T01:57:36+00:00,0,False,"design,mathematics,forces",engineering,True,
+se-engineering-63371-a63379,answer,3,2025-07-02T07:09:39+00:00,0,False,"design,mathematics,forces",engineering,True,
+se-engineering-63371-a63386,answer,4,2025-07-02T22:27:52+00:00,0,False,"design,mathematics,forces",engineering,True,
+se-engineering-62886,question,1,2025-04-04T04:49:28+00:00,2,,"steel,machining,drilling",engineering,True,
+se-engineering-62886-a62887,answer,2,2025-04-04T05:58:37+00:00,3,False,"steel,machining,drilling",engineering,True,
+se-engineering-62886-a62888,answer,3,2025-04-04T08:39:45+00:00,0,False,"steel,machining,drilling",engineering,True,
+se-engineering-62886-a63025,answer,4,2025-04-26T18:56:37+00:00,0,False,"steel,machining,drilling",engineering,True,
+se-engineering-61626,question,1,2024-09-23T20:48:15+00:00,0,,"materials,machining,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-61626-a61627,answer,2,2024-09-23T20:56:09+00:00,1,True,"materials,machining,3d-printing",engineering,True,
+se-engineering-60390,question,1,2024-04-12T11:54:45+00:00,0,,threads,engineering,False,Model indicated no relevant content.
+se-engineering-60390-a60393,answer,2,2024-04-12T16:44:20+00:00,0,False,threads,engineering,True,
+se-engineering-60390-a60432,answer,3,2024-04-18T15:36:36+00:00,1,True,threads,engineering,True,
+se-engineering-60162,question,1,2024-03-12T21:18:53+00:00,0,,"mechanical-engineering,motors,power-transmission,shafts",engineering,True,
+se-engineering-60068,question,1,2024-03-02T18:52:32+00:00,1,,metalwork,engineering,True,
+se-engineering-60068-a60071,answer,2,2024-03-02T19:45:34+00:00,4,True,metalwork,engineering,True,
+se-engineering-60068-a60078,answer,3,2024-03-03T08:41:05+00:00,2,False,metalwork,engineering,True,
+se-engineering-60068-a60081,answer,4,2024-03-03T22:37:03+00:00,1,False,metalwork,engineering,True,
+se-engineering-60068-a60089,answer,5,2024-03-04T12:50:08+00:00,1,False,metalwork,engineering,True,
+se-engineering-58867,question,1,2024-02-10T18:25:08+00:00,1,,threads,engineering,True,
+se-engineering-58698,question,1,2024-01-20T15:12:33+00:00,0,,threads,engineering,False,Model indicated no relevant content.
+se-engineering-58698-a58699,answer,2,2024-01-20T17:12:01+00:00,0,False,threads,engineering,True,
+se-engineering-58698-a58701,answer,3,2024-01-20T18:38:16+00:00,1,True,threads,engineering,True,
+se-engineering-58411,question,1,2023-12-19T18:18:27+00:00,0,,"machining,strength,cnc,bicycles,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-58411-a58413,answer,2,2023-12-19T19:56:53+00:00,2,False,"machining,strength,cnc,bicycles,metalwork",engineering,True,
+se-engineering-58411-a58414,answer,3,2023-12-19T21:15:56+00:00,1,False,"machining,strength,cnc,bicycles,metalwork",engineering,True,
+se-engineering-58412,question,1,2023-12-19T18:18:27+00:00,0,,"machining,strength,cnc,bicycles,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-6497,question,1,2015-12-10T19:56:17+00:00,0,,"materials,machining",engineering,False,Model indicated no relevant content.
+se-engineering-6497-a55278,answer,2,2023-05-18T19:09:20+00:00,0,False,"materials,machining",engineering,True,
+se-engineering-48822,question,1,2021-12-19T12:56:19+00:00,2,,"mechanical-engineering,machine-design,tools,drilling,product-design",engineering,True,
+se-engineering-48822-a48827,answer,2,2021-12-19T16:19:29+00:00,1,False,"mechanical-engineering,machine-design,tools,drilling,product-design",engineering,True,
+se-engineering-51331,question,1,2022-06-12T09:09:09+00:00,0,,"motors,robotics,wheels",engineering,False,Model indicated no relevant content.
+se-engineering-51331-a51341,answer,2,2022-06-13T03:13:37+00:00,2,True,"motors,robotics,wheels",engineering,True,
+se-engineering-38548,question,1,2020-11-07T08:20:42+00:00,1,,"mechanical-engineering,torque,drilling,thrust",engineering,False,Model indicated no relevant content.
+se-engineering-38548-a38550,answer,2,2020-11-07T12:00:37+00:00,2,True,"mechanical-engineering,torque,drilling,thrust",engineering,True,
+se-engineering-38548-a38558,answer,3,2020-11-07T19:55:07+00:00,0,False,"mechanical-engineering,torque,drilling,thrust",engineering,True,
+se-engineering-38548-a38575,answer,4,2020-11-09T19:14:27+00:00,1,False,"mechanical-engineering,torque,drilling,thrust",engineering,True,
+se-engineering-37128,question,1,2020-08-12T17:24:49+00:00,1,,"gears,power-transmission",engineering,False,Model indicated no relevant content.
+se-engineering-37128-a37129,answer,2,2020-08-12T17:46:36+00:00,2,True,"gears,power-transmission",engineering,True,
+se-engineering-31840,question,1,2019-11-07T09:07:59+00:00,3,,"aircraft-design,shear,fasteners",engineering,False,Model indicated no relevant content.
+se-engineering-31831,question,1,2019-11-06T13:19:33+00:00,0,,grinding,engineering,False,Model indicated no relevant content.
+se-engineering-30026,question,1,2019-09-07T20:24:11+00:00,4,,"machining,drilling",engineering,False,Model indicated no relevant content.
+se-engineering-30026-a30031,answer,2,2019-09-08T05:35:20+00:00,1,False,"machining,drilling",engineering,True,
+se-engineering-30026-a30033,answer,3,2019-09-08T12:37:47+00:00,2,False,"machining,drilling",engineering,True,
+se-engineering-29107,question,1,2019-07-09T13:02:31+00:00,0,,"drilling,molding",engineering,False,Model indicated no relevant content.
+se-engineering-29107-a29111,answer,2,2019-07-09T17:08:34+00:00,1,False,"drilling,molding",engineering,True,
+se-engineering-26422,question,1,2019-03-17T21:02:23+00:00,0,,manufacturing-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-26422-a26423,answer,2,2019-03-17T21:35:00+00:00,2,True,manufacturing-engineering,engineering,True,
+se-engineering-22299,question,1,2018-06-17T13:35:03+00:00,2,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-22299-a22305,answer,2,2018-06-18T00:27:21+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-22622,question,1,2018-07-06T10:47:44+00:00,5,,"mechanical-engineering,cutting",engineering,False,Model indicated no relevant content.
+se-engineering-22622-a22623,answer,2,2018-07-06T11:13:23+00:00,8,True,"mechanical-engineering,cutting",engineering,True,
+se-engineering-22622-a22625,answer,3,2018-07-06T13:24:28+00:00,4,False,"mechanical-engineering,cutting",engineering,True,
+se-engineering-22622-a22628,answer,4,2018-07-06T15:25:53+00:00,2,False,"mechanical-engineering,cutting",engineering,True,
+se-engineering-22622-a22633,answer,5,2018-07-06T17:08:13+00:00,1,False,"mechanical-engineering,cutting",engineering,True,
+se-engineering-8110,question,1,2016-03-22T06:43:54+00:00,7,,"metals,lasers,drilling",engineering,True,
+se-engineering-3410,question,1,2015-07-01T09:23:10+00:00,11,,"machining,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-14189,question,1,2017-03-10T22:06:48+00:00,1,,"machining,computer-aided-design,cnc,drilling",engineering,True,
+se-engineering-10255,question,1,2016-06-09T20:14:45+00:00,2,,"mechanical-engineering,steel,machining",engineering,False,Model indicated no relevant content.
+se-engineering-160,question,1,2015-01-22T20:40:52+00:00,10,,"materials,machining",engineering,True,
+se-engineering-19442,question,1,2018-02-15T18:07:20+00:00,2,,"machining,prototyping,cost-engineering,metal-folding,cost-estimation",engineering,False,Model indicated no relevant content.
+se-engineering-19442-a28112,answer,2,2019-04-26T21:38:08+00:00,1,False,"machining,prototyping,cost-engineering,metal-folding,cost-estimation",engineering,True,
+se-engineering-62152,question,1,2024-12-09T21:31:08+00:00,0,,"mechanical-engineering,motors,gears",engineering,True,
+se-engineering-62152-a62169,answer,2,2024-12-11T07:46:34+00:00,0,False,"mechanical-engineering,motors,gears",engineering,True,
+se-engineering-13633,question,1,2017-02-06T15:25:31+00:00,7,,gears,engineering,True,
+se-engineering-56929,question,1,2023-11-07T17:09:36+00:00,0,,"cad,cnc",engineering,True,
+se-engineering-52706,question,1,2022-10-01T19:12:21+00:00,0,,design,engineering,False,Model indicated no relevant content.
+se-engineering-52706-a52713,answer,2,2022-10-02T17:52:39+00:00,1,False,design,engineering,True,
+se-engineering-51786,question,1,2022-07-19T10:32:27+00:00,0,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-51786-a51789,answer,2,2022-07-19T12:42:14+00:00,0,False,"mechanical-engineering,gears",engineering,True,
+se-engineering-51786-a51799,answer,3,2022-07-19T20:09:49+00:00,0,True,"mechanical-engineering,gears",engineering,True,
+se-engineering-51701,question,1,2022-07-13T21:13:59+00:00,0,,"cad,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-51010,question,1,2022-05-17T04:28:42+00:00,2,,"measurements,cad,positions-measurement",engineering,True,
+se-engineering-51010-a51018,answer,2,2022-05-17T18:14:03+00:00,1,False,"measurements,cad,positions-measurement",engineering,True,
+se-engineering-51010-a51020,answer,3,2022-05-17T18:44:49+00:00,2,False,"measurements,cad,positions-measurement",engineering,True,
+se-engineering-51010-a51030,answer,4,2022-05-18T19:15:11+00:00,3,False,"measurements,cad,positions-measurement",engineering,True,
+se-engineering-51010-a51068,answer,5,2022-05-23T07:16:31+00:00,0,False,"measurements,cad,positions-measurement",engineering,True,
+se-engineering-47507,question,1,2021-10-01T17:40:22+00:00,1,,"design,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-44769,question,1,2021-06-22T05:28:35+00:00,1,,"structural-analysis,simulation,ansys,meshing",engineering,False,Model indicated no relevant content.
+se-engineering-39054,question,1,2020-12-10T15:54:39+00:00,0,,cad,engineering,True,
+se-engineering-39054-a40295,answer,2,2021-02-10T23:43:52+00:00,0,True,cad,engineering,True,
+se-engineering-38722,question,1,2020-11-19T05:52:49+00:00,0,,"software,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-38519,question,1,2020-11-05T11:34:11+00:00,0,,"cad,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-38519-a38520,answer,2,2020-11-05T11:43:22+00:00,4,True,"cad,technical-drawing",engineering,True,
+se-engineering-37924,question,1,2020-09-30T21:26:28+00:00,0,,"prototyping,surface-modelling",engineering,True,
+se-engineering-37924-a37925,answer,2,2020-09-30T22:04:09+00:00,2,False,"prototyping,surface-modelling",engineering,True,
+se-engineering-37924-a37926,answer,3,2020-09-30T23:38:14+00:00,1,False,"prototyping,surface-modelling",engineering,True,
+se-engineering-34995,question,1,2020-04-04T14:19:38+00:00,2,,"machining,cnc,molding",engineering,False,Model indicated no relevant content.
+se-engineering-34995-a34996,answer,2,2020-04-04T16:17:35+00:00,1,False,"machining,cnc,molding",engineering,True,
+se-engineering-34995-a34997,answer,3,2020-04-04T17:12:59+00:00,2,False,"machining,cnc,molding",engineering,True,
+se-engineering-34995-a34999,answer,4,2020-04-04T19:47:21+00:00,2,False,"machining,cnc,molding",engineering,True,
+se-engineering-34995-a35001,answer,5,2020-04-05T00:45:13+00:00,1,False,"machining,cnc,molding",engineering,True,
+se-engineering-34995-a35058,answer,6,2020-04-07T16:54:55+00:00,2,False,"machining,cnc,molding",engineering,True,
+se-engineering-29356,question,1,2019-07-25T07:49:39+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-14300,question,1,2017-03-18T02:38:49+00:00,2,,"cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-14300-a29172,answer,2,2019-07-12T20:33:40+00:00,1,False,"cad,solidworks",engineering,True,
+se-engineering-23491,question,1,2018-08-28T14:00:01+00:00,4,,"mechanical-engineering,kinematics,servo,linkage",engineering,True,
+se-engineering-14524,question,1,2017-03-31T17:25:08+00:00,0,,"solidworks,software",engineering,False,Model indicated no relevant content.
+se-engineering-7304,question,1,2016-02-06T17:48:03+00:00,3,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-7906,question,1,2016-03-12T17:54:28+00:00,3,,"aluminum,rivets,cad",engineering,True,
+se-engineering-32619,question,1,2020-01-02T20:33:43+00:00,3,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-24725,question,1,2018-11-18T18:45:03+00:00,3,,"cad,drafting",engineering,False,Model indicated no relevant content.
+se-engineering-24725-a24730,answer,2,2018-11-19T13:36:20+00:00,7,False,"cad,drafting",engineering,True,
+se-engineering-65286,question,1,2026-01-30T14:45:03+00:00,0,,"structural-analysis,solidworks,simulation",engineering,False,Model indicated no relevant content.
+se-engineering-62810,question,1,2025-03-23T21:02:12+00:00,0,,"cad,solidworks",engineering,True,
+se-engineering-62810-a62849,answer,2,2025-03-30T11:02:07+00:00,0,False,"cad,solidworks",engineering,True,
+se-engineering-52378,question,1,2022-09-07T12:07:26+00:00,0,,solidworks,engineering,True,
+se-engineering-52378-a52379,answer,2,2022-09-07T13:43:16+00:00,0,False,solidworks,engineering,True,
+se-engineering-52378-a60331,answer,3,2024-04-04T16:40:44+00:00,0,False,solidworks,engineering,True,
+se-engineering-63366,question,1,2025-06-30T14:12:05+00:00,0,,robotics,engineering,True,
+se-engineering-63366-a63401,answer,2,2025-07-04T12:50:08+00:00,0,False,robotics,engineering,True,
+se-engineering-43271,question,1,2021-05-13T21:51:32+00:00,4,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-43271-a43276,answer,2,2021-05-20T09:48:12+00:00,0,False,solidworks,engineering,True,
+se-engineering-43271-a43316,answer,3,2021-05-21T22:54:39+00:00,0,False,solidworks,engineering,True,
+se-engineering-43271-a56920,answer,4,2023-11-07T07:36:43+00:00,0,False,solidworks,engineering,True,
+se-engineering-8199,question,1,2016-03-28T18:41:06+00:00,5,,finite-element-method,engineering,False,Model indicated no relevant content.
+se-engineering-8199-a24387,answer,2,2018-10-27T06:34:25+00:00,0,False,finite-element-method,engineering,True,
+se-engineering-49276,question,1,2022-01-15T00:39:23+00:00,0,,solidworks,engineering,True,
+se-engineering-49276-a49287,answer,2,2022-01-15T21:21:37+00:00,1,True,solidworks,engineering,True,
+se-engineering-62730,question,1,2025-03-10T04:01:15+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-62730-a62760,answer,2,2025-03-14T08:42:14+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-63482,question,1,2025-07-22T02:13:35+00:00,0,,"mechanical-engineering,structural-analysis,solidworks,simulation,ansys",engineering,False,Model indicated no relevant content.
+se-engineering-63099,question,1,2025-05-08T19:58:47+00:00,0,,"gears,cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-63185,question,1,2025-05-27T16:49:25+00:00,0,,"mechanical-engineering,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-63066,question,1,2025-05-04T22:29:08+00:00,2,,"mechanical-engineering,cad,solidworks",engineering,True,
+se-engineering-43356,question,1,2021-05-25T00:22:13+00:00,1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-43356-a43377,answer,2,2021-05-26T08:14:19+00:00,1,False,solidworks,engineering,True,
+se-engineering-43356-a62776,answer,3,2025-03-16T09:59:54+00:00,0,False,solidworks,engineering,True,
+se-engineering-62673,question,1,2025-03-01T16:01:00+00:00,0,,simulation,engineering,True,
+se-engineering-58534,question,1,2024-01-03T23:54:18+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-58534-a58535,answer,2,2024-01-04T12:02:02+00:00,1,False,solidworks,engineering,True,
+se-engineering-62001,question,1,2024-11-18T05:38:33+00:00,0,,"mechanical-engineering,stresses,solidworks,simulation,flywheels",engineering,True,
+se-engineering-62001-a62004,answer,2,2024-11-18T09:31:07+00:00,2,False,"mechanical-engineering,stresses,solidworks,simulation,flywheels",engineering,True,
+se-engineering-61771,question,1,2024-10-13T11:13:34+00:00,0,,"mechanical-engineering,finite-element-method,cad,vibration,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-61221,question,1,2024-07-29T08:53:45+00:00,0,,"mechanical-engineering,solid-mechanics,mathematics,modeling,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-61185,question,1,2024-07-24T16:04:30+00:00,0,,"cad,solidworks",engineering,True,
+se-engineering-43401,question,1,2021-05-28T14:59:40+00:00,2,,"measurements,solidworks,cad",engineering,True,
+se-engineering-43401-a54264,answer,2,2023-02-16T14:20:44+00:00,1,False,"measurements,solidworks,cad",engineering,True,
+se-engineering-45822,question,1,2021-08-29T12:35:34+00:00,1,,"solidworks,cad,metals,aluminum",engineering,False,Model indicated no relevant content.
+se-engineering-45822-a45832,answer,2,2021-08-30T02:22:30+00:00,2,False,"solidworks,cad,metals,aluminum",engineering,True,
+se-engineering-45822-a47472,answer,3,2021-09-28T23:06:01+00:00,0,False,"solidworks,cad,metals,aluminum",engineering,True,
+se-engineering-45822-a55100,answer,4,2023-05-01T22:13:19+00:00,0,False,"solidworks,cad,metals,aluminum",engineering,True,
+se-engineering-45822-a60957,answer,5,2024-06-27T15:33:12+00:00,0,False,"solidworks,cad,metals,aluminum",engineering,True,
+se-engineering-45822-a60958,answer,6,2024-06-27T17:15:04+00:00,0,False,"solidworks,cad,metals,aluminum",engineering,True,
+se-engineering-60394,question,1,2024-04-12T17:18:13+00:00,0,,"solidworks,3d-printing,cross-section",engineering,False,Model indicated no relevant content.
+se-engineering-38503,question,1,2020-11-04T01:49:46+00:00,3,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38503-a38509,answer,2,2020-11-04T11:37:13+00:00,4,True,solidworks,engineering,True,
+se-engineering-38503-a57236,answer,3,2023-12-06T19:28:51+00:00,1,False,solidworks,engineering,True,
+se-engineering-2933,question,1,2015-05-25T14:04:56+00:00,6,,"mechanical-engineering,design",engineering,False,Model indicated no relevant content.
+se-engineering-2933-a3341,answer,2,2015-06-26T09:20:50+00:00,7,False,"mechanical-engineering,design",engineering,True,
+se-engineering-55699,question,1,2023-07-08T22:23:10+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-55699-a55717,answer,2,2023-07-10T10:16:04+00:00,1,True,solidworks,engineering,True,
+se-engineering-47728,question,1,2021-10-15T20:50:16+00:00,0,,"solidworks,cad",engineering,True,
+se-engineering-47728-a47733,answer,2,2021-10-16T00:27:15+00:00,1,False,"solidworks,cad",engineering,True,
+se-engineering-55333,question,1,2023-05-23T10:58:28+00:00,0,,"mechanical-engineering,solidworks,technical-drawing,standards,drawings",engineering,True,
+se-engineering-55333-a55336,answer,2,2023-05-23T11:34:46+00:00,3,True,"mechanical-engineering,solidworks,technical-drawing,standards,drawings",engineering,True,
+se-engineering-54601,question,1,2023-03-22T01:07:55+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-54601-a54669,answer,2,2023-03-28T16:03:07+00:00,1,False,solidworks,engineering,True,
+se-engineering-17571,question,1,2017-10-17T16:12:58+00:00,0,,"solidworks,drafting",engineering,False,Model indicated no relevant content.
+se-engineering-17571-a54668,answer,2,2023-03-28T15:47:03+00:00,0,False,"solidworks,drafting",engineering,True,
+se-engineering-53697,question,1,2022-12-29T06:44:01+00:00,0,,"cad,solidworks,solid-mechanics,software",engineering,False,Model indicated no relevant content.
+se-engineering-53697-a53701,answer,2,2022-12-29T17:00:47+00:00,1,True,"cad,solidworks,solid-mechanics,software",engineering,True,
+se-engineering-38957,question,1,2020-12-06T18:03:36+00:00,1,,"mechanical-engineering,design,modeling,solidworks,robotics",engineering,False,Model indicated no relevant content.
+se-engineering-38957-a39011,answer,2,2020-12-08T21:10:32+00:00,0,False,"mechanical-engineering,design,modeling,solidworks,robotics",engineering,True,
+se-engineering-38957-a39048,answer,3,2020-12-10T03:14:15+00:00,1,True,"mechanical-engineering,design,modeling,solidworks,robotics",engineering,True,
+se-engineering-53192,question,1,2022-11-16T09:02:35+00:00,0,,"solidworks,cad",engineering,False,Model indicated no relevant content.
+se-engineering-52853,question,1,2022-10-11T18:40:34+00:00,0,,"mechanical-engineering,design,solidworks,solid-mechanics",engineering,False,Model indicated no relevant content.
+se-engineering-52502,question,1,2022-09-15T20:55:14+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-52502-a52506,answer,2,2022-09-16T12:40:12+00:00,0,True,solidworks,engineering,True,
+se-engineering-43395,question,1,2021-05-28T00:41:28+00:00,1,,solidworks,engineering,True,
+se-engineering-43395-a43400,answer,2,2021-05-28T13:14:52+00:00,3,True,solidworks,engineering,True,
+se-engineering-43395-a52311,answer,3,2022-09-01T05:28:36+00:00,1,False,solidworks,engineering,True,
+se-engineering-51547,question,1,2022-06-29T21:25:12+00:00,0,,"mechanical-engineering,solidworks,bolting",engineering,False,Model indicated no relevant content.
+se-engineering-51547-a51554,answer,2,2022-06-30T07:13:38+00:00,1,True,"mechanical-engineering,solidworks,bolting",engineering,True,
+se-engineering-51054,question,1,2022-05-21T15:31:57+00:00,1,,"mechanical-engineering,solidworks,cad,technical-drawing,drafting",engineering,False,Model indicated no relevant content.
+se-engineering-50995,question,1,2022-05-16T09:44:20+00:00,0,,"mechanical-engineering,solidworks,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-19307,question,1,2018-02-08T11:34:52+00:00,3,,"measurements,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-19307-a19322,answer,2,2018-02-08T18:02:23+00:00,1,True,"measurements,solidworks",engineering,True,
+se-engineering-50017,question,1,2022-03-01T00:43:41+00:00,0,,"solidworks,3d-printing,prototyping",engineering,False,Model indicated no relevant content.
+se-engineering-50017-a50038,answer,2,2022-03-02T04:36:35+00:00,0,False,"solidworks,3d-printing,prototyping",engineering,True,
+se-engineering-50017-a50041,answer,3,2022-03-02T10:16:14+00:00,1,False,"solidworks,3d-printing,prototyping",engineering,True,
+se-engineering-50017-a50131,answer,4,2022-03-09T21:56:17+00:00,0,False,"solidworks,3d-printing,prototyping",engineering,True,
+se-engineering-49324,question,1,2022-01-18T21:00:28+00:00,0,,"solidworks,cad,tools",engineering,False,Model indicated no relevant content.
+se-engineering-38750,question,1,2020-11-21T14:47:02+00:00,1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38750-a38768,answer,2,2020-11-22T08:08:43+00:00,1,False,solidworks,engineering,True,
+se-engineering-48467,question,1,2021-11-28T21:24:23+00:00,18,,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48468,answer,2,2021-11-28T21:29:16+00:00,2,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48471,answer,3,2021-11-29T04:18:29+00:00,40,True,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48472,answer,4,2021-11-29T06:59:57+00:00,5,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48473,answer,5,2021-11-29T11:21:44+00:00,2,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48481,answer,6,2021-11-29T18:19:14+00:00,4,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48486,answer,7,2021-11-30T02:30:27+00:00,18,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48487,answer,8,2021-11-30T06:02:59+00:00,3,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48494,answer,9,2021-11-30T16:48:36+00:00,2,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48524,answer,10,2021-12-02T00:37:43+00:00,3,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-48467-a48530,answer,11,2021-12-02T11:19:59+00:00,1,False,"cad,drafting,software,engineering-history",engineering,True,
+se-engineering-34887,question,1,2020-03-30T04:22:19+00:00,1,,"mechanical,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-34887-a34889,answer,2,2020-03-30T07:38:22+00:00,4,True,"mechanical,cnc",engineering,True,
+se-engineering-34887-a34916,answer,3,2020-03-31T21:00:35+00:00,2,False,"mechanical,cnc",engineering,True,
+se-engineering-34887-a37222,answer,4,2020-08-18T23:47:37+00:00,0,False,"mechanical,cnc",engineering,True,
+se-engineering-34887-a37263,answer,5,2020-08-21T06:09:26+00:00,1,False,"mechanical,cnc",engineering,True,
+se-engineering-34887-a38186,answer,6,2020-10-14T11:43:31+00:00,0,False,"mechanical,cnc",engineering,True,
+se-engineering-47581,question,1,2021-10-06T00:11:11+00:00,1,,solidworks,engineering,True,
+se-engineering-47581-a47584,answer,2,2021-10-06T04:12:10+00:00,1,False,solidworks,engineering,True,
+se-engineering-45220,question,1,2021-07-21T03:35:23+00:00,1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-45119,question,1,2021-07-14T15:43:14+00:00,0,,"solidworks,cad,solid-mechanics,software",engineering,False,Model indicated no relevant content.
+se-engineering-45119-a45128,answer,2,2021-07-15T09:09:36+00:00,1,True,"solidworks,cad,solid-mechanics,software",engineering,True,
+se-engineering-44920,question,1,2021-07-01T00:13:08+00:00,1,,solidworks,engineering,True,
+se-engineering-44829,question,1,2021-06-25T09:18:10+00:00,1,,"solidworks,cad,computer-aided-design,surface-modelling",engineering,False,Model indicated no relevant content.
+se-engineering-44829-a44836,answer,2,2021-06-25T16:28:16+00:00,3,True,"solidworks,cad,computer-aided-design,surface-modelling",engineering,True,
+se-engineering-44525,question,1,2021-06-05T21:39:27+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-44525-a44530,answer,2,2021-06-06T08:33:15+00:00,0,True,solidworks,engineering,True,
+se-engineering-43484,question,1,2021-06-03T10:28:32+00:00,0,,"beam,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-43368,question,1,2021-05-25T20:19:58+00:00,0,,solidworks,engineering,True,
+se-engineering-43368-a43397,answer,2,2021-05-28T04:50:11+00:00,1,False,solidworks,engineering,True,
+se-engineering-43383,question,1,2021-05-26T14:33:03+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-43383-a43385,answer,2,2021-05-26T16:37:40+00:00,1,True,solidworks,engineering,True,
+se-engineering-43362,question,1,2021-05-25T09:33:35+00:00,0,,"finite-element-method,modeling,simulation",engineering,False,Model indicated no relevant content.
+se-engineering-43362-a43367,answer,2,2021-05-25T17:36:08+00:00,1,True,"finite-element-method,modeling,simulation",engineering,True,
+se-engineering-43014,question,1,2021-05-06T06:58:20+00:00,1,,"design,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-43014-a43016,answer,2,2021-05-06T08:57:16+00:00,2,True,"design,solidworks",engineering,True,
+se-engineering-42775,question,1,2021-04-25T02:55:26+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-42775-a42778,answer,2,2021-04-25T07:34:19+00:00,0,False,solidworks,engineering,True,
+se-engineering-42775-a42781,answer,3,2021-04-25T13:33:36+00:00,1,True,solidworks,engineering,True,
+se-engineering-42775-a42794,answer,4,2021-04-26T03:31:25+00:00,0,False,solidworks,engineering,True,
+se-engineering-42765,question,1,2021-04-24T14:17:32+00:00,0,,"mechanical-engineering,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-42765-a42769,answer,2,2021-04-24T15:58:21+00:00,1,False,"mechanical-engineering,solidworks",engineering,True,
+se-engineering-40920,question,1,2021-03-11T11:37:16+00:00,1,,"mechanical-engineering,applied-mechanics,mechanisms,solidworks,solid-mechanics",engineering,False,Model indicated no relevant content.
+se-engineering-40920-a40922,answer,2,2021-03-11T13:34:26+00:00,0,False,"mechanical-engineering,applied-mechanics,mechanisms,solidworks,solid-mechanics",engineering,True,
+se-engineering-40340,question,1,2021-02-13T03:41:12+00:00,2,,"solidworks,electrical,circuits,drawings",engineering,True,
+se-engineering-40267,question,1,2021-02-09T19:28:42+00:00,0,,"gears,solidworks,bearings",engineering,False,Model indicated no relevant content.
+se-engineering-39680,question,1,2021-01-12T23:51:52+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-39680-a39683,answer,2,2021-01-13T02:20:22+00:00,3,True,solidworks,engineering,True,
+se-engineering-39566,question,1,2021-01-07T10:33:21+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-39566-a39570,answer,2,2021-01-07T13:45:24+00:00,1,True,solidworks,engineering,True,
+se-engineering-39458,question,1,2021-01-02T10:49:07+00:00,0,,"solidworks,meshing",engineering,False,Model indicated no relevant content.
+se-engineering-39458-a39462,answer,2,2021-01-02T13:37:37+00:00,1,True,"solidworks,meshing",engineering,True,
+se-engineering-39405,question,1,2020-12-30T06:08:52+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-39405-a39406,answer,2,2020-12-30T06:53:11+00:00,2,True,solidworks,engineering,True,
+se-engineering-38648,question,1,2020-11-14T23:55:41+00:00,2,,"cad,solidworks",engineering,True,
+se-engineering-38648-a38653,answer,2,2020-11-15T08:50:19+00:00,2,True,"cad,solidworks",engineering,True,
+se-engineering-38843,question,1,2020-11-27T17:25:49+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-32776,question,1,2020-01-15T04:51:37+00:00,2,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-32776-a32781,answer,2,2020-01-15T09:54:36+00:00,2,True,solidworks,engineering,True,
+se-engineering-38733,question,1,2020-11-20T17:32:35+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38733-a38735,answer,2,2020-11-20T18:25:37+00:00,1,True,solidworks,engineering,True,
+se-engineering-38726,question,1,2020-11-19T16:38:25+00:00,2,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38624,question,1,2020-11-13T03:42:50+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38565,question,1,2020-11-08T05:11:00+00:00,3,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38547,question,1,2020-11-07T07:34:45+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-38547-a38549,answer,2,2020-11-07T11:15:37+00:00,1,True,solidworks,engineering,True,
+se-engineering-10674,question,1,2016-07-13T06:12:58+00:00,1,,ansys,engineering,False,Model indicated no relevant content.
+se-engineering-26808,question,1,2019-04-10T16:02:19+00:00,2,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-26808-a35868,answer,2,2020-05-20T11:31:21+00:00,1,False,cad,engineering,True,
+se-engineering-26808-a36366,answer,3,2020-06-22T21:18:41+00:00,1,False,cad,engineering,True,
+se-engineering-26808-a36836,answer,4,2020-07-23T22:01:44+00:00,0,False,cad,engineering,True,
+se-engineering-26808-a37306,answer,5,2020-08-23T04:47:51+00:00,1,False,cad,engineering,True,
+se-engineering-26808-a37311,answer,6,2020-08-23T18:41:05+00:00,0,False,cad,engineering,True,
+se-engineering-36914,question,1,2020-07-29T14:55:04+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-36914-a36937,answer,2,2020-07-31T08:56:57+00:00,1,False,solidworks,engineering,True,
+se-engineering-16258,question,1,2017-07-11T18:25:58+00:00,1,,"mechanical-engineering,manufacturing-engineering,computer-aided-design,documentation",engineering,False,Model indicated no relevant content.
+se-engineering-16258-a16261,answer,2,2017-07-11T20:53:41+00:00,0,False,"mechanical-engineering,manufacturing-engineering,computer-aided-design,documentation",engineering,True,
+se-engineering-16258-a16289,answer,3,2017-07-13T16:58:33+00:00,1,True,"mechanical-engineering,manufacturing-engineering,computer-aided-design,documentation",engineering,True,
+se-engineering-36377,question,1,2020-06-23T18:57:47+00:00,1,,solidworks,engineering,True,
+se-engineering-35297,question,1,2020-04-21T07:58:10+00:00,3,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-35018,question,1,2020-04-05T20:31:51+00:00,-1,,solidworks,engineering,True,
+se-engineering-35018-a35274,answer,2,2020-04-20T03:13:43+00:00,1,False,solidworks,engineering,True,
+se-engineering-35161,question,1,2020-04-14T09:47:19+00:00,2,,"finite-element-method,simulation,solidworks",engineering,True,
+se-engineering-35085,question,1,2020-04-09T17:06:17+00:00,1,,solidworks,engineering,True,
+se-engineering-35007,question,1,2020-04-05T09:00:42+00:00,3,,"mechanical-engineering,cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-35007-a35049,answer,2,2020-04-07T10:22:55+00:00,1,True,"mechanical-engineering,cad,solidworks",engineering,True,
+se-engineering-35004,question,1,2020-04-05T07:16:01+00:00,3,,"mechanical-engineering,simulation,solidworks,kinematics,simulink",engineering,False,Model indicated no relevant content.
+se-engineering-34987,question,1,2020-04-04T02:31:24+00:00,1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-33824,question,1,2020-03-26T05:05:33+00:00,1,,"solidworks,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-33824-a33847,answer,2,2020-03-27T09:28:49+00:00,2,False,"solidworks,autocad",engineering,True,
+se-engineering-33424,question,1,2020-02-27T13:39:36+00:00,2,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-33424-a33429,answer,2,2020-02-28T19:20:07+00:00,4,True,mechanical-engineering,engineering,True,
+se-engineering-33441,question,1,2020-02-29T13:09:22+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-33361,question,1,2020-02-23T14:45:55+00:00,3,,"modeling,cad,solidworks,technical-drawing,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-33361-a33377,answer,2,2020-02-24T09:42:19+00:00,-1,False,"modeling,cad,solidworks,technical-drawing,drawings",engineering,True,
+se-engineering-33339,question,1,2020-02-21T12:02:35+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-33011,question,1,2020-01-31T22:08:41+00:00,2,,"solidworks,cnc",engineering,True,
+se-engineering-33011-a33171,answer,2,2020-02-10T16:08:54+00:00,2,True,"solidworks,cnc",engineering,True,
+se-engineering-33074,question,1,2020-02-05T03:22:14+00:00,1,,solidworks,engineering,True,
+se-engineering-33074-a33084,answer,2,2020-02-05T13:16:39+00:00,2,False,solidworks,engineering,True,
+se-engineering-32923,question,1,2020-01-26T19:34:45+00:00,2,,solidworks,engineering,True,
+se-engineering-32883,question,1,2020-01-23T19:36:11+00:00,2,,computer-aided-design,engineering,False,Model indicated no relevant content.
+se-engineering-32795,question,1,2020-01-16T12:56:25+00:00,1,,"design,cad,metals,cutting,metal-folding",engineering,False,Model indicated no relevant content.
+se-engineering-32795-a32796,answer,2,2020-01-16T13:13:15+00:00,1,True,"design,cad,metals,cutting,metal-folding",engineering,True,
+se-engineering-32335,question,1,2019-12-12T09:08:40+00:00,2,,"mechanical-engineering,cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-32335-a32337,answer,2,2019-12-12T10:16:07+00:00,1,False,"mechanical-engineering,cad,solidworks",engineering,True,
+se-engineering-23712,question,1,2018-09-12T12:51:54+00:00,0,,"mechanical-engineering,fluid-mechanics,applied-mechanics,solidworks,geometry",engineering,False,Model indicated no relevant content.
+se-engineering-23712-a23724,answer,2,2018-09-12T22:37:52+00:00,1,False,"mechanical-engineering,fluid-mechanics,applied-mechanics,solidworks,geometry",engineering,True,
+se-engineering-29511,question,1,2019-08-05T14:59:31+00:00,0,,"finite-element-method,solidworks,wood",engineering,False,Model indicated no relevant content.
+se-engineering-29511-a29524,answer,2,2019-08-05T21:15:33+00:00,0,False,"finite-element-method,solidworks,wood",engineering,True,
+se-engineering-29511-a29528,answer,3,2019-08-06T12:37:47+00:00,0,True,"finite-element-method,solidworks,wood",engineering,True,
+se-engineering-28984,question,1,2019-06-28T12:04:43+00:00,5,,"solidworks,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-28984-a28985,answer,2,2019-06-28T12:34:41+00:00,6,False,"solidworks,technical-drawing",engineering,True,
+se-engineering-28984-a29061,answer,3,2019-07-06T02:04:23+00:00,1,False,"solidworks,technical-drawing",engineering,True,
+se-engineering-28150,question,1,2019-04-29T13:24:55+00:00,0,,"mechanical-engineering,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-28150-a28154,answer,2,2019-04-29T19:45:00+00:00,1,False,"mechanical-engineering,solidworks",engineering,True,
+se-engineering-28078,question,1,2019-04-25T08:24:35+00:00,1,,"solidworks,computer-aided-design,project-management",engineering,True,
+se-engineering-28078-a28079,answer,2,2019-04-25T08:29:19+00:00,1,False,"solidworks,computer-aided-design,project-management",engineering,True,
+se-engineering-28078-a28080,answer,3,2019-04-25T09:43:11+00:00,1,False,"solidworks,computer-aided-design,project-management",engineering,True,
+se-engineering-28078-a28082,answer,4,2019-04-25T10:25:15+00:00,1,True,"solidworks,computer-aided-design,project-management",engineering,True,
+se-engineering-26776,question,1,2019-04-07T20:38:46+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-26502,question,1,2019-03-22T12:43:54+00:00,0,,mechanical-engineering,engineering,True,
+se-engineering-26403,question,1,2019-03-16T12:50:52+00:00,0,,"mechanical-engineering,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-26023,question,1,2019-02-17T09:39:11+00:00,0,,"robotics,autocad,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-24291,question,1,2018-10-22T06:09:46+00:00,0,,"solidworks,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-24291-a24293,answer,2,2018-10-22T08:57:27+00:00,1,True,"solidworks,drawings",engineering,True,
+se-engineering-24238,question,1,2018-10-19T12:37:52+00:00,0,,"machining,threads",engineering,False,Model indicated no relevant content.
+se-engineering-24238-a24686,answer,2,2018-11-16T13:08:01+00:00,1,False,"machining,threads",engineering,True,
+se-engineering-25021,question,1,2018-12-07T10:29:32+00:00,0,,"solidworks,bolting,threads",engineering,True,
+se-engineering-24873,question,1,2018-11-26T23:19:01+00:00,0,,"vibration,simulation,frequency-response",engineering,True,
+se-engineering-24873-a24874,answer,2,2018-11-27T00:55:18+00:00,1,True,"vibration,simulation,frequency-response",engineering,True,
+se-engineering-23259,question,1,2018-08-16T03:55:16+00:00,0,,"solidworks,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-23259-a23262,answer,2,2018-08-16T09:03:17+00:00,1,False,"solidworks,3d-printing",engineering,True,
+se-engineering-23489,question,1,2018-08-28T13:46:59+00:00,2,,"finite-element-method,simulation,ansys,solidworks,ansys-workbench",engineering,False,Model indicated no relevant content.
+se-engineering-22591,question,1,2018-07-04T09:54:50+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-22591-a22593,answer,2,2018-07-04T11:51:56+00:00,0,False,solidworks,engineering,True,
+se-engineering-22591-a22594,answer,3,2018-07-04T12:02:30+00:00,0,True,solidworks,engineering,True,
+se-engineering-22403,question,1,2018-06-22T18:32:40+00:00,1,,"cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-22403-a22408,answer,2,2018-06-22T23:08:53+00:00,1,False,"cad,solidworks",engineering,True,
+se-engineering-22403-a22423,answer,3,2018-06-23T16:12:38+00:00,1,True,"cad,solidworks",engineering,True,
+se-engineering-22332,question,1,2018-06-20T01:35:26+00:00,1,,"mechanical-engineering,structural-analysis,finite-element-method",engineering,False,Model indicated no relevant content.
+se-engineering-19394,question,1,2018-02-13T08:48:40+00:00,2,,"solidworks,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-19394-a19398,answer,2,2018-02-13T10:13:56+00:00,2,True,"solidworks,technical-drawing",engineering,True,
+se-engineering-18517,question,1,2017-12-20T05:57:19+00:00,0,,"cad,cfd,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-18517-a18518,answer,2,2017-12-20T07:20:55+00:00,0,False,"cad,cfd,solidworks",engineering,True,
+se-engineering-18517-a18519,answer,3,2017-12-20T08:22:51+00:00,1,True,"cad,cfd,solidworks",engineering,True,
+se-engineering-18194,question,1,2017-11-26T18:25:48+00:00,0,,"mechanical-engineering,finite-element-method,ansys,ansys-workbench",engineering,False,Model indicated no relevant content.
+se-engineering-16721,question,1,2017-08-11T13:47:40+00:00,1,,solidworks,engineering,True,
+se-engineering-16721-a16726,answer,2,2017-08-11T18:08:33+00:00,1,True,solidworks,engineering,True,
+se-engineering-15218,question,1,2017-05-08T19:35:23+00:00,1,,solidworks,engineering,True,
+se-engineering-7828,question,1,2016-03-08T16:38:25+00:00,1,,"drafting,solidworks,cad",engineering,False,Model indicated no relevant content.
+se-engineering-7828-a13491,answer,2,2017-01-29T12:27:15+00:00,1,False,"drafting,solidworks,cad",engineering,True,
+se-engineering-13204,question,1,2017-01-11T19:36:04+00:00,1,,"solidworks,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-13204-a13209,answer,2,2017-01-12T04:42:42+00:00,2,False,"solidworks,drawings",engineering,True,
+se-engineering-13204-a13229,answer,3,2017-01-13T03:25:08+00:00,5,True,"solidworks,drawings",engineering,True,
+se-engineering-13204-a13324,answer,4,2017-01-18T20:15:55+00:00,0,False,"solidworks,drawings",engineering,True,
+se-engineering-13303,question,1,2017-01-17T14:27:19+00:00,-1,,"computer-aided-design,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-13303-a13304,answer,2,2017-01-17T16:10:44+00:00,1,False,"computer-aided-design,solidworks",engineering,True,
+se-engineering-13303-a13306,answer,3,2017-01-17T16:53:40+00:00,2,False,"computer-aided-design,solidworks",engineering,True,
+se-engineering-13208,question,1,2017-01-12T01:45:53+00:00,4,,"mechanical-engineering,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-13208-a13233,answer,2,2017-01-13T07:49:37+00:00,5,True,"mechanical-engineering,solidworks",engineering,True,
+se-engineering-12521,question,1,2016-11-27T11:13:40+00:00,0,,"modeling,solidworks",engineering,True,
+se-engineering-12521-a12551,answer,2,2016-11-28T19:14:34+00:00,3,True,"modeling,solidworks",engineering,True,
+se-engineering-12521-a12552,answer,3,2016-11-28T19:37:41+00:00,1,False,"modeling,solidworks",engineering,True,
+se-engineering-8885,question,1,2016-05-14T21:58:10+00:00,1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-8885-a8969,answer,2,2016-05-21T14:01:04+00:00,1,True,solidworks,engineering,True,
+se-engineering-6055,question,1,2015-11-05T20:39:58+00:00,4,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-6055-a6300,answer,2,2015-11-25T16:09:03+00:00,3,False,solidworks,engineering,True,
+se-engineering-6148,question,1,2015-11-14T22:39:47+00:00,3,,"design,computer-aided-design,aluminum",engineering,False,Model indicated no relevant content.
+se-engineering-6148-a6149,answer,2,2015-11-14T23:07:48+00:00,7,True,"design,computer-aided-design,aluminum",engineering,True,
+se-engineering-6148-a6154,answer,3,2015-11-15T04:04:04+00:00,5,False,"design,computer-aided-design,aluminum",engineering,True,
+se-engineering-1709,question,1,2015-02-17T20:05:05+00:00,4,,"computer-aided-design,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-1709-a1711,answer,2,2015-02-17T21:22:15+00:00,10,True,"computer-aided-design,solidworks",engineering,True,
+se-engineering-60345,question,1,2024-04-05T16:28:07+00:00,0,,"mechanical-engineering,design,mechanisms,cad,linkage",engineering,False,Model indicated no relevant content.
+se-engineering-47903,question,1,2021-10-26T16:21:27+00:00,0,,"mechanical-engineering,design,cad",engineering,False,Model indicated no relevant content.
+se-engineering-47903-a47904,answer,2,2021-10-26T17:32:52+00:00,1,True,"mechanical-engineering,design,cad",engineering,True,
+se-engineering-47780,question,1,2021-10-18T18:17:22+00:00,0,,"mechanical-engineering,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-47780-a47790,answer,2,2021-10-19T06:57:56+00:00,0,True,"mechanical-engineering,manufacturing-engineering",engineering,True,
+se-engineering-33354,question,1,2020-02-22T16:46:59+00:00,0,,computer-aided-design,engineering,False,Model indicated no relevant content.
+se-engineering-21977,question,1,2018-05-31T12:25:28+00:00,4,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-2670,question,1,2015-04-30T14:49:13+00:00,8,,"mechanical-engineering,finite-element-method",engineering,False,Model indicated no relevant content.
+se-engineering-2670-a2672,answer,2,2015-04-30T21:23:29+00:00,4,False,"mechanical-engineering,finite-element-method",engineering,True,
+se-mechanics-8140,question,1,2013-12-22T03:45:28+00:00,6,,"engine,transmission,diesel,drivetrain,conversion",mechanics,False,Model indicated no relevant content.
+se-mechanics-8140-a8141,answer,2,2013-12-22T13:52:44+00:00,4,True,"engine,transmission,diesel,drivetrain,conversion",mechanics,True,
+se-mechanics-8140-a8159,answer,3,2013-12-24T14:22:27+00:00,5,False,"engine,transmission,diesel,drivetrain,conversion",mechanics,True,
+se-mechanics-3139,question,1,2012-03-24T06:56:45+00:00,1,,"transmission,parts",mechanics,False,Model indicated no relevant content.
+se-mechanics-51511,question,1,2018-02-05T04:10:40+00:00,5,,"stripped-thread,aluminum,helicoil",mechanics,False,Model indicated no relevant content.
+se-mechanics-51511-a51515,answer,2,2018-02-05T05:22:56+00:00,3,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51517,answer,3,2018-02-05T07:59:11+00:00,4,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51518,answer,4,2018-02-05T08:33:59+00:00,6,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51522,answer,5,2018-02-05T11:55:46+00:00,3,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51530,answer,6,2018-02-05T16:16:21+00:00,5,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51540,answer,7,2018-02-05T23:46:47+00:00,3,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51546,answer,8,2018-02-06T03:32:07+00:00,4,False,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-51511-a51547,answer,9,2018-02-06T05:39:23+00:00,6,True,"stripped-thread,aluminum,helicoil",mechanics,True,
+se-mechanics-90050,question,1,2022-10-12T09:54:04+00:00,2,,"engine,cylinder",mechanics,False,Model indicated no relevant content.
+se-mechanics-90050-a90051,answer,2,2022-10-12T10:23:01+00:00,2,True,"engine,cylinder",mechanics,True,
+se-robotics-112754,question,1,2024-08-24T14:41:46+00:00,0,,"ros,camera,hardware,real-time,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-112754-a112765,answer,2,2024-08-26T09:52:57+00:00,1,False,"ros,camera,hardware,real-time,cnc",robotics,True,
+se-robotics-22180,question,1,2021-05-15T17:59:30+00:00,0,,"gearing,cnc,3d-printing,3d-model",robotics,False,Model indicated no relevant content.
+se-robotics-22180-a22220,answer,2,2021-05-28T01:25:53+00:00,1,False,"gearing,cnc,3d-printing,3d-model",robotics,True,
+se-robotics-21020,question,1,2020-08-02T07:51:27+00:00,1,,"design,programming-languages,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-21020-a21026,answer,2,2020-08-03T07:21:43+00:00,1,False,"design,programming-languages,cnc",robotics,True,
+se-robotics-21020-a21033,answer,3,2020-08-05T13:53:09+00:00,0,False,"design,programming-languages,cnc",robotics,True,
+se-robotics-24573,question,1,2023-03-21T07:35:15+00:00,1,,cnc,robotics,True,
+se-robotics-16710,question,1,2018-11-17T20:02:13+00:00,3,,"arduino,stepper-motor,industrial-robot,electronics,cnc",robotics,True,
+se-robotics-8184,question,1,2015-10-05T04:08:56+00:00,3,,industrial-robot,robotics,True,
+se-robotics-8184-a8185,answer,2,2015-10-05T06:23:45+00:00,3,False,industrial-robot,robotics,True,
+se-robotics-8184-a8198,answer,3,2015-10-07T05:35:39+00:00,1,False,industrial-robot,robotics,True,
+se-robotics-8184-a8217,answer,4,2015-10-09T21:03:25+00:00,5,False,industrial-robot,robotics,True,
+se-robotics-8184-a11032,answer,5,2016-11-10T17:41:28+00:00,4,False,industrial-robot,robotics,True,
+se-robotics-8184-a22795,answer,6,2021-10-21T07:36:29+00:00,-1,False,industrial-robot,robotics,True,
+se-robotics-4569,question,1,2014-09-17T01:57:10+00:00,0,,cnc,robotics,False,Model indicated no relevant content.
+se-robotics-4569-a4571,answer,2,2014-09-17T05:47:17+00:00,2,False,cnc,robotics,True,
+se-robotics-4569-a22353,answer,3,2021-06-28T15:16:33+00:00,1,False,cnc,robotics,True,
+se-robotics-29124,question,1,2021-01-07T11:12:52+00:00,0,,gazebo-9,robotics,False,Model indicated no relevant content.
+se-robotics-29124-a29125,answer,2,2021-01-11T10:08:09+00:00,0,True,gazebo-9,robotics,True,
+se-robotics-11072,question,1,2016-11-17T11:40:56+00:00,0,,"cnc,stepper-driver,linear-bearing",robotics,False,Model indicated no relevant content.
+se-robotics-11072-a11073,answer,2,2016-11-17T11:51:26+00:00,2,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a11075,answer,3,2016-11-17T13:22:48+00:00,2,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a11082,answer,4,2016-11-18T08:47:59+00:00,0,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a11084,answer,5,2016-11-18T17:02:45+00:00,0,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a11093,answer,6,2016-11-20T17:59:36+00:00,0,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a11101,answer,7,2016-11-21T21:47:20+00:00,0,True,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a19914,answer,8,2019-12-23T21:10:12+00:00,0,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-11072-a21547,answer,9,2020-12-25T23:55:35+00:00,0,False,"cnc,stepper-driver,linear-bearing",robotics,True,
+se-robotics-21374,question,1,2020-11-10T02:13:43+00:00,0,,cnc,robotics,True,
+se-robotics-21374-a21375,answer,2,2020-11-10T15:20:05+00:00,1,True,cnc,robotics,True,
+se-robotics-21119,question,1,2020-09-05T06:25:54+00:00,1,,"stepper-motor,software,programming-languages,cnc,stepper-driver",robotics,False,Model indicated no relevant content.
+se-robotics-21119-a21140,answer,2,2020-09-09T21:14:31+00:00,2,False,"stepper-motor,software,programming-languages,cnc,stepper-driver",robotics,True,
+se-robotics-19781,question,1,2019-11-23T17:23:54+00:00,-1,,"industrial-robot,cnc,plc",robotics,False,Model indicated no relevant content.
+se-robotics-19781-a19794,answer,2,2019-11-25T11:47:44+00:00,1,True,"industrial-robot,cnc,plc",robotics,True,
+se-robotics-19781-a20010,answer,3,2020-01-15T07:55:47+00:00,0,False,"industrial-robot,cnc,plc",robotics,True,
+se-robotics-16076,question,1,2018-07-20T09:52:58+00:00,0,,"cnc,manufacturing",robotics,False,Model indicated no relevant content.
+se-robotics-16076-a16083,answer,2,2018-07-23T09:27:36+00:00,3,False,"cnc,manufacturing",robotics,True,
+se-robotics-16076-a19987,answer,3,2020-01-09T19:41:01+00:00,2,False,"cnc,manufacturing",robotics,True,
+se-robotics-19453,question,1,2019-09-13T07:09:03+00:00,0,,calibration,robotics,False,Model indicated no relevant content.
+se-robotics-19453-a19465,answer,2,2019-09-16T19:54:47+00:00,0,True,calibration,robotics,True,
+se-robotics-12024,question,1,2017-04-04T11:05:34+00:00,0,,cnc,robotics,False,Model indicated no relevant content.
+se-robotics-12024-a12025,answer,2,2017-04-04T12:08:16+00:00,0,True,cnc,robotics,True,
+se-robotics-2433,question,1,2014-02-03T06:53:02+00:00,1,,"stepper-motor,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-2433-a2437,answer,2,2014-02-03T21:33:31+00:00,0,False,"stepper-motor,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-2433-a11033,answer,3,2016-11-10T17:45:45+00:00,1,False,"stepper-motor,cnc",robotics,True,
+se-robotics-7111,question,1,2015-04-27T12:56:19+00:00,1,,"forward-kinematics,cnc,dh-parameters",robotics,False,Model indicated no relevant content.
+se-robotics-7111-a7114,answer,2,2015-04-27T14:38:10+00:00,1,False,"forward-kinematics,cnc,dh-parameters",robotics,True,
+se-robotics-446,question,1,2012-11-16T21:03:22+00:00,7,,"stepper-motor,reprap",robotics,False,Model indicated no relevant content.
+se-robotics-446-a1284,answer,2,2013-05-09T18:51:47+00:00,0,False,"stepper-motor,reprap",robotics,True,
+se-robotics-446-a6529,answer,3,2015-02-05T13:01:38+00:00,0,False,"stepper-motor,reprap",robotics,True,
+se-robotics-8457,question,1,2015-11-13T22:42:58+00:00,0,,"irobot-create,design,turtlebot2",robotics,False,Model indicated no relevant content.
+se-robotics-8457-a8460,answer,2,2015-11-14T20:16:22+00:00,3,True,"irobot-create,design,turtlebot2",robotics,True,
+se-robotics-9965,question,1,2016-05-30T01:58:47+00:00,4,,"design,software,manufacturing,chassis,hardware",robotics,False,Model indicated no relevant content.
+se-robotics-9965-a9966,answer,2,2016-05-30T03:49:18+00:00,4,True,"design,software,manufacturing,chassis,hardware",robotics,True,
+se-robotics-19775,question,1,2019-11-22T19:45:42+00:00,0,,"arduino,python",robotics,True,
+se-robotics-113577,question,1,2024-11-03T02:55:11+00:00,0,,urdf,robotics,False,Model indicated no relevant content.
+se-robotics-113577-a114026,answer,2,2024-12-16T14:00:46+00:00,0,False,urdf,robotics,True,
+se-robotics-113577-a114037,answer,3,2024-12-17T11:51:08+00:00,0,False,urdf,robotics,True,
+se-robotics-116955,question,1,2025-07-02T04:44:55+00:00,1,,"ros2,robotic-arm,urdf,solidworks,sw-urdf-exporter",robotics,True,
+se-robotics-116955-a116963,answer,2,2025-07-02T16:26:30+00:00,0,False,"ros2,robotic-arm,urdf,solidworks,sw-urdf-exporter",robotics,True,
+se-robotics-104028,question,1,2023-09-09T01:28:11+00:00,0,,"stl,solidworks,dae",robotics,False,Model indicated no relevant content.
+se-robotics-104028-a104034,answer,2,2023-09-09T17:01:51+00:00,2,False,"stl,solidworks,dae",robotics,True,
+se-robotics-104028-a104053,answer,3,2023-09-11T08:42:10+00:00,0,False,"stl,solidworks,dae",robotics,True,
+se-robotics-96126,question,1,2020-06-10T01:04:10+00:00,0,,"ros,sw-urdf-exporter",robotics,True,
+se-robotics-96126-a96127,answer,2,2020-06-10T03:24:32+00:00,0,True,"ros,sw-urdf-exporter",robotics,True,
+se-robotics-89637,question,1,2018-11-19T02:04:22+00:00,0,,"ros,gazebo,rviz,ros-kinetic,joint-state-publisher",robotics,True,
+se-robotics-89637-a89638,answer,2,2018-11-19T03:06:16+00:00,0,True,"ros,gazebo,rviz,ros-kinetic,joint-state-publisher",robotics,True,
+se-robotics-86303,question,1,2018-04-02T20:15:53+00:00,0,,"urdf,plugin,solidworks,ros-indigo",robotics,False,Model indicated no relevant content.
+se-robotics-86303-a86304,answer,2,2018-05-17T09:24:06+00:00,0,True,"urdf,plugin,solidworks,ros-indigo",robotics,True,
+se-robotics-86474,question,1,2018-04-10T05:37:28+00:00,0,,"ros,gazebo,ros-kinetic,collada",robotics,True,
+se-robotics-86474-a86475,answer,2,2018-04-10T07:13:45+00:00,1,True,"ros,gazebo,ros-kinetic,collada",robotics,True,
+se-robotics-45238,question,1,2012-10-25T03:35:02+00:00,0,,"ros,sw-urdf-exporter",robotics,False,Model indicated no relevant content.
+se-robotics-45238-a45240,answer,2,2017-08-21T16:07:25+00:00,0,False,"ros,sw-urdf-exporter",robotics,True,
+se-robotics-82343,question,1,2017-08-15T06:55:55+00:00,0,,mesh,robotics,True,
+se-robotics-82343-a82344,answer,2,2017-08-15T09:00:24+00:00,0,True,mesh,robotics,True,
+se-robotics-82343-a82345,answer,3,2017-08-16T02:42:02+00:00,0,False,mesh,robotics,True,
+se-engineering-33491,question,1,2020-03-04T20:06:37+00:00,1,,"mechanical-engineering,mechanical,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-11664,question,1,2016-09-28T16:25:43+00:00,7,,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-11664-a11669,answer,2,2016-09-28T19:32:21+00:00,0,False,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-11664-a23817,answer,3,2018-09-19T09:13:45+00:00,0,False,"mechanical-engineering,tolerance",engineering,True,
+se-engineering-11664-a51793,answer,4,2022-07-19T13:41:58+00:00,0,False,"mechanical-engineering,tolerance",engineering,True,
+se-engineering-8466,question,1,2016-04-18T13:02:25+00:00,4,,"structural-engineering,finite-element-method,ansys",engineering,False,Model indicated no relevant content.
+se-engineering-8466-a8468,answer,2,2016-04-18T14:00:06+00:00,0,False,"structural-engineering,finite-element-method,ansys",engineering,True,
+se-engineering-8466-a52154,answer,3,2022-08-16T17:38:30+00:00,0,False,"structural-engineering,finite-element-method,ansys",engineering,True,
+se-engineering-45784,question,1,2021-08-27T03:50:00+00:00,4,,"mechanical,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-45784-a45785,answer,2,2021-08-27T05:45:54+00:00,7,False,"mechanical,tolerance",engineering,True,
+se-engineering-45784-a61979,answer,3,2024-11-15T02:10:17+00:00,0,False,"mechanical,tolerance",engineering,True,
+se-engineering-60009,question,1,2024-02-26T09:26:44+00:00,0,,"finite-element-method,vibration",engineering,False,Model indicated no relevant content.
+se-engineering-53898,question,1,2023-01-15T23:49:35+00:00,0,,"mechanical-engineering,aluminum,joining",engineering,False,Model indicated no relevant content.
+se-engineering-53833,question,1,2023-01-10T02:41:21+00:00,0,,"mechanical-engineering,machining,bearings",engineering,False,Model indicated no relevant content.
+se-engineering-53276,question,1,2022-11-21T15:16:37+00:00,0,,"mechanical-engineering,tolerance",engineering,True,
+se-engineering-45403,question,1,2021-08-03T04:18:40+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-45403-a45404,answer,2,2021-08-03T04:39:45+00:00,1,True,mechanical-engineering,engineering,True,
+se-engineering-22996,question,1,2018-07-31T23:58:15+00:00,3,,"mechanical-engineering,design,applied-mechanics,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-22996-a39618,answer,2,2021-01-09T06:22:52+00:00,1,False,"mechanical-engineering,design,applied-mechanics,manufacturing-engineering",engineering,True,
+se-engineering-38625,question,1,2020-11-13T05:40:54+00:00,0,,"mechanical-engineering,machining,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-29157,question,1,2019-07-12T07:00:06+00:00,2,,"machining,bearings",engineering,False,Model indicated no relevant content.
+se-engineering-29157-a29158,answer,2,2019-07-12T07:10:29+00:00,2,False,"machining,bearings",engineering,True,
+se-engineering-29157-a29162,answer,3,2019-07-12T12:17:34+00:00,1,False,"machining,bearings",engineering,True,
+se-engineering-29157-a29165,answer,4,2019-07-12T13:20:58+00:00,1,False,"machining,bearings",engineering,True,
+se-engineering-29157-a29185,answer,5,2019-07-13T21:42:50+00:00,1,False,"machining,bearings",engineering,True,
+se-engineering-22371,question,1,2018-06-21T13:19:27+00:00,1,,"mechanical-engineering,machining,fasteners,connections",engineering,False,Model indicated no relevant content.
+se-engineering-22371-a22451,answer,2,2018-06-25T19:23:45+00:00,1,False,"mechanical-engineering,machining,fasteners,connections",engineering,True,
+se-engineering-22371-a24021,answer,3,2018-10-03T14:28:16+00:00,0,False,"mechanical-engineering,machining,fasteners,connections",engineering,True,
+se-engineering-20990,question,1,2018-03-22T10:50:33+00:00,0,,"mechanical-engineering,materials,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-20990-a20991,answer,2,2018-03-22T14:01:02+00:00,1,False,"mechanical-engineering,materials,tolerance",engineering,True,
+se-engineering-20990-a20992,answer,3,2018-03-22T14:11:18+00:00,1,True,"mechanical-engineering,materials,tolerance",engineering,True,
+se-engineering-13471,question,1,2017-01-27T12:44:25+00:00,2,,"aluminum,fasteners",engineering,True,
+se-engineering-13471-a13475,answer,2,2017-01-27T20:32:22+00:00,1,True,"aluminum,fasteners",engineering,True,
+se-engineering-11178,question,1,2016-08-21T17:27:55+00:00,2,,"aluminum,heat-treatment",engineering,False,Model indicated no relevant content.
+se-engineering-11178-a11180,answer,2,2016-08-21T18:12:04+00:00,2,False,"aluminum,heat-treatment",engineering,True,
+se-engineering-11178-a12907,answer,3,2016-12-19T21:46:01+00:00,2,False,"aluminum,heat-treatment",engineering,True,
+se-engineering-7896,question,1,2016-03-11T21:15:29+00:00,3,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-7896-a7897,answer,2,2016-03-11T21:30:27+00:00,4,True,gears,engineering,True,
+se-engineering-7896-a11654,answer,3,2016-09-28T02:25:17+00:00,1,False,gears,engineering,True,
+se-engineering-7179,question,1,2016-01-30T01:27:48+00:00,3,,"mechanical-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-7179-a7180,answer,2,2016-01-30T03:48:24+00:00,4,True,"mechanical-engineering,machining",engineering,True,
+se-engineering-1739,question,1,2015-02-19T16:39:22+00:00,1,,"mechanical-engineering,fasteners",engineering,False,Model indicated no relevant content.
+se-engineering-28089,question,1,2019-04-25T14:27:42+00:00,2,,"mechanical-engineering,manufacturing-engineering",engineering,True,
+se-engineering-28089-a28091,answer,2,2019-04-25T15:44:33+00:00,0,False,"mechanical-engineering,manufacturing-engineering",engineering,True,
+se-engineering-28089-a28526,answer,3,2019-05-25T21:46:13+00:00,0,False,"mechanical-engineering,manufacturing-engineering",engineering,True,
+se-engineering-53809,question,1,2023-01-07T21:01:41+00:00,0,,"mechanical-engineering,motors,machining,drilling",engineering,False,Model indicated no relevant content.
+se-engineering-53809-a53812,answer,2,2023-01-08T00:56:21+00:00,0,True,"mechanical-engineering,motors,machining,drilling",engineering,True,
+se-engineering-49877,question,1,2022-02-20T18:30:15+00:00,0,,threads,engineering,False,Model indicated no relevant content.
+se-engineering-36220,question,1,2020-06-12T10:32:51+00:00,4,,"mechanical-engineering,design",engineering,True,
+se-engineering-36220-a39540,answer,2,2021-01-06T06:10:43+00:00,1,False,"mechanical-engineering,design",engineering,False,Model indicated no relevant content.
+se-engineering-32667,question,1,2020-01-06T15:33:44+00:00,2,,tolerance,engineering,False,Model indicated no relevant content.
+se-engineering-32667-a32670,answer,2,2020-01-06T18:09:02+00:00,7,True,tolerance,engineering,True,
+se-engineering-22798,question,1,2018-07-19T10:28:43+00:00,1,,"mechanical-engineering,cad,threads",engineering,False,Model indicated no relevant content.
+se-engineering-22798-a22814,answer,2,2018-07-20T12:41:21+00:00,3,False,"mechanical-engineering,cad,threads",engineering,True,
+se-engineering-4105,question,1,2015-08-21T20:46:27+00:00,2,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-55320,question,1,2023-05-22T05:28:54+00:00,1,,"mechanical-engineering,machining,cutting",engineering,True,
+se-engineering-55320-a55324,answer,2,2023-05-22T15:28:23+00:00,1,False,"mechanical-engineering,machining,cutting",engineering,True,
+se-engineering-40438,question,1,2021-02-18T10:21:12+00:00,0,,"mechanical-engineering,design,aluminum,fasteners",engineering,False,Model indicated no relevant content.
+se-engineering-40438-a40452,answer,2,2021-02-19T02:01:54+00:00,1,True,"mechanical-engineering,design,aluminum,fasteners",engineering,True,
+se-engineering-51534,question,1,2022-06-29T01:23:47+00:00,2,,"cad,technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-51534-a51543,answer,2,2022-06-29T19:37:52+00:00,1,True,"cad,technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-51534-a51563,answer,3,2022-07-01T03:27:26+00:00,0,False,"cad,technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-2490,question,1,2015-04-16T02:22:18+00:00,2,,"computer-aided-design,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-63978,question,1,2025-11-13T21:05:06+00:00,0,,"modeling,freecad",engineering,False,Model indicated no relevant content.
+se-engineering-63978-a63983,answer,2,2025-11-15T10:12:24+00:00,0,False,"modeling,freecad",engineering,True,
+se-engineering-17838,question,1,2017-10-31T16:59:04+00:00,2,,"mechanical-engineering,design,stresses,finite-element-method,strength",engineering,True,
+se-engineering-17838-a17843,answer,2,2017-10-31T19:05:27+00:00,0,False,"mechanical-engineering,design,stresses,finite-element-method,strength",engineering,True,
+se-engineering-60683,question,1,2024-05-21T03:58:59+00:00,0,,"cad,technical-drawing,drafting,drawings,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-41168,question,1,2021-03-24T17:36:54+00:00,-1,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-41168-a41171,answer,2,2021-03-24T21:07:09+00:00,0,True,solidworks,engineering,True,
+se-engineering-33031,question,1,2020-02-02T15:18:35+00:00,2,,cad,engineering,True,
+se-engineering-477,question,1,2015-02-05T13:33:45+00:00,4,,"machining,manufacturing-engineering,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-63216,question,1,2025-06-05T02:55:53+00:00,0,,"design,cad,mathematics,geometry",engineering,True,
+se-engineering-63216-a63218,answer,2,2025-06-05T12:28:32+00:00,0,False,"design,cad,mathematics,geometry",engineering,True,
+se-engineering-63216-a63229,answer,3,2025-06-07T05:26:06+00:00,0,True,"design,cad,mathematics,geometry",engineering,True,
+se-engineering-31829,question,1,2019-11-06T09:29:36+00:00,1,,autocad,engineering,False,Model indicated no relevant content.
+se-engineering-43350,question,1,2021-05-24T13:43:55+00:00,1,,"mechanical-engineering,applied-mechanics,torque,strength,shear",engineering,False,Model indicated no relevant content.
+se-engineering-43350-a43352,answer,2,2021-05-24T14:14:34+00:00,1,False,"mechanical-engineering,applied-mechanics,torque,strength,shear",engineering,True,
+se-engineering-33105,question,1,2020-02-06T09:42:13+00:00,-1,,thrust,engineering,False,Model indicated no relevant content.
+se-engineering-33105-a33106,answer,2,2020-02-06T13:06:58+00:00,0,False,thrust,engineering,True,
+se-engineering-31821,question,1,2019-11-05T21:24:25+00:00,0,,"cad,geometry,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-17907,question,1,2017-11-05T02:01:35+00:00,2,,"mechanical-engineering,manufacturing-engineering,metals,moments,yield-point",engineering,False,Model indicated no relevant content.
+se-engineering-17907-a17931,answer,2,2017-11-06T22:26:09+00:00,3,True,"mechanical-engineering,manufacturing-engineering,metals,moments,yield-point",engineering,True,
+se-engineering-11456,question,1,2016-09-11T05:17:37+00:00,3,,"mechanical-engineering,design,drafting",engineering,False,Model indicated no relevant content.
+se-engineering-55182,question,1,2023-05-10T15:41:53+00:00,0,,"machining,cnc",engineering,True,
+se-engineering-55182-a55195,answer,2,2023-05-11T12:48:21+00:00,2,True,"machining,cnc",engineering,True,
+se-engineering-14585,question,1,2017-04-03T16:24:36+00:00,1,,"materials,mechanical-failure,corrosion,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-41020,question,1,2021-03-17T19:03:31+00:00,1,,"design,bearings,drafting,tolerance,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-41020-a41025,answer,2,2021-03-17T21:19:15+00:00,0,False,"design,bearings,drafting,tolerance,machine-design",engineering,True,
+se-engineering-61740,question,1,2024-10-09T10:41:13+00:00,1,,"mechanical-engineering,manufacturing-engineering,technical-drawing,standards,tolerance",engineering,True,
+se-engineering-61740-a61777,answer,2,2024-10-14T10:13:42+00:00,0,False,"mechanical-engineering,manufacturing-engineering,technical-drawing,standards,tolerance",engineering,True,
+se-engineering-63086,question,1,2025-05-07T11:29:04+00:00,0,,"mechanical-engineering,bearings,forces",engineering,True,
+se-engineering-62163,question,1,2024-12-10T21:36:35+00:00,0,,"tolerance,statistics,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-62163-a62164,answer,2,2024-12-10T22:47:51+00:00,1,False,"tolerance,statistics,metalwork",engineering,True,
+se-engineering-61425,question,1,2024-08-25T13:43:48+00:00,1,,"mechanical-engineering,metallurgy,machining",engineering,False,Model indicated no relevant content.
+se-engineering-61425-a61455,answer,2,2024-08-29T04:22:24+00:00,1,False,"mechanical-engineering,metallurgy,machining",engineering,True,
+se-engineering-50185,question,1,2022-03-15T06:15:07+00:00,1,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-50185-a50186,answer,2,2022-03-15T07:02:58+00:00,1,False,machining,engineering,True,
+se-engineering-53907,question,1,2023-01-16T16:33:53+00:00,0,,"cnc,tolerance",engineering,True,
+se-engineering-53907-a53909,answer,2,2023-01-16T21:01:11+00:00,1,False,"cnc,tolerance",engineering,True,
+se-engineering-53907-a53910,answer,3,2023-01-16T21:51:07+00:00,1,False,"cnc,tolerance",engineering,True,
+se-engineering-53289,question,1,2022-11-22T12:37:44+00:00,0,,"mechanical-engineering,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-53289-a53295,answer,2,2022-11-22T19:39:50+00:00,1,False,"mechanical-engineering,technical-drawing",engineering,True,
+se-engineering-53289-a53301,answer,3,2022-11-23T08:34:22+00:00,1,False,"mechanical-engineering,technical-drawing",engineering,True,
+se-engineering-52189,question,1,2022-08-19T08:45:23+00:00,0,,"mechanical-engineering,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-47736,question,1,2021-10-16T01:51:50+00:00,5,,fasteners,engineering,False,Model indicated no relevant content.
+se-engineering-47736-a47737,answer,2,2021-10-16T02:50:10+00:00,3,True,fasteners,engineering,True,
+se-engineering-47736-a47741,answer,3,2021-10-16T04:19:47+00:00,5,False,fasteners,engineering,True,
+se-engineering-47736-a47744,answer,4,2021-10-16T05:37:24+00:00,3,False,fasteners,engineering,True,
+se-engineering-47736-a47756,answer,5,2021-10-16T18:39:49+00:00,0,False,fasteners,engineering,True,
+se-engineering-47325,question,1,2021-09-22T15:22:47+00:00,1,,technical-drawing,engineering,False,Model indicated no relevant content.
+se-engineering-47325-a47342,answer,2,2021-09-23T08:42:34+00:00,1,True,technical-drawing,engineering,True,
+se-engineering-47005,question,1,2021-09-06T16:29:13+00:00,0,,"mechanical-engineering,machine-design,standards",engineering,True,
+se-engineering-45463,question,1,2021-08-06T02:42:44+00:00,0,,drafting,engineering,True,
+se-engineering-45463-a45468,answer,2,2021-08-06T11:55:48+00:00,2,True,drafting,engineering,True,
+se-engineering-41011,question,1,2021-03-16T22:36:13+00:00,1,,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-41011-a41021,answer,2,2021-03-17T19:11:17+00:00,2,False,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,True,
+se-engineering-41011-a41026,answer,3,2021-03-17T23:25:09+00:00,4,False,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,True,
+se-engineering-41011-a42360,answer,4,2021-04-02T04:52:30+00:00,1,False,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,True,
+se-engineering-41011-a42502,answer,5,2021-04-10T05:33:20+00:00,1,False,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,True,
+se-engineering-41011-a42505,answer,6,2021-04-10T11:03:44+00:00,0,False,"mechanical-engineering,design,technical-drawing,tolerance,drawings",engineering,True,
+se-engineering-40789,question,1,2021-03-06T17:56:02+00:00,0,,threads,engineering,False,Model indicated no relevant content.
+se-engineering-40789-a40792,answer,2,2021-03-06T18:31:13+00:00,1,True,threads,engineering,True,
+se-engineering-39420,question,1,2020-12-31T12:15:53+00:00,1,,gears,engineering,True,
+se-engineering-39388,question,1,2020-12-28T23:42:07+00:00,0,,"technical-drawing,tolerance",engineering,True,
+se-engineering-39388-a39391,answer,2,2020-12-29T07:57:31+00:00,1,False,"technical-drawing,tolerance",engineering,True,
+se-engineering-36413,question,1,2020-06-25T20:52:43+00:00,2,,"machining,technical-drawing,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-36413-a36414,answer,2,2020-06-25T21:14:13+00:00,3,False,"machining,technical-drawing,tolerance",engineering,True,
+se-engineering-36413-a36420,answer,3,2020-06-26T12:32:53+00:00,2,False,"machining,technical-drawing,tolerance",engineering,True,
+se-engineering-36413-a36643,answer,4,2020-07-09T15:16:04+00:00,0,False,"machining,technical-drawing,tolerance",engineering,True,
+se-engineering-14015,question,1,2017-03-01T08:53:36+00:00,4,,"torque,pulleys",engineering,True,
+se-engineering-14015-a36236,answer,2,2020-06-13T01:32:07+00:00,1,False,"torque,pulleys",engineering,True,
+se-engineering-33628,question,1,2020-03-13T16:59:04+00:00,1,,"mechanical-engineering,mechanical,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-29956,question,1,2019-09-04T05:05:31+00:00,0,,"tolerance,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-23345,question,1,2018-08-20T14:11:47+00:00,1,,"mechanical-engineering,design,machining",engineering,False,Model indicated no relevant content.
+se-engineering-23345-a23347,answer,2,2018-08-20T14:27:27+00:00,1,True,"mechanical-engineering,design,machining",engineering,True,
+se-engineering-22510,question,1,2018-06-29T01:09:07+00:00,1,,"tolerance,metrology,lathe",engineering,False,Model indicated no relevant content.
+se-engineering-22510-a22523,answer,2,2018-06-29T11:48:22+00:00,0,True,"tolerance,metrology,lathe",engineering,True,
+se-engineering-6537,question,1,2015-12-15T16:56:05+00:00,5,,"mechanical-engineering,manufacturing-engineering,casting",engineering,False,Model indicated no relevant content.
+se-engineering-6537-a16471,answer,2,2017-07-26T19:47:28+00:00,0,False,"mechanical-engineering,manufacturing-engineering,casting",engineering,True,
+se-engineering-16854,question,1,2017-08-22T18:22:00+00:00,0,,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-16854-a16856,answer,2,2017-08-23T08:03:15+00:00,-1,False,"mechanical-engineering,tolerance",engineering,True,
+se-engineering-15733,question,1,2017-06-06T23:45:17+00:00,2,,"mechanical-engineering,design,gears,cad",engineering,False,Model indicated no relevant content.
+se-engineering-7321,question,1,2016-02-08T07:56:33+00:00,4,,"mechanical-engineering,design,cad,software",engineering,False,Model indicated no relevant content.
+se-engineering-8301,question,1,2016-04-05T16:08:44+00:00,6,,"mechanical-engineering,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-7607,question,1,2016-02-25T09:48:57+00:00,3,,"mechanical-engineering,machining,aluminum,tolerance,product-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-3128,question,1,2015-06-10T16:52:45+00:00,2,,"mechanical-engineering,bearings",engineering,True,
+se-engineering-7167,question,1,2016-01-29T18:41:55+00:00,4,,"mechanical-engineering,machining,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-1853,question,1,2015-02-25T15:21:54+00:00,6,,"mechanical-engineering,threads",engineering,False,Model indicated no relevant content.
+se-engineering-42233,question,1,2021-03-27T08:08:56+00:00,1,,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-42233-a42236,answer,2,2021-03-27T10:20:14+00:00,3,False,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-42233-a42282,answer,3,2021-03-29T12:43:44+00:00,1,False,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-36710,question,1,2020-07-14T20:53:26+00:00,1,,"mechanical-engineering,design,gears",engineering,False,Model indicated no relevant content.
+se-engineering-36710-a36851,answer,2,2020-07-24T15:46:05+00:00,1,False,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-36710-a63026,answer,3,2025-04-26T22:00:17+00:00,0,False,"mechanical-engineering,design,gears",engineering,False,Model indicated no relevant content.
+se-engineering-62707,question,1,2025-03-05T23:05:35+00:00,0,,"mechanical-engineering,design,cad",engineering,False,Model indicated no relevant content.
+se-engineering-45720,question,1,2021-08-23T02:12:59+00:00,1,,"strength,computer-hardware",engineering,True,
+se-engineering-45720-a46890,answer,2,2021-09-02T04:15:35+00:00,1,False,"strength,computer-hardware",engineering,True,
+se-engineering-62234,question,1,2024-12-19T19:50:13+00:00,0,,"stresses,elastic-modulus,bending,sheet-metal",engineering,True,
+se-engineering-62234-a62245,answer,2,2024-12-21T00:01:27+00:00,1,True,"stresses,elastic-modulus,bending,sheet-metal",engineering,True,
+se-engineering-62149,question,1,2024-12-09T05:13:32+00:00,0,,linkage,engineering,True,
+se-engineering-58716,question,1,2024-01-22T14:27:40+00:00,0,,"design,machining,machine-design",engineering,True,
+se-engineering-58716-a58717,answer,2,2024-01-22T15:27:37+00:00,2,False,"design,machining,machine-design",engineering,True,
+se-engineering-58716-a58718,answer,3,2024-01-22T15:31:11+00:00,3,False,"design,machining,machine-design",engineering,True,
+se-engineering-58341,question,1,2023-12-14T11:09:51+00:00,0,,mechanical-engineering,engineering,True,
+se-engineering-31241,question,1,2019-09-21T16:08:36+00:00,0,,"mechanical-engineering,machining,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-26504,question,1,2019-03-22T12:47:44+00:00,2,,"gears,stepper-motor",engineering,False,Model indicated no relevant content.
+se-engineering-53847,question,1,2023-01-11T10:26:09+00:00,1,,"structural-analysis,3d-printing,bolting",engineering,False,Model indicated no relevant content.
+se-engineering-53583,question,1,2022-12-17T16:14:33+00:00,1,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-53583-a53593,answer,2,2022-12-18T08:16:40+00:00,2,False,mechanical-engineering,engineering,True,
+se-engineering-52253,question,1,2022-08-25T22:09:18+00:00,0,,"machining,fasteners,bolting,brass,soldering",engineering,True,
+se-engineering-51698,question,1,2022-07-13T13:50:12+00:00,0,,"mechanical-engineering,mechanisms,mechanical,fasteners",engineering,False,Model indicated no relevant content.
+se-engineering-50394,question,1,2022-03-29T14:55:56+00:00,1,,"linear-motion,linear-control",engineering,True,
+se-engineering-50394-a50398,answer,2,2022-03-29T17:21:55+00:00,1,False,"linear-motion,linear-control",engineering,True,
+se-engineering-22035,question,1,2018-06-04T01:14:43+00:00,1,,"machining,bearings",engineering,False,Model indicated no relevant content.
+se-engineering-22035-a49946,answer,2,2022-02-24T00:36:45+00:00,0,False,"machining,bearings",engineering,True,
+se-engineering-49257,question,1,2022-01-13T16:30:52+00:00,0,,"structural-engineering,design,chemical-engineering,machine-design,plumbing",engineering,False,Model indicated no relevant content.
+se-engineering-49257-a49260,answer,2,2022-01-13T18:54:52+00:00,2,False,"structural-engineering,design,chemical-engineering,machine-design,plumbing",engineering,True,
+se-engineering-24004,question,1,2018-10-02T16:22:51+00:00,1,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-24004-a47915,answer,2,2021-10-27T08:35:09+00:00,1,False,gears,engineering,True,
+se-engineering-47625,question,1,2021-10-08T00:48:11+00:00,1,,"steel,instrumentation",engineering,True,
+se-engineering-47625-a47628,answer,2,2021-10-08T17:40:20+00:00,1,False,"steel,instrumentation",engineering,True,
+se-engineering-47625-a47629,answer,3,2021-10-08T17:59:06+00:00,1,False,"steel,instrumentation",engineering,True,
+se-engineering-47508,question,1,2021-10-01T17:47:42+00:00,0,,"gears,machining",engineering,True,
+se-engineering-47508-a47510,answer,2,2021-10-01T17:55:44+00:00,2,False,"gears,machining",engineering,True,
+se-engineering-47508-a47514,answer,3,2021-10-01T21:45:54+00:00,2,False,"gears,machining",engineering,True,
+se-engineering-47015,question,1,2021-09-07T13:25:48+00:00,0,,"mechanical-engineering,mechanisms,mechanical,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-47015-a47017,answer,2,2021-09-07T14:07:09+00:00,0,False,"mechanical-engineering,mechanisms,mechanical,machine-design",engineering,True,
+se-engineering-47015-a47018,answer,3,2021-09-07T14:07:33+00:00,2,True,"mechanical-engineering,mechanisms,mechanical,machine-design",engineering,True,
+se-engineering-47015-a47022,answer,4,2021-09-07T15:05:20+00:00,0,False,"mechanical-engineering,mechanisms,mechanical,machine-design",engineering,True,
+se-engineering-45214,question,1,2021-07-20T16:31:38+00:00,2,,"cnc,tools",engineering,False,Model indicated no relevant content.
+se-engineering-43404,question,1,2021-05-29T10:30:23+00:00,0,,pulleys,engineering,True,
+se-engineering-42719,question,1,2021-04-21T22:16:40+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-40718,question,1,2021-03-04T10:45:18+00:00,0,,"design,machine-elements",engineering,False,Model indicated no relevant content.
+se-engineering-40718-a40720,answer,2,2021-03-04T12:17:03+00:00,0,True,"design,machine-elements",engineering,True,
+se-engineering-39899,question,1,2021-01-23T02:49:58+00:00,0,,"piping,fasteners,prototyping",engineering,True,
+se-engineering-39899-a39983,answer,2,2021-01-27T06:14:17+00:00,1,False,"piping,fasteners,prototyping",engineering,True,
+se-engineering-38535,question,1,2020-11-06T06:53:57+00:00,2,,"mechanical-engineering,manufacturing-engineering,machining,robotics,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-38535-a38537,answer,2,2020-11-06T07:41:56+00:00,3,True,"mechanical-engineering,manufacturing-engineering,machining,robotics,3d-printing",engineering,True,
+se-engineering-38535-a38538,answer,3,2020-11-06T09:12:08+00:00,1,False,"mechanical-engineering,manufacturing-engineering,machining,robotics,3d-printing",engineering,True,
+se-engineering-38535-a38539,answer,4,2020-11-06T09:14:48+00:00,1,False,"mechanical-engineering,manufacturing-engineering,machining,robotics,3d-printing",engineering,True,
+se-engineering-38278,question,1,2020-10-20T06:12:02+00:00,3,,"aerospace-engineering,manufacturing-engineering,fasteners",engineering,False,Model indicated no relevant content.
+se-engineering-36520,question,1,2020-07-03T02:00:23+00:00,2,,"steel,metallurgy,machining,material-science",engineering,False,Model indicated no relevant content.
+se-engineering-36520-a36529,answer,2,2020-07-03T16:00:41+00:00,1,False,"steel,metallurgy,machining,material-science",engineering,True,
+se-engineering-36468,question,1,2020-06-30T12:43:03+00:00,1,,"gears,power-transmission",engineering,False,Model indicated no relevant content.
+se-engineering-36468-a36469,answer,2,2020-06-30T12:49:13+00:00,0,False,"gears,power-transmission",engineering,True,
+se-engineering-36468-a36471,answer,3,2020-06-30T17:29:28+00:00,1,False,"gears,power-transmission",engineering,True,
+se-engineering-36468-a36491,answer,4,2020-07-01T12:27:19+00:00,1,False,"gears,power-transmission",engineering,True,
+se-engineering-36388,question,1,2020-06-24T10:50:59+00:00,1,,"mechanical-engineering,gears,lathe",engineering,True,
+se-engineering-36388-a36389,answer,2,2020-06-24T13:19:09+00:00,1,False,"mechanical-engineering,gears,lathe",engineering,True,
+se-engineering-36388-a36390,answer,3,2020-06-24T13:26:30+00:00,1,True,"mechanical-engineering,gears,lathe",engineering,True,
+se-engineering-35752,question,1,2020-05-14T03:25:07+00:00,1,,"motors,gears,torque,servo",engineering,False,Model indicated no relevant content.
+se-engineering-35752-a35759,answer,2,2020-05-14T12:34:16+00:00,4,True,"motors,gears,torque,servo",engineering,True,
+se-engineering-32345,question,1,2019-12-13T14:35:38+00:00,1,,"mechanical-engineering,motors,gears,power,power-transmission",engineering,False,Model indicated no relevant content.
+se-engineering-31224,question,1,2019-09-20T11:52:24+00:00,0,,"automotive-engineering,metallurgy,joining",engineering,False,Model indicated no relevant content.
+se-engineering-29958,question,1,2019-09-04T08:48:47+00:00,0,,"machining,plastic,3d-printing,cutting",engineering,True,
+se-engineering-26370,question,1,2019-03-14T00:47:26+00:00,0,,bearings,engineering,False,Model indicated no relevant content.
+se-engineering-29581,question,1,2019-08-09T14:51:22+00:00,0,,"motors,gears",engineering,False,Model indicated no relevant content.
+se-engineering-28684,question,1,2019-06-05T15:53:12+00:00,3,,"mechanical-engineering,design,mechanisms,machining,machine-design",engineering,True,
+se-engineering-28684-a29426,answer,2,2019-07-29T12:37:53+00:00,2,False,"mechanical-engineering,design,mechanisms,machining,machine-design",engineering,True,
+se-engineering-2125,question,1,2015-03-18T10:48:17+00:00,13,,"mechanical-engineering,systems-design,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-2125-a11925,answer,2,2016-10-19T12:34:19+00:00,1,False,"mechanical-engineering,systems-design,computer-aided-design",engineering,True,
+se-engineering-2125-a29180,answer,3,2019-07-13T16:20:03+00:00,0,False,"mechanical-engineering,systems-design,computer-aided-design",engineering,True,
+se-engineering-28685,question,1,2019-06-05T18:13:23+00:00,3,,"mechanical-engineering,threads",engineering,True,
+se-engineering-7446,question,1,2016-02-15T14:35:26+00:00,4,,"gears,pulleys",engineering,True,
+se-engineering-7446-a14734,answer,2,2017-04-11T11:09:50+00:00,1,False,"gears,pulleys",engineering,True,
+se-engineering-26969,question,1,2019-04-19T05:03:49+00:00,0,,"manufacturing-engineering,metals",engineering,True,
+se-engineering-26969-a26985,answer,2,2019-04-20T02:00:25+00:00,2,False,"manufacturing-engineering,metals",engineering,True,
+se-engineering-26724,question,1,2019-04-03T23:00:01+00:00,0,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-5865,question,1,2015-10-21T11:16:39+00:00,5,,"mathematics,software,drafting",engineering,True,
+se-engineering-5865-a25296,answer,2,2018-12-29T17:06:40+00:00,0,False,"mathematics,software,drafting",engineering,True,
+se-engineering-24590,question,1,2018-11-08T15:41:11+00:00,1,,"design,machining,cad,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-8774,question,1,2016-05-07T12:48:31+00:00,3,,mechanisms,engineering,True,
+se-engineering-8774-a23808,answer,2,2018-09-18T10:33:41+00:00,-1,False,mechanisms,engineering,False,Model indicated no relevant content.
+se-engineering-19719,question,1,2018-03-05T08:44:05+00:00,1,,"mechanical-engineering,design,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-19719-a19720,answer,2,2018-03-05T10:14:07+00:00,1,False,"mechanical-engineering,design,manufacturing-engineering",engineering,True,
+se-engineering-15007,question,1,2017-04-27T13:42:40+00:00,2,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-15007-a15008,answer,2,2017-04-27T14:01:08+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-15007-a15014,answer,3,2017-04-27T16:21:36+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-15007-a15029,answer,4,2017-04-28T10:44:33+00:00,1,False,mechanical-engineering,engineering,True,
+se-engineering-15007-a16482,answer,5,2017-07-27T15:33:45+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-15007-a19573,answer,6,2018-02-23T12:04:47+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-19440,question,1,2018-02-15T16:56:51+00:00,1,,pneumatic,engineering,False,Model indicated no relevant content.
+se-engineering-19440-a19441,answer,2,2018-02-15T17:53:05+00:00,1,True,pneumatic,engineering,True,
+se-engineering-19440-a19465,answer,3,2018-02-17T02:51:52+00:00,0,False,pneumatic,engineering,True,
+se-engineering-7403,question,1,2016-02-12T22:04:34+00:00,3,,adhesive,engineering,True,
+se-engineering-7403-a18525,answer,2,2017-12-20T20:46:01+00:00,1,False,adhesive,engineering,True,
+se-engineering-17519,question,1,2017-10-13T17:09:00+00:00,2,,"mechanical-engineering,terminology",engineering,False,Model indicated no relevant content.
+se-engineering-17519-a17520,answer,2,2017-10-13T17:18:04+00:00,2,False,"mechanical-engineering,terminology",engineering,True,
+se-engineering-16097,question,1,2017-06-29T17:59:42+00:00,1,,"machining,manufacturing-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-16097-a16098,answer,2,2017-06-29T19:01:42+00:00,2,True,"machining,manufacturing-engineering",engineering,True,
+se-engineering-16097-a16111,answer,3,2017-06-30T13:11:41+00:00,1,False,"machining,manufacturing-engineering",engineering,True,
+se-engineering-7228,question,1,2016-02-02T16:43:57+00:00,4,,"pumps,airflow,turbomachinery",engineering,False,Model indicated no relevant content.
+se-engineering-7228-a15103,answer,2,2017-05-02T22:35:48+00:00,0,False,"pumps,airflow,turbomachinery",engineering,True,
+se-engineering-12944,question,1,2016-12-22T18:28:01+00:00,5,,"design,gears",engineering,False,Model indicated no relevant content.
+se-engineering-12944-a12951,answer,2,2016-12-23T12:31:53+00:00,5,True,"design,gears",engineering,True,
+se-engineering-12832,question,1,2016-12-14T00:08:19+00:00,1,,seals,engineering,False,Model indicated no relevant content.
+se-engineering-11640,question,1,2016-09-27T03:46:39+00:00,0,,"mechanical-engineering,motors,bicycles",engineering,False,Model indicated no relevant content.
+se-engineering-10300,question,1,2016-06-14T14:35:00+00:00,5,,"mechanical-engineering,gears",engineering,True,
+se-engineering-8688,question,1,2016-05-02T09:08:33+00:00,0,,materials,engineering,True,
+se-engineering-2908,question,1,2015-05-22T17:21:13+00:00,14,,"materials,cryogenics",engineering,True,
+se-engineering-8173,question,1,2016-03-26T17:10:25+00:00,5,,"design,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-6812,question,1,2016-01-07T10:15:23+00:00,4,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-34,question,1,2015-01-20T23:50:02+00:00,13,,"steel,corrosion,materials",engineering,False,Model indicated no relevant content.
+se-engineering-53434,question,1,2022-12-05T10:24:27+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-48630,question,1,2021-12-06T23:22:55+00:00,0,,"torque,pneumatic,injection-molding",engineering,False,Model indicated no relevant content.
+se-engineering-47127,question,1,2021-09-12T11:52:43+00:00,0,,"mechanical-engineering,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-19403,question,1,2018-02-13T16:26:52+00:00,0,,"gears,machining,cutting",engineering,False,Model indicated no relevant content.
+se-engineering-19403-a19467,answer,2,2018-02-17T03:24:51+00:00,1,True,"gears,machining,cutting",engineering,True,
+se-engineering-19576,question,1,2018-02-23T14:41:23+00:00,0,,"manufacturing-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-19576-a19590,answer,2,2018-02-24T02:19:05+00:00,1,True,"manufacturing-engineering,tolerance",engineering,True,
+se-engineering-60531,question,1,2024-05-01T16:19:30+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-37177,question,1,2020-08-16T11:13:52+00:00,4,,"mechanical-engineering,gears,bearings",engineering,False,Model indicated no relevant content.
+se-engineering-19633,question,1,2018-02-27T02:39:35+00:00,5,,"gears,stepper-motor,pulleys,timing",engineering,False,Model indicated no relevant content.
+se-engineering-19633-a19698,answer,2,2018-03-03T02:52:31+00:00,0,False,"gears,stepper-motor,pulleys,timing",engineering,True,
+se-engineering-19633-a24926,answer,3,2018-11-29T20:24:40+00:00,1,False,"gears,stepper-motor,pulleys,timing",engineering,True,
+se-engineering-18203,question,1,2017-11-27T06:06:15+00:00,3,,"mechanical-engineering,materials,measurements,threads,tools",engineering,True,
+se-engineering-18203-a18206,answer,2,2017-11-27T06:29:20+00:00,2,False,"mechanical-engineering,materials,measurements,threads,tools",engineering,True,
+se-engineering-18203-a18243,answer,3,2017-11-28T23:48:23+00:00,4,False,"mechanical-engineering,materials,measurements,threads,tools",engineering,True,
+se-engineering-18203-a18300,answer,4,2017-12-02T01:19:33+00:00,0,False,"mechanical-engineering,materials,measurements,threads,tools",engineering,True,
+se-engineering-8672,question,1,2016-04-30T08:44:34+00:00,4,,drilling,engineering,True,
+se-engineering-61371,question,1,2024-08-18T02:29:16+00:00,0,,"mechanical-engineering,mechanisms",engineering,False,Model indicated no relevant content.
+se-engineering-61371-a61372,answer,2,2024-08-18T04:30:42+00:00,1,True,"mechanical-engineering,mechanisms",engineering,True,
+se-engineering-61371-a61375,answer,3,2024-08-18T14:55:23+00:00,1,False,"mechanical-engineering,mechanisms",engineering,True,
+se-engineering-8730,question,1,2016-05-04T08:00:15+00:00,2,,"mechanical-engineering,design",engineering,True,
+se-engineering-8730-a8732,answer,2,2016-05-04T09:13:50+00:00,5,False,"mechanical-engineering,design",engineering,True,
+se-engineering-50092,question,1,2022-03-06T21:39:58+00:00,0,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-50092-a50093,answer,2,2022-03-06T21:46:26+00:00,0,False,solidworks,engineering,True,
+se-engineering-50092-a50099,answer,3,2022-03-07T06:13:17+00:00,0,False,solidworks,engineering,True,
+se-engineering-53444,question,1,2022-12-05T22:28:21+00:00,2,,drafting,engineering,False,Model indicated no relevant content.
+se-engineering-53444-a53446,answer,2,2022-12-06T01:35:39+00:00,2,False,drafting,engineering,True,
+se-engineering-48213,question,1,2021-11-12T19:05:30+00:00,1,,"cad,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-48213-a48214,answer,2,2021-11-12T20:20:16+00:00,2,False,"cad,autodesk-inventor",engineering,True,
+se-engineering-48213-a48256,answer,3,2021-11-15T18:29:44+00:00,0,False,"cad,autodesk-inventor",engineering,True,
+se-engineering-39323,question,1,2020-12-25T09:54:39+00:00,1,,"steel,drilling",engineering,False,Model indicated no relevant content.
+se-engineering-39323-a39326,answer,2,2020-12-25T18:29:59+00:00,1,False,"steel,drilling",engineering,True,
+se-engineering-18726,question,1,2018-01-04T18:30:04+00:00,6,,"mechanical-engineering,design,applied-mechanics,stresses,geometry",engineering,False,Model indicated no relevant content.
+se-engineering-18726-a18729,answer,2,2018-01-04T20:28:55+00:00,12,False,"mechanical-engineering,design,applied-mechanics,stresses,geometry",engineering,True,
+se-engineering-61937,question,1,2024-11-09T13:06:54+00:00,0,,mechanical-engineering,engineering,True,
+se-engineering-61937-a62058,answer,2,2024-11-26T04:13:42+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-63984,question,1,2025-11-16T06:40:05+00:00,0,,"mechanical-engineering,machine-design",engineering,False,Model indicated no relevant content.
+se-engineering-63984-a63985,answer,2,2025-11-16T09:39:54+00:00,1,False,"mechanical-engineering,machine-design",engineering,True,
+se-engineering-63984-a63992,answer,3,2025-11-18T01:06:11+00:00,0,False,"mechanical-engineering,machine-design",engineering,True,
+se-engineering-51648,question,1,2022-07-08T19:00:49+00:00,2,,"mechanical-engineering,gears,machine-design",engineering,True,
+se-engineering-51648-a55196,answer,2,2023-05-11T12:54:49+00:00,1,False,"mechanical-engineering,gears,machine-design",engineering,True,
+se-engineering-58898,question,1,2024-02-14T05:58:54+00:00,1,,"mechanical-engineering,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-58898-a58900,answer,2,2024-02-14T09:37:54+00:00,1,True,"mechanical-engineering,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-58490,question,1,2023-12-30T04:15:54+00:00,0,,"motors,shafts",engineering,True,
+se-engineering-58490-a58493,answer,2,2023-12-30T16:01:44+00:00,1,False,"motors,shafts",engineering,True,
+se-engineering-51464,question,1,2022-06-22T18:51:33+00:00,0,,"cad,technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-47742,question,1,2021-10-16T04:57:50+00:00,0,,"technical-drawing,drafting,drawings,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-47563,question,1,2021-10-05T05:03:53+00:00,1,,"technical-drawing,drafting,drawings,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-47563-a47567,answer,2,2021-10-05T10:54:21+00:00,2,True,"technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-47563-a47569,answer,3,2021-10-05T12:17:28+00:00,1,False,"technical-drawing,drafting,drawings,autodesk-inventor",engineering,True,
+se-engineering-47205,question,1,2021-09-16T16:15:31+00:00,1,,"technical-drawing,drawings,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-47205-a47206,answer,2,2021-09-16T17:08:26+00:00,0,False,"technical-drawing,drawings,autodesk-inventor",engineering,True,
+se-engineering-47205-a47207,answer,3,2021-09-16T18:04:13+00:00,0,False,"technical-drawing,drawings,autodesk-inventor",engineering,True,
+se-engineering-47205-a47208,answer,4,2021-09-16T18:31:31+00:00,0,False,"technical-drawing,drawings,autodesk-inventor",engineering,True,
+se-engineering-47205-a47230,answer,5,2021-09-17T11:07:12+00:00,2,True,"technical-drawing,drawings,autodesk-inventor",engineering,True,
+se-engineering-45585,question,1,2021-08-13T18:40:33+00:00,0,,"stresses,beam,finite-element-method",engineering,False,Model indicated no relevant content.
+se-engineering-45585-a45587,answer,2,2021-08-13T20:05:09+00:00,3,False,"stresses,beam,finite-element-method",engineering,True,
+se-engineering-45585-a45588,answer,3,2021-08-13T20:15:00+00:00,1,False,"stresses,beam,finite-element-method",engineering,True,
+se-engineering-45585-a45605,answer,4,2021-08-15T13:37:10+00:00,0,False,"stresses,beam,finite-element-method",engineering,True,
+se-engineering-45279,question,1,2021-07-24T18:02:14+00:00,1,,stresses,engineering,True,
+se-engineering-45279-a45280,answer,2,2021-07-24T19:12:34+00:00,0,False,stresses,engineering,True,
+se-engineering-45279-a45282,answer,3,2021-07-24T19:48:16+00:00,1,False,stresses,engineering,True,
+se-engineering-45279-a45283,answer,4,2021-07-24T21:41:28+00:00,1,False,stresses,engineering,True,
+se-engineering-40470,question,1,2021-02-20T17:23:57+00:00,2,,"mechanical-engineering,meshing",engineering,False,Model indicated no relevant content.
+se-engineering-40470-a40515,answer,2,2021-02-22T12:37:51+00:00,1,True,"mechanical-engineering,meshing",engineering,True,
+se-engineering-40470-a40599,answer,3,2021-02-26T01:13:43+00:00,1,False,"mechanical-engineering,meshing",engineering,True,
+se-engineering-37734,question,1,2020-09-19T21:41:17+00:00,4,,"modeling,cad,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-36201,question,1,2020-06-11T11:57:27+00:00,3,,"mechanical-engineering,motors,stresses,aluminum",engineering,False,Model indicated no relevant content.
+se-engineering-33499,question,1,2020-03-05T03:30:42+00:00,2,,"mechanical-engineering,stresses,solidworks",engineering,False,Model indicated no relevant content.
+se-engineering-24615,question,1,2018-11-10T21:33:52+00:00,4,,fatigue,engineering,True,
+se-engineering-56460,question,1,2023-09-27T22:39:33+00:00,0,,"gears,mathematics,kinematics",engineering,False,Model indicated no relevant content.
+se-engineering-56460-a56464,answer,2,2023-09-28T05:12:27+00:00,0,False,"gears,mathematics,kinematics",engineering,True,
+se-engineering-40833,question,1,2021-03-08T04:31:52+00:00,0,,"mechanical-engineering,torque,mechanisms,linkage",engineering,False,Model indicated no relevant content.
+se-engineering-40833-a40834,answer,2,2021-03-08T05:20:57+00:00,0,False,"mechanical-engineering,torque,mechanisms,linkage",engineering,True,
+se-engineering-40833-a40837,answer,3,2021-03-08T09:40:33+00:00,0,False,"mechanical-engineering,torque,mechanisms,linkage",engineering,True,
+se-engineering-40833-a42459,answer,4,2021-04-07T17:49:58+00:00,0,False,"mechanical-engineering,torque,mechanisms,linkage",engineering,True,
+se-engineering-40833-a60452,answer,5,2024-04-22T02:51:41+00:00,0,False,"mechanical-engineering,torque,mechanisms,linkage",engineering,True,
+se-engineering-35991,question,1,2020-05-29T17:56:16+00:00,1,,"stresses,finite-element-method,pressure-vessel,thermal-conduction,numerical-methods",engineering,True,
+se-engineering-35991-a36001,answer,2,2020-05-30T11:52:58+00:00,0,False,"stresses,finite-element-method,pressure-vessel,thermal-conduction,numerical-methods",engineering,True,
+se-engineering-52773,question,1,2022-10-06T03:38:01+00:00,0,,"mathematics,machining,terminology,threads",engineering,True,
+se-engineering-52773-a52776,answer,2,2022-10-06T14:27:39+00:00,2,False,"mathematics,machining,terminology,threads",engineering,True,
+se-engineering-52773-a64036,answer,3,2025-11-26T07:16:08+00:00,0,False,"mathematics,machining,terminology,threads",engineering,True,
+se-engineering-64001,question,1,2025-11-20T16:35:06+00:00,0,,freecad,engineering,False,Model indicated no relevant content.
+se-engineering-64001-a64005,answer,2,2025-11-20T22:50:49+00:00,1,True,freecad,engineering,True,
+se-engineering-52575,question,1,2022-09-21T12:06:58+00:00,4,,"mechanical-engineering,gears",engineering,True,
+se-engineering-52575-a55193,answer,2,2023-05-11T12:39:26+00:00,0,False,"mechanical-engineering,gears",engineering,True,
+se-engineering-52575-a56853,answer,3,2023-11-01T15:13:09+00:00,0,False,"mechanical-engineering,gears",engineering,True,
+se-engineering-63038,question,1,2025-04-29T11:04:01+00:00,0,,"cad,solidworks",engineering,True,
+se-engineering-62708,question,1,2025-03-06T03:05:09+00:00,0,,"abaqus,meshing",engineering,False,Model indicated no relevant content.
+se-engineering-60366,question,1,2024-04-09T12:09:25+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-55344,question,1,2023-05-24T21:44:38+00:00,1,,"mechanical-engineering,machining,technical-drawing,drafting,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-55073,question,1,2023-04-29T15:04:10+00:00,0,,"measurements,cad,metallurgy",engineering,False,Model indicated no relevant content.
+se-engineering-54639,question,1,2023-03-26T14:30:06+00:00,0,,optics,engineering,False,Model indicated no relevant content.
+se-engineering-52668,question,1,2022-09-28T08:29:37+00:00,1,,"mechanical-engineering,stresses,torque,moments,forces",engineering,True,
+se-engineering-52668-a52669,answer,2,2022-09-28T09:36:22+00:00,0,False,"mechanical-engineering,stresses,torque,moments,forces",engineering,True,
+se-engineering-52668-a53756,answer,3,2023-01-02T22:29:02+00:00,0,True,"mechanical-engineering,stresses,torque,moments,forces",engineering,True,
+se-engineering-51312,question,1,2022-06-10T00:58:48+00:00,1,,"mechanical,geometry",engineering,True,
+se-engineering-49407,question,1,2022-01-24T14:31:25+00:00,0,,"machining,tools",engineering,False,Model indicated no relevant content.
+se-engineering-48373,question,1,2021-11-24T05:53:54+00:00,0,,"solidworks,cad,technical-drawing,drafting,autodesk-inventor",engineering,True,
+se-engineering-48373-a48424,answer,2,2021-11-25T20:04:12+00:00,0,True,"solidworks,cad,technical-drawing,drafting,autodesk-inventor",engineering,True,
+se-engineering-48425,question,1,2021-11-25T23:32:19+00:00,1,,"solidworks,cad,technical-drawing,drawings,autodesk-inventor",engineering,False,Model indicated no relevant content.
+se-engineering-45808,question,1,2021-08-28T13:25:44+00:00,0,,"stresses,beam",engineering,True,
+se-engineering-45808-a45809,answer,2,2021-08-28T14:12:34+00:00,0,False,"stresses,beam",engineering,True,
+se-engineering-45808-a45810,answer,3,2021-08-28T15:24:25+00:00,1,True,"stresses,beam",engineering,False,Model indicated no relevant content.
+se-engineering-45142,question,1,2021-07-16T02:18:19+00:00,2,,drafting,engineering,False,Model indicated no relevant content.
+se-engineering-45142-a45144,answer,2,2021-07-16T02:51:34+00:00,1,False,drafting,engineering,True,
+se-engineering-37854,question,1,2020-09-27T10:44:25+00:00,3,,"stresses,pressure-vessel,mechanical-failure,solid-mechanics",engineering,False,Model indicated no relevant content.
+se-engineering-37854-a37855,answer,2,2020-09-27T11:36:52+00:00,3,True,"stresses,pressure-vessel,mechanical-failure,solid-mechanics",engineering,True,
+se-engineering-37854-a37862,answer,3,2020-09-27T15:30:04+00:00,2,False,"stresses,pressure-vessel,mechanical-failure,solid-mechanics",engineering,True,
+se-engineering-37502,question,1,2020-09-05T13:38:33+00:00,0,,"technical-drawing,drawings",engineering,True,
+se-engineering-37502-a37509,answer,2,2020-09-05T20:45:37+00:00,1,True,"technical-drawing,drawings",engineering,True,
+se-engineering-35090,question,1,2020-04-10T01:49:10+00:00,3,,"mechanical-engineering,design,gears",engineering,False,Model indicated no relevant content.
+se-engineering-35090-a35092,answer,2,2020-04-10T07:22:44+00:00,4,True,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-35090-a35217,answer,3,2020-04-17T04:14:20+00:00,0,False,"mechanical-engineering,design,gears",engineering,True,
+se-engineering-24502,question,1,2018-11-03T20:07:30+00:00,1,,pneumatic,engineering,False,Model indicated no relevant content.
+se-engineering-24502-a24513,answer,2,2018-11-04T11:30:49+00:00,1,False,pneumatic,engineering,True,
+se-engineering-32340,question,1,2019-12-13T01:51:27+00:00,2,,solidworks,engineering,False,Model indicated no relevant content.
+se-engineering-32340-a32343,answer,2,2019-12-13T12:11:59+00:00,1,True,solidworks,engineering,True,
+se-engineering-28223,question,1,2019-05-04T16:43:43+00:00,1,,"pipelines,solidworks",engineering,True,
+se-engineering-23320,question,1,2018-08-18T22:43:54+00:00,0,,technical-drawing,engineering,False,Model indicated no relevant content.
+se-engineering-23320-a23322,answer,2,2018-08-19T00:35:18+00:00,1,True,technical-drawing,engineering,True,
+se-engineering-21800,question,1,2018-05-18T09:33:48+00:00,0,,"torque,friction",engineering,True,
+se-engineering-21800-a21802,answer,2,2018-05-18T13:39:30+00:00,4,False,"torque,friction",engineering,True,
+se-engineering-5496,question,1,2015-09-21T17:21:42+00:00,4,,"mechanical-engineering,manufacturing-engineering,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-2589,question,1,2015-04-23T09:56:08+00:00,15,,"machining,metal-folding",engineering,False,Model indicated no relevant content.
+se-engineering-14710,question,1,2017-04-09T20:58:14+00:00,2,,autocad,engineering,False,Model indicated no relevant content.
+se-engineering-11928,question,1,2016-10-19T19:35:50+00:00,1,,"mechanical-engineering,design",engineering,True,
+se-engineering-11928-a11929,answer,2,2016-10-19T20:16:51+00:00,0,True,"mechanical-engineering,design",engineering,True,
+se-engineering-10669,question,1,2016-07-12T20:52:38+00:00,2,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-8631,question,1,2016-04-28T12:36:28+00:00,1,,design,engineering,False,Model indicated no relevant content.
+se-engineering-7603,question,1,2016-02-25T08:15:02+00:00,1,,ansys,engineering,False,Model indicated no relevant content.
+se-engineering-5576,question,1,2015-09-28T19:33:40+00:00,3,,"materials,metals,geometry,vacuum,buckling",engineering,False,Model indicated no relevant content.
+se-engineering-5576-a5699,answer,2,2015-10-08T20:35:02+00:00,3,True,"materials,metals,geometry,vacuum,buckling",engineering,True,
+se-engineering-3815,question,1,2015-08-05T17:02:16+00:00,3,,"civil-engineering,drafting,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-51998,question,1,2022-08-05T18:01:38+00:00,0,,"materials,machining",engineering,False,Model indicated no relevant content.
+se-engineering-51998-a52002,answer,2,2022-08-05T19:09:59+00:00,0,False,"materials,machining",engineering,True,
+se-engineering-51998-a52015,answer,3,2022-08-07T02:30:47+00:00,0,False,"materials,machining",engineering,True,
+se-engineering-32193,question,1,2019-12-04T15:17:37+00:00,1,,"distance-measurement,unit,international",engineering,False,Model indicated no relevant content.
+se-engineering-32193-a32205,answer,2,2019-12-05T01:58:22+00:00,3,True,"distance-measurement,unit,international",engineering,True,
+se-engineering-32193-a61843,answer,3,2024-10-22T20:52:13+00:00,0,False,"distance-measurement,unit,international",engineering,True,
+se-engineering-54644,question,1,2023-03-27T00:32:20+00:00,0,,"machining,education",engineering,False,Model indicated no relevant content.
+se-engineering-54644-a54646,answer,2,2023-03-27T09:49:39+00:00,0,True,"machining,education",engineering,True,
+se-engineering-52286,question,1,2022-08-29T20:38:52+00:00,0,,"mechanical-engineering,pistons",engineering,True,
+se-engineering-52286-a52289,answer,2,2022-08-30T05:07:50+00:00,3,True,"mechanical-engineering,pistons",engineering,True,
+se-engineering-15279,question,1,2017-05-12T14:50:00+00:00,3,,"manufacturing-engineering,grinding",engineering,False,Model indicated no relevant content.
+se-engineering-15279-a15351,answer,2,2017-05-16T20:46:40+00:00,3,True,"manufacturing-engineering,grinding",engineering,True,
+se-engineering-15279-a47156,answer,3,2021-09-14T15:57:43+00:00,3,False,"manufacturing-engineering,grinding",engineering,True,
+se-engineering-39732,question,1,2021-01-14T23:37:09+00:00,3,,"measurements,machining,metrology",engineering,False,Model indicated no relevant content.
+se-engineering-39732-a39733,answer,2,2021-01-14T23:46:56+00:00,1,False,"measurements,machining,metrology",engineering,True,
+se-engineering-39732-a39745,answer,3,2021-01-15T12:38:19+00:00,3,True,"measurements,machining,metrology",engineering,True,
+se-engineering-14636,question,1,2017-04-05T20:01:00+00:00,3,,"machining,threads",engineering,True,
+se-engineering-14636-a22482,answer,2,2018-06-27T12:28:37+00:00,2,True,"machining,threads",engineering,True,
+se-engineering-14636-a23596,answer,3,2018-09-04T12:30:12+00:00,1,False,"machining,threads",engineering,True,
+se-engineering-14636-a36858,answer,4,2020-07-24T22:07:01+00:00,0,False,"machining,threads",engineering,True,
+se-engineering-36408,question,1,2020-06-25T18:39:44+00:00,1,,"mechanical-engineering,design,stresses,bolting",engineering,False,Model indicated no relevant content.
+se-engineering-36408-a36411,answer,2,2020-06-25T20:08:33+00:00,1,False,"mechanical-engineering,design,stresses,bolting",engineering,True,
+se-engineering-36408-a36475,answer,3,2020-06-30T23:28:31+00:00,1,False,"mechanical-engineering,design,stresses,bolting",engineering,True,
+se-engineering-12604,question,1,2016-12-01T15:01:45+00:00,2,,"control-engineering,manufacturing-engineering,robotics",engineering,False,Model indicated no relevant content.
+se-engineering-12604-a12607,answer,2,2016-12-01T20:24:10+00:00,3,True,"control-engineering,manufacturing-engineering,robotics",engineering,True,
+se-engineering-35181,question,1,2020-04-15T02:47:36+00:00,2,,"machining,lasers,cutting",engineering,False,Model indicated no relevant content.
+se-engineering-35181-a35188,answer,2,2020-04-15T13:01:24+00:00,3,False,"machining,lasers,cutting",engineering,True,
+se-engineering-35181-a35889,answer,3,2020-05-21T19:35:01+00:00,0,True,"machining,lasers,cutting",engineering,True,
+se-engineering-17006,question,1,2017-09-07T08:05:55+00:00,1,,"mechanical-engineering,structural-analysis,machining,deformation,stiffness",engineering,False,Model indicated no relevant content.
+se-engineering-17006-a17007,answer,2,2017-09-07T08:16:31+00:00,1,False,"mechanical-engineering,structural-analysis,machining,deformation,stiffness",engineering,True,
+se-engineering-17006-a17008,answer,3,2017-09-07T11:01:02+00:00,0,True,"mechanical-engineering,structural-analysis,machining,deformation,stiffness",engineering,True,
+se-engineering-35107,question,1,2020-04-11T03:33:00+00:00,1,,linear-motion,engineering,True,
+se-engineering-35107-a35121,answer,2,2020-04-11T22:29:29+00:00,2,True,linear-motion,engineering,True,
+se-engineering-35028,question,1,2020-04-06T10:34:13+00:00,1,,"machining,robotics,industrial-engineering,product-engineering,production-technology",engineering,False,Model indicated no relevant content.
+se-engineering-35028-a35066,answer,2,2020-04-08T06:57:04+00:00,1,True,"machining,robotics,industrial-engineering,product-engineering,production-technology",engineering,True,
+se-engineering-28778,question,1,2019-06-13T00:15:57+00:00,2,,"structural-analysis,combustion",engineering,True,
+se-engineering-28778-a28788,answer,2,2019-06-13T20:19:57+00:00,2,False,"structural-analysis,combustion",engineering,True,
+se-engineering-24343,question,1,2018-10-24T17:50:04+00:00,2,,"modeling,technical-drawing",engineering,True,
+se-engineering-24343-a24376,answer,2,2018-10-26T10:33:40+00:00,1,False,"modeling,technical-drawing",engineering,True,
+se-engineering-5755,question,1,2015-10-12T00:18:41+00:00,4,,"mechanical-engineering,stepper-motor",engineering,False,Model indicated no relevant content.
+se-engineering-5755-a5756,answer,2,2015-10-12T01:25:33+00:00,11,True,"mechanical-engineering,stepper-motor",engineering,True,
+se-engineering-5755-a5757,answer,3,2015-10-12T01:29:17+00:00,8,False,"mechanical-engineering,stepper-motor",engineering,True,
+se-engineering-5755-a15594,answer,4,2017-05-30T09:48:59+00:00,1,False,"mechanical-engineering,stepper-motor",engineering,True,
+se-engineering-21710,question,1,2018-05-11T15:35:01+00:00,1,,"manufacturing-engineering,machining,technical-drawing,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-21710-a22484,answer,2,2018-06-27T12:42:12+00:00,1,False,"manufacturing-engineering,machining,technical-drawing,drawings",engineering,True,
+se-engineering-22440,question,1,2018-06-25T02:01:06+00:00,2,,"mechanical-engineering,materials",engineering,True,
+se-engineering-22440-a22441,answer,2,2018-06-25T02:18:31+00:00,1,False,"mechanical-engineering,materials",engineering,True,
+se-engineering-22440-a22460,answer,3,2018-06-26T13:47:35+00:00,1,True,"mechanical-engineering,materials",engineering,True,
+se-engineering-12240,question,1,2016-11-10T17:09:39+00:00,0,,"mechanical-engineering,machining",engineering,False,Model indicated no relevant content.
+se-engineering-12240-a12243,answer,2,2016-11-10T18:21:05+00:00,1,False,"mechanical-engineering,machining",engineering,True,
+se-engineering-12240-a12245,answer,3,2016-11-10T19:09:25+00:00,3,True,"mechanical-engineering,machining",engineering,True,
+se-engineering-180,question,1,2015-01-23T13:48:27+00:00,3,,"control-engineering,feedback-loop",engineering,True,
+se-engineering-55110,question,1,2023-05-02T18:50:43+00:00,0,,"mechanical-engineering,motors,gears,linear-motion",engineering,False,Model indicated no relevant content.
+se-engineering-55110-a55114,answer,2,2023-05-03T04:01:21+00:00,0,False,"mechanical-engineering,motors,gears,linear-motion",engineering,True,
+se-engineering-55110-a62424,answer,3,2025-01-23T05:09:44+00:00,0,False,"mechanical-engineering,motors,gears,linear-motion",engineering,True,
+se-engineering-51002,question,1,2022-05-16T21:28:28+00:00,0,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-51002-a51005,answer,2,2022-05-16T22:00:33+00:00,0,False,gears,engineering,True,
+se-engineering-51002-a51007,answer,3,2022-05-17T00:18:15+00:00,0,False,gears,engineering,True,
+se-engineering-63598,question,1,2025-08-17T07:40:15+00:00,0,,"mechanical-engineering,mechanical,manufacturing",engineering,True,
+se-engineering-63598-a63599,answer,2,2025-08-17T09:00:20+00:00,0,False,"mechanical-engineering,mechanical,manufacturing",engineering,True,
+se-engineering-60069,question,1,2024-03-02T19:04:07+00:00,1,,"linkage,hinge",engineering,False,Model indicated no relevant content.
+se-engineering-60069-a60073,answer,2,2024-03-02T22:19:13+00:00,0,False,"linkage,hinge",engineering,True,
+se-engineering-62207,question,1,2024-12-16T15:16:09+00:00,0,,robotics,engineering,False,Model indicated no relevant content.
+se-engineering-62207-a62209,answer,2,2024-12-16T16:12:07+00:00,1,False,robotics,engineering,True,
+se-engineering-53478,question,1,2022-12-08T16:30:21+00:00,0,,"machine-design,cnc,bending,machine-elements",engineering,False,Model indicated no relevant content.
+se-engineering-53478-a53511,answer,2,2022-12-11T12:25:31+00:00,1,False,"machine-design,cnc,bending,machine-elements",engineering,True,
+se-engineering-57078,question,1,2023-11-21T00:01:49+00:00,0,,"fluid-mechanics,pumps,pipelines",engineering,False,Model indicated no relevant content.
+se-engineering-57078-a57083,answer,2,2023-11-21T08:36:08+00:00,3,True,"fluid-mechanics,pumps,pipelines",engineering,True,
+se-engineering-56334,question,1,2023-09-15T10:14:56+00:00,0,,"cnc,communication",engineering,True,
+se-engineering-56018,question,1,2023-08-12T21:32:19+00:00,0,,"motors,electromagnetism,construction-management",engineering,False,Model indicated no relevant content.
+se-engineering-55384,question,1,2023-05-29T21:05:21+00:00,0,,"sensors,distance-measurement",engineering,False,Model indicated no relevant content.
+se-engineering-55384-a55385,answer,2,2023-05-29T21:26:10+00:00,1,True,"sensors,distance-measurement",engineering,True,
+se-engineering-55384-a55386,answer,3,2023-05-29T22:13:24+00:00,0,False,"sensors,distance-measurement",engineering,True,
+se-engineering-55266,question,1,2023-05-18T04:10:47+00:00,0,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-54907,question,1,2023-04-14T23:22:14+00:00,0,,"motors,gears,car,coupling",engineering,False,Model indicated no relevant content.
+se-engineering-54194,question,1,2023-02-11T09:48:12+00:00,2,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-54194-a54195,answer,2,2023-02-11T11:39:35+00:00,3,False,cnc,engineering,True,
+se-engineering-52290,question,1,2022-08-30T05:49:33+00:00,0,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-52290-a52292,answer,2,2022-08-30T07:50:07+00:00,0,True,mechanical-engineering,engineering,True,
+se-engineering-52290-a52296,answer,3,2022-08-30T16:35:12+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-52120,question,1,2022-08-14T16:26:29+00:00,0,,"mechanical-engineering,materials,design,manufacturing-engineering,solid-mechanics",engineering,False,Model indicated no relevant content.
+se-engineering-52120-a52121,answer,2,2022-08-14T17:15:13+00:00,3,True,"mechanical-engineering,materials,design,manufacturing-engineering,solid-mechanics",engineering,True,
+se-engineering-52120-a52150,answer,3,2022-08-16T16:00:08+00:00,1,False,"mechanical-engineering,materials,design,manufacturing-engineering,solid-mechanics",engineering,True,
+se-engineering-49112,question,1,2022-01-05T08:53:49+00:00,0,,"mechanical-engineering,manufacturing-engineering,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-47652,question,1,2021-10-10T14:33:13+00:00,0,,"measurements,machine-design",engineering,True,
+se-engineering-44992,question,1,2021-07-06T03:10:44+00:00,1,,"mechanical-engineering,gears,cad,robotics",engineering,False,Model indicated no relevant content.
+se-engineering-41157,question,1,2021-03-24T08:27:35+00:00,2,,"mechanical-engineering,mechanical,machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-41157-a41159,answer,2,2021-03-24T09:21:45+00:00,3,False,"mechanical-engineering,mechanical,machining,cnc",engineering,True,
+se-engineering-41157-a41162,answer,3,2021-03-24T11:40:03+00:00,2,False,"mechanical-engineering,mechanical,machining,cnc",engineering,True,
+se-engineering-2413,question,1,2015-04-11T21:16:04+00:00,4,,"mechanical-engineering,machining,cnc",engineering,True,
+se-engineering-2413-a40671,answer,2,2021-03-02T22:16:36+00:00,0,False,"mechanical-engineering,machining,cnc",engineering,True,
+se-engineering-39860,question,1,2021-01-21T12:48:17+00:00,2,,"terminology,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-38042,question,1,2020-10-06T12:42:49+00:00,1,,"control-engineering,gears,stepper-motor,cnc,power-transmission",engineering,False,Model indicated no relevant content.
+se-engineering-38042-a38046,answer,2,2020-10-06T16:13:07+00:00,0,True,"control-engineering,gears,stepper-motor,cnc,power-transmission",engineering,True,
+se-engineering-25441,question,1,2019-01-08T16:05:07+00:00,0,,"machining,metals,cnc,alloys",engineering,False,Model indicated no relevant content.
+se-engineering-25441-a25444,answer,2,2019-01-08T17:41:47+00:00,3,False,"machining,metals,cnc,alloys",engineering,True,
+se-engineering-6396,question,1,2015-12-02T22:58:36+00:00,1,,"machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-31266,question,1,2019-09-23T16:23:11+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-26547,question,1,2019-03-25T14:16:27+00:00,0,,cnc,engineering,False,Model indicated no relevant content.
+se-engineering-26547-a26548,answer,2,2019-03-25T15:20:33+00:00,1,True,cnc,engineering,True,
+se-engineering-24488,question,1,2018-11-03T10:40:46+00:00,1,,pneumatic,engineering,True,
+se-engineering-24488-a24490,answer,2,2018-11-03T11:52:06+00:00,2,True,pneumatic,engineering,True,
+se-engineering-23203,question,1,2018-08-12T14:20:14+00:00,1,,"manufacturing-engineering,machining,cnc",engineering,False,Model indicated no relevant content.
+se-engineering-21584,question,1,2018-05-03T13:39:52+00:00,0,,"cad,threads",engineering,False,Model indicated no relevant content.
+se-engineering-21584-a21585,answer,2,2018-05-03T17:51:54+00:00,2,True,"cad,threads",engineering,True,
+se-engineering-21584-a21652,answer,3,2018-05-08T01:34:57+00:00,2,False,"cad,threads",engineering,True,
+se-engineering-18910,question,1,2018-01-15T14:26:47+00:00,1,,"mechanical-engineering,thermodynamics,heat-transfer",engineering,False,Model indicated no relevant content.
+se-engineering-18910-a18936,answer,2,2018-01-16T18:28:58+00:00,1,True,"mechanical-engineering,thermodynamics,heat-transfer",engineering,True,
+se-engineering-17083,question,1,2017-09-12T13:01:12+00:00,1,,"motors,stepper-motor",engineering,False,Model indicated no relevant content.
+se-engineering-17083-a17089,answer,2,2017-09-13T05:11:04+00:00,1,False,"motors,stepper-motor",engineering,True,
+se-engineering-17083-a17524,answer,3,2017-10-14T05:23:44+00:00,1,True,"motors,stepper-motor",engineering,True,
+se-engineering-15572,question,1,2017-05-29T00:35:58+00:00,2,,"gears,linkage",engineering,True,
+se-engineering-13950,question,1,2017-02-26T12:45:35+00:00,1,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-12431,question,1,2016-11-22T02:39:33+00:00,4,,gears,engineering,False,Model indicated no relevant content.
+se-engineering-8881,question,1,2016-05-14T15:31:52+00:00,2,,"mechanical-engineering,tolerance",engineering,False,Model indicated no relevant content.
+se-engineering-6639,question,1,2015-12-24T21:48:10+00:00,1,,"mechanical-engineering,failure-analysis",engineering,False,Model indicated no relevant content.
+se-engineering-3755,question,1,2015-07-31T14:14:40+00:00,1,,"mechanical-engineering,materials,motors",engineering,True,
+se-engineering-3657,question,1,2015-07-22T18:10:00+00:00,0,,"mechanical-engineering,pulleys",engineering,False,Model indicated no relevant content.
+se-engineering-3259,question,1,2015-06-20T08:23:30+00:00,2,,"mechanical-engineering,aluminum,cnc",engineering,True,
+se-engineering-32,question,1,2015-01-20T23:41:29+00:00,6,,machining,engineering,False,Model indicated no relevant content.
+se-engineering-58769,question,1,2024-01-28T11:58:57+00:00,1,,"mechanical,surface-preparation,polishing,manufacturing",engineering,False,Model indicated no relevant content.
+se-engineering-56979,question,1,2023-11-12T16:03:30+00:00,0,,"manufacturing-engineering,metrology",engineering,True,
+se-engineering-56979-a56982,answer,2,2023-11-13T02:47:10+00:00,1,False,"manufacturing-engineering,metrology",engineering,False,Model indicated no relevant content.
+se-engineering-11839,question,1,2016-10-12T06:16:28+00:00,1,,metallurgy,engineering,True,
+se-engineering-31990,question,1,2019-11-19T00:41:56+00:00,0,,mechanical-engineering,engineering,True,
+se-engineering-14067,question,1,2017-03-03T16:46:06+00:00,3,,kinematics,engineering,False,Model indicated no relevant content.
+se-engineering-14067-a14090,answer,2,2017-03-06T02:56:21+00:00,0,False,kinematics,engineering,True,
+se-engineering-14067-a15364,answer,3,2017-05-17T22:40:32+00:00,0,False,kinematics,engineering,True,
+se-engineering-46985,question,1,2021-09-06T07:55:26+00:00,0,,aluminum,engineering,False,Model indicated no relevant content.
+se-engineering-46985-a46988,answer,2,2021-09-06T08:31:37+00:00,2,True,aluminum,engineering,True,
+se-engineering-25557,question,1,2019-01-16T17:49:18+00:00,1,,geometry,engineering,False,Model indicated no relevant content.
+se-engineering-25557-a25558,answer,2,2019-01-16T18:40:41+00:00,1,False,geometry,engineering,True,
+se-engineering-53416,question,1,2022-12-02T22:34:23+00:00,0,,"mechanical-engineering,3d-printing",engineering,False,Model indicated no relevant content.
+se-engineering-53416-a53418,answer,2,2022-12-03T00:05:15+00:00,0,False,"mechanical-engineering,3d-printing",engineering,True,
+se-engineering-57183,question,1,2023-11-30T12:13:59+00:00,0,,"metallurgy,technical-drawing,drawings",engineering,False,Model indicated no relevant content.
+se-engineering-57183-a57184,answer,2,2023-11-30T12:54:53+00:00,0,False,"metallurgy,technical-drawing,drawings",engineering,True,
+se-engineering-26431,question,1,2019-03-18T17:37:09+00:00,1,,automotive-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-26431-a26433,answer,2,2019-03-18T21:12:37+00:00,0,False,automotive-engineering,engineering,True,
+se-engineering-26431-a45470,answer,3,2021-08-06T13:24:49+00:00,0,False,automotive-engineering,engineering,True,
+se-engineering-22409,question,1,2018-06-23T00:39:17+00:00,2,,"mechanical-engineering,gears,meshing",engineering,False,Model indicated no relevant content.
+se-engineering-22409-a22415,answer,2,2018-06-23T09:50:04+00:00,0,False,"mechanical-engineering,gears,meshing",engineering,True,
+se-engineering-54274,question,1,2023-02-17T05:36:03+00:00,0,,design,engineering,False,Model indicated no relevant content.
+se-engineering-54274-a54275,answer,2,2023-02-17T07:33:18+00:00,0,False,design,engineering,True,
+se-engineering-54274-a54287,answer,3,2023-02-18T02:01:38+00:00,0,False,design,engineering,True,
+se-engineering-63677,question,1,2025-09-03T08:57:05+00:00,0,,"design,cad",engineering,False,Model indicated no relevant content.
+se-engineering-63677-a63683,answer,2,2025-09-04T13:45:50+00:00,0,False,"design,cad",engineering,True,
+se-engineering-63746,question,1,2025-09-18T11:38:43+00:00,0,,"mechanical-engineering,mechanisms",engineering,False,Model indicated no relevant content.
+se-engineering-52511,question,1,2022-09-17T06:28:41+00:00,0,,"mechanical-engineering,cad",engineering,False,Model indicated no relevant content.
+se-engineering-52511-a52524,answer,2,2022-09-18T09:06:12+00:00,2,False,"mechanical-engineering,cad",engineering,True,
+se-engineering-61445,question,1,2024-08-27T18:58:09+00:00,6,,"metal-folding,metalwork",engineering,False,Model indicated no relevant content.
+se-engineering-61445-a61446,answer,2,2024-08-27T20:13:54+00:00,9,True,"metal-folding,metalwork",engineering,True,
+se-engineering-60355,question,1,2024-04-06T22:28:50+00:00,1,,"mechanical-engineering,materials,aluminum,alloys",engineering,True,
+se-engineering-56611,question,1,2023-10-12T02:14:28+00:00,0,,"cad,technical-drawing",engineering,True,
+se-engineering-56611-a56613,answer,2,2023-10-12T06:05:29+00:00,1,True,"cad,technical-drawing",engineering,True,
+se-engineering-55808,question,1,2023-07-21T12:14:31+00:00,1,,"linear-motion,actuator,linear-motors",engineering,False,Model indicated no relevant content.
+se-engineering-55808-a55809,answer,2,2023-07-21T12:22:39+00:00,3,False,"linear-motion,actuator,linear-motors",engineering,True,
+se-engineering-54603,question,1,2023-03-22T03:38:17+00:00,-1,,autocad,engineering,False,Model indicated no relevant content.
+se-engineering-54603-a54606,answer,2,2023-03-22T06:46:16+00:00,0,True,autocad,engineering,True,
+se-engineering-54603-a54618,answer,3,2023-03-24T08:41:07+00:00,0,False,autocad,engineering,True,
+se-engineering-53696,question,1,2022-12-29T03:50:59+00:00,0,,"mechanical-engineering,design",engineering,False,Model indicated no relevant content.
+se-engineering-53360,question,1,2022-11-28T19:48:44+00:00,0,,"gears,manufacturing-engineering,lasers",engineering,True,
+se-engineering-52678,question,1,2022-09-29T09:08:21+00:00,0,,"cad,fasteners,standards,bolting",engineering,False,Model indicated no relevant content.
+se-engineering-52678-a52681,answer,2,2022-09-29T13:48:52+00:00,2,True,"cad,fasteners,standards,bolting",engineering,True,
+se-engineering-52678-a52691,answer,3,2022-09-30T11:38:22+00:00,0,False,"cad,fasteners,standards,bolting",engineering,True,
+se-engineering-50882,question,1,2022-05-07T19:59:12+00:00,1,,"mathematics,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-50882-a50883,answer,2,2022-05-07T20:28:08+00:00,2,False,"mathematics,technical-drawing",engineering,True,
+se-engineering-50882-a50885,answer,3,2022-05-08T00:45:54+00:00,0,False,"mathematics,technical-drawing",engineering,True,
+se-engineering-50882-a50900,answer,4,2022-05-09T13:26:15+00:00,0,False,"mathematics,technical-drawing",engineering,True,
+se-engineering-43442,question,1,2021-06-01T08:16:50+00:00,0,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-43442-a43445,answer,2,2021-06-01T11:16:16+00:00,1,True,cad,engineering,True,
+se-engineering-36662,question,1,2020-07-11T15:06:21+00:00,-1,,"design,manufacturing-engineering,cad,plastic,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-36662-a36663,answer,2,2020-07-11T15:37:02+00:00,1,False,"design,manufacturing-engineering,cad,plastic,computer-aided-design",engineering,True,
+se-engineering-36662-a36666,answer,3,2020-07-11T16:37:38+00:00,2,True,"design,manufacturing-engineering,cad,plastic,computer-aided-design",engineering,True,
+se-engineering-35187,question,1,2020-04-15T12:25:48+00:00,1,,"mechanical-engineering,gears,cad",engineering,False,Model indicated no relevant content.
+se-engineering-35187-a35189,answer,2,2020-04-15T13:56:05+00:00,1,True,"mechanical-engineering,gears,cad",engineering,True,
+se-engineering-35187-a35193,answer,3,2020-04-15T15:50:15+00:00,1,False,"mechanical-engineering,gears,cad",engineering,True,
+se-engineering-32304,question,1,2019-12-10T12:30:17+00:00,1,,"fluid-mechanics,design,cad,computer-aided-design",engineering,False,Model indicated no relevant content.
+se-engineering-32304-a32315,answer,2,2019-12-11T01:32:33+00:00,2,False,"fluid-mechanics,design,cad,computer-aided-design",engineering,True,
+se-engineering-32304-a32882,answer,3,2020-01-23T19:29:21+00:00,1,False,"fluid-mechanics,design,cad,computer-aided-design",engineering,True,
+se-engineering-32566,question,1,2019-12-28T11:43:36+00:00,1,,"modeling,simulation,terminology",engineering,False,Model indicated no relevant content.
+se-engineering-28739,question,1,2019-06-10T12:34:26+00:00,0,,"mechanical-engineering,bicycles,transmission,chain",engineering,False,Model indicated no relevant content.
+se-engineering-25128,question,1,2018-12-17T17:02:11+00:00,1,,"cad,geometry",engineering,False,Model indicated no relevant content.
+se-engineering-25128-a25139,answer,2,2018-12-17T23:45:08+00:00,0,True,"cad,geometry",engineering,True,
+se-engineering-23798,question,1,2018-09-17T19:51:53+00:00,0,,"mechanical,computer-aided-design,product-engineering",engineering,False,Model indicated no relevant content.
+se-engineering-23798-a23801,answer,2,2018-09-17T22:37:33+00:00,1,False,"mechanical,computer-aided-design,product-engineering",engineering,True,
+se-engineering-21781,question,1,2018-05-17T08:38:40+00:00,1,,cad,engineering,False,Model indicated no relevant content.
+se-engineering-21781-a21792,answer,2,2018-05-17T15:51:28+00:00,1,True,cad,engineering,True,
+se-engineering-21781-a21794,answer,3,2018-05-17T21:42:20+00:00,0,False,cad,engineering,True,
+se-engineering-19601,question,1,2018-02-25T01:18:27+00:00,0,,"mechanical-engineering,motors,cad,technical-drawing",engineering,False,Model indicated no relevant content.
+se-engineering-19601-a19602,answer,2,2018-02-25T01:38:50+00:00,3,False,"mechanical-engineering,motors,cad,technical-drawing",engineering,True,
+se-engineering-19601-a19607,answer,3,2018-02-25T06:18:22+00:00,1,True,"mechanical-engineering,motors,cad,technical-drawing",engineering,True,
+se-engineering-7921,question,1,2016-03-14T04:46:00+00:00,3,,mechanical-engineering,engineering,False,Model indicated no relevant content.
+se-engineering-7921-a19539,answer,2,2018-02-21T15:09:21+00:00,0,False,mechanical-engineering,engineering,True,
+se-engineering-15693,question,1,2017-06-05T21:07:20+00:00,1,,"steel,measurements,mathematics,aluminum",engineering,True,
+se-engineering-15693-a15697,answer,2,2017-06-05T21:48:24+00:00,2,True,"steel,measurements,mathematics,aluminum",engineering,True,
+se-engineering-15693-a15699,answer,3,2017-06-05T22:56:42+00:00,0,False,"steel,measurements,mathematics,aluminum",engineering,True,
+se-engineering-449,question,1,2015-02-04T16:41:32+00:00,18,,"modeling,finite-element-method,meshing",engineering,True,
+se-engineering-449-a14316,answer,2,2017-03-19T09:14:57+00:00,0,False,"modeling,finite-element-method,meshing",engineering,True,
+se-engineering-8725,question,1,2016-05-04T02:32:27+00:00,2,,"design,gears,drafting,autocad",engineering,False,Model indicated no relevant content.
+se-engineering-8725-a8736,answer,2,2016-05-04T11:08:09+00:00,4,False,"design,gears,drafting,autocad",engineering,True,
+se-engineering-8725-a8740,answer,3,2016-05-04T16:06:26+00:00,3,False,"design,gears,drafting,autocad",engineering,True,
+se-engineering-7924,question,1,2016-03-14T09:29:52+00:00,3,,"mechanical-engineering,torque,friction",engineering,False,Model indicated no relevant content.
+se-engineering-7924-a7946,answer,2,2016-03-15T03:16:53+00:00,0,True,"mechanical-engineering,torque,friction",engineering,True,
+se-engineering-7280,question,1,2016-02-05T07:46:49+00:00,3,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-2637,question,1,2015-04-27T19:31:41+00:00,3,,"mechanical-engineering,gears",engineering,False,Model indicated no relevant content.
+se-engineering-16174,question,1,2017-07-05T23:20:05+00:00,0,,"mechanical-engineering,automotive-engineering,manufacturing-engineering,engines,pistons",engineering,True,
+se-engineering-16174-a16175,answer,2,2017-07-06T02:03:54+00:00,-1,False,"mechanical-engineering,automotive-engineering,manufacturing-engineering,engines,pistons",engineering,True,
+se-engineering-2993,question,1,2015-05-31T19:20:02+00:00,7,,"mechanical-engineering,machining",engineering,True,
+se-engineering-2047,question,1,2015-03-11T20:32:03+00:00,5,,mechanical-engineering,engineering,True,
+se-mechanics-79822,question,1,2020-09-21T22:39:03+00:00,0,,"troubleshooting,water-pump,bushing",mechanics,True,
+se-mechanics-79822-a79823,answer,2,2020-09-21T23:03:00+00:00,2,False,"troubleshooting,water-pump,bushing",mechanics,True,
+se-mechanics-79822-a97970,answer,3,2024-09-26T23:47:13+00:00,2,False,"troubleshooting,water-pump,bushing",mechanics,True,
+se-mechanics-52499,question,1,2018-03-13T19:58:04+00:00,5,,"tools,machining",mechanics,False,Model indicated no relevant content.
+se-mechanics-52499-a52503,answer,2,2018-03-13T21:01:18+00:00,2,True,"tools,machining",mechanics,True,
+se-mechanics-38371,question,1,2016-11-07T03:57:06+00:00,6,,"cylinder,shim",mechanics,True,
+se-mechanics-39751,question,1,2016-12-13T20:53:57+00:00,2,,axle,mechanics,True,
+se-mechanics-40799,question,1,2017-01-11T17:27:33+00:00,7,,"engine-theory,crankshaft,machining",mechanics,True,
+se-mechanics-40799-a40800,answer,2,2017-01-11T17:39:32+00:00,6,True,"engine-theory,crankshaft,machining",mechanics,True,
+se-mechanics-40799-a40816,answer,3,2017-01-12T09:02:27+00:00,1,False,"engine-theory,crankshaft,machining",mechanics,True,
+se-mechanics-50850,question,1,2018-01-05T02:53:37+00:00,9,,"tools,machining",mechanics,False,Model indicated no relevant content.
+se-mechanics-50850-a50864,answer,2,2018-01-05T14:13:56+00:00,6,True,"tools,machining",mechanics,True,
+se-mechanics-62466,question,1,2019-01-04T11:50:51+00:00,0,,"cylinder-head,block,machining",mechanics,False,Model indicated no relevant content.
+se-mechanics-62466-a62467,answer,2,2019-01-04T12:06:40+00:00,0,True,"cylinder-head,block,machining",mechanics,True,
+se-mechanics-62466-a62476,answer,3,2019-01-04T19:53:33+00:00,1,False,"cylinder-head,block,machining",mechanics,True,
+se-robotics-21582,question,1,2020-12-31T13:49:15+00:00,0,,"motion,gearing,linear-bearing",robotics,True,
+se-robotics-4329,question,1,2014-07-31T09:21:59+00:00,4,,"cnc,chassis",robotics,True,
+se-robotics-4329-a4331,answer,2,2014-07-31T11:47:04+00:00,3,True,"cnc,chassis",robotics,True,
+se-robotics-4329-a4344,answer,3,2014-08-03T06:10:51+00:00,4,False,"cnc,chassis",robotics,True,
+se-robotics-4329-a4353,answer,4,2014-08-04T21:32:44+00:00,3,False,"cnc,chassis",robotics,True,
+se-robotics-4329-a4367,answer,5,2014-08-05T21:20:13+00:00,3,False,"cnc,chassis",robotics,True,
+se-robotics-22429,question,1,2021-07-20T15:48:00+00:00,1,,"cnc,linear-bearing",robotics,False,Model indicated no relevant content.
+se-robotics-22429-a22432,answer,2,2021-07-20T21:31:18+00:00,2,True,"cnc,linear-bearing",robotics,True,
+se-robotics-20309,question,1,2020-03-11T08:55:47+00:00,0,,stepper-motor,robotics,False,Model indicated no relevant content.
+se-robotics-78262,question,1,2017-01-10T06:01:24+00:00,0,,"ros,coordinate,sw-urdf-exporter,model",robotics,True,
+se-robotics-78262-a78263,answer,2,2017-01-10T08:30:53+00:00,0,True,"ros,coordinate,sw-urdf-exporter,model",robotics,True,
+se-robotics-9175,question,1,2016-02-13T19:27:20+00:00,3,,"otherservos,3d-printing",robotics,True,
+se-robotics-9175-a9178,answer,2,2016-02-14T02:50:03+00:00,3,True,"otherservos,3d-printing",robotics,True,
+se-robotics-9175-a9215,answer,3,2016-02-20T08:11:50+00:00,0,False,"otherservos,3d-printing",robotics,True,
+se-robotics-114679,question,1,2025-02-15T15:44:42+00:00,1,,"robotic-arm,servo",robotics,False,Model indicated no relevant content.
+se-robotics-19958,question,1,2020-01-06T05:34:41+00:00,0,,"mechanism,gearing",robotics,False,Model indicated no relevant content.
+se-robotics-835,question,1,2013-01-26T01:50:21+00:00,2,,cnc,robotics,True,
+se-robotics-23376,question,1,2022-04-06T18:04:14+00:00,0,,"stepper-motor,cnc,stepper-driver",robotics,True,
+se-robotics-23376-a23377,answer,2,2022-04-06T18:41:39+00:00,0,False,"stepper-motor,cnc,stepper-driver",robotics,True,
+se-robotics-117010,question,1,2025-07-08T19:30:29+00:00,1,,"cnc,automation",robotics,True,
+se-robotics-24357,question,1,2023-01-27T20:05:29+00:00,1,,actuator,robotics,False,Model indicated no relevant content.
+se-robotics-24357-a24369,answer,2,2023-02-01T19:30:48+00:00,3,True,actuator,robotics,True,
+se-robotics-24344,question,1,2023-01-25T17:59:02+00:00,1,,"motor,actuator,joint",robotics,False,Model indicated no relevant content.
+se-robotics-24344-a24353,answer,2,2023-01-27T06:48:23+00:00,0,True,"motor,actuator,joint",robotics,True,
+se-robotics-23506,question,1,2022-05-22T15:47:16+00:00,0,,"robotic-arm,motion-planning,stepper-motor,cnc",robotics,True,
+se-robotics-20835,question,1,2020-06-23T22:07:30+00:00,0,,"control,motor,servomotor,cnc,quadrature-encoder",robotics,True,
+se-robotics-20835-a20837,answer,2,2020-06-24T05:55:46+00:00,1,False,"control,motor,servomotor,cnc,quadrature-encoder",robotics,True,
+se-robotics-22403,question,1,2021-07-11T10:00:47+00:00,1,,"microcontroller,stepper-motor,cnc,stepper-driver",robotics,False,Model indicated no relevant content.
+se-robotics-22403-a22404,answer,2,2021-07-11T12:42:37+00:00,1,False,"microcontroller,stepper-motor,cnc,stepper-driver",robotics,True,
+se-robotics-22403-a22406,answer,3,2021-07-11T20:25:13+00:00,2,True,"microcontroller,stepper-motor,cnc,stepper-driver",robotics,True,
+se-robotics-22264,question,1,2021-06-08T00:26:12+00:00,2,,"robotic-arm,industrial-robot,software",robotics,False,Model indicated no relevant content.
+se-robotics-22264-a22270,answer,2,2021-06-09T14:49:14+00:00,2,True,"robotic-arm,industrial-robot,software",robotics,True,
+se-robotics-10923,question,1,2016-10-26T03:01:39+00:00,2,,"servomotor,torque,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-10923-a10926,answer,2,2016-10-26T20:08:51+00:00,2,True,"servomotor,torque,cnc",robotics,True,
+se-robotics-18365,question,1,2019-03-07T21:01:24+00:00,2,,"stepper-motor,power,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-18365-a20172,answer,2,2020-02-12T19:43:29+00:00,1,False,"stepper-motor,power,cnc",robotics,True,
+se-robotics-18813,question,1,2019-05-19T09:40:15+00:00,1,,"python,cnc",robotics,True,
+se-robotics-14905,question,1,2018-01-04T13:01:36+00:00,0,,"control,motion-planning,motion,cnc",robotics,True,
+se-robotics-14905-a14906,answer,2,2018-01-04T13:33:59+00:00,1,False,"control,motion-planning,motion,cnc",robotics,True,
+se-robotics-12595,question,1,2017-06-10T21:41:20+00:00,1,,"motor,actuator,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-12595-a12596,answer,2,2017-06-10T22:10:30+00:00,0,False,"motor,actuator,cnc",robotics,True,
+se-robotics-10860,question,1,2016-10-17T01:46:01+00:00,1,,cnc,robotics,False,Model indicated no relevant content.
+se-robotics-10860-a10862,answer,2,2016-10-17T06:58:05+00:00,4,True,cnc,robotics,True,
+se-robotics-10860-a11034,answer,3,2016-11-10T17:48:41+00:00,2,False,cnc,robotics,True,
+se-robotics-10860-a11035,answer,4,2016-11-10T23:29:59+00:00,1,False,cnc,robotics,True,
+se-robotics-2434,question,1,2014-02-03T13:50:52+00:00,1,,mechanism,robotics,False,Model indicated no relevant content.
+se-robotics-2434-a2436,answer,2,2014-02-03T21:29:45+00:00,1,False,mechanism,robotics,True,
+se-robotics-2434-a8496,answer,3,2015-11-18T11:56:50+00:00,0,False,mechanism,robotics,True,
+se-robotics-4880,question,1,2014-10-30T18:41:03+00:00,2,,"cnc,circuit",robotics,False,Model indicated no relevant content.
+se-robotics-4880-a4883,answer,2,2014-10-31T19:20:25+00:00,2,False,"cnc,circuit",robotics,True,
+se-robotics-4880-a4886,answer,3,2014-10-31T23:29:30+00:00,2,False,"cnc,circuit",robotics,True,
+se-robotics-3218,question,1,2014-07-09T07:37:58+00:00,2,,"actuator,linear-bearing",robotics,False,Model indicated no relevant content.
+se-robotics-3218-a4383,answer,2,2014-08-08T20:37:38+00:00,1,True,"actuator,linear-bearing",robotics,True,
+se-robotics-3206,question,1,2014-07-07T17:22:55+00:00,2,,"arduino,stepper-motor,stepper-driver,cnc,reprap",robotics,False,Model indicated no relevant content.
+se-robotics-3206-a3217,answer,2,2014-07-09T03:43:44+00:00,2,False,"arduino,stepper-motor,stepper-driver,cnc,reprap",robotics,True,
+se-robotics-1344,question,1,2013-05-29T17:47:11+00:00,1,,"design,quadcopter",robotics,False,Model indicated no relevant content.
+se-robotics-1344-a1398,answer,2,2013-06-05T23:14:28+00:00,2,False,"design,quadcopter",robotics,True,
+se-robotics-1344-a1452,answer,3,2013-06-20T21:03:17+00:00,1,False,"design,quadcopter",robotics,True,
+se-robotics-1344-a2318,answer,4,2014-01-16T11:30:13+00:00,1,False,"design,quadcopter",robotics,True,
+se-robotics-1638,question,1,2013-07-21T18:33:28+00:00,6,,"stepper-motor,cnc",robotics,False,Model indicated no relevant content.
+se-robotics-1638-a1639,answer,2,2013-07-21T21:32:06+00:00,3,True,"stepper-motor,cnc",robotics,True,
+se-robotics-1638-a1648,answer,3,2013-07-23T18:31:54+00:00,3,False,"stepper-motor,cnc",robotics,True,
+se-robotics-1638-a1665,answer,4,2013-07-27T04:53:20+00:00,1,False,"stepper-motor,cnc",robotics,True,
+se-robotics-865,question,1,2013-02-01T00:06:46+00:00,9,,"arduino,stepper-motor,current,cnc",robotics,False,Model indicated no relevant content.

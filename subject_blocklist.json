@@ -1,0 +1,15 @@
+{
+  "description": "Subject pairs that should never be in the same cluster. Each entry is [subject_a, subject_b]. Used by normalize_subjects.py to force distance to maximum before clustering.",
+  "blocked_pairs": [
+    ["CNC mill performance priorities", "3D printer performance priorities"],
+    ["condition for 0% thread engagement", "condition for 100% thread engagement"],
+    ["M6 helicoil drill size", "M1.6 metric tap drill size"],
+    ["cube corner fillet vertex patch type (equal radii)", "cube corner fillet vertex patch type (two radii smaller than third)"],
+    ["cantilever beam tip-load deflection", "simply supported beam point-load deflection"],
+    ["blocking delay on Arduino", "non-blocking delay support in Arduino"],
+    ["constant-force excitation displacement behavior", "force scaling under fixed-displacement excitation"],
+    ["cutting tap predrill size vs chip removal", "forming tap predrill size and material displacement"],
+    ["SolidWorks path mate", "SolidWorks limit mate"],
+    ["coolant use when drilling plastics", "coolant use to extend tool life in high\u2011volume, high\u2011feed drilling"]
+  ]
+}

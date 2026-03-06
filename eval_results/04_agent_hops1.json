@@ -1,0 +1,133 @@
+{
+  "test": "Agent shallow (k=10, hops=1, backfill)",
+  "query": "what should I consider when designing thin-walled aluminum parts for CNC machining?",
+  "model": "gpt-5",
+  "config": {
+    "top_k": 10,
+    "max_hops": 1,
+    "decompose": null,
+    "backfill": true,
+    "max_frames": 20
+  },
+  "elapsed_s": 363.9,
+  "sub_aspects": [
+    "Wall deflection under cutting loads",
+    "Chatter stability for thin walls",
+    "Residual stress release and warpage",
+    "Tool stickout to diameter ratio",
+    "Fixturing support and clamping pressure",
+    "Built-up edge and burr control"
+  ],
+  "diagnostic": {
+    "grade": "Weak coverage",
+    "relevant": 0,
+    "total": 10,
+    "avg_sim": 0.567,
+    "detail": "0/10 frames above 0.7 similarity (avg: 0.567)"
+  },
+  "metrics": {
+    "frames_ranked": 25,
+    "frames_cited": 21,
+    "unique_authors": 12,
+    "unique_threads": 15,
+    "disciplines": 6,
+    "evidence_claims": 16,
+    "reasoning_chains": 2,
+    "chain_frames": 7,
+    "formulas": 8,
+    "design_rules": 14,
+    "contradictions": 0,
+    "knowledge_gaps": 5,
+    "backfills": 5
+  },
+  "summary": "Thin-walled aluminum parts are highly compliant, so design for stiffness, conservative cutting forces, and robust fixturing. Model walls as beams/plates to limit deflection under machining loads; include cutting forces in your load case. Expect residual stresses to move the part after heavy material removal and unclamping; plan roughing/finishing and fixturing accordingly. Use vacuum or soft-jaw fixturing sized for adequate pressure×area, and avoid tapping threads in very thin walls. Control burrs with process and geometry (corner reliefs) and use sharp, appropriate-geometry tools to reduce cutting pressure.",
+  "disciplines": [
+    "design_geometry",
+    "machining_process",
+    "tooling",
+    "material",
+    "programming",
+    "quality"
+  ],
+  "design_rules": [
+    "Size thin walls using beam deflection: for simply supported cases under point load, delta_max = (P·L^3)/(48·E·I). Use this to keep machining deflection within tolerance.",
+    "Back-calculate minimum thickness from a deflection limit with t = cbrt( (12·P·L^3) / (48·E·d_max·w) ) when a simply supported rectangular section is a reasonable approximation.",
+    "Include cutting forces (not just weight) when estimating loads on thin walls and setups.",
+    "Avoid tapping into very thin walls; use through-fasteners, nuts, or inserts because thin panels often provide only about one thread turn.",
+    "Specify internal corner reliefs for mating fits; sharp internal corners are impractical and relief space helps accommodate burrs/debris.",
+    "For vacuum fixturing, compute hold-down as pressure × effective area; only vacuum-exposed area contributes to clamping.",
+    "Small parts around 3 in × 3 in may be hard to hold by vacuum without gaskets; plan dedicated seals or alternative fixturing.",
+    "Pocketed fixtures with through-holes connected to a vacuum source can provide reliable hold-down when clamps or tape are unsuitable.",
+    "With a capable vacuum system, targeting about 10 psi differential can yield on the order of 1000 lb of downforce on modest-sized panels.",
+    "Use a vise with soft jaws to rigidly secure small parts during drilling or light machining to prevent movement.",
+    "Select sharp tools to reduce cutting pressure and enable smaller effective cuts without rubbing on thin features.",
+    "Prefer positive lead-angle tooling to distribute cutting load along a greater edge length and improve stability/life.",
+    "Expect parts to move when heavy asymmetric material is removed; plan sequences and fixturing with residual-stress release in mind.",
+    "If assembly clearance is about 0.007 in, plan for thorough deburring or increased clearance because even small burrs can block fit."
+  ],
+  "knowledge_gaps": [
+    "No direct chatter stability data (e.g., stability lobe diagrams, critical wall thickness vs. cutting parameters) specific to thin-walled aluminum in the provided frames.",
+    "No quantitative guidance on tool stickout-to-diameter ratio limits for thin-wall machining in the provided frames.",
+    "No explicit plate/skin deflection formulas or recommended H/t limits for aluminum thin walls tied to machining tolerances in the provided frames (only beam models are cited).",
+    "No process parameter guidance (rpm, feed per tooth, width/depth of cut) to mitigate built-up edge on aluminum beyond general tool sharpness.",
+    "No data on thermal distortion or dimensional change from post-processing (e.g., anodizing) for thin-walled aluminum parts in the provided frames."
+  ],
+  "chain_labels": [
+    "Vacuum clamping: pressure × area governs hold-down; implications for part size and fixture strategy",
+    "Residual-stress effects linked to machining"
+  ],
+  "cited_frame_ids": [
+    "se-electronics-644282-a644287-1",
+    "se-electronics-746238-a746243-1",
+    "se-engineering-25920-a25921-1",
+    "se-engineering-26547-a26548-3",
+    "se-engineering-31385-0",
+    "se-engineering-32455-a32459-0",
+    "se-engineering-45279-a45280-0",
+    "se-engineering-46985-a46988-3",
+    "se-engineering-48831-a48833-0",
+    "se-engineering-48831-a48833-1",
+    "se-engineering-48831-a48833-3",
+    "se-engineering-49640-a49655-1",
+    "se-engineering-49640-a49655-5",
+    "se-engineering-52120-a52121-1",
+    "se-engineering-55277-a55280-2",
+    "se-engineering-58977-2",
+    "se-engineering-58977-3",
+    "se-engineering-58977-4",
+    "se-engineering-58977-a58978-0",
+    "se-engineering-62234-a62245-1",
+    "se-mechanics-51511-a51547-1"
+  ],
+  "authors": [
+    "Brian Bell",
+    "Criggie",
+    "DKNguyen",
+    "Greg Locock",
+    "Kuba hasn&#39;t forgotten Monica",
+    "NMech",
+    "Ron",
+    "SF.",
+    "Solar Mike",
+    "Transistor",
+    "fred_dot_u",
+    "kamran"
+  ],
+  "threads": [
+    "https://electronics.stackexchange.com/questions/644282/milling-pcb-with-cnc",
+    "https://electronics.stackexchange.com/questions/746238/drilling-holes-in-enclosure",
+    "https://engineering.stackexchange.com/questions/25920/mechanical-tolerances-on-a-cnc-machine",
+    "https://engineering.stackexchange.com/questions/26547/how-much-space-should-i-leave-between-round-bushing-and-the-rotating-parts-to-mi",
+    "https://engineering.stackexchange.com/questions/31385/is-cnc-milling-on-metals-always-followed-by-heat-treatment",
+    "https://engineering.stackexchange.com/questions/32455/where-to-find-springed-pegs-with-screws-for-a-cnc-mill",
+    "https://engineering.stackexchange.com/questions/45279/how-can-i-visualize-shear-stress-concentration",
+    "https://engineering.stackexchange.com/questions/46985/computing-the-required-thickness-of-an-aluminum-sheet-to-support-a-given-load",
+    "https://engineering.stackexchange.com/questions/48831/max-length-of-12mm-od-steel-rod-for-cnc-axis",
+    "https://engineering.stackexchange.com/questions/49640/usage-of-handedness-in-lathe-turning-tools",
+    "https://engineering.stackexchange.com/questions/52120/what-are-the-practical-solutions-to-manufacturing-this-mechanical-piece",
+    "https://engineering.stackexchange.com/questions/55277/when-milling-is-there-such-a-thing-as-a-cut-that-is-too-small",
+    "https://engineering.stackexchange.com/questions/58977/workholding-vacuum-only-on-a-portion-of-the-workpiece",
+    "https://engineering.stackexchange.com/questions/62234/how-can-i-determine-if-this-metal-flange-is-wide-enough-to-support-a-load-withou",
+    "https://mechanics.stackexchange.com/questions/51511/helicoil-installed-from-other-side"
+  ]
+}
