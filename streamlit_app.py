@@ -1105,7 +1105,38 @@ def main():
         )
         st.stop()
 
-    st.title("DFM Knowledge Graph Agent")
+    title_col, info_col = st.columns([6, 1])
+    with title_col:
+        st.title("DFM Knowledge Graph Agent")
+    with info_col:
+        st.markdown("<div style='height:28px'></div>", unsafe_allow_html=True)
+        with st.popover("\u2753 What is this?"):
+            st.markdown(
+                "### Design-for-Manufacturability Knowledge Agent\n\n"
+                "This tool helps **mechanical and product designers** get "
+                "manufacturing feedback *before* sending parts to the shop.\n\n"
+                "**The problem:** Experienced machinists carry decades of practical "
+                "knowledge about what's easy or hard to machine -- wall thickness "
+                "limits, fixturing tricks, tolerance traps -- but most of that "
+                "knowledge lives in forum posts and shop-floor conversations, not "
+                "in engineering textbooks.\n\n"
+                "**What this does:** We scraped thousands of expert discussions "
+                "from Stack Exchange engineering communities, used LLMs to extract "
+                "structured knowledge frames (risks, heuristics, workarounds, "
+                "principles), and built a semantic knowledge graph connecting them. "
+                "When you ask a question, the agent:\n\n"
+                "1. **Retrieves** relevant frames via multi-vector embedding search\n"
+                "2. **Traverses** the knowledge graph to find causal links, "
+                "mitigations, and contradictions\n"
+                "3. **Synthesizes** a structured report with design rules, "
+                "reasoning chains, and engineering rationale\n"
+                "4. **Backfills** knowledge gaps with textbook-level guidance\n\n"
+                "Every claim cites its source frame -- click any frame ID to see "
+                "the original quote, author, and thread URL.\n\n"
+                "**Built by** [Douglas McGowan](https://www.linkedin.com/in/douglas-mcgowan/), "
+                "Ph.D. Researcher at UC Berkeley's "
+                "[Co-Design Lab](https://codesign.berkeley.edu/)."
+            )
     st.caption(
         "Ask a design-for-manufacturability question. The agent retrieves practitioner "
         "knowledge from forum discussions, traverses the knowledge graph for related insights, "
