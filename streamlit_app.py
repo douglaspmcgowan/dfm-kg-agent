@@ -16,6 +16,8 @@ import json
 import pickle
 import hashlib
 import datetime
+import smtplib
+from email.mime.text import MIMEText
 from pathlib import Path
 
 import streamlit as st
@@ -320,6 +322,66 @@ def _record_visitor():
         tally["unique_ips"].append(ip_hash)
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
+
+
+# ─────────────────────────────────────────────
+# FEEDBACK
+# ─────────────────────────────────────────────
+
+_FEEDBACK_FILE = Path(__file__).parent / "feedback.json"
+_FEEDBACK_EMAIL = "dpm5970@berkeley.edu"
+
+
+def _save_feedback(name, email, message):
+    """Save feedback to local JSON and send email if SMTP is configured."""
+    entry = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "name": name,
+        "email": email,
+        "message": message,
+        "ip_hash": _get_visitor_ip_hash(),
+    }
+
+    # Save locally
+    feedback = []
+    if _FEEDBACK_FILE.exists():
+        try:
+            with open(_FEEDBACK_FILE, "r") as f:
+                feedback = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            feedback = []
+    feedback.append(entry)
+    with open(_FEEDBACK_FILE, "w") as f:
+        json.dump(feedback, f, indent=2)
+
+    # Send email via SMTP
+    try:
+        smtp_user = st.secrets.get("SMTP_USER")
+        smtp_pass = st.secrets.get("SMTP_PASSWORD")
+        smtp_server = st.secrets.get("SMTP_SERVER", "smtp.gmail.com")
+        smtp_port = int(st.secrets.get("SMTP_PORT", 587))
+
+        if smtp_user and smtp_pass:
+            subject = f"DFM KG Agent Feedback from {name or 'Anonymous'}"
+            body = (
+                f"Name: {name or 'Anonymous'}\n"
+                f"Email: {email or 'Not provided'}\n"
+                f"Time: {entry['timestamp']}\n\n"
+                f"Message:\n{message}"
+            )
+            msg = MIMEText(body)
+            msg["Subject"] = subject
+            msg["From"] = smtp_user
+            msg["To"] = _FEEDBACK_EMAIL
+
+            with smtplib.SMTP(smtp_server, smtp_port) as server:
+                server.starttls()
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(smtp_user, _FEEDBACK_EMAIL, msg.as_string())
+            return True
+    except Exception:
+        pass  # Email failed silently -- feedback is still saved locally
+    return False
 
 
 # ─────────────────────────────────────────────
@@ -1090,6 +1152,30 @@ def main():
             "\U0001f517 [LinkedIn](https://www.linkedin.com/in/douglas-mcgowan/) "
             " | [Co-Design Lab](https://codesign.berkeley.edu/team/douglas-mcgowan/)"
         )
+
+        # ── Feedback ──
+        st.divider()
+        with st.expander("\U0001f4ac Send Feedback", expanded=False):
+            with st.form("feedback_form", clear_on_submit=True):
+                fb_name = st.text_input("Name (optional)")
+                fb_email = st.text_input("Email (optional)")
+                fb_message = st.text_area(
+                    "Your feedback",
+                    placeholder="Bug reports, feature requests, questions, or general feedback...",
+                    height=120,
+                )
+                fb_submitted = st.form_submit_button(
+                    "\U0001f4e8 Send", use_container_width=True
+                )
+            if fb_submitted:
+                if not fb_message.strip():
+                    st.warning("Please enter a message.")
+                else:
+                    emailed = _save_feedback(fb_name.strip(), fb_email.strip(), fb_message.strip())
+                    if emailed:
+                        st.success("Thanks! Your feedback has been sent.")
+                    else:
+                        st.success("Thanks! Your feedback has been recorded.")
 
     # ── MAIN AREA ──
 
