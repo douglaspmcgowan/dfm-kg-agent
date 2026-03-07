@@ -1,8 +1,9 @@
 """
 Generate pre-cached DFM reports for the Streamlit app example questions.
 
-Example 0 (thin-walled aluminum): gpt-5 medium (reasoning_effort=None)
-Examples 1-3: gpt-5 low (reasoning_effort="low")
+Quick Search:       gpt-4.1, top_k=5,  max_hops=2, max_frames=15
+Efficient Thinking: gpt-5 low,  top_k=10, max_hops=2, max_frames=20
+Deep Reasoning:     gpt-5 medium, top_k=10, max_hops=3, max_frames=20
 
 Usage:
     python generate_example_cache.py
@@ -27,25 +28,29 @@ from dfm_report_schema import (
 )
 
 EXAMPLES = [
-    {
+    {   # Quick Search
         "question": "What should I consider when designing thin-walled aluminum parts for CNC machining?",
         "model": "gpt-4.1",
-        "reasoning_effort": None,  # Quick Search
+        "reasoning_effort": None,
+        "top_k": 5, "max_hops": 2, "max_frames": 15,
     },
-    {
+    {   # Quick Search
         "question": "What fixturing methods work best for thin flexible parts?",
         "model": "gpt-4.1",
         "reasoning_effort": None,
+        "top_k": 5, "max_hops": 2, "max_frames": 15,
     },
-    {
+    {   # Efficient Thinking
         "question": "What are the risks of deep pocket milling in steel?",
         "model": "gpt-5",
-        "reasoning_effort": "low",  # Efficient Thinking
+        "reasoning_effort": "low",
+        "top_k": 10, "max_hops": 2, "max_frames": 20,
     },
-    {
+    {   # Deep Reasoning
         "question": "How do I choose between climb and conventional milling?",
         "model": "gpt-5",
-        "reasoning_effort": None,  # Deep Reasoning (medium)
+        "reasoning_effort": None,  # medium (default)
+        "top_k": 10, "max_hops": 3, "max_frames": 20,
     },
 ]
 
@@ -59,7 +64,7 @@ with open(GRAPH_PICKLE, "rb") as f:
 print(f"  Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 
-def run_example(question, model_name, reasoning_effort):
+def run_example(question, model_name, reasoning_effort, top_k=10, max_hops=2, max_frames=20):
     """Run a single example query and return serializable result."""
     agent.MODEL = model_name
 
@@ -148,13 +153,14 @@ def run_example(question, model_name, reasoning_effort):
     effort_label = f" (reasoning_effort={reasoning_effort})" if reasoning_effort else " (medium)"
     print(f"\n{'='*60}")
     print(f"  {model_name}{effort_label}")
+    print(f"  top_k={top_k}, max_hops={max_hops}, max_frames={max_frames}")
     print(f"  Q: {question[:80]}...")
     print(f"{'='*60}")
 
     t0 = time.time()
     try:
         report, enrichment, ranked, sub_aspects, diagnostic, backfill_result, tracker = query_dfm(
-            question, top_k=10, max_frames=20, max_hops=2,
+            question, top_k=top_k, max_frames=max_frames, max_hops=max_hops,
             decompose=True, backfill=True, verbose=False, G=G,
         )
         elapsed = time.time() - t0
@@ -199,7 +205,12 @@ def main():
 
     for i, ex in enumerate(EXAMPLES):
         print(f"\n--- Example {i+1}/{len(EXAMPLES)} ---")
-        result = run_example(ex["question"], ex["model"], ex["reasoning_effort"])
+        result = run_example(
+            ex["question"], ex["model"], ex["reasoning_effort"],
+            top_k=ex.get("top_k", 10),
+            max_hops=ex.get("max_hops", 2),
+            max_frames=ex.get("max_frames", 20),
+        )
         if result:
             cache[ex["question"]] = result
         else:
