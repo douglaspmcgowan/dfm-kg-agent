@@ -50,11 +50,22 @@ from dfm_report_schema import (
 # ANALYSIS MODE CONFIGS
 # ─────────────────────────────────────────────
 
+FLASH_MODE = {
+    "model": "gpt-4.1-mini",
+    "reasoning_effort": None,
+    "icon": "\u26a1",
+    "time_range": "~20 sec",
+    "token_range": "~7K tokens",
+    "cost_estimate": "~$0.01",
+    "description": "Fastest results. Best for quick checks and simple questions.",
+    "top_k": 5, "max_hops": 1, "max_frames": 10,
+}
+
 ANALYSIS_MODES = {
     "Quick Search": {
         "model": "gpt-4.1",
         "reasoning_effort": None,
-        "icon": "\u26a1",
+        "icon": "\U0001f50d",
         "time_range": "1-2 min",
         "token_range": "~11K tokens",
         "cost_estimate": "~$0.05",
@@ -1083,37 +1094,70 @@ def main():
         st.divider()
         st.markdown("**Controls**")
 
-        # Analysis mode selector
+        # Flash Mode toggle — visually separate, above standard modes
+        flash_on = st.toggle(
+            "\u26a1 Flash Mode",
+            value=False,
+            help="Ultra-fast ~20s analysis with gpt-4.1-mini. Disables advanced settings.",
+        )
+        if flash_on:
+            st.caption(
+                f"{FLASH_MODE['description']}  \n"
+                f"**{FLASH_MODE['time_range']}** &nbsp;|&nbsp; "
+                f"**{FLASH_MODE['token_range']}** &nbsp;|&nbsp; "
+                f"**{FLASH_MODE['cost_estimate']}**/query"
+            )
+
+        st.divider()
+
+        # Standard analysis modes — disabled when Flash is on
         mode_names = list(ANALYSIS_MODES.keys())
-        mode_labels = [
-            f"{ANALYSIS_MODES[m]['icon']} {m}" for m in mode_names
-        ]
         selected_mode = st.radio(
             "Analysis mode",
             mode_names,
             format_func=lambda m: f"{ANALYSIS_MODES[m]['icon']} {m}",
             index=0,
+            disabled=flash_on,
             help="Controls the LLM used for synthesis. Affects speed, depth, and cost.",
         )
         mode_cfg = ANALYSIS_MODES[selected_mode]
-        st.caption(
-            f"{mode_cfg['description']}  \n"
-            f"**{mode_cfg['time_range']}** &nbsp;|&nbsp; "
-            f"**{mode_cfg['token_range']}** &nbsp;|&nbsp; "
-            f"**{mode_cfg['cost_estimate']}**/query"
-        )
+        if not flash_on:
+            st.caption(
+                f"{mode_cfg['description']}  \n"
+                f"**{mode_cfg['time_range']}** &nbsp;|&nbsp; "
+                f"**{mode_cfg['token_range']}** &nbsp;|&nbsp; "
+                f"**{mode_cfg['cost_estimate']}**/query"
+            )
 
-        top_k = st.slider("Top K (frames per query)", min_value=3, max_value=25, value=10, step=1,
-                          help="Number of frames to retrieve from the vector index per sub-aspect")
-        max_hops = st.slider("Max Hops (graph traversal)", min_value=1, max_value=4, value=2, step=1,
-                             help="How many edge hops to follow in the semantic graph")
-        max_frames = st.slider("Max Frames (for synthesis)", min_value=10, max_value=40, value=20, step=5,
-                               help="Maximum frames passed to the LLM for report synthesis")
-        decompose = st.checkbox("Decompose query", value=True,
-                                help="Break question into engineering sub-aspects for broader retrieval")
-        backfill = st.checkbox("Backfill knowledge gaps", value=True,
-                               help="Generate textbook answers for areas not covered by the knowledge graph")
-        concise = st.checkbox("Concise output", value=False,
+        # Retrieval settings — disabled when Flash is on
+        if flash_on:
+            top_k = FLASH_MODE["top_k"]
+            max_hops = FLASH_MODE["max_hops"]
+            max_frames = FLASH_MODE["max_frames"]
+            st.slider("Top K (frames per query)", min_value=3, max_value=25,
+                      value=FLASH_MODE["top_k"], step=1, disabled=True)
+            st.slider("Max Hops (graph traversal)", min_value=1, max_value=4,
+                      value=FLASH_MODE["max_hops"], step=1, disabled=True)
+            st.slider("Max Frames (for synthesis)", min_value=10, max_value=40,
+                      value=FLASH_MODE["max_frames"], step=5, disabled=True)
+            decompose = False
+            backfill = False
+            st.checkbox("Decompose query", value=False, disabled=True,
+                        help="Disabled in Flash Mode")
+            st.checkbox("Backfill knowledge gaps", value=False, disabled=True,
+                        help="Disabled in Flash Mode")
+        else:
+            top_k = st.slider("Top K (frames per query)", min_value=3, max_value=25, value=10, step=1,
+                              help="Number of frames to retrieve from the vector index per sub-aspect")
+            max_hops = st.slider("Max Hops (graph traversal)", min_value=1, max_value=4, value=2, step=1,
+                                 help="How many edge hops to follow in the semantic graph")
+            max_frames = st.slider("Max Frames (for synthesis)", min_value=10, max_value=40, value=20, step=5,
+                                   help="Maximum frames passed to the LLM for report synthesis")
+            decompose = st.checkbox("Decompose query", value=True,
+                                    help="Break question into engineering sub-aspects for broader retrieval")
+            backfill = st.checkbox("Backfill knowledge gaps", value=True,
+                                   help="Generate textbook answers for areas not covered by the knowledge graph")
+        concise = st.checkbox("Concise output", value=False, disabled=flash_on,
                               help="Shorter report: max 5 design rules, collapsed evidence, compact knowledge gaps")
         pin_popovers = st.checkbox("Pin popovers", value=False,
                                    help="Keep frame detail popovers open while scrolling (default: auto-dismiss on scroll)")
@@ -1243,7 +1287,48 @@ def main():
                 "reasoning chains, and engineering rationale\n"
                 "4. **Backfills** knowledge gaps with textbook-level guidance\n\n"
                 "Every claim cites its source frame -- click any frame ID to see "
-                "the original quote, author, and thread URL.\n\n"
+                "the original quote, author, and thread URL."
+            )
+            st.divider()
+            st.markdown(
+                "### Quick Start Guide\n\n"
+                "1. **Type a question** about your design or manufacturing process "
+                "in the text box, or click an **example question** below.\n"
+                "2. **Choose an analysis mode** in the sidebar (or try an example "
+                "first -- they load instantly).\n"
+                "3. Click **Analyze** and wait for the report.\n"
+                "4. **Explore the report:** click frame popovers to see original "
+                "source quotes, scroll through discipline tabs, and expand "
+                "dropdowns for evidence and knowledge gaps.\n\n"
+                "---\n\n"
+                "### Analysis Modes\n\n"
+                "| Mode | Speed | Best For |\n"
+                "|---|---|---|\n"
+                "| **\u26a1 Flash Mode** | ~20 sec | Quick checks, simple questions. "
+                "Uses gpt-4.1-mini with lean retrieval. |\n"
+                "| **\U0001f50d Quick Search** | 1-2 min | Interactive exploration. "
+                "Good balance of speed and depth. |\n"
+                "| **\U0001f9e0 Efficient Thinking** | 3-4 min | Deeper analysis "
+                "with more rules and reasoning chains. |\n"
+                "| **\U0001f52c Deep Reasoning** | 7-10 min | Most thorough. "
+                "Maximum rules, disciplines, and gap detection. |\n\n"
+                "---\n\n"
+                "### Sidebar Settings\n\n"
+                "- **Top K** -- How many frames to retrieve per search. "
+                "Higher = broader coverage, slower.\n"
+                "- **Max Hops** -- Graph traversal depth. More hops find "
+                "indirect connections (e.g., a risk that MITIGATES another).\n"
+                "- **Max Frames** -- Total frames sent to the LLM. "
+                "More frames = richer report but longer synthesis.\n"
+                "- **Decompose query** -- Breaks your question into sub-aspects "
+                "(e.g., 'thin walls' -> geometry, fixturing, thermal). "
+                "Helps for broad questions.\n"
+                "- **Backfill knowledge gaps** -- If the graph doesn't cover "
+                "something, the LLM fills in with textbook-level engineering guidance.\n"
+                "- **Concise output** -- Caps design rules at 5 and collapses "
+                "evidence sections for quicker scanning.\n\n"
+                "Flash Mode locks these to optimal fast settings automatically.\n\n"
+                "---\n\n"
                 "**Built by** [Douglas McGowan](https://www.linkedin.com/in/douglas-mcgowan/), "
                 "Ph.D. Researcher at UC Berkeley's "
                 "[Co-Design Lab](https://codesign.berkeley.edu/)."
@@ -1311,8 +1396,17 @@ def main():
         _t0 = _time.time()
 
         # Apply analysis mode: set model and patch reasoning_effort if needed
-        _agent_module.MODEL = mode_cfg["model"]
-        _reasoning_effort = mode_cfg["reasoning_effort"]
+        if flash_on:
+            _agent_module.MODEL = FLASH_MODE["model"]
+            _reasoning_effort = None
+            top_k = FLASH_MODE["top_k"]
+            max_hops = FLASH_MODE["max_hops"]
+            max_frames = FLASH_MODE["max_frames"]
+            decompose = False
+            backfill = False
+        else:
+            _agent_module.MODEL = mode_cfg["model"]
+            _reasoning_effort = mode_cfg["reasoning_effort"]
         _originals = {}
 
         if _reasoning_effort is not None:
@@ -1504,6 +1598,7 @@ def main():
 
         st.markdown("**Example questions:**")
         examples = [
+            "What surface finish can I expect from face milling aluminum?",
             "What should I consider when designing thin-walled aluminum parts for CNC machining?",
             "What fixturing methods work best for thin flexible parts?",
             "What are the risks of deep pocket milling in steel?",
@@ -1515,8 +1610,10 @@ def main():
                 # Show the analysis mode used for this cached result
                 c_model = cached.get("model", "")
                 c_effort = cached.get("reasoning_effort")
-                if c_model == "gpt-4.1":
-                    mode_tag = "\u26a1 Quick Search"
+                if c_model == "gpt-4.1-mini":
+                    mode_tag = "\u26a1 Flash Mode"
+                elif c_model == "gpt-4.1":
+                    mode_tag = "\U0001f50d Quick Search"
                 elif c_model == "gpt-5" and c_effort == "low":
                     mode_tag = "\U0001f9e0 Efficient Thinking"
                 else:
