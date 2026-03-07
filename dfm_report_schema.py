@@ -205,9 +205,13 @@ rules in the formulas list with variable definitions and relevance notes.
   settings, spindle RPM). Those belong in the discipline evidence sections, not design_rules.
 - Frame each rule as "When designing X, do Y because Z" -- the designer should understand
   what to change in their model or drawing and why.
-- Good examples: "Specify internal fillet radii >= cutter radius to ensure machinability",
-  "Keep wall height-to-thickness ratio below 15:1 to avoid chatter during milling",
-  "Add corner relief features where mating parts must seat flush against inside corners".
+- Use **bold** (markdown) on the key actionable phrase in each rule to make it scannable.
+  Bold the specific design action or constraint -- the part the designer needs to remember.
+  Example: "When designing thin walls, **keep height-to-thickness ratio below 15:1** to
+  avoid chatter during milling." Only bold 3-8 words; do not bold the entire sentence.
+- Good examples: "**Specify internal fillet radii >= cutter radius** to ensure machinability",
+  "**Keep wall height-to-thickness ratio below 15:1** to avoid chatter during milling",
+  "**Add corner relief features** where mating parts must seat flush against inside corners".
 - Bad examples: "Reduce spindle speed when walls deflect" (machinist action, not design),
   "Use climb milling for better finish" (process choice, not design decision).
 - Each rule must cite a frame_id.
