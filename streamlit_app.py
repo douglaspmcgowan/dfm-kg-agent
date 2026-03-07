@@ -493,7 +493,7 @@ def render_frame_popover(frame_id, frame_lookup, short_label=None):
         return
 
     with st.popover(f"\U0001f4cb {label}"):
-        # Header -- larger type/scope/applicability line
+        # Header -- larger type/scope/applicability line + frame ID
         ft = detail["frame_type"]
         color = FRAME_TYPE_COLORS.get(ft, "#95a5a6")
         st.markdown(
@@ -501,6 +501,7 @@ def render_frame_popover(frame_id, frame_lookup, short_label=None):
             f"`{detail['scope']}` &nbsp; | &nbsp; "
             f"`{detail['applicability']}`"
         )
+        st.caption(f"`{frame_id}`")
 
         st.markdown(f"**Subject:** {detail['subject']}")
         st.markdown(f"**Main Point:** {detail['main_point']}")
@@ -582,20 +583,14 @@ def render_design_rules(report, frame_lookup, concise=False):
 
     show_rules = rules[:5] if concise else rules
     for i, rule in enumerate(show_rules, 1):
-        col_text, col_ref = st.columns([7, 1])
-        with col_text:
-            st.markdown(f"**{i}.** {rule.claim}")
-        with col_ref:
-            render_frame_popover(rule.frame_id, frame_lookup)
+        st.markdown(f"**{i}.** {rule.claim}")
+        render_frame_popover(rule.frame_id, frame_lookup)
 
     if concise and len(rules) > 5:
         with st.expander(f"Show all {len(rules)} rules"):
             for i, rule in enumerate(rules[5:], 6):
-                col_text, col_ref = st.columns([7, 1])
-                with col_text:
-                    st.markdown(f"**{i}.** {rule.claim}")
-                with col_ref:
-                    render_frame_popover(rule.frame_id, frame_lookup)
+                st.markdown(f"**{i}.** {rule.claim}")
+                render_frame_popover(rule.frame_id, frame_lookup)
 
 
 def render_evidence(evidence_list, frame_lookup):
@@ -832,27 +827,29 @@ def build_graph_figure(report, G, frame_lookup):
     node_hover = []
 
     node_ids = []
-    for fid in cited_in_graph:
+    node_tags = []  # short numeric tags for display
+    for idx, fid in enumerate(cited_in_graph, 1):
         if fid not in pos:
             continue
         x, y = pos[fid]
         node_x.append(x)
         node_y.append(y)
         node_ids.append(fid)
+        node_tags.append(f"#{idx}")
 
         detail = frame_lookup.get(fid, {})
         ft = detail.get("frame_type", "other")
         node_colors.append(FRAME_TYPE_COLORS.get(ft, "#95a5a6"))
 
-        # Label: frame type instead of number
-        node_text.append(ft.upper())
+        # Label: short numeric tag on the node
+        node_text.append(f"#{idx}")
 
         # Hover text
         subject = detail.get("subject", "?")
         author = detail.get("author", "?")
         node_hover.append(
-            f"<b>{fid}</b><br>"
-            f"Type: {ft}<br>"
+            f"<b>#{idx}</b> {ft.upper()}<br>"
+            f"{fid}<br>"
             f"Subject: {subject}<br>"
             f"Author: {author}"
         )
@@ -883,7 +880,7 @@ def build_graph_figure(report, G, frame_lookup):
         plot_bgcolor="rgba(0,0,0,0)",
     )
 
-    return fig, node_ids
+    return fig, node_ids, node_tags
 
 
 # ─────────────────────────────────────────────
@@ -999,14 +996,17 @@ def render_report(result, G, concise=False):
     with st.expander("\U0001f578\ufe0f Knowledge Graph View", expanded=False):
         graph_result = build_graph_figure(report, G, frame_lookup)
         if graph_result:
-            fig, graph_node_ids = graph_result
+            fig, graph_node_ids, graph_node_tags = graph_result
             st.plotly_chart(fig, use_container_width=True)
-            # Render clickable frame links below the graph
+            # Render clickable frame links below the graph with matching tags
             st.caption("Click a frame to see full details:")
             cols = st.columns(min(len(graph_node_ids), 5))
             for i, fid in enumerate(graph_node_ids):
+                tag = graph_node_tags[i]
+                detail = frame_lookup.get(fid, {})
+                ft = detail.get("frame_type", "other") if detail else "?"
                 with cols[i % min(len(graph_node_ids), 5)]:
-                    render_frame_popover(fid, frame_lookup)
+                    render_frame_popover(fid, frame_lookup, short_label=f"{tag} {ft}")
         else:
             st.caption("Not enough connected frames to visualize.")
 
