@@ -493,21 +493,23 @@ def render_frame_popover(frame_id, frame_lookup, short_label=None):
         return
 
     with st.popover(f"\U0001f4cb {label}"):
-        # Header
+        # Header -- larger type/scope/applicability line
         ft = detail["frame_type"]
         color = FRAME_TYPE_COLORS.get(ft, "#95a5a6")
         st.markdown(
-            f"**{ft.upper()}** &nbsp; | &nbsp; "
-            f"Scope: `{detail['scope']}` &nbsp; | &nbsp; "
-            f"Applicability: `{detail['applicability']}`"
+            f"### {ft.upper()} &nbsp; | &nbsp; "
+            f"`{detail['scope']}` &nbsp; | &nbsp; "
+            f"`{detail['applicability']}`"
         )
 
         st.markdown(f"**Subject:** {detail['subject']}")
         st.markdown(f"**Main Point:** {detail['main_point']}")
 
         if detail.get("source_quote"):
-            st.caption("Source Quote")
-            st.markdown(f"> {detail['source_quote']}")
+            # Clean bullet points from source quotes to avoid formatting issues
+            quote = detail["source_quote"].replace("\n- ", "\n  - ").replace("\n* ", "\n  * ")
+            st.markdown("**Source Quote**")
+            st.markdown(f"> {quote}")
 
         st.markdown(f"**Epistemic stance:** `{detail['epistemic_stance']}` "
                     f"&nbsp; | &nbsp; Post role: `{detail['post_role']}`")
@@ -519,19 +521,20 @@ def render_frame_popover(frame_id, frame_lookup, short_label=None):
 
         st.divider()
 
-        # Author & credibility
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Author", detail.get("author", "?"))
-        c2.metric("Credibility", detail.get("credibility", "?"))
+        # Author & credibility -- smaller/compact
+        author = detail.get("author", "?")
+        cred = detail.get("credibility", "?")
         rep = detail.get("reputation", -1)
-        c3.metric("Reputation", f"{rep:,}" if rep != -1 else "N/A")
-
-        c4, c5 = st.columns(2)
-        c4.metric("Post Score", detail.get("post_score", 0))
-        if detail.get("is_accepted"):
-            c5.success("\u2713 Accepted Answer")
-        else:
-            c5.caption("Not accepted")
+        rep_str = f"{rep:,}" if rep != -1 else "N/A"
+        score = detail.get("post_score", 0)
+        accepted = "\u2713 Accepted" if detail.get("is_accepted") else ""
+        st.caption(
+            f"Author: **{author}** &nbsp; | &nbsp; "
+            f"Credibility: **{cred}** &nbsp; | &nbsp; "
+            f"Reputation: **{rep_str}** &nbsp; | &nbsp; "
+            f"Post score: **{score}** "
+            f"{'&nbsp; | &nbsp; ' + accepted if accepted else ''}"
+        )
 
         if detail.get("source_url"):
             st.markdown(f"[\U0001f517 View Original Thread]({detail['source_url']})")
@@ -681,8 +684,9 @@ def render_disciplines(report, frame_lookup):
 
             # Evidence
             if disc.evidence:
-                st.markdown(f"**Evidence** ({len(disc.evidence)} claims)")
-                render_evidence(disc.evidence, frame_lookup)
+                st.markdown(f"**Evidence**")
+                with st.expander(f"Show evidence ({len(disc.evidence)} claims)", expanded=False):
+                    render_evidence(disc.evidence, frame_lookup)
 
             # Reasoning chains
             if disc.reasoning_chains:
@@ -702,22 +706,32 @@ def render_contradictions(report, frame_lookup):
             st.warning(f"**{c.summary}**")
             c1, c2 = st.columns(2)
             with c1:
-                st.markdown(f"**Position A** (`{c.frame_id_a}`):\n\n{c.position_a}")
+                pos_col, ref_col = st.columns([6, 1])
+                with pos_col:
+                    st.markdown(f"**Position A:**\n\n{c.position_a}")
+                with ref_col:
+                    render_frame_popover(c.frame_id_a, frame_lookup)
                 fa = frame_lookup.get(c.frame_id_a)
                 if fa:
                     if fa.get("source_quote"):
-                        st.caption(f'> "{fa["source_quote"][:200]}..."' if len(fa.get("source_quote", "")) > 200 else f'> "{fa["source_quote"]}"')
-                    link = fa.get("thread_url") or fa.get("url")
+                        quote = fa["source_quote"][:200].replace("\n- ", " - ").replace("\n* ", " * ")
+                        st.caption(f'> "{quote}..."' if len(fa.get("source_quote", "")) > 200 else f'> "{quote}"')
+                    link = fa.get("thread_url") or fa.get("url") or fa.get("source_url")
                     author = fa.get("author", "")
                     if link:
                         st.caption(f"Source: [{author or c.frame_id_a}]({link})")
             with c2:
-                st.markdown(f"**Position B** (`{c.frame_id_b}`):\n\n{c.position_b}")
+                pos_col, ref_col = st.columns([6, 1])
+                with pos_col:
+                    st.markdown(f"**Position B:**\n\n{c.position_b}")
+                with ref_col:
+                    render_frame_popover(c.frame_id_b, frame_lookup)
                 fb = frame_lookup.get(c.frame_id_b)
                 if fb:
                     if fb.get("source_quote"):
-                        st.caption(f'> "{fb["source_quote"][:200]}..."' if len(fb.get("source_quote", "")) > 200 else f'> "{fb["source_quote"]}"')
-                    link = fb.get("thread_url") or fb.get("url")
+                        quote = fb["source_quote"][:200].replace("\n- ", " - ").replace("\n* ", " * ")
+                        st.caption(f'> "{quote}..."' if len(fb.get("source_quote", "")) > 200 else f'> "{quote}"')
+                    link = fb.get("thread_url") or fb.get("url") or fb.get("source_url")
                     author = fb.get("author", "")
                     if link:
                         st.caption(f"Source: [{author or c.frame_id_b}]({link})")
@@ -734,7 +748,7 @@ def render_knowledge_gaps(report, backfill_result, concise=False):
     n_backfills = len(backfill_result.backfills) if backfill_result and backfill_result.backfills else 0
     st.markdown(f"### \U0001f50d Knowledge Gaps & Textbook Backfill")
 
-    with st.expander(f"Knowledge Gaps ({len(gaps)})", expanded=False):
+    with st.expander(f"\u2753 Knowledge Gaps ({len(gaps)})", expanded=False):
         st.caption("Areas where the knowledge graph lacks coverage")
         for gap in gaps:
             st.markdown(f"- {gap}")
@@ -817,21 +831,21 @@ def build_graph_figure(report, G, frame_lookup):
     node_text = []
     node_hover = []
 
+    node_ids = []
     for fid in cited_in_graph:
         if fid not in pos:
             continue
         x, y = pos[fid]
         node_x.append(x)
         node_y.append(y)
+        node_ids.append(fid)
 
         detail = frame_lookup.get(fid, {})
         ft = detail.get("frame_type", "other")
         node_colors.append(FRAME_TYPE_COLORS.get(ft, "#95a5a6"))
 
-        # Short label: last part of frame_id
-        parts = fid.split("-")
-        short = parts[-1] if len(parts) > 1 else fid[:8]
-        node_text.append(short)
+        # Label: frame type instead of number
+        node_text.append(ft.upper())
 
         # Hover text
         subject = detail.get("subject", "?")
@@ -869,7 +883,7 @@ def build_graph_figure(report, G, frame_lookup):
         plot_bgcolor="rgba(0,0,0,0)",
     )
 
-    return fig
+    return fig, node_ids
 
 
 # ─────────────────────────────────────────────
@@ -983,9 +997,16 @@ def render_report(result, G, concise=False):
 
     # Graph visualization
     with st.expander("\U0001f578\ufe0f Knowledge Graph View", expanded=False):
-        fig = build_graph_figure(report, G, frame_lookup)
-        if fig:
+        graph_result = build_graph_figure(report, G, frame_lookup)
+        if graph_result:
+            fig, graph_node_ids = graph_result
             st.plotly_chart(fig, use_container_width=True)
+            # Render clickable frame links below the graph
+            st.caption("Click a frame to see full details:")
+            cols = st.columns(min(len(graph_node_ids), 5))
+            for i, fid in enumerate(graph_node_ids):
+                with cols[i % min(len(graph_node_ids), 5)]:
+                    render_frame_popover(fid, frame_lookup)
         else:
             st.caption("Not enough connected frames to visualize.")
 
@@ -1125,9 +1146,12 @@ def main():
         tc1, tc2 = st.columns(2)
         tc1.metric("Queries", tally["queries"])
         tc2.metric("Total tokens", f"{tally['total_tokens']:,}")
+        tc3, tc4 = st.columns(2)
+        tc3.metric("Input tokens", f"{tally['prompt_tokens']:,}",
+                   help="Tokens sent to the model (system + user messages)")
+        tc4.metric("Output tokens", f"{tally['completion_tokens']:,}",
+                   help="Tokens generated by the model")
         with st.expander("Breakdown", expanded=False):
-            st.caption(f"Prompt: **{tally['prompt_tokens']:,}**")
-            st.caption(f"Completion: **{tally['completion_tokens']:,}**")
             st.caption(f"Embedding: **{tally['embedding_tokens']:,}**")
         if st.button("\U0001f504 Reset tally", key="reset_tally",
                      help="Reset the token counter and start a new tracking period"):
@@ -1459,10 +1483,11 @@ def main():
 
         # Usage stats
         tally = _load_token_tally()
-        col1, col2, col3 = st.columns(3)
-        col1.metric("Total Queries", f"{tally.get('queries', 0):,}")
-        col2.metric("Total Tokens", f"{tally.get('total_tokens', 0):,}")
-        col3.metric("Unique Visitors", f"{len(tally.get('unique_ips', []))}")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Queries", f"{tally.get('queries', 0):,}")
+        col2.metric("Input Tokens", f"{tally.get('prompt_tokens', 0):,}")
+        col3.metric("Output Tokens", f"{tally.get('completion_tokens', 0):,}")
+        col4.metric("Unique Visitors", f"{len(tally.get('unique_ips', []))}")
 
         st.markdown("### Getting Started")
         st.markdown(
