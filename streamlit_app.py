@@ -1156,12 +1156,13 @@ def main():
         # ── Feedback ──
         st.divider()
         with st.expander("\U0001f4ac Send Feedback", expanded=False):
+            st.caption("Loved it? Found a bug? Have an idea? All feedback welcome!")
             with st.form("feedback_form", clear_on_submit=True):
                 fb_name = st.text_input("Name (optional)")
                 fb_email = st.text_input("Email (optional)")
                 fb_message = st.text_area(
                     "Your feedback",
-                    placeholder="Bug reports, feature requests, questions, or general feedback...",
+                    placeholder="What did you like? What could be better? Feature ideas, bug reports, or just say hi...",
                     height=120,
                 )
                 fb_submitted = st.form_submit_button(
