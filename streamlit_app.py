@@ -1340,13 +1340,25 @@ def main():
         st.markdown("**Example questions:**")
         examples = [
             "What should I consider when designing thin-walled aluminum parts for CNC machining?",
+            "What fixturing methods work best for thin flexible parts?",
             "What are the risks of deep pocket milling in steel?",
             "How do I choose between climb and conventional milling?",
-            "What fixturing methods work best for thin flexible parts?",
         ]
         for ex in examples:
             cached = example_cache.get(ex)
-            label = f"{ex}  \u26a1" if cached else ex
+            if cached:
+                # Show the analysis mode used for this cached result
+                c_model = cached.get("model", "")
+                c_effort = cached.get("reasoning_effort")
+                if c_model == "gpt-4.1":
+                    mode_tag = "\u26a1 Quick Search"
+                elif c_model == "gpt-5" and c_effort == "low":
+                    mode_tag = "\U0001f9e0 Efficient Thinking"
+                else:
+                    mode_tag = "\U0001f52c Deep Reasoning"
+                label = f"{ex}  |  {mode_tag}"
+            else:
+                label = ex
             if st.button(label, key=f"ex_{ex[:20]}", use_container_width=True):
                 if cached:
                     # Serve pre-cached result instantly
