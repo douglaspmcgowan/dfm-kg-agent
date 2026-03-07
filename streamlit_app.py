@@ -617,17 +617,19 @@ def render_disciplines(report, frame_lookup):
             # Formulas
             render_formulas(disc.formulas)
 
-            # Evidence (collapsible)
+            # Evidence
             if disc.evidence:
-                with st.expander(f"Evidence ({len(disc.evidence)} claims)", expanded=False):
-                    render_evidence(disc.evidence, frame_lookup)
+                st.markdown(f"**Evidence** ({len(disc.evidence)} claims)")
+                render_evidence(disc.evidence, frame_lookup)
 
             # Reasoning chains
-            render_reasoning_chains(disc.reasoning_chains, frame_lookup)
+            if disc.reasoning_chains:
+                st.markdown(f"**Reasoning Chains** ({len(disc.reasoning_chains)})")
+                render_reasoning_chains(disc.reasoning_chains, frame_lookup)
 
 
-def render_contradictions(report):
-    """Render contradictions as warning blocks."""
+def render_contradictions(report, frame_lookup):
+    """Render contradictions as warning blocks with source details."""
     contras = report.contradictions
     if not contras:
         return
@@ -639,8 +641,24 @@ def render_contradictions(report):
             c1, c2 = st.columns(2)
             with c1:
                 st.markdown(f"**Position A** (`{c.frame_id_a}`):\n\n{c.position_a}")
+                fa = frame_lookup.get(c.frame_id_a)
+                if fa:
+                    if fa.get("source_quote"):
+                        st.caption(f'> "{fa["source_quote"][:200]}..."' if len(fa.get("source_quote", "")) > 200 else f'> "{fa["source_quote"]}"')
+                    link = fa.get("thread_url") or fa.get("url")
+                    author = fa.get("author", "")
+                    if link:
+                        st.caption(f"Source: [{author or c.frame_id_a}]({link})")
             with c2:
                 st.markdown(f"**Position B** (`{c.frame_id_b}`):\n\n{c.position_b}")
+                fb = frame_lookup.get(c.frame_id_b)
+                if fb:
+                    if fb.get("source_quote"):
+                        st.caption(f'> "{fb["source_quote"][:200]}..."' if len(fb.get("source_quote", "")) > 200 else f'> "{fb["source_quote"]}"')
+                    link = fb.get("thread_url") or fb.get("url")
+                    author = fb.get("author", "")
+                    if link:
+                        st.caption(f"Source: [{author or c.frame_id_b}]({link})")
             if hasattr(c, "edge_reasoning") and c.edge_reasoning:
                 st.caption(f"Edge reasoning: {c.edge_reasoning}")
 
@@ -651,7 +669,10 @@ def render_knowledge_gaps(report, backfill_result, concise=False):
     if not gaps:
         return
 
-    with st.expander(f"\U0001f50d Knowledge Gaps ({len(gaps)})", expanded=False):
+    n_backfills = len(backfill_result.backfills) if backfill_result and backfill_result.backfills else 0
+    st.markdown(f"### \U0001f50d Knowledge Gaps & Textbook Backfill")
+
+    with st.expander(f"Knowledge Gaps ({len(gaps)})", expanded=False):
         st.caption("Areas where the knowledge graph lacks coverage")
         for gap in gaps:
             st.markdown(f"- {gap}")
@@ -659,7 +680,7 @@ def render_knowledge_gaps(report, backfill_result, concise=False):
     # Backfill
     if backfill_result and backfill_result.backfills:
         with st.expander(
-            f"\U0001f4da Textbook Backfill ({len(backfill_result.backfills)} gaps filled)",
+            f"\U0001f4da Textbook Backfill ({n_backfills} gaps filled)",
             expanded=False,
         ):
             st.caption(
@@ -869,7 +890,7 @@ def render_report(result, G, concise=False):
     render_disciplines(report, frame_lookup)
 
     # Contradictions
-    render_contradictions(report)
+    render_contradictions(report, frame_lookup)
 
     st.divider()
 
@@ -878,13 +899,14 @@ def render_report(result, G, concise=False):
 
     st.divider()
 
-    # Context Summary
-    st.markdown("### Source Context")
+    # Context Summary & Graph
+    st.markdown("### \U0001f50e Source Context & Knowledge Graph")
     cited_ids = sorted(collect_cited_frame_ids(report))
     cache_key = tuple(cited_ids) + (query,)
 
     if cache_key in st.session_state.context_cache:
-        st.markdown(st.session_state.context_cache[cache_key])
+        with st.expander("Source Context & Credibility Summary", expanded=False):
+            st.markdown(st.session_state.context_cache[cache_key])
     else:
         if st.button("\U0001f50e Get Source Context & Credibility Summary", key=f"ctx_{query[:20]}"):
             client = get_openai_client()
@@ -895,7 +917,7 @@ def render_report(result, G, concise=False):
                     provenance = gather_provenance_context(G, cited_ids)
                     summary = summarize_context(client, provenance, query)
                     st.session_state.context_cache[cache_key] = summary
-                    st.markdown(summary)
+                    st.rerun()
 
     # Graph visualization
     with st.expander("\U0001f578\ufe0f Knowledge Graph View", expanded=False):
@@ -1055,7 +1077,7 @@ def main():
         st.markdown("**About the Developer**")
         st.markdown(
             "**Douglas McGowan**  \n"
-            "Ph.D. Candidate, Mechanical Engineering  \n"
+            "Ph.D. Researcher, Mechanical Engineering  \n"
             "[Co-Design Lab](https://codesign.berkeley.edu/), UC Berkeley  \n"
             "Advisor: Dr. Kosa Goucher-Lambert"
         )
