@@ -29,23 +29,23 @@ from dfm_report_schema import (
 EXAMPLES = [
     {
         "question": "What should I consider when designing thin-walled aluminum parts for CNC machining?",
-        "model": "gpt-5",
-        "reasoning_effort": None,  # medium (default)
+        "model": "gpt-4.1",
+        "reasoning_effort": None,  # Quick Search
+    },
+    {
+        "question": "What fixturing methods work best for thin flexible parts?",
+        "model": "gpt-4.1",
+        "reasoning_effort": None,
     },
     {
         "question": "What are the risks of deep pocket milling in steel?",
         "model": "gpt-5",
-        "reasoning_effort": "low",
+        "reasoning_effort": "low",  # Efficient Thinking
     },
     {
         "question": "How do I choose between climb and conventional milling?",
         "model": "gpt-5",
-        "reasoning_effort": "low",
-    },
-    {
-        "question": "What fixturing methods work best for thin flexible parts?",
-        "model": "gpt-5",
-        "reasoning_effort": "low",
+        "reasoning_effort": None,  # Deep Reasoning (medium)
     },
 ]
 
