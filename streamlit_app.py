@@ -745,13 +745,33 @@ def render_contradictions(report, frame_lookup):
                 st.caption(f"Edge reasoning: {c.edge_reasoning}")
 
 
-def render_knowledge_gaps(report, backfill_result, concise=False):
-    """Render knowledge gaps and optional backfill."""
+def _render_backfill_results(backfill_result):
+    """Render backfill answers in an expander."""
+    n = len(backfill_result.backfills)
+    with st.expander(
+        f"\U0001f4da Textbook Backfill ({n} gaps filled)",
+        expanded=False,
+    ):
+        st.caption(
+            "General engineering knowledge -- NOT from the knowledge graph. "
+            "Use as starting guidance only."
+        )
+        for bf in backfill_result.backfills:
+            with st.container(border=True):
+                st.markdown(f"**Gap:** {bf.gap}")
+                st.markdown(bf.backfill_answer)
+                footer_parts = [f"*{bf.confidence_note}*"]
+                if bf.relevant_standards:
+                    footer_parts.append(f"Standards: {bf.relevant_standards}")
+                st.caption(" | ".join(footer_parts))
+
+
+def render_knowledge_gaps(report, backfill_result, result_dict=None, concise=False):
+    """Render knowledge gaps, optional backfill, and Fill the Gaps button."""
     gaps = report.knowledge_gaps
     if not gaps:
         return
 
-    n_backfills = len(backfill_result.backfills) if backfill_result and backfill_result.backfills else 0
     st.markdown(f"### \U0001f50d Knowledge Gaps & Textbook Backfill")
 
     with st.expander(f"\u2753 Knowledge Gaps ({len(gaps)})", expanded=False):
@@ -759,24 +779,27 @@ def render_knowledge_gaps(report, backfill_result, concise=False):
         for gap in gaps:
             st.markdown(f"- {gap}")
 
-    # Backfill
+    # Backfill results (already computed or filled on-demand)
     if backfill_result and backfill_result.backfills:
-        with st.expander(
-            f"\U0001f4da Textbook Backfill ({n_backfills} gaps filled)",
-            expanded=False,
-        ):
-            st.caption(
-                "General engineering knowledge -- NOT from the knowledge graph. "
-                "Use as starting guidance only."
-            )
-            for bf in backfill_result.backfills:
-                with st.container(border=True):
-                    st.markdown(f"**Gap:** {bf.gap}")
-                    st.markdown(bf.backfill_answer)
-                    footer_parts = [f"*{bf.confidence_note}*"]
-                    if bf.relevant_standards:
-                        footer_parts.append(f"Standards: {bf.relevant_standards}")
-                    st.caption(" | ".join(footer_parts))
+        _render_backfill_results(backfill_result)
+
+    # "Fill the Gaps" button — shown when backfill wasn't run (e.g. Flash Mode)
+    elif gaps and result_dict is not None:
+        query_key = result_dict.get("query", "")[:20]
+        if st.button("\U0001f4da Fill the Gaps", key=f"fill_gaps_{query_key}",
+                     help="Generate textbook answers for knowledge gaps using GPT"):
+            client = get_openai_client()
+            if not client:
+                st.error("OPENAI_API_KEY not set.")
+            else:
+                with st.spinner("Generating textbook backfill for knowledge gaps..."):
+                    from dfm_agent import backfill_knowledge_gaps
+                    bf = backfill_knowledge_gaps(client, report)
+                    if bf and bf.backfills:
+                        result_dict["backfill_result"] = bf
+                        st.rerun()
+                    else:
+                        st.caption("No backfill generated.")
 
 
 def build_graph_figure(report, G, frame_lookup):
@@ -979,7 +1002,7 @@ def render_report(result, G, concise=False):
     st.divider()
 
     # Knowledge Gaps + Backfill
-    render_knowledge_gaps(report, backfill_result, concise=concise)
+    render_knowledge_gaps(report, backfill_result, result_dict=result, concise=concise)
 
     st.divider()
 
@@ -1077,6 +1100,7 @@ def main():
         if st.session_state.get("active_idx", -1) >= 0:
             if st.button("\u2190 Home", use_container_width=True):
                 st.session_state.active_idx = -1
+                st.session_state.flash_on = False
                 st.rerun()
 
         if G is None:
@@ -1098,6 +1122,7 @@ def main():
         flash_on = st.toggle(
             "\u26a1 Flash Mode",
             value=False,
+            key="flash_on",
             help="Ultra-fast ~20s analysis with gpt-4.1-mini. Disables advanced settings.",
         )
         if flash_on:
@@ -1525,6 +1550,7 @@ def main():
                 "timestamp": datetime.datetime.now().strftime("%H:%M:%S"),
                 "elapsed_s": round(elapsed, 1),
                 "token_usage": token_usage,
+                "flash_mode": flash_on,
             }
 
             # Update persistent token tally
@@ -1598,7 +1624,6 @@ def main():
 
         st.markdown("**Example questions:**")
         examples = [
-            "What surface finish can I expect from face milling aluminum?",
             "What should I consider when designing thin-walled aluminum parts for CNC machining?",
             "What fixturing methods work best for thin flexible parts?",
             "What are the risks of deep pocket milling in steel?",

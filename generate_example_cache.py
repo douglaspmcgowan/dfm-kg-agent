@@ -28,12 +28,6 @@ from dfm_report_schema import (
 )
 
 EXAMPLES = [
-    {   # Flash Mode
-        "question": "What surface finish can I expect from face milling aluminum?",
-        "model": "gpt-4.1-mini",
-        "reasoning_effort": None,
-        "top_k": 5, "max_hops": 1, "max_frames": 10,
-    },
     {   # Quick Search
         "question": "What should I consider when designing thin-walled aluminum parts for CNC machining?",
         "model": "gpt-4.1",
