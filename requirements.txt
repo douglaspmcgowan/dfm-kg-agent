@@ -4,3 +4,4 @@ qdrant-client>=1.17.0
 networkx>=3.6
 plotly>=6.5
 pydantic>=2.12
+fpdf2>=2.8
