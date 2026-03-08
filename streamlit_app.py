@@ -955,6 +955,256 @@ def _render_summary(text):
 
 
 # ─────────────────────────────────────────────
+# PDF REPORT GENERATION
+# ─────────────────────────────────────────────
+
+def _sanitize_for_pdf(text):
+    """Replace Unicode characters that aren't in Latin-1 with ASCII equivalents."""
+    replacements = {
+        "\u2014": "--",   # em dash
+        "\u2013": "-",    # en dash
+        "\u2018": "'",    # left single quote
+        "\u2019": "'",    # right single quote
+        "\u201c": '"',    # left double quote
+        "\u201d": '"',    # right double quote
+        "\u2022": "-",    # bullet
+        "\u2026": "...",  # ellipsis
+        "\u2264": "<=",   # less than or equal
+        "\u2265": ">=",   # greater than or equal
+        "\u00b2": "^2",   # superscript 2
+        "\u00b3": "^3",   # superscript 3
+        "\u00b0": " deg", # degree
+        "\u03b1": "alpha",
+        "\u03b2": "beta",
+        "\u03b4": "delta",
+        "\u03bc": "mu",
+        "\u03bd": "nu",
+        "\u03c1": "rho",
+        "\u03c3": "sigma",
+        "\u0394": "Delta",
+    }
+    for uni, ascii_rep in replacements.items():
+        text = text.replace(uni, ascii_rep)
+    # Strip remaining non-Latin-1 chars
+    return text.encode("latin-1", errors="replace").decode("latin-1")
+
+
+def _md_to_html(text):
+    """Convert markdown bold (**text**) to HTML <b>text</b> and sanitize for PDF."""
+    import re
+    text = _sanitize_for_pdf(text)
+    text = text.replace("&", "&amp;")
+    text = text.replace("<", "&lt;").replace(">", "&gt;")
+    text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
+    return text
+
+
+def generate_pdf_report(result):
+    """Generate a PDF document from a DFM report result dict.
+
+    Returns bytes (BytesIO) ready for st.download_button.
+    """
+    from fpdf import FPDF
+
+    report = result["report"]
+    backfill_result = result.get("backfill_result")
+    query = result.get("query", "")
+    elapsed = result.get("elapsed_s", 0)
+    timestamp = result.get("timestamp", "")
+    token_usage = result.get("token_usage", {})
+
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.add_page()
+
+    def _reset():
+        """Reset cursor to left margin."""
+        pdf.set_x(pdf.l_margin)
+
+    def _safe_text(pdf_obj, h, text, **kw):
+        """Write sanitized text with position reset."""
+        _reset()
+        pdf_obj.multi_cell(0, h, _sanitize_for_pdf(text),
+                           new_x="LMARGIN", new_y="NEXT", **kw)
+
+    def _safe_html(pdf_obj, html):
+        """Write HTML with position reset."""
+        _reset()
+        pdf_obj.write_html(html)
+        pdf_obj.ln(1)
+        _reset()
+
+    def _section_header(title, font_size=14):
+        """Render a section header with underline."""
+        _reset()
+        pdf.set_font("Helvetica", "B", font_size)
+        pdf.cell(0, 8, _sanitize_for_pdf(title), new_x="LMARGIN", new_y="NEXT")
+        pdf.set_draw_color(200, 200, 200)
+        pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+        pdf.ln(3)
+
+    # ── Title ──
+    pdf.set_font("Helvetica", "B", 18)
+    pdf.cell(0, 12, "DFM Analysis Report", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(2)
+
+    # ── Query & metadata ──
+    pdf.set_font("Helvetica", "", 10)
+    pdf.set_text_color(80, 80, 80)
+    meta_parts = []
+    if timestamp:
+        meta_parts.append(f"Generated: {timestamp}")
+    if elapsed:
+        meta_parts.append(f"{elapsed}s")
+    total_tok = token_usage.get("total_tokens", 0)
+    if total_tok:
+        meta_parts.append(f"{total_tok:,} tokens")
+    if meta_parts:
+        pdf.cell(0, 5, " | ".join(meta_parts), new_x="LMARGIN", new_y="NEXT")
+    pdf.set_text_color(0, 0, 0)
+    pdf.ln(2)
+
+    pdf.set_font("Helvetica", "B", 11)
+    pdf.cell(0, 6, "Query:", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 11)
+    _safe_text(pdf, 6, query)
+    pdf.ln(4)
+
+    # ── Summary ──
+    _section_header("Summary")
+    pdf.set_font("Helvetica", "", 10)
+    _safe_html(pdf, _md_to_html(report.summary))
+    pdf.ln(6)
+
+    # ── Design Rules ──
+    rules = report.design_rules
+    if rules:
+        _section_header(f"Design Rules ({len(rules)})")
+        pdf.set_font("Helvetica", "", 10)
+        for i, rule in enumerate(rules, 1):
+            _safe_html(pdf, f"{i}. {_md_to_html(rule.claim)}")
+            pdf.ln(3)
+        pdf.ln(4)
+
+    # ── Disciplines ──
+    for disc in report.disciplines:
+        disc_name = disc.discipline.replace("_", " ").title()
+        _section_header(disc_name)
+
+        # First principles
+        if disc.first_principles:
+            pdf.set_font("Helvetica", "I", 10)
+            pdf.set_text_color(40, 40, 120)
+            _safe_text(pdf, 5, disc.first_principles)
+            pdf.set_text_color(0, 0, 0)
+            pdf.ln(3)
+
+        # Formulas
+        for f in disc.formulas:
+            try:
+                pdf.set_font("Helvetica", "B", 9)
+                _safe_text(pdf, 5, f.formula_name)
+                pdf.set_font("Helvetica", "", 9)
+                _safe_text(pdf, 4, f.expression)
+                pdf.set_font("Helvetica", "", 8)
+                pdf.set_text_color(100, 100, 100)
+                _safe_text(pdf, 4, f"Variables: {f.variables}")
+                _safe_text(pdf, 4, f.relevance)
+                pdf.set_text_color(0, 0, 0)
+                pdf.ln(2)
+            except Exception:
+                pdf.set_text_color(0, 0, 0)
+                pdf.set_font("Helvetica", "", 8)
+                _safe_text(pdf, 4, f"[Formula: {f.formula_name}]")
+
+        # Evidence
+        if disc.evidence:
+            pdf.set_font("Helvetica", "B", 11)
+            pdf.cell(0, 6, f"Evidence ({len(disc.evidence)} claims)",
+                     new_x="LMARGIN", new_y="NEXT")
+            pdf.set_font("Helvetica", "", 10)
+            for ev in disc.evidence:
+                _safe_text(pdf, 5, f"- {ev.claim}")
+            pdf.ln(2)
+
+        # Reasoning chains
+        if disc.reasoning_chains:
+            pdf.set_font("Helvetica", "B", 11)
+            pdf.cell(0, 6, f"Reasoning Chains ({len(disc.reasoning_chains)})",
+                     new_x="LMARGIN", new_y="NEXT")
+            for chain in disc.reasoning_chains:
+                pdf.set_font("Helvetica", "BI", 10)
+                _safe_text(pdf, 5, chain.chain_label)
+                pdf.set_font("Helvetica", "", 9)
+                for cf in chain.frames:
+                    role = cf.role_in_chain.replace("_", " ").title()
+                    edge = f" [{cf.edge_type}]" if cf.edge_type else ""
+                    _safe_text(pdf, 4, f"  {role}{edge}: {cf.claim}")
+                pdf.ln(3)
+            pdf.ln(2)
+
+        pdf.ln(2)
+
+    # ── Contradictions ──
+    if report.contradictions:
+        _section_header("Contradictions")
+        for c in report.contradictions:
+            pdf.set_font("Helvetica", "B", 10)
+            _safe_text(pdf, 5, c.summary)
+            pdf.set_font("Helvetica", "", 9)
+            _safe_text(pdf, 4, f"Position A: {c.position_a}")
+            _safe_text(pdf, 4, f"Position B: {c.position_b}")
+            if hasattr(c, "edge_reasoning") and c.edge_reasoning:
+                pdf.set_font("Helvetica", "I", 8)
+                _safe_text(pdf, 4, f"Edge reasoning: {c.edge_reasoning}")
+            pdf.ln(4)
+        pdf.ln(2)
+
+    # ── Knowledge Gaps ──
+    gaps = report.knowledge_gaps
+    if gaps:
+        _section_header(f"Knowledge Gaps ({len(gaps)})")
+        pdf.set_font("Helvetica", "", 10)
+        for gap in gaps:
+            _safe_text(pdf, 5, f"- {gap}")
+            pdf.ln(1)
+        pdf.ln(2)
+
+    # ── Backfill ──
+    if backfill_result and hasattr(backfill_result, "backfills") and backfill_result.backfills:
+        _section_header("Textbook Backfill")
+        pdf.set_font("Helvetica", "", 9)
+        pdf.set_text_color(100, 100, 100)
+        _safe_text(pdf, 4, "General engineering knowledge -- NOT from the knowledge graph.")
+        pdf.set_text_color(0, 0, 0)
+        pdf.ln(2)
+        for bf in backfill_result.backfills:
+            pdf.set_font("Helvetica", "B", 10)
+            _safe_text(pdf, 5, f"Gap: {bf.gap}")
+            pdf.set_font("Helvetica", "", 10)
+            _safe_text(pdf, 5, bf.backfill_answer)
+            pdf.set_font("Helvetica", "I", 8)
+            footer = bf.confidence_note
+            if bf.relevant_standards:
+                footer += f" | {bf.relevant_standards}"
+            _safe_text(pdf, 4, footer)
+            pdf.ln(4)
+
+    # ── Footer ──
+    pdf.ln(4)
+    _reset()
+    pdf.set_font("Helvetica", "I", 8)
+    pdf.set_text_color(150, 150, 150)
+    pdf.cell(0, 4, "Generated by DFM Knowledge Graph Agent", new_x="LMARGIN", new_y="NEXT")
+
+    # Return as bytes
+    buf = io.BytesIO()
+    pdf.output(buf)
+    buf.seek(0)
+    return buf.getvalue()
+
+
+# ─────────────────────────────────────────────
 # RENDER FULL REPORT
 # ─────────────────────────────────────────────
 
@@ -1583,7 +1833,21 @@ def main():
         if idx < len(st.session_state.query_history):
             result = st.session_state.query_history[idx]
             st.markdown(f"---")
-            st.markdown(f"**Query:** {result['query']}")
+
+            # Query line + PDF download button
+            q_col, dl_col = st.columns([6, 1])
+            with q_col:
+                st.markdown(f"**Query:** {result['query']}")
+            with dl_col:
+                pdf_bytes = generate_pdf_report(result)
+                st.download_button(
+                    "\U0001f4c4 PDF",
+                    data=pdf_bytes,
+                    file_name="dfm_report.pdf",
+                    mime="application/pdf",
+                    key=f"pdf_dl_{idx}",
+                )
+
             render_report(result, G, concise=concise)
 
             # Scroll to report if navigating from history
