@@ -1331,6 +1331,634 @@ def render_report(result, G, concise=False):
 
 
 # ─────────────────────────────────────────────
+# KG EXPLORER
+# ─────────────────────────────────────────────
+
+_TOPIC_MODEL_FILE = Path(__file__).parent / "topic_model_output.json"
+_SUBJECT_CLUSTERS_FILE = Path(__file__).parent / "subject_clusters.json"
+_SEMANTIC_EDGES_FILE = Path(__file__).parent / "semantic_edges.json"
+
+
+@st.cache_resource
+def _ensure_semantic_edges(_G):
+    """Load semantic edges from JSON into the graph if not already present."""
+    # Check if semantic edges already exist
+    has_sem = any(
+        d.get("edge_type") in SEMANTIC_EDGE_TYPES
+        for _, _, d in _G.edges(data=True)
+    )
+    if has_sem:
+        return _G
+
+    if not _SEMANTIC_EDGES_FILE.exists():
+        return _G
+
+    try:
+        with open(_SEMANTIC_EDGES_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return _G
+
+    added = 0
+    for edge in data.get("edges", []):
+        fa = edge.get("frame_a", "")
+        fb = edge.get("frame_b", "")
+        label = edge.get("label", "")
+        direction = edge.get("direction", "A_to_B")
+        confidence = edge.get("confidence", "medium")
+        reasoning = edge.get("reasoning", "")
+
+        if not (_G.has_node(fa) and _G.has_node(fb)):
+            continue
+        if label not in SEMANTIC_EDGE_TYPES:
+            continue
+
+        if label == "CONTRADICTS" or direction == "bidirectional":
+            _G.add_edge(fa, fb, edge_type=label, confidence=confidence, reasoning=reasoning)
+            _G.add_edge(fb, fa, edge_type=label, confidence=confidence, reasoning=reasoning)
+            added += 2
+        elif direction == "B_to_A":
+            _G.add_edge(fb, fa, edge_type=label, confidence=confidence, reasoning=reasoning)
+            added += 1
+        else:
+            _G.add_edge(fa, fb, edge_type=label, confidence=confidence, reasoning=reasoning)
+            added += 1
+
+    return _G
+
+
+@st.cache_data
+def _load_topic_model():
+    """Load BERTopic model output for topic filtering."""
+    if not _TOPIC_MODEL_FILE.exists():
+        return None
+    try:
+        with open(_TOPIC_MODEL_FILE, "r") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
+
+
+@st.cache_data
+def _build_frame_index(_G):
+    """Build a searchable index of all frames from the graph."""
+    frames = []
+    for nid, data in _G.nodes(data=True):
+        if data.get("node_type") != "Frame":
+            continue
+        # Get parent post and author via graph edges
+        author = "unknown"
+        source_url = ""
+        post_score = 0
+        reputation = -1
+        credibility = "?"
+        is_accepted = False
+        se_tags = ""
+        thread_title = ""
+        se_site = ""
+
+        # Walk graph: Post -> Frame (so Frame's predecessor is Post)
+        # Post -> Author (successor), Thread -> Post (so Post's predecessor is Thread)
+        for pred in _G.predecessors(nid):
+            pred_data = _G.nodes.get(pred, {})
+            if pred_data.get("node_type") == "Post":
+                post_score = pred_data.get("post_score", 0) or 0
+                is_accepted = pred_data.get("is_accepted_answer", False)
+                se_tags = pred_data.get("se_tags", "")
+                se_site = pred_data.get("se_site", "")
+                # Get author from post (Post -> Author via successor)
+                for _, succ in _G.out_edges(pred):
+                    succ_data = _G.nodes.get(succ, {})
+                    if succ_data.get("node_type") == "Author":
+                        author = succ_data.get("author_username", "unknown")
+                        reputation = succ_data.get("reputation", -1)
+                        credibility = succ_data.get("credibility_tier", "?")
+                # Get thread from post (Thread -> Post, so Post's predecessor is Thread)
+                for pp in _G.predecessors(pred):
+                    pp_data = _G.nodes.get(pp, {})
+                    if pp_data.get("node_type") == "Thread":
+                        thread_title = pp_data.get("thread_title", "")
+                        source_url = pp
+                        break
+
+        frames.append({
+            "frame_id": nid,
+            "frame_type": data.get("frame_type", "?"),
+            "scope": data.get("scope", "?"),
+            "subject": data.get("subject", "?"),
+            "main_point": data.get("main_point", "?"),
+            "source_quote": data.get("source_quote", ""),
+            "applicability": data.get("applicability", "?"),
+            "epistemic_stance": data.get("epistemic_stance", "?"),
+            "post_role": data.get("post_role", "?"),
+            "example_value": data.get("example_value", ""),
+            "example_context": data.get("example_context", ""),
+            "author": author,
+            "credibility": credibility,
+            "reputation": reputation,
+            "post_score": post_score,
+            "is_accepted": is_accepted,
+            "source_url": source_url,
+            "se_tags": se_tags,
+            "se_site": se_site,
+            "thread_title": thread_title,
+        })
+    return frames
+
+
+def _build_neighborhood_figure(G, center_frame_id, max_hops=2):
+    """Build a Plotly network graph showing a frame's neighborhood."""
+    if not G.has_node(center_frame_id):
+        return None
+
+    # Collect neighbors via semantic edges (BFS up to max_hops)
+    visited = {center_frame_id}
+    frontier = {center_frame_id}
+    for _ in range(max_hops):
+        next_frontier = set()
+        for fid in frontier:
+            for _, nbr, d in G.edges(fid, data=True):
+                if d.get("edge_type") in SEMANTIC_EDGE_TYPES and nbr not in visited:
+                    if G.nodes.get(nbr, {}).get("node_type") == "Frame":
+                        next_frontier.add(nbr)
+            for pred, _, d in G.in_edges(fid, data=True):
+                if d.get("edge_type") in SEMANTIC_EDGE_TYPES and pred not in visited:
+                    if G.nodes.get(pred, {}).get("node_type") == "Frame":
+                        next_frontier.add(pred)
+        visited.update(next_frontier)
+        frontier = next_frontier
+        if not frontier:
+            break
+
+    if len(visited) < 2:
+        return None
+
+    subG = G.subgraph(visited).copy()
+
+    # Remove non-semantic edges
+    edges_to_remove = [
+        (u, v, k) for u, v, k, d in subG.edges(data=True, keys=True)
+        if d.get("edge_type") not in SEMANTIC_EDGE_TYPES
+    ]
+    for u, v, k in edges_to_remove:
+        subG.remove_edge(u, v, key=k)
+
+    if subG.number_of_edges() == 0:
+        return None
+
+    pos = nx.spring_layout(subG, seed=42, k=3.0, iterations=80)
+
+    # Edge traces
+    edge_traces = {}
+    for u, v, d in subG.edges(data=True):
+        etype = d.get("edge_type", "UNKNOWN")
+        if etype not in edge_traces:
+            edge_traces[etype] = {"x": [], "y": []}
+        x0, y0 = pos[u]
+        x1, y1 = pos[v]
+        edge_traces[etype]["x"].extend([x0, x1, None])
+        edge_traces[etype]["y"].extend([y0, y1, None])
+
+    fig = go.Figure()
+    for etype, coords in edge_traces.items():
+        color = EDGE_COLORS.get(etype, "#bdc3c7")
+        fig.add_trace(go.Scatter(
+            x=coords["x"], y=coords["y"],
+            mode="lines",
+            line=dict(width=1.5, color=color),
+            name=etype,
+            hoverinfo="none",
+        ))
+
+    # Node traces
+    node_x, node_y, node_colors, node_text, node_hover = [], [], [], [], []
+    for fid in visited:
+        if fid not in pos:
+            continue
+        x, y = pos[fid]
+        node_x.append(x)
+        node_y.append(y)
+        nd = G.nodes.get(fid, {})
+        ft = nd.get("frame_type", "other")
+        node_colors.append(FRAME_TYPE_COLORS.get(ft, "#95a5a6"))
+        subject = nd.get("subject", "?")
+        # Bold the center node label
+        if fid == center_frame_id:
+            node_text.append(f"** {subject[:25]} **")
+        else:
+            node_text.append(subject[:25])
+        node_hover.append(
+            f"<b>{ft.upper()}</b><br>"
+            f"{fid}<br>"
+            f"Subject: {subject}<br>"
+            f"Main point: {nd.get('main_point', '?')[:80]}"
+        )
+
+    # Center node gets larger marker
+    node_sizes = [
+        24 if list(visited)[i] == center_frame_id else 14
+        for i in range(len(node_x))
+    ]
+
+    fig.add_trace(go.Scatter(
+        x=node_x, y=node_y,
+        mode="markers+text",
+        marker=dict(size=node_sizes, color=node_colors,
+                    line=dict(width=1.5, color="white")),
+        text=node_text,
+        textposition="top center",
+        textfont=dict(size=9),
+        hovertext=node_hover,
+        hoverinfo="text",
+        name="Frames",
+        showlegend=False,
+    ))
+
+    fig.update_layout(
+        title=dict(text=f"Neighborhood of {center_frame_id}", y=0.98, x=0.01,
+                   xanchor="left", yanchor="top"),
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False,
+                   scaleanchor="x", scaleratio=1),
+        height=550,
+        margin=dict(l=20, r=20, t=80, b=20),
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+
+    return fig
+
+
+def _render_kg_explorer(G, stats):
+    """Render the Knowledge Graph Explorer page."""
+    # Ensure semantic edges are loaded into the graph
+    G = _ensure_semantic_edges(G)
+    frames = _build_frame_index(G)
+    topic_data = _load_topic_model()
+
+    # Build frame_id -> topic mapping
+    frame_to_topic = {}
+    topic_labels = {}
+    if topic_data:
+        for t in topic_data.get("topics", []):
+            tid = t["topic_id"]
+            label = t.get("label", f"Topic {tid}")
+            topic_labels[tid] = label
+            for tf in t.get("top_frames", []):
+                frame_to_topic[tf["frame_id"]] = tid
+
+    # ── Sidebar controls ──
+    with st.sidebar:
+        st.markdown("**Filters**")
+
+        search_text = st.text_input(
+            "Search subjects & main points",
+            placeholder="e.g. thread tapping, wall thickness",
+            key="kg_search",
+        )
+
+        # Frame type filter
+        all_types = sorted(set(f["frame_type"] for f in frames if f["frame_type"] != "?"))
+        selected_types = st.multiselect("Frame type", all_types, default=[], key="kg_types")
+
+        # Scope filter
+        all_scopes = sorted(set(f["scope"] for f in frames if f["scope"] != "?"))
+        selected_scopes = st.multiselect("Scope", all_scopes, default=[], key="kg_scopes")
+
+        # SE site filter
+        all_sites = sorted(set(f["se_site"] for f in frames if f["se_site"]))
+        selected_sites = st.multiselect("SE site", all_sites, default=[], key="kg_sites")
+
+        # Credibility filter
+        selected_cred = st.multiselect(
+            "Author credibility", ["high", "medium", "low"], default=[], key="kg_cred"
+        )
+
+        # Applicability filter
+        selected_app = st.multiselect(
+            "Applicability", ["universal", "context_dependent", "limited"],
+            default=[], key="kg_app"
+        )
+
+        st.divider()
+        st.markdown("**Graph settings**")
+        explore_hops = st.slider("Neighborhood hops", 1, 3, 2, key="kg_hops",
+                                 help="How many semantic edge hops to show around a selected frame")
+
+    # ── Apply filters ──
+    filtered = frames
+    if search_text:
+        terms = search_text.lower().split()
+        filtered = [
+            f for f in filtered
+            if all(
+                t in f["subject"].lower() or t in f["main_point"].lower()
+                for t in terms
+            )
+        ]
+    if selected_types:
+        filtered = [f for f in filtered if f["frame_type"] in selected_types]
+    if selected_scopes:
+        filtered = [f for f in filtered if f["scope"] in selected_scopes]
+    if selected_sites:
+        filtered = [f for f in filtered if f["se_site"] in selected_sites]
+    if selected_cred:
+        filtered = [f for f in filtered if f["credibility"] in selected_cred]
+    if selected_app:
+        filtered = [f for f in filtered if f["applicability"] in selected_app]
+
+    # ── Main area ──
+    st.title("Knowledge Graph Explorer")
+    st.caption(
+        f"Browse and explore **{stats['frames']:,}** knowledge frames extracted from "
+        f"practitioner discussions across **{stats['threads']:,}** threads."
+    )
+
+    # ── Overview metrics ──
+    tab_browse, tab_stats = st.tabs(["Browse Frames", "Graph Statistics"])
+
+    with tab_stats:
+        st.markdown("### Frame Distributions")
+
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Total Frames", f"{stats['frames']:,}")
+        col2.metric("Semantic Edges", f"{stats['semantic_edges']:,}")
+        col3.metric("Authors", f"{stats['authors']:,}")
+        col4.metric("Threads", f"{stats['threads']:,}")
+
+        st.markdown("---")
+
+        chart_col1, chart_col2 = st.columns(2)
+
+        with chart_col1:
+            st.markdown("#### By Frame Type")
+            type_counts = {}
+            for f in frames:
+                ft = f["frame_type"]
+                type_counts[ft] = type_counts.get(ft, 0) + 1
+            sorted_types = sorted(type_counts.items(), key=lambda x: -x[1])
+            type_labels = [t[0] for t in sorted_types]
+            type_values = [t[1] for t in sorted_types]
+            type_colors = [FRAME_TYPE_COLORS.get(t, "#95a5a6") for t in type_labels]
+
+            fig_type = go.Figure(go.Bar(
+                x=type_labels, y=type_values,
+                marker_color=type_colors,
+                text=type_values, textposition="outside",
+            ))
+            fig_type.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_type, use_container_width=True)
+
+        with chart_col2:
+            st.markdown("#### By Scope")
+            scope_counts = {}
+            for f in frames:
+                sc = f["scope"]
+                scope_counts[sc] = scope_counts.get(sc, 0) + 1
+            sorted_scopes = sorted(scope_counts.items(), key=lambda x: -x[1])
+            scope_labels = [s[0] for s in sorted_scopes]
+            scope_values = [s[1] for s in sorted_scopes]
+
+            fig_scope = go.Figure(go.Bar(
+                x=scope_labels, y=scope_values,
+                marker_color="#3498db",
+                text=scope_values, textposition="outside",
+            ))
+            fig_scope.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                xaxis_tickangle=-45,
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_scope, use_container_width=True)
+
+        chart_col3, chart_col4 = st.columns(2)
+
+        with chart_col3:
+            st.markdown("#### By Epistemic Stance")
+            stance_counts = {}
+            for f in frames:
+                es = f["epistemic_stance"]
+                stance_counts[es] = stance_counts.get(es, 0) + 1
+            sorted_stances = sorted(stance_counts.items(), key=lambda x: -x[1])
+            fig_stance = go.Figure(go.Bar(
+                x=[s[0] for s in sorted_stances],
+                y=[s[1] for s in sorted_stances],
+                marker_color="#9b59b6",
+                text=[s[1] for s in sorted_stances], textposition="outside",
+            ))
+            fig_stance.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                xaxis_tickangle=-45,
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_stance, use_container_width=True)
+
+        with chart_col4:
+            st.markdown("#### By Author Credibility")
+            cred_counts = {}
+            for f in frames:
+                cr = f["credibility"]
+                cred_counts[cr] = cred_counts.get(cr, 0) + 1
+            cred_order = ["high", "medium", "low"]
+            cred_colors_map = {"high": "#2ecc71", "medium": "#f39c12", "low": "#e74c3c"}
+            fig_cred = go.Figure(go.Bar(
+                x=[c for c in cred_order if c in cred_counts],
+                y=[cred_counts.get(c, 0) for c in cred_order if c in cred_counts],
+                marker_color=[cred_colors_map.get(c, "#95a5a6") for c in cred_order if c in cred_counts],
+                text=[cred_counts.get(c, 0) for c in cred_order if c in cred_counts],
+                textposition="outside",
+            ))
+            fig_cred.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_cred, use_container_width=True)
+
+        # Semantic edge breakdown
+        st.markdown("#### Semantic Edge Types")
+        edge_type_counts = {}
+        for _, _, d in G.edges(data=True):
+            et = d.get("edge_type")
+            if et in SEMANTIC_EDGE_TYPES:
+                edge_type_counts[et] = edge_type_counts.get(et, 0) + 1
+        if edge_type_counts:
+            sorted_edges = sorted(edge_type_counts.items(), key=lambda x: -x[1])
+            ec1, ec2, ec3, ec4 = st.columns(len(sorted_edges))
+            for col, (etype, count) in zip([ec1, ec2, ec3, ec4][:len(sorted_edges)], sorted_edges):
+                col.metric(etype, f"{count:,}")
+
+        # Topic model summary
+        if topic_data:
+            st.markdown("---")
+            st.markdown("#### Topics (BERTopic)")
+            meta = topic_data.get("metadata", {})
+            tc1, tc2, tc3 = st.columns(3)
+            tc1.metric("Topics", meta.get("total_topics", "?"))
+            tc2.metric("Outlier frames", f"{meta.get('outlier_count', '?')} ({meta.get('outlier_pct', '?')}%)")
+            tc3.metric("Total frames", meta.get("total_frames", "?"))
+
+            topics = topic_data.get("topics", [])
+            top_topics = sorted(topics, key=lambda t: -t.get("n_frames", 0))[:15]
+            fig_topics = go.Figure(go.Bar(
+                x=[t["label"] for t in top_topics],
+                y=[t["n_frames"] for t in top_topics],
+                marker_color="#1abc9c",
+                text=[t["n_frames"] for t in top_topics],
+                textposition="outside",
+            ))
+            fig_topics.update_layout(
+                height=400, margin=dict(l=20, r=20, t=20, b=100),
+                xaxis_title="", yaxis_title="Frames",
+                xaxis_tickangle=-45,
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_topics, use_container_width=True)
+
+    with tab_browse:
+        st.markdown(f"**{len(filtered):,}** frames match your filters")
+
+        if not filtered:
+            st.info("No frames match the current filters. Try broadening your search.")
+            return
+
+        # Pagination
+        page_size = 25
+        total_pages = max(1, (len(filtered) + page_size - 1) // page_size)
+        if "kg_page" not in st.session_state:
+            st.session_state.kg_page = 0
+        # Reset page when filters change
+        filter_hash = hash((search_text, tuple(selected_types), tuple(selected_scopes),
+                           tuple(selected_sites), tuple(selected_cred), tuple(selected_app)))
+        if st.session_state.get("_kg_filter_hash") != filter_hash:
+            st.session_state.kg_page = 0
+            st.session_state["_kg_filter_hash"] = filter_hash
+
+        current_page = st.session_state.kg_page
+        start = current_page * page_size
+        end = min(start + page_size, len(filtered))
+        page_frames = filtered[start:end]
+
+        # Page navigation
+        nav_col1, nav_col2, nav_col3 = st.columns([1, 3, 1])
+        with nav_col1:
+            if st.button("< Prev", disabled=(current_page == 0), key="kg_prev"):
+                st.session_state.kg_page = max(0, current_page - 1)
+                st.rerun()
+        with nav_col2:
+            st.markdown(
+                f"<div style='text-align:center'>Page {current_page + 1} of {total_pages}</div>",
+                unsafe_allow_html=True,
+            )
+        with nav_col3:
+            if st.button("Next >", disabled=(current_page >= total_pages - 1), key="kg_next"):
+                st.session_state.kg_page = min(total_pages - 1, current_page + 1)
+                st.rerun()
+
+        st.markdown("---")
+
+        # Frame list
+        for frame in page_frames:
+            ft = frame["frame_type"]
+            color = FRAME_TYPE_COLORS.get(ft, "#95a5a6")
+
+            with st.expander(
+                f"**{ft.upper()}** | {frame['scope']} | {frame['subject'][:60]}",
+                expanded=False,
+            ):
+                # Header
+                st.markdown(
+                    f"### {ft.upper()} &nbsp; | &nbsp; "
+                    f"`{frame['scope']}` &nbsp; | &nbsp; "
+                    f"`{frame['applicability']}`"
+                )
+                st.caption(f"`{frame['frame_id']}`")
+
+                st.markdown(f"**Subject:** {frame['subject']}")
+                st.markdown(f"**Main Point:** {frame['main_point']}")
+
+                if frame.get("source_quote"):
+                    quote = frame["source_quote"].replace("\n- ", "\n  - ").replace("\n* ", "\n  * ")
+                    st.markdown("**Source Quote**")
+                    st.markdown(f"> {quote}")
+
+                st.markdown(
+                    f"**Epistemic stance:** `{frame['epistemic_stance']}` "
+                    f"&nbsp; | &nbsp; Post role: `{frame['post_role']}`"
+                )
+
+                if frame.get("example_value"):
+                    st.markdown(f"**Example value:** {frame['example_value']}")
+                if frame.get("example_context"):
+                    st.markdown(f"**Example context:** {frame['example_context']}")
+
+                st.divider()
+
+                # Author info
+                rep = frame.get("reputation", -1)
+                rep_str = f"{rep:,}" if rep != -1 else "N/A"
+                accepted = " | Accepted" if frame.get("is_accepted") else ""
+                st.caption(
+                    f"Author: **{frame['author']}** &nbsp; | &nbsp; "
+                    f"Credibility: **{frame['credibility']}** &nbsp; | &nbsp; "
+                    f"Reputation: **{rep_str}** &nbsp; | &nbsp; "
+                    f"Post score: **{frame['post_score']}**"
+                    f"{accepted}"
+                )
+
+                if frame.get("source_url"):
+                    st.markdown(f"[\U0001f517 View Original Thread]({frame['source_url']})")
+                if frame.get("se_tags"):
+                    st.caption(f"Tags: {frame['se_tags']}")
+                if frame.get("thread_title"):
+                    st.caption(f"Thread: {frame['thread_title']}")
+
+                # Neighborhood graph button
+                st.divider()
+                if st.button(
+                    "\U0001f578\ufe0f Show Neighborhood Graph",
+                    key=f"nbr_{frame['frame_id']}",
+                ):
+                    st.session_state["_kg_selected_frame"] = frame["frame_id"]
+
+                if st.session_state.get("_kg_selected_frame") == frame["frame_id"]:
+                    fig = _build_neighborhood_figure(G, frame["frame_id"], max_hops=explore_hops)
+                    if fig:
+                        st.plotly_chart(fig, use_container_width=True)
+
+                        # List connected frames
+                        st.markdown("**Connected frames:**")
+                        for _, nbr, d in G.edges(frame["frame_id"], data=True):
+                            if d.get("edge_type") in SEMANTIC_EDGE_TYPES:
+                                nbr_data = G.nodes.get(nbr, {})
+                                if nbr_data.get("node_type") == "Frame":
+                                    st.caption(
+                                        f"`{d['edge_type']}` -> "
+                                        f"**{nbr_data.get('frame_type', '?').upper()}** "
+                                        f"{nbr_data.get('subject', '?')} "
+                                        f"(`{nbr}`)"
+                                    )
+                        for pred, _, d in G.in_edges(frame["frame_id"], data=True):
+                            if d.get("edge_type") in SEMANTIC_EDGE_TYPES:
+                                pred_data = G.nodes.get(pred, {})
+                                if pred_data.get("node_type") == "Frame":
+                                    st.caption(
+                                        f"**{pred_data.get('frame_type', '?').upper()}** "
+                                        f"{pred_data.get('subject', '?')} "
+                                        f"(`{pred}`) -> `{d['edge_type']}`"
+                                    )
+                    else:
+                        st.info("No semantic edges found for this frame.")
+
+
+# ─────────────────────────────────────────────
 # MAIN APP
 # ─────────────────────────────────────────────
 
@@ -1343,29 +1971,44 @@ def main():
     # Record visitor (once per session)
     _record_visitor()
 
-    # ── SIDEBAR ──
+    if G is None:
+        st.sidebar.error("Graph not found. Run `build_graph.py` first.")
+        st.stop()
+
+    G = _ensure_semantic_edges(G)
+    stats = get_graph_stats(G)
+
+    # ── SIDEBAR (common) ──
     with st.sidebar:
         st.title("\U0001f527 DFM KG Agent")
-
-        if st.session_state.get("active_idx", -1) >= 0:
-            if st.button("\u2190 Home", use_container_width=True):
-                st.session_state.active_idx = -1
-                st.session_state.flash_on = False
-                st.rerun()
-
-        if G is None:
-            st.error("Graph not found. Run `build_graph.py` first.")
-            st.stop()
-
-        stats = get_graph_stats(G)
         st.caption(
             f"**{stats['frames']:,}** frames &nbsp;|&nbsp; "
             f"**{stats['semantic_edges']:,}** semantic edges\n\n"
             f"**{stats['authors']:,}** authors &nbsp;|&nbsp; "
             f"**{stats['threads']:,}** threads"
         )
-
         st.divider()
+        page = st.radio(
+            "Navigate",
+            ["\U0001f50d DFM Agent", "\U0001f578\ufe0f KG Explorer"],
+            label_visibility="collapsed",
+            key="page_nav",
+        )
+        st.divider()
+
+    # ── KG Explorer page ──
+    if page == "\U0001f578\ufe0f KG Explorer":
+        _render_kg_explorer(G, stats)
+        return
+
+    # ── DFM Agent page (original) ──
+    with st.sidebar:
+        if st.session_state.get("active_idx", -1) >= 0:
+            if st.button("\u2190 Home", use_container_width=True):
+                st.session_state.active_idx = -1
+                st.session_state.flash_on = False
+                st.rerun()
+
         st.markdown("**Controls**")
 
         # Flash Mode toggle — visually separate, above standard modes

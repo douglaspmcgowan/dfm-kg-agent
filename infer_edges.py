@@ -23,6 +23,8 @@ Usage:
     python infer_edges.py --limit 100      # prototype on first 100 frames
     python infer_edges.py --resume         # continue from checkpoint
     python infer_edges.py --dry-run        # Qdrant lookup only, skip LLM
+    python infer_edges.py --incremental --old-extractions extractions_se_all.json
+        # re-infer only pairs touching frames that changed between old and new extractions
     OPENAI_MODEL=gpt-5 python infer_edges.py
     TOP_K=3 PARALLEL_REQUESTS=5 python infer_edges.py
 
@@ -74,6 +76,44 @@ _XML_ILLEGAL = re.compile(
 
 def _clean_xml(v):
     return _XML_ILLEGAL.sub("", v) if isinstance(v, str) else v
+
+
+# ─────────────────────────────────────────────
+# INCREMENTAL DIFF
+# ─────────────────────────────────────────────
+
+def diff_frames(old_path: str, new_path: str) -> Set[str]:
+    """Compare two extraction files and return frame IDs that changed."""
+    with open(old_path, "r", encoding="utf-8") as f:
+        old_data = json.load(f)
+    with open(new_path, "r", encoding="utf-8") as f:
+        new_data = json.load(f)
+
+    def build_map(data):
+        fmap = {}
+        for r in data["results"]:
+            pid = r["post_id"]
+            for i, frame in enumerate(r.get("frames", [])):
+                fmap[f"{pid}-{i}"] = frame
+        return fmap
+
+    old_frames = build_map(old_data)
+    new_frames = build_map(new_data)
+
+    added   = set(new_frames) - set(old_frames)
+    removed = set(old_frames) - set(new_frames)
+    changed = {fid for fid in set(old_frames) & set(new_frames)
+                if old_frames[fid] != new_frames[fid]}
+
+    affected = added | removed | changed
+    print(f"Incremental diff:")
+    print(f"  Old frames : {len(old_frames)}")
+    print(f"  New frames : {len(new_frames)}")
+    print(f"  Added      : {len(added)}")
+    print(f"  Removed    : {len(removed)}")
+    print(f"  Changed    : {len(changed)}")
+    print(f"  Affected   : {len(affected)}")
+    return affected
 
 
 # ─────────────────────────────────────────────
@@ -250,10 +290,14 @@ def get_frame_neighbors(qdrant, int_id: int, top_k: int, int_to_fid: Dict[int, s
 # ─────────────────────────────────────────────
 
 def gather_pairs(G, qdrant, fid_to_int: Dict[str, int], int_to_fid: Dict[int, str],
-                 top_k: int, limit: Optional[int] = None):
+                 top_k: int, limit: Optional[int] = None,
+                 frame_subset: Optional[Set[str]] = None):
     """
     For each Frame node in the graph that is also in the Qdrant index,
     find its top-K neighbors. Returns a deduplicated list of (fid_a, fid_b) pairs.
+
+    If frame_subset is provided, only gathers neighbors for frames in that set
+    (but neighbors can be any frame). Used for incremental re-inference.
 
     Skips:
       - Pairs from the same post (post_id derived by stripping the trailing "-{i}" index)
@@ -263,6 +307,10 @@ def gather_pairs(G, qdrant, fid_to_int: Dict[str, int], int_to_fid: Dict[int, st
         n for n, d in G.nodes(data=True)
         if d.get("node_type") == "Frame" and n in fid_to_int
     ]
+
+    if frame_subset is not None:
+        frame_nodes = [n for n in frame_nodes if n in frame_subset]
+        print(f"Incremental mode: gathering pairs for {len(frame_nodes)} affected frames")
 
     not_indexed = sum(
         1 for n, d in G.nodes(data=True)
@@ -522,6 +570,18 @@ def main():
         "--dry-run", action="store_true",
         help="Run Qdrant neighbor lookup and pair gathering only; skip LLM calls"
     )
+    parser.add_argument(
+        "--incremental", action="store_true",
+        help="Re-infer only pairs touching frames that changed between old and new extractions"
+    )
+    parser.add_argument(
+        "--old-extractions", type=str, default="extractions_se_all.json",
+        help="Previous extractions file for incremental diff (default: extractions_se_all.json)"
+    )
+    parser.add_argument(
+        "--new-extractions", type=str, default="extractions_revised_reviews_all.json",
+        help="New extractions file for incremental diff (default: extractions_revised_reviews_all.json)"
+    )
     args = parser.parse_args()
 
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -534,7 +594,25 @@ def main():
     print(f"Limit        : {args.limit if args.limit else 'all frames'}")
     print(f"Resume       : {args.resume}")
     print(f"Dry run      : {args.dry_run}")
+    print(f"Incremental  : {args.incremental}")
     print()
+
+    # ── Incremental diff ──
+    affected_frames: Optional[Set[str]] = None
+    if args.incremental:
+        old_path = str(BASE_DIR / args.old_extractions)
+        new_path = str(BASE_DIR / args.new_extractions)
+        if not os.path.exists(old_path):
+            print(f"ERROR: old extractions not found: {old_path}")
+            sys.exit(1)
+        if not os.path.exists(new_path):
+            print(f"ERROR: new extractions not found: {new_path}")
+            sys.exit(1)
+        affected_frames = diff_frames(old_path, new_path)
+        if not affected_frames:
+            print("No frames changed. Nothing to re-infer.")
+            return
+        print()
 
     # Load graph
     G = load_graph()
@@ -549,15 +627,30 @@ def main():
     fid_to_int, int_to_fid = build_qdrant_index(qdrant)
 
     # Gather candidate pairs via Qdrant neighbor lookup (fast, no API cost)
-    pairs = gather_pairs(G, qdrant, fid_to_int, int_to_fid, TOP_K, limit=args.limit)
+    pairs = gather_pairs(G, qdrant, fid_to_int, int_to_fid, TOP_K,
+                         limit=args.limit, frame_subset=affected_frames)
     qdrant.close()
 
     if not pairs:
         print("No pairs to classify.")
         return
 
-    # Load checkpoint if resuming
-    prev_results, already_done = load_checkpoint() if args.resume else ([], set())
+    # ── Build base results for incremental mode ──
+    if args.incremental:
+        # Load previous checkpoint and keep only pairs NOT touching affected frames
+        prev_results, _ = load_checkpoint() if CHECKPOINT.exists() else ([], set())
+        kept = [r for r in prev_results
+                if r["frame_a"] not in affected_frames
+                and r["frame_b"] not in affected_frames]
+        dropped = len(prev_results) - len(kept)
+        print(f"Incremental: keeping {len(kept)} old pairs, dropped {dropped} touching changed frames")
+        already_done: Set[str] = set()  # classify all new pairs fresh
+    elif args.resume:
+        prev_results, already_done = load_checkpoint()
+        kept = prev_results
+    else:
+        kept = []
+        already_done = set()
 
     # Extract frame content from graph nodes (for LLM prompt)
     frame_data: Dict[str, Dict] = {
@@ -570,7 +663,7 @@ def main():
         client, pairs, frame_data, already_done, dry_run=args.dry_run
     )
 
-    all_results = prev_results + new_results
+    all_results = kept + new_results
 
     # Save semantic edges JSON
     if not args.dry_run and all_results:
