@@ -365,7 +365,38 @@ def _save_feedback(name, email, message):
     with open(_FEEDBACK_FILE, "w") as f:
         json.dump(feedback, f, indent=2)
 
-    # Send email via SMTP
+    # Send email via Formsubmit.co (free, no API key needed)
+    try:
+        import urllib.request
+        payload = json.dumps({
+            "name": name or "Anonymous",
+            "email": email or "Not provided",
+            "message": message,
+            "_subject": f"DFM KG Agent Feedback from {name or 'Anonymous'}",
+            "_captcha": "false",
+            "_template": "box",
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            f"https://formsubmit.co/ajax/{_FEEDBACK_EMAIL}",
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "User-Agent": "Mozilla/5.0 (compatible; DFM-KG-Agent/1.0)",
+                "Origin": "https://dfm-kg-agent.streamlit.app",
+                "Referer": "https://dfm-kg-agent.streamlit.app/",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            if resp.status == 200:
+                result = json.loads(resp.read())
+                if result.get("success") == "true":
+                    return True
+    except Exception:
+        pass  # Email failed silently -- feedback is still saved locally
+
+    # Fallback: SMTP if configured
     try:
         smtp_user = st.secrets.get("SMTP_USER")
         smtp_pass = st.secrets.get("SMTP_PASSWORD")
@@ -391,7 +422,7 @@ def _save_feedback(name, email, message):
                 server.sendmail(smtp_user, _FEEDBACK_EMAIL, msg.as_string())
             return True
     except Exception:
-        pass  # Email failed silently -- feedback is still saved locally
+        pass
     return False
 
 
