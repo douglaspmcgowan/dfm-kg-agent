@@ -991,6 +991,8 @@ def _render_summary(text):
 
 def _sanitize_for_pdf(text):
     """Replace Unicode characters that aren't in Latin-1 with ASCII equivalents."""
+    if not text:
+        return ""
     replacements = {
         "\u2014": "--",   # em dash
         "\u2013": "-",    # en dash
@@ -1030,12 +1032,37 @@ def _md_to_html(text):
     return text
 
 
+def _strip_md_bold(text):
+    """Remove markdown **bold** markers for plain text rendering."""
+    import re
+    return re.sub(r'\*\*(.+?)\*\*', r'\1', _sanitize_for_pdf(text))
+
+
 def generate_pdf_report(result):
-    """Generate a PDF document from a DFM report result dict.
+    """Generate a polished PDF document from a DFM report result dict.
 
     Returns bytes (BytesIO) ready for st.download_button.
     """
     from fpdf import FPDF
+
+    # Color palette
+    C_PRIMARY = (41, 128, 185)      # blue
+    C_ACCENT = (44, 62, 80)         # dark navy
+    C_LIGHT_BG = (236, 240, 241)    # light gray
+    C_RULE_GREEN = (39, 174, 96)    # green
+    C_WARN_ORANGE = (230, 126, 34)  # orange
+    C_CONTRA_RED = (192, 57, 43)    # red
+    C_GAP_PURPLE = (142, 68, 173)   # purple
+    C_BODY = (44, 62, 80)           # dark text
+    C_MUTED = (127, 140, 141)       # gray text
+    C_WHITE = (255, 255, 255)
+
+    # Discipline colors (cycle)
+    DISC_COLORS = [
+        (41, 128, 185), (39, 174, 96), (142, 68, 173),
+        (230, 126, 34), (192, 57, 43), (22, 160, 133),
+        (52, 73, 94), (243, 156, 18),
+    ]
 
     report = result["report"]
     backfill_result = result.get("backfill_result")
@@ -1045,188 +1072,371 @@ def generate_pdf_report(result):
     token_usage = result.get("token_usage", {})
 
     pdf = FPDF()
-    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.set_auto_page_break(auto=True, margin=18)
     pdf.add_page()
+    usable_w = pdf.w - pdf.l_margin - pdf.r_margin
 
     def _reset():
-        """Reset cursor to left margin."""
         pdf.set_x(pdf.l_margin)
 
-    def _safe_text(pdf_obj, h, text, **kw):
-        """Write sanitized text with position reset."""
+    def _safe_text(h, text, **kw):
         _reset()
-        pdf_obj.multi_cell(0, h, _sanitize_for_pdf(text),
-                           new_x="LMARGIN", new_y="NEXT", **kw)
+        pdf.multi_cell(0, h, _sanitize_for_pdf(text),
+                       new_x="LMARGIN", new_y="NEXT", **kw)
 
-    def _safe_html(pdf_obj, html):
-        """Write HTML with position reset."""
+    def _safe_html(html):
         _reset()
-        pdf_obj.write_html(html)
-        pdf_obj.ln(1)
+        pdf.write_html(html)
+        pdf.ln(1)
         _reset()
 
-    def _section_header(title, font_size=14):
-        """Render a section header with underline."""
+    def _colored_banner(text, bg_color, text_color=C_WHITE, font_size=16):
+        """Full-width colored banner with text."""
         _reset()
+        y = pdf.get_y()
+        pdf.set_fill_color(*bg_color)
+        pdf.set_text_color(*text_color)
         pdf.set_font("Helvetica", "B", font_size)
-        pdf.cell(0, 8, _sanitize_for_pdf(title), new_x="LMARGIN", new_y="NEXT")
-        pdf.set_draw_color(200, 200, 200)
-        pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+        pdf.cell(usable_w, 10, _sanitize_for_pdf(f"  {text}"),
+                 new_x="LMARGIN", new_y="NEXT", fill=True)
         pdf.ln(3)
 
-    # ── Title ──
-    pdf.set_font("Helvetica", "B", 18)
-    pdf.cell(0, 12, "DFM Analysis Report", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(2)
+    def _section_header(title, color=C_PRIMARY, font_size=13):
+        """Colored section header with accent bar."""
+        _reset()
+        pdf.ln(2)
+        y = pdf.get_y()
+        # Accent bar
+        pdf.set_fill_color(*color)
+        pdf.rect(pdf.l_margin, y, 3, 8, "F")
+        pdf.set_x(pdf.l_margin + 6)
+        pdf.set_font("Helvetica", "B", font_size)
+        pdf.set_text_color(*color)
+        pdf.cell(0, 8, _sanitize_for_pdf(title), new_x="LMARGIN", new_y="NEXT")
+        # Thin line
+        pdf.set_draw_color(*color)
+        pdf.set_line_width(0.3)
+        pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+        pdf.ln(3)
+        pdf.set_text_color(*C_BODY)
 
-    # ── Query & metadata ──
-    pdf.set_font("Helvetica", "", 10)
-    pdf.set_text_color(80, 80, 80)
+    def _sub_header(title, color=C_ACCENT):
+        """Smaller sub-section header."""
+        _reset()
+        pdf.set_font("Helvetica", "B", 10)
+        pdf.set_text_color(*color)
+        pdf.cell(0, 6, _sanitize_for_pdf(title), new_x="LMARGIN", new_y="NEXT")
+        pdf.set_text_color(*C_BODY)
+        pdf.ln(1)
+
+    def _quote_block(text, left_color=C_MUTED):
+        """Indented quote block with left border."""
+        _reset()
+        y = pdf.get_y()
+        pdf.set_fill_color(*left_color)
+        pdf.set_font("Helvetica", "I", 9)
+        pdf.set_text_color(80, 80, 80)
+        indent = 8
+        pdf.set_x(pdf.l_margin + indent)
+        pdf.multi_cell(usable_w - indent, 4.5, _sanitize_for_pdf(text),
+                       new_x="LMARGIN", new_y="NEXT")
+        y2 = pdf.get_y()
+        # Left accent bar
+        pdf.rect(pdf.l_margin + 3, y, 2, y2 - y, "F")
+        pdf.set_text_color(*C_BODY)
+        pdf.ln(2)
+
+    def _bullet(text, bullet_color=C_PRIMARY):
+        """Colored bullet point."""
+        _reset()
+        y = pdf.get_y()
+        # Bullet dot
+        pdf.set_fill_color(*bullet_color)
+        pdf.ellipse(pdf.l_margin + 2, y + 1.5, 2.5, 2.5, "F")
+        pdf.set_x(pdf.l_margin + 8)
+        pdf.set_font("Helvetica", "", 9.5)
+        pdf.set_text_color(*C_BODY)
+        pdf.multi_cell(usable_w - 8, 5, _strip_md_bold(text),
+                       new_x="LMARGIN", new_y="NEXT")
+        pdf.ln(1)
+
+    def _numbered_item(num, text, num_color=C_RULE_GREEN):
+        """Numbered item with colored number circle."""
+        _reset()
+        y = pdf.get_y()
+        # Number circle
+        pdf.set_fill_color(*num_color)
+        pdf.set_text_color(*C_WHITE)
+        pdf.set_font("Helvetica", "B", 8)
+        cx = pdf.l_margin + 4
+        cy = y + 2.5
+        pdf.ellipse(cx - 3.5, cy - 3.5, 7, 7, "F")
+        pdf.set_xy(cx - 3.5, cy - 2.5)
+        pdf.cell(7, 5, str(num), align="C")
+        # Text (with bold support via write_html)
+        pdf.set_x(pdf.l_margin + 12)
+        pdf.set_font("Helvetica", "", 9.5)
+        pdf.set_text_color(*C_BODY)
+        pdf.multi_cell(usable_w - 12, 5, _strip_md_bold(text),
+                       new_x="LMARGIN", new_y="NEXT")
+        pdf.ln(2)
+
+    def _info_box(text, bg_color=C_LIGHT_BG, text_color=C_MUTED):
+        """Subtle background box for metadata/notes."""
+        _reset()
+        y = pdf.get_y()
+        pdf.set_font("Helvetica", "I", 8)
+        # Measure height
+        lines = pdf.multi_cell(usable_w - 8, 4, _sanitize_for_pdf(text),
+                               dry_run=True, output="LINES")
+        h = len(lines) * 4 + 4
+        pdf.set_fill_color(*bg_color)
+        pdf.rect(pdf.l_margin, y, usable_w, h, "F")
+        pdf.set_xy(pdf.l_margin + 4, y + 2)
+        pdf.set_text_color(*text_color)
+        pdf.multi_cell(usable_w - 8, 4, _sanitize_for_pdf(text),
+                       new_x="LMARGIN", new_y="NEXT")
+        pdf.set_text_color(*C_BODY)
+        pdf.ln(3)
+
+    # ══════════════════════════════════════════════
+    # TITLE BANNER
+    # ══════════════════════════════════════════════
+    _reset()
+    pdf.set_fill_color(*C_ACCENT)
+    pdf.rect(pdf.l_margin, pdf.get_y(), usable_w, 22, "F")
+    pdf.set_text_color(*C_WHITE)
+    pdf.set_font("Helvetica", "B", 20)
+    pdf.set_xy(pdf.l_margin + 6, pdf.get_y() + 3)
+    pdf.cell(0, 8, "DFM Analysis Report", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 9)
+    pdf.set_xy(pdf.l_margin + 6, pdf.get_y() - 1)
+    pdf.cell(0, 5, "Design-for-Manufacturability Knowledge Graph Agent",
+             new_x="LMARGIN", new_y="NEXT")
+    pdf.set_y(pdf.get_y() + 4)
+
+    # ── Metadata bar ──
     meta_parts = []
     if timestamp:
         meta_parts.append(f"Generated: {timestamp}")
     if elapsed:
-        meta_parts.append(f"{elapsed}s")
+        meta_parts.append(f"Analysis time: {elapsed}s")
     total_tok = token_usage.get("total_tokens", 0)
     if total_tok:
         meta_parts.append(f"{total_tok:,} tokens")
     if meta_parts:
-        pdf.cell(0, 5, " | ".join(meta_parts), new_x="LMARGIN", new_y="NEXT")
-    pdf.set_text_color(0, 0, 0)
-    pdf.ln(2)
+        _info_box("  |  ".join(meta_parts))
 
-    pdf.set_font("Helvetica", "B", 11)
-    pdf.cell(0, 6, "Query:", new_x="LMARGIN", new_y="NEXT")
+    # ── Query ──
+    pdf.ln(1)
+    pdf.set_font("Helvetica", "B", 10)
+    pdf.set_text_color(*C_PRIMARY)
+    _reset()
+    pdf.cell(0, 6, "QUERY", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_text_color(*C_BODY)
     pdf.set_font("Helvetica", "", 11)
-    _safe_text(pdf, 6, query)
+    _safe_text(6, query)
+    pdf.ln(3)
+
+    # ══════════════════════════════════════════════
+    # SUMMARY
+    # ══════════════════════════════════════════════
+    _section_header("Summary", C_PRIMARY)
+    pdf.set_font("Helvetica", "", 10)
+    _safe_html(_md_to_html(report.summary))
     pdf.ln(4)
 
-    # ── Summary ──
-    _section_header("Summary")
-    pdf.set_font("Helvetica", "", 10)
-    _safe_html(pdf, _md_to_html(report.summary))
-    pdf.ln(6)
-
-    # ── Design Rules ──
+    # ══════════════════════════════════════════════
+    # DESIGN RULES
+    # ══════════════════════════════════════════════
     rules = report.design_rules
     if rules:
-        _section_header(f"Design Rules ({len(rules)})")
-        pdf.set_font("Helvetica", "", 10)
+        _section_header(f"Design Rules ({len(rules)})", C_RULE_GREEN)
         for i, rule in enumerate(rules, 1):
-            _safe_html(pdf, f"{i}. {_md_to_html(rule.claim)}")
-            pdf.ln(3)
-        pdf.ln(4)
+            _numbered_item(i, rule.claim, C_RULE_GREEN)
+        pdf.ln(2)
 
-    # ── Disciplines ──
-    for disc in report.disciplines:
+    # ══════════════════════════════════════════════
+    # DISCIPLINES
+    # ══════════════════════════════════════════════
+    for d_idx, disc in enumerate(report.disciplines):
         disc_name = disc.discipline.replace("_", " ").title()
-        _section_header(disc_name)
+        disc_color = DISC_COLORS[d_idx % len(DISC_COLORS)]
+        _colored_banner(disc_name, disc_color)
 
         # First principles
         if disc.first_principles:
-            pdf.set_font("Helvetica", "I", 10)
-            pdf.set_text_color(40, 40, 120)
-            _safe_text(pdf, 5, disc.first_principles)
-            pdf.set_text_color(0, 0, 0)
-            pdf.ln(3)
+            _quote_block(disc.first_principles, disc_color)
 
         # Formulas
-        for f in disc.formulas:
-            try:
-                pdf.set_font("Helvetica", "B", 9)
-                _safe_text(pdf, 5, f.formula_name)
-                pdf.set_font("Helvetica", "", 9)
-                _safe_text(pdf, 4, f.expression)
-                pdf.set_font("Helvetica", "", 8)
-                pdf.set_text_color(100, 100, 100)
-                _safe_text(pdf, 4, f"Variables: {f.variables}")
-                _safe_text(pdf, 4, f.relevance)
-                pdf.set_text_color(0, 0, 0)
-                pdf.ln(2)
-            except Exception:
-                pdf.set_text_color(0, 0, 0)
-                pdf.set_font("Helvetica", "", 8)
-                _safe_text(pdf, 4, f"[Formula: {f.formula_name}]")
+        if disc.formulas:
+            _sub_header("Governing Equations", disc_color)
+            for f in disc.formulas:
+                try:
+                    pdf.set_font("Helvetica", "B", 9)
+                    pdf.set_text_color(*disc_color)
+                    _safe_text(5, f.formula_name)
+                    pdf.set_text_color(*C_BODY)
+                    pdf.set_font("Courier", "", 9)
+                    _safe_text(5, f"  {f.expression}")
+                    pdf.set_font("Helvetica", "", 8)
+                    pdf.set_text_color(*C_MUTED)
+                    _safe_text(4, f"  Variables: {f.variables}")
+                    _safe_text(4, f"  {f.relevance}")
+                    pdf.set_text_color(*C_BODY)
+                    pdf.ln(2)
+                except Exception:
+                    pdf.set_text_color(*C_BODY)
+                    pdf.set_font("Helvetica", "", 8)
+                    _safe_text(4, f"[Formula: {f.formula_name}]")
 
         # Evidence
         if disc.evidence:
-            pdf.set_font("Helvetica", "B", 11)
-            pdf.cell(0, 6, f"Evidence ({len(disc.evidence)} claims)",
-                     new_x="LMARGIN", new_y="NEXT")
-            pdf.set_font("Helvetica", "", 10)
+            _sub_header(f"Evidence ({len(disc.evidence)} claims)", disc_color)
             for ev in disc.evidence:
-                _safe_text(pdf, 5, f"- {ev.claim}")
-            pdf.ln(2)
+                _bullet(ev.claim, disc_color)
+            pdf.ln(1)
 
         # Reasoning chains
         if disc.reasoning_chains:
-            pdf.set_font("Helvetica", "B", 11)
-            pdf.cell(0, 6, f"Reasoning Chains ({len(disc.reasoning_chains)})",
-                     new_x="LMARGIN", new_y="NEXT")
+            _sub_header(f"Reasoning Chains ({len(disc.reasoning_chains)})", disc_color)
             for chain in disc.reasoning_chains:
-                pdf.set_font("Helvetica", "BI", 10)
-                _safe_text(pdf, 5, chain.chain_label)
-                pdf.set_font("Helvetica", "", 9)
+                pdf.set_font("Helvetica", "BI", 9)
+                pdf.set_text_color(*disc_color)
+                _safe_text(5, chain.chain_label)
+                pdf.set_text_color(*C_BODY)
+                pdf.set_font("Helvetica", "", 8.5)
                 for cf in chain.frames:
                     role = cf.role_in_chain.replace("_", " ").title()
                     edge = f" [{cf.edge_type}]" if cf.edge_type else ""
-                    _safe_text(pdf, 4, f"  {role}{edge}: {cf.claim}")
-                pdf.ln(3)
-            pdf.ln(2)
+                    _reset()
+                    pdf.set_x(pdf.l_margin + 6)
+                    # Role badge
+                    role_colors = {
+                        "Root Cause": (231, 76, 60),
+                        "Effect": (230, 126, 34),
+                        "Mitigation": (39, 174, 96),
+                    }
+                    rc = role_colors.get(role, disc_color)
+                    pdf.set_text_color(*rc)
+                    pdf.set_font("Helvetica", "B", 8)
+                    pdf.cell(pdf.get_string_width(role) + 2, 4, role)
+                    pdf.set_text_color(*C_MUTED)
+                    pdf.set_font("Helvetica", "", 8)
+                    if edge:
+                        pdf.cell(pdf.get_string_width(edge) + 1, 4, edge)
+                    pdf.set_text_color(*C_BODY)
+                    pdf.set_font("Helvetica", "", 8.5)
+                    pdf.ln(4)
+                    pdf.set_x(pdf.l_margin + 10)
+                    pdf.multi_cell(usable_w - 10, 4.5, _sanitize_for_pdf(cf.claim),
+                                   new_x="LMARGIN", new_y="NEXT")
+                    pdf.ln(1)
+                pdf.ln(2)
 
         pdf.ln(2)
 
-    # ── Contradictions ──
+    # ══════════════════════════════════════════════
+    # CONTRADICTIONS
+    # ══════════════════════════════════════════════
     if report.contradictions:
-        _section_header("Contradictions")
+        _section_header("Contradictions", C_CONTRA_RED)
         for c in report.contradictions:
             pdf.set_font("Helvetica", "B", 10)
-            _safe_text(pdf, 5, c.summary)
+            pdf.set_text_color(*C_CONTRA_RED)
+            _safe_text(5, c.summary)
+            pdf.set_text_color(*C_BODY)
+            pdf.ln(1)
+
+            # Position A
+            _reset()
+            pdf.set_fill_color(214, 234, 248)  # light blue
+            y = pdf.get_y()
+            pdf.set_font("Helvetica", "B", 8)
+            pdf.set_text_color(*C_PRIMARY)
+            pdf.set_x(pdf.l_margin + 3)
+            pdf.cell(0, 4, "POSITION A", new_x="LMARGIN", new_y="NEXT")
+            pdf.set_text_color(*C_BODY)
             pdf.set_font("Helvetica", "", 9)
-            _safe_text(pdf, 4, f"Position A: {c.position_a}")
-            _safe_text(pdf, 4, f"Position B: {c.position_b}")
+            pdf.set_x(pdf.l_margin + 3)
+            pdf.multi_cell(usable_w - 6, 4.5, _sanitize_for_pdf(c.position_a),
+                           new_x="LMARGIN", new_y="NEXT")
+            y2 = pdf.get_y()
+            pdf.rect(pdf.l_margin, y, usable_w, y2 - y + 2, "D")
+            pdf.ln(3)
+
+            # Position B
+            _reset()
+            pdf.set_fill_color(253, 235, 208)  # light orange
+            y = pdf.get_y()
+            pdf.set_font("Helvetica", "B", 8)
+            pdf.set_text_color(*C_WARN_ORANGE)
+            pdf.set_x(pdf.l_margin + 3)
+            pdf.cell(0, 4, "POSITION B", new_x="LMARGIN", new_y="NEXT")
+            pdf.set_text_color(*C_BODY)
+            pdf.set_font("Helvetica", "", 9)
+            pdf.set_x(pdf.l_margin + 3)
+            pdf.multi_cell(usable_w - 6, 4.5, _sanitize_for_pdf(c.position_b),
+                           new_x="LMARGIN", new_y="NEXT")
+            y2 = pdf.get_y()
+            pdf.rect(pdf.l_margin, y, usable_w, y2 - y + 2, "D")
+            pdf.ln(2)
+
             if hasattr(c, "edge_reasoning") and c.edge_reasoning:
                 pdf.set_font("Helvetica", "I", 8)
-                _safe_text(pdf, 4, f"Edge reasoning: {c.edge_reasoning}")
+                pdf.set_text_color(*C_MUTED)
+                _safe_text(4, f"Edge reasoning: {c.edge_reasoning}")
+                pdf.set_text_color(*C_BODY)
             pdf.ln(4)
         pdf.ln(2)
 
-    # ── Knowledge Gaps ──
+    # ══════════════════════════════════════════════
+    # KNOWLEDGE GAPS
+    # ══════════════════════════════════════════════
     gaps = report.knowledge_gaps
     if gaps:
-        _section_header(f"Knowledge Gaps ({len(gaps)})")
-        pdf.set_font("Helvetica", "", 10)
+        _section_header(f"Knowledge Gaps ({len(gaps)})", C_GAP_PURPLE)
         for gap in gaps:
-            _safe_text(pdf, 5, f"- {gap}")
-            pdf.ln(1)
+            _bullet(gap, C_GAP_PURPLE)
         pdf.ln(2)
 
-    # ── Backfill ──
+    # ══════════════════════════════════════════════
+    # BACKFILL
+    # ══════════════════════════════════════════════
     if backfill_result and hasattr(backfill_result, "backfills") and backfill_result.backfills:
-        _section_header("Textbook Backfill")
-        pdf.set_font("Helvetica", "", 9)
-        pdf.set_text_color(100, 100, 100)
-        _safe_text(pdf, 4, "General engineering knowledge -- NOT from the knowledge graph.")
-        pdf.set_text_color(0, 0, 0)
-        pdf.ln(2)
-        for bf in backfill_result.backfills:
-            pdf.set_font("Helvetica", "B", 10)
-            _safe_text(pdf, 5, f"Gap: {bf.gap}")
-            pdf.set_font("Helvetica", "", 10)
-            _safe_text(pdf, 5, bf.backfill_answer)
-            pdf.set_font("Helvetica", "I", 8)
-            footer = bf.confidence_note
-            if bf.relevant_standards:
-                footer += f" | {bf.relevant_standards}"
-            _safe_text(pdf, 4, footer)
-            pdf.ln(4)
+        _section_header("Textbook Backfill", C_GAP_PURPLE)
+        _info_box("General engineering knowledge -- NOT from the knowledge graph. "
+                  "Provided for completeness.")
 
-    # ── Footer ──
-    pdf.ln(4)
+        for bf in backfill_result.backfills:
+            pdf.set_font("Helvetica", "B", 9)
+            pdf.set_text_color(*C_GAP_PURPLE)
+            _safe_text(5, f"Gap: {bf.gap}")
+            pdf.set_text_color(*C_BODY)
+            pdf.set_font("Helvetica", "", 9.5)
+            _safe_text(5, bf.backfill_answer)
+            footer = bf.confidence_note or ""
+            if bf.relevant_standards:
+                footer += f"  |  {bf.relevant_standards}"
+            if footer:
+                _info_box(footer)
+            pdf.ln(3)
+
+    # ══════════════════════════════════════════════
+    # FOOTER
+    # ══════════════════════════════════════════════
+    pdf.ln(6)
     _reset()
-    pdf.set_font("Helvetica", "I", 8)
-    pdf.set_text_color(150, 150, 150)
-    pdf.cell(0, 4, "Generated by DFM Knowledge Graph Agent", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_draw_color(*C_MUTED)
+    pdf.set_line_width(0.3)
+    pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+    pdf.ln(3)
+    pdf.set_font("Helvetica", "", 8)
+    pdf.set_text_color(*C_MUTED)
+    _reset()
+    pdf.cell(0, 4, "Generated by DFM Knowledge Graph Agent  |  "
+             "UC Berkeley Co-Design Lab  |  Douglas McGowan",
+             new_x="LMARGIN", new_y="NEXT")
 
     # Return as bytes
     buf = io.BytesIO()
