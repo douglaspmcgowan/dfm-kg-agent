@@ -2619,7 +2619,7 @@ def _render_admin_page():
         # Reorder columns for readability
         desired_cols = ["timestamp", "first_name", "last_name", "contact_info", "ip", "user_agent", "session_id", "ip_hash"]
         cols = [c for c in desired_cols if c in df_v.columns] + [c for c in df_v.columns if c not in desired_cols]
-        df_v = df_v[cols]
+        df_v = df_v[cols].iloc[::-1].reset_index(drop=True)
         st.dataframe(df_v, use_container_width=True, hide_index=True)
         csv_v = df_v.to_csv(index=False)
         st.download_button("Download Visitor Log CSV", csv_v, "visitor_log.csv", "text/csv", key="dl_visitor_csv")
@@ -2636,7 +2636,7 @@ def _render_admin_page():
         desired_cols = ["timestamp", "visitor_name", "query", "model", "flash_mode", "from_cache",
                         "elapsed_s", "num_rules", "num_disciplines", "num_gaps", "ip", "session_id", "summary_preview"]
         cols = [c for c in desired_cols if c in df_q.columns] + [c for c in df_q.columns if c not in desired_cols]
-        df_q = df_q[cols]
+        df_q = df_q[cols].iloc[::-1].reset_index(drop=True)
         st.dataframe(df_q, use_container_width=True, hide_index=True)
         csv_q = df_q.to_csv(index=False)
         st.download_button("Download Query Log CSV", csv_q, "query_log.csv", "text/csv", key="dl_query_csv")
@@ -2670,9 +2670,18 @@ def main():
     _inject_client_js()
 
     # Show welcome form for first-time visitors
+    # Skip if: already shown, admin/owner, or IP not yet resolved (JS redirect pending)
     if not st.session_state.get("_visitor_form_shown"):
-        _visitor_welcome_dialog()
-    else:
+        ip = _get_visitor_ip()
+        ip_resolved = ip and not _is_private_ip(ip)
+        if ip_resolved and _is_admin_visitor():
+            # Owner -- never show the form
+            st.session_state["_visitor_form_shown"] = True
+        elif ip_resolved:
+            # Regular visitor with resolved IP -- show the form
+            _visitor_welcome_dialog()
+        # else: IP not resolved yet -- JS redirect is about to fire, skip for now
+    if st.session_state.get("_visitor_form_shown"):
         # Persist the "shown" flag to localStorage for future sessions
         _inject_welcome_done()
 
