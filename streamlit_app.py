@@ -330,38 +330,52 @@ def _get_visitor_ip_hash():
 
 
 def _inject_ip_fetch():
-    """Inject client-side JS to fetch the visitor's real public IP and store as a cookie.
+    """Inject client-side JS to fetch the visitor's real public IP.
 
-    Streamlit Cloud proxies strip the real IP from headers, so we must get it
-    client-side via an external API. The cookie is sent with subsequent requests.
+    Streamlit Cloud strips real IPs from all headers. This JS runs in the
+    parent frame (not an iframe), fetches the real IP from ipify.org, and
+    writes it into a query param that Streamlit can read.
     """
+    # Already resolved this session
+    if st.session_state.get("_public_ip"):
+        return
+
+    # Check if the IP was passed back via query param
+    ip_from_param = st.query_params.get("_cip")
+    if ip_from_param:
+        st.session_state["_public_ip"] = ip_from_param
+        # Clean the URL
+        del st.query_params["_cip"]
+        return
+
+    # Inject JS into the PARENT frame to fetch IP and reload with query param
     import streamlit.components.v1 as components
     components.html(
         """<script>
-        if (!document.cookie.includes('_client_ip=')) {
+        (function() {
+            // Only run once -- check if we already added the param
+            if (window.parent.location.search.includes('_cip=')) return;
             fetch('https://api.ipify.org?format=text')
                 .then(r => r.text())
                 .then(ip => {
-                    document.cookie = '_client_ip=' + ip + ';path=/;max-age=86400';
+                    const url = new URL(window.parent.location.href);
+                    url.searchParams.set('_cip', ip);
+                    window.parent.location.replace(url.toString());
                 })
                 .catch(() => {});
-        }
+        })();
         </script>""",
         height=0,
     )
 
 
 def _get_visitor_ip():
-    """Get the real public IP from the client-side cookie, fall back to headers."""
+    """Get the real public IP (from JS fetch) or fall back to headers."""
     try:
-        # 1. Check cookie set by client-side JS (most reliable on Streamlit Cloud)
-        cookies = st.context.headers.get("Cookie", "")
-        for part in cookies.split(";"):
-            part = part.strip()
-            if part.startswith("_client_ip="):
-                ip = part.split("=", 1)[1].strip()
-                if ip:
-                    return ip
+        # 1. Public IP from client-side JS fetch
+        public_ip = st.session_state.get("_public_ip")
+        if public_ip:
+            return public_ip
         # 2. st.context.ip_address (Streamlit 1.45+)
         ip = getattr(st.context, "ip_address", None)
         if ip:
