@@ -18,6 +18,7 @@ import pickle
 import hashlib
 import datetime
 import smtplib
+from zoneinfo import ZoneInfo
 from email.mime.text import MIMEText
 from pathlib import Path
 
@@ -329,14 +330,18 @@ def _get_visitor_ip_hash():
 
 
 def _get_visitor_ip():
-    """Get the raw visitor IP address from headers."""
+    """Get the raw visitor IP address (prefer st.context.ip_address, fall back to headers)."""
     try:
-        ip = st.context.headers.get("X-Forwarded-For", "")
+        # st.context.ip_address available since Streamlit 1.45+
+        ip = getattr(st.context, "ip_address", None)
         if ip:
-            ip = ip.split(",")[0].strip()
-        if not ip:
-            ip = st.context.headers.get("Host", "")
-        return ip or None
+            return ip
+        # Fallback: check proxy headers
+        for header in ("X-Forwarded-For", "CF-Connecting-IP", "X-Real-IP"):
+            val = st.context.headers.get(header, "")
+            if val:
+                return val.split(",")[0].strip()
+        return st.context.headers.get("Host", "") or None
     except Exception:
         return None
 
@@ -352,6 +357,12 @@ def _get_user_agent():
 # ─────────────────────────────────────────────
 # ANALYTICS LOG FILES
 # ─────────────────────────────────────────────
+
+_PST = ZoneInfo("America/Los_Angeles")
+
+def _now_pst():
+    """Get current time in Pacific time."""
+    return datetime.datetime.now(_PST)
 
 _VISITOR_LOG_FILE = Path(__file__).parent / "visitor_log.jsonl"
 _QUERY_LOG_FILE = Path(__file__).parent / "query_log.jsonl"
@@ -406,7 +417,7 @@ def _log_query(result):
         summary_preview = report.summary[:200]
 
     entry = {
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "session_id": _get_session_id(),
         "ip": _get_visitor_ip(),
         "visitor_name": visitor_name,
@@ -433,7 +444,7 @@ def _record_visitor():
 
     # Append detailed entry to visitor log
     entry = {
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "session_id": _get_session_id(),
         "ip": _get_visitor_ip(),
         "ip_hash": ip_hash,
@@ -466,7 +477,7 @@ _FEEDBACK_EMAIL = "dpm5970@berkeley.edu"
 def _save_feedback(name, email, message):
     """Save feedback to local JSON and send email if SMTP is configured."""
     entry = {
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "name": name,
         "email": email,
         "message": message,
@@ -2412,6 +2423,17 @@ def _render_admin_page():
     else:
         st.caption("No query records yet.")
 
+    # Debug: show all headers for diagnosing IP issues
+    st.divider()
+    with st.expander("Debug: Request Headers"):
+        try:
+            headers = dict(st.context.headers)
+            st.json(headers)
+            ip_addr = getattr(st.context, "ip_address", "not available")
+            st.caption(f"st.context.ip_address = `{ip_addr}`")
+        except Exception as e:
+            st.caption(f"Could not read headers: {e}")
+
 
 # ─────────────────────────────────────────────
 # MAIN APP
@@ -2897,7 +2919,7 @@ def main():
                 "diagnostic": diagnostic,
                 "backfill_result": backfill_result,
                 "frame_details": frame_details,
-                "timestamp": datetime.datetime.now().strftime("%H:%M:%S"),
+                "timestamp": _now_pst().strftime("%I:%M:%S %p"),
                 "elapsed_s": round(elapsed, 1),
                 "token_usage": token_usage,
                 "flash_mode": flash_on,
@@ -3037,7 +3059,7 @@ def main():
                         "diagnostic": cached.get("diagnostic", {}),
                         "backfill_result": backfill,
                         "frame_details": cached.get("frame_details", []),
-                        "timestamp": datetime.datetime.now().strftime("%H:%M:%S"),
+                        "timestamp": _now_pst().strftime("%I:%M:%S %p"),
                         "elapsed_s": cached.get("elapsed_s", 0),
                         "token_usage": cached.get("token_usage", {}),
                         "from_cache": True,
