@@ -355,9 +355,10 @@ def _get_visitor_ip_hash():
 def _inject_ip_fetch():
     """Inject client-side JS to fetch the visitor's real public IP.
 
-    Streamlit Cloud strips real IPs from all headers. This JS runs in the
-    parent frame (not an iframe), fetches the real IP from ipify.org, and
-    writes it into a query param that Streamlit can read.
+    Streamlit Cloud strips real IPs from all headers. Strategy:
+    1. Check query param _cip (set by JS redirect)
+    2. Check localStorage (persists across sessions)
+    3. Fetch from ipify.org, store in localStorage, redirect with _cip param
     """
     # Already resolved this session
     if st.session_state.get("_public_ip"):
@@ -371,21 +372,34 @@ def _inject_ip_fetch():
         del st.query_params["_cip"]
         return
 
-    # Inject JS into the PARENT frame to fetch IP and reload with query param
+    # Inject JS: try localStorage first, then fetch from ipify and redirect
     import streamlit.components.v1 as components
     components.html(
         """<script>
         (function() {
-            // Only run once -- check if we already added the param
-            if (window.parent.location.search.includes('_cip=')) return;
-            fetch('https://api.ipify.org?format=text')
-                .then(r => r.text())
-                .then(ip => {
-                    const url = new URL(window.parent.location.href);
-                    url.searchParams.set('_cip', ip);
+            try {
+                if (window.parent.location.search.includes('_cip=')) return;
+
+                // Check localStorage first (instant, no network)
+                var cached = localStorage.getItem('_dfm_public_ip');
+                if (cached) {
+                    var url = new URL(window.parent.location.href);
+                    url.searchParams.set('_cip', cached);
                     window.parent.location.replace(url.toString());
-                })
-                .catch(() => {});
+                    return;
+                }
+
+                // Fetch from ipify and store
+                fetch('https://api.ipify.org?format=text')
+                    .then(function(r) { return r.text(); })
+                    .then(function(ip) {
+                        localStorage.setItem('_dfm_public_ip', ip);
+                        var url = new URL(window.parent.location.href);
+                        url.searchParams.set('_cip', ip);
+                        window.parent.location.replace(url.toString());
+                    })
+                    .catch(function() {});
+            } catch(e) {}
         })();
         </script>""",
         height=0,
@@ -519,9 +533,12 @@ def _record_visitor():
 
     st.session_state["_visitor_recorded"] = True
     ip_hash = _get_visitor_ip_hash()
-    is_admin = _is_admin_visitor()
 
-    # Append detailed entry to visitor log (always, even admin)
+    # Skip admin/owner visits entirely -- don't log or count
+    if _is_admin_visitor():
+        return
+
+    # Append detailed entry to visitor log
     entry = {
         "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "session_id": _get_session_id(),
@@ -531,20 +548,18 @@ def _record_visitor():
         "first_name": st.session_state.get("_visitor_first_name"),
         "last_name": st.session_state.get("_visitor_last_name"),
         "contact_info": st.session_state.get("_visitor_contact_info"),
-        "is_admin": is_admin,
     }
     _append_log(_VISITOR_LOG_FILE, entry)
 
-    # Update token tally -- skip admin/owner visits
-    if not is_admin:
-        tally = _load_token_tally()
-        tally.setdefault("unique_ips", [])
-        tally.setdefault("page_views", 0)
-        tally["page_views"] += 1
-        if ip_hash and ip_hash not in tally["unique_ips"]:
-            tally["unique_ips"].append(ip_hash)
-        with open(_TOKEN_TALLY_FILE, "w") as f:
-            json.dump(tally, f, indent=2)
+    # Update token tally
+    tally = _load_token_tally()
+    tally.setdefault("unique_ips", [])
+    tally.setdefault("page_views", 0)
+    tally["page_views"] += 1
+    if ip_hash and ip_hash not in tally["unique_ips"]:
+        tally["unique_ips"].append(ip_hash)
+    with open(_TOKEN_TALLY_FILE, "w") as f:
+        json.dump(tally, f, indent=2)
 
 
 # ─────────────────────────────────────────────
@@ -2415,6 +2430,41 @@ def _render_kg_explorer(G, stats):
 # VISITOR WELCOME FORM
 # ─────────────────────────────────────────────
 
+def _check_welcome_form_shown():
+    """Check if the welcome form was previously shown (via localStorage -> query param)."""
+    if st.session_state.get("_visitor_form_shown"):
+        return True
+    # Check query param set by localStorage JS
+    vf = st.query_params.get("_vf")
+    if vf == "1":
+        st.session_state["_visitor_form_shown"] = True
+        del st.query_params["_vf"]
+        return True
+    return False
+
+
+def _inject_welcome_check():
+    """Inject JS to check localStorage for welcome form flag and pass via query param."""
+    if st.session_state.get("_visitor_form_shown"):
+        return
+    import streamlit.components.v1 as components
+    components.html(
+        """<script>
+        (function() {
+            try {
+                if (window.parent.location.search.includes('_vf=')) return;
+                if (localStorage.getItem('_dfm_welcome_done') === '1') {
+                    var url = new URL(window.parent.location.href);
+                    url.searchParams.set('_vf', '1');
+                    window.parent.location.replace(url.toString());
+                }
+            } catch(e) {}
+        })();
+        </script>""",
+        height=0,
+    )
+
+
 @st.dialog("Welcome to the DFM Knowledge Graph Agent!")
 def _visitor_welcome_dialog():
     """First-time visitor popup to optionally collect name and contact."""
@@ -2423,18 +2473,32 @@ def _visitor_welcome_dialog():
     last_name = st.text_input("Last name", key="_dlg_last")
     contact = st.text_input("Contact info / website (optional)", key="_dlg_contact")
 
+    def _save_and_close():
+        st.session_state["_visitor_form_shown"] = True
+
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Submit", use_container_width=True, type="primary"):
             st.session_state["_visitor_first_name"] = first_name.strip() or None
             st.session_state["_visitor_last_name"] = last_name.strip() or None
             st.session_state["_visitor_contact_info"] = contact.strip() or None
-            st.session_state["_visitor_form_shown"] = True
+            _save_and_close()
             st.rerun()
     with col2:
         if st.button("Skip", use_container_width=True):
-            st.session_state["_visitor_form_shown"] = True
+            _save_and_close()
             st.rerun()
+
+
+def _inject_welcome_done():
+    """Save to localStorage that welcome form was shown (persists across sessions)."""
+    import streamlit.components.v1 as components
+    components.html(
+        """<script>
+        try { localStorage.setItem('_dfm_welcome_done', '1'); } catch(e) {}
+        </script>""",
+        height=0,
+    )
 
 
 # ─────────────────────────────────────────────
@@ -2603,12 +2667,17 @@ def main():
     client = get_openai_client()
     example_cache = load_example_cache()
 
-    # Inject client-side IP detection (sets cookie for real public IP)
+    # Inject client-side IP detection
     _inject_ip_fetch()
 
-    # Show welcome form for first-time visitors (before recording)
+    # Welcome form: check localStorage first, then show dialog if new visitor
+    _inject_welcome_check()
+    _check_welcome_form_shown()
     if not st.session_state.get("_visitor_form_shown"):
         _visitor_welcome_dialog()
+    else:
+        # Persist the "shown" flag to localStorage for future sessions
+        _inject_welcome_done()
 
     # Record visitor (once per session) -- after form so we capture name
     _record_visitor()
