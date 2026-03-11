@@ -352,53 +352,84 @@ def _get_visitor_ip_hash():
         return None
 
 
-def _inject_ip_fetch():
-    """Inject client-side JS to fetch the visitor's real public IP.
+def _inject_client_js():
+    """Inject client-side JS to resolve public IP and welcome form state.
 
-    Streamlit Cloud strips real IPs from all headers. Strategy:
-    1. Check query param _cip (set by JS redirect)
-    2. Check localStorage (persists across sessions)
-    3. Fetch from ipify.org, store in localStorage, redirect with _cip param
+    Combines both into a single redirect so the server-side render already
+    has all the info it needs (no flash of welcome dialog).
+
+    Streamlit Cloud strips real IPs from headers, so we fetch client-side
+    from ipify.org. The welcome-done flag is stored in localStorage so
+    returning visitors skip the form entirely.
     """
-    # Already resolved this session
-    if st.session_state.get("_public_ip"):
+    # Already resolved everything this session
+    if st.session_state.get("_public_ip") and st.session_state.get("_visitor_form_shown"):
         return
 
-    # Check if the IP was passed back via query param
+    # Read query params set by JS redirect
     ip_from_param = st.query_params.get("_cip")
+    vf_from_param = st.query_params.get("_vf")
+
     if ip_from_param:
         st.session_state["_public_ip"] = ip_from_param
-        # Clean the URL
         del st.query_params["_cip"]
+    if vf_from_param == "1":
+        st.session_state["_visitor_form_shown"] = True
+        del st.query_params["_vf"]
+
+    # If both resolved, nothing more to do
+    if st.session_state.get("_public_ip") and st.session_state.get("_visitor_form_shown"):
         return
 
-    # Inject JS: try localStorage first, then fetch from ipify and redirect
+    # Inject single JS snippet that handles both IP + welcome check
     import streamlit.components.v1 as components
     components.html(
         """<script>
         (function() {
             try {
-                if (window.parent.location.search.includes('_cip=')) return;
+                var url = new URL(window.parent.location.href);
+                var changed = false;
 
-                // Check localStorage first (instant, no network)
-                var cached = localStorage.getItem('_dfm_public_ip');
-                if (cached) {
-                    var url = new URL(window.parent.location.href);
-                    url.searchParams.set('_cip', cached);
-                    window.parent.location.replace(url.toString());
+                // -- Welcome form check --
+                if (!url.searchParams.has('_vf')) {
+                    if (localStorage.getItem('_dfm_welcome_done') === '1') {
+                        url.searchParams.set('_vf', '1');
+                        changed = true;
+                    }
+                }
+
+                // -- IP resolution --
+                if (!url.searchParams.has('_cip')) {
+                    var cachedIp = localStorage.getItem('_dfm_public_ip');
+                    if (cachedIp) {
+                        url.searchParams.set('_cip', cachedIp);
+                        changed = true;
+                        if (changed) {
+                            window.parent.location.replace(url.toString());
+                        }
+                        return;
+                    }
+                    // Fetch from ipify
+                    fetch('https://api.ipify.org?format=text')
+                        .then(function(r) { return r.text(); })
+                        .then(function(ip) {
+                            localStorage.setItem('_dfm_public_ip', ip);
+                            url.searchParams.set('_cip', ip);
+                            window.parent.location.replace(url.toString());
+                        })
+                        .catch(function() {
+                            // IP fetch failed -- still redirect with welcome flag if needed
+                            if (changed) {
+                                window.parent.location.replace(url.toString());
+                            }
+                        });
                     return;
                 }
 
-                // Fetch from ipify and store
-                fetch('https://api.ipify.org?format=text')
-                    .then(function(r) { return r.text(); })
-                    .then(function(ip) {
-                        localStorage.setItem('_dfm_public_ip', ip);
-                        var url = new URL(window.parent.location.href);
-                        url.searchParams.set('_cip', ip);
-                        window.parent.location.replace(url.toString());
-                    })
-                    .catch(function() {});
+                // Only welcome flag changed, no IP needed
+                if (changed) {
+                    window.parent.location.replace(url.toString());
+                }
             } catch(e) {}
         })();
         </script>""",
@@ -2432,41 +2463,6 @@ def _render_kg_explorer(G, stats):
 # VISITOR WELCOME FORM
 # ─────────────────────────────────────────────
 
-def _check_welcome_form_shown():
-    """Check if the welcome form was previously shown (via localStorage -> query param)."""
-    if st.session_state.get("_visitor_form_shown"):
-        return True
-    # Check query param set by localStorage JS
-    vf = st.query_params.get("_vf")
-    if vf == "1":
-        st.session_state["_visitor_form_shown"] = True
-        del st.query_params["_vf"]
-        return True
-    return False
-
-
-def _inject_welcome_check():
-    """Inject JS to check localStorage for welcome form flag and pass via query param."""
-    if st.session_state.get("_visitor_form_shown"):
-        return
-    import streamlit.components.v1 as components
-    components.html(
-        """<script>
-        (function() {
-            try {
-                if (window.parent.location.search.includes('_vf=')) return;
-                if (localStorage.getItem('_dfm_welcome_done') === '1') {
-                    var url = new URL(window.parent.location.href);
-                    url.searchParams.set('_vf', '1');
-                    window.parent.location.replace(url.toString());
-                }
-            } catch(e) {}
-        })();
-        </script>""",
-        height=0,
-    )
-
-
 @st.dialog("Welcome to the DFM Knowledge Graph Agent!")
 def _visitor_welcome_dialog():
     """First-time visitor popup to optionally collect name and contact."""
@@ -2669,12 +2665,11 @@ def main():
     client = get_openai_client()
     example_cache = load_example_cache()
 
-    # Inject client-side IP detection
-    _inject_ip_fetch()
+    # Client-side JS: resolve public IP + check welcome form localStorage
+    # This runs as a single redirect so server-side render has all info
+    _inject_client_js()
 
-    # Welcome form: check localStorage first, then show dialog if new visitor
-    _inject_welcome_check()
-    _check_welcome_form_shown()
+    # Show welcome form for first-time visitors
     if not st.session_state.get("_visitor_form_shown"):
         _visitor_welcome_dialog()
     else:
