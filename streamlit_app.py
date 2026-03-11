@@ -485,7 +485,9 @@ def _get_session_id():
 
 
 def _log_query(result):
-    """Log a query and its summary stats to query_log.jsonl."""
+    """Log a query and its summary stats to query_log.jsonl. Skips admin visits."""
+    if _is_admin_visitor():
+        return
     report = result.get("report")
     visitor_name = None
     fn = st.session_state.get("_visitor_first_name", "")
