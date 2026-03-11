@@ -2525,6 +2525,19 @@ def _render_admin_page():
     # Save token on successful login (in case it's a fresh password entry)
     _inject_admin_persistence(logged_in=True)
 
+    # Logout button
+    if st.button("Logout", key="admin_logout"):
+        st.session_state["_admin_authenticated"] = False
+        # Clear localStorage token via JS
+        import streamlit.components.v1 as components
+        components.html(
+            """<script>
+            localStorage.removeItem('_dfm_admin_token');
+            </script>""",
+            height=0,
+        )
+        st.rerun()
+
     # ── Token Tally ──
     st.subheader("Token Tally")
     tally = _load_token_tally()
