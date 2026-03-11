@@ -329,19 +329,49 @@ def _get_visitor_ip_hash():
         return None
 
 
+def _inject_ip_fetch():
+    """Inject client-side JS to fetch the visitor's real public IP and store as a cookie.
+
+    Streamlit Cloud proxies strip the real IP from headers, so we must get it
+    client-side via an external API. The cookie is sent with subsequent requests.
+    """
+    import streamlit.components.v1 as components
+    components.html(
+        """<script>
+        if (!document.cookie.includes('_client_ip=')) {
+            fetch('https://api.ipify.org?format=text')
+                .then(r => r.text())
+                .then(ip => {
+                    document.cookie = '_client_ip=' + ip + ';path=/;max-age=86400';
+                })
+                .catch(() => {});
+        }
+        </script>""",
+        height=0,
+    )
+
+
 def _get_visitor_ip():
-    """Get the raw visitor IP address (prefer st.context.ip_address, fall back to headers)."""
+    """Get the real public IP from the client-side cookie, fall back to headers."""
     try:
-        # st.context.ip_address available since Streamlit 1.45+
+        # 1. Check cookie set by client-side JS (most reliable on Streamlit Cloud)
+        cookies = st.context.headers.get("Cookie", "")
+        for part in cookies.split(";"):
+            part = part.strip()
+            if part.startswith("_client_ip="):
+                ip = part.split("=", 1)[1].strip()
+                if ip:
+                    return ip
+        # 2. st.context.ip_address (Streamlit 1.45+)
         ip = getattr(st.context, "ip_address", None)
         if ip:
             return ip
-        # Fallback: check proxy headers
+        # 3. Proxy headers (usually private IPs on Streamlit Cloud)
         for header in ("X-Forwarded-For", "CF-Connecting-IP", "X-Real-IP"):
             val = st.context.headers.get(header, "")
             if val:
                 return val.split(",")[0].strip()
-        return st.context.headers.get("Host", "") or None
+        return None
     except Exception:
         return None
 
@@ -2444,6 +2474,9 @@ def main():
     G = load_graph()
     client = get_openai_client()
     example_cache = load_example_cache()
+
+    # Inject client-side IP detection (sets cookie for real public IP)
+    _inject_ip_fetch()
 
     # Show welcome form for first-time visitors (before recording)
     if not st.session_state.get("_visitor_form_shown"):
