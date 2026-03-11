@@ -101,7 +101,7 @@ ANALYSIS_MODES = {
 st.set_page_config(
     page_title="DFM Knowledge Graph Agent",
     layout="wide",
-    page_icon="\U0001f527",  # wrench
+    page_icon="\U0001f5ff",  # moyai
     initial_sidebar_state="expanded",
 )
 
@@ -314,14 +314,37 @@ def _reset_token_tally():
     return tally
 
 
-def _get_visitor_ip_hash():
-    """Get a privacy-safe hash of the visitor's IP address."""
+def _is_private_ip(ip):
+    """Check if an IP address is private/internal (RFC 1918, loopback, etc.)."""
+    if not ip:
+        return True
     try:
-        ip = st.context.headers.get("X-Forwarded-For", "")
-        if ip:
-            ip = ip.split(",")[0].strip()
-        if not ip:
-            ip = st.context.headers.get("Host", "")
+        import ipaddress
+        return ipaddress.ip_address(ip).is_private
+    except (ValueError, TypeError):
+        return False
+
+
+def _is_admin_visitor():
+    """Check if the current visitor is the site owner (exclude from tallies)."""
+    # Check Streamlit secret for owner IPs
+    try:
+        owner_ips = st.secrets.get("OWNER_IPS", "")
+        if owner_ips:
+            ip = _get_visitor_ip()
+            for owner_ip in owner_ips.split(","):
+                if ip and ip.strip() == owner_ip.strip():
+                    return True
+    except Exception:
+        pass
+    # Also check if admin is authenticated this session
+    return bool(st.session_state.get("_admin_authenticated"))
+
+
+def _get_visitor_ip_hash():
+    """Get a privacy-safe hash of the visitor's real public IP."""
+    try:
+        ip = _get_visitor_ip()
         if not ip:
             return None
         return hashlib.sha256(ip.encode()).hexdigest()[:12]
@@ -480,34 +503,48 @@ def _log_query(result):
 
 
 def _record_visitor():
-    """Record a unique visitor (once per session)."""
+    """Record a unique visitor (once per session).
+
+    Waits for the real public IP (from JS fetch) before logging.
+    Skips tally increment for admin/owner visits.
+    """
     if st.session_state.get("_visitor_recorded"):
         return
+
+    ip = _get_visitor_ip()
+
+    # Wait for the JS IP fetch to complete -- don't log private IPs
+    if not ip or _is_private_ip(ip):
+        return  # Will be called again on next rerun after JS redirect
+
     st.session_state["_visitor_recorded"] = True
     ip_hash = _get_visitor_ip_hash()
+    is_admin = _is_admin_visitor()
 
-    # Append detailed entry to visitor log
+    # Append detailed entry to visitor log (always, even admin)
     entry = {
         "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "session_id": _get_session_id(),
-        "ip": _get_visitor_ip(),
+        "ip": ip,
         "ip_hash": ip_hash,
         "user_agent": _get_user_agent(),
         "first_name": st.session_state.get("_visitor_first_name"),
         "last_name": st.session_state.get("_visitor_last_name"),
         "contact_info": st.session_state.get("_visitor_contact_info"),
+        "is_admin": is_admin,
     }
     _append_log(_VISITOR_LOG_FILE, entry)
 
-    # Update token tally (existing behavior)
-    tally = _load_token_tally()
-    tally.setdefault("unique_ips", [])
-    tally.setdefault("page_views", 0)
-    tally["page_views"] += 1
-    if ip_hash and ip_hash not in tally["unique_ips"]:
-        tally["unique_ips"].append(ip_hash)
-    with open(_TOKEN_TALLY_FILE, "w") as f:
-        json.dump(tally, f, indent=2)
+    # Update token tally -- skip admin/owner visits
+    if not is_admin:
+        tally = _load_token_tally()
+        tally.setdefault("unique_ips", [])
+        tally.setdefault("page_views", 0)
+        tally["page_views"] += 1
+        if ip_hash and ip_hash not in tally["unique_ips"]:
+            tally["unique_ips"].append(ip_hash)
+        with open(_TOKEN_TALLY_FILE, "w") as f:
+            json.dump(tally, f, indent=2)
 
 
 # ─────────────────────────────────────────────
@@ -3049,7 +3086,7 @@ def main():
         col1.metric("Queries", f"{tally.get('queries', 0):,}")
         col2.metric("Input Tokens", f"{tally.get('prompt_tokens', 0):,}")
         col3.metric("Output Tokens", f"{tally.get('completion_tokens', 0):,}")
-        col4.metric("Unique Visitors", f"{len(tally.get('unique_ips', []))}")
+        col4.metric("Visitors", f"{len(tally.get('unique_ips', []))}")
 
         st.markdown("### Getting Started")
         st.markdown(
