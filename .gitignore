@@ -26,6 +26,8 @@ stackexchange_posts_*.json
 dfm_reports/
 token_tally.json
 feedback.json
+visitor_log.jsonl
+query_log.jsonl
 qdrant_data/
 _check_sizes.ps1
 _eval_agent.py

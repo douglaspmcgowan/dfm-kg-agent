@@ -13,6 +13,7 @@ import os
 import sys
 import io
 import json
+import uuid
 import pickle
 import hashlib
 import datetime
@@ -327,12 +328,123 @@ def _get_visitor_ip_hash():
         return None
 
 
+def _get_visitor_ip():
+    """Get the raw visitor IP address from headers."""
+    try:
+        ip = st.context.headers.get("X-Forwarded-For", "")
+        if ip:
+            ip = ip.split(",")[0].strip()
+        if not ip:
+            ip = st.context.headers.get("Host", "")
+        return ip or None
+    except Exception:
+        return None
+
+
+def _get_user_agent():
+    """Get the visitor's User-Agent string from headers."""
+    try:
+        return st.context.headers.get("User-Agent", "") or None
+    except Exception:
+        return None
+
+
+# ─────────────────────────────────────────────
+# ANALYTICS LOG FILES
+# ─────────────────────────────────────────────
+
+_VISITOR_LOG_FILE = Path(__file__).parent / "visitor_log.jsonl"
+_QUERY_LOG_FILE = Path(__file__).parent / "query_log.jsonl"
+
+
+def _append_log(filepath, entry):
+    """Append a JSON entry as one line to a JSONL file."""
+    try:
+        with open(filepath, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception:
+        pass  # Non-critical -- don't break the app
+
+
+def _read_log(filepath):
+    """Read a JSONL file into a list of dicts."""
+    entries = []
+    if not filepath.exists():
+        return entries
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        entries.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        continue
+    except IOError:
+        pass
+    return entries
+
+
+def _get_session_id():
+    """Get or create a unique session ID for linking visitor + query logs."""
+    if "_session_id" not in st.session_state:
+        st.session_state["_session_id"] = str(uuid.uuid4())[:12]
+    return st.session_state["_session_id"]
+
+
+def _log_query(result):
+    """Log a query and its summary stats to query_log.jsonl."""
+    report = result.get("report")
+    visitor_name = None
+    fn = st.session_state.get("_visitor_first_name", "")
+    ln = st.session_state.get("_visitor_last_name", "")
+    if fn or ln:
+        visitor_name = f"{fn} {ln}".strip()
+
+    summary_preview = ""
+    if report and hasattr(report, "summary"):
+        summary_preview = report.summary[:200]
+
+    entry = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "session_id": _get_session_id(),
+        "ip": _get_visitor_ip(),
+        "visitor_name": visitor_name,
+        "query": result.get("query", ""),
+        "model": "gpt-4.1-mini" if result.get("flash_mode") else (os.environ.get("OPENAI_MODEL", "gpt-5")),
+        "flash_mode": bool(result.get("flash_mode")),
+        "from_cache": bool(result.get("from_cache")),
+        "elapsed_s": result.get("elapsed_s", 0),
+        "token_usage": result.get("token_usage", {}),
+        "num_rules": len(report.design_rules) if report and hasattr(report, "design_rules") else 0,
+        "num_disciplines": len(report.disciplines) if report and hasattr(report, "disciplines") else 0,
+        "num_gaps": len(report.knowledge_gaps) if report and hasattr(report, "knowledge_gaps") else 0,
+        "summary_preview": summary_preview,
+    }
+    _append_log(_QUERY_LOG_FILE, entry)
+
+
 def _record_visitor():
     """Record a unique visitor (once per session)."""
     if st.session_state.get("_visitor_recorded"):
         return
     st.session_state["_visitor_recorded"] = True
     ip_hash = _get_visitor_ip_hash()
+
+    # Append detailed entry to visitor log
+    entry = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "session_id": _get_session_id(),
+        "ip": _get_visitor_ip(),
+        "ip_hash": ip_hash,
+        "user_agent": _get_user_agent(),
+        "first_name": st.session_state.get("_visitor_first_name"),
+        "last_name": st.session_state.get("_visitor_last_name"),
+        "contact_info": st.session_state.get("_visitor_contact_info"),
+    }
+    _append_log(_VISITOR_LOG_FILE, entry)
+
+    # Update token tally (existing behavior)
     tally = _load_token_tally()
     tally.setdefault("unique_ips", [])
     tally.setdefault("page_views", 0)
@@ -2208,6 +2320,100 @@ def _render_kg_explorer(G, stats):
 
 
 # ─────────────────────────────────────────────
+# VISITOR WELCOME FORM
+# ─────────────────────────────────────────────
+
+@st.dialog("Welcome to the DFM Knowledge Graph Agent!")
+def _visitor_welcome_dialog():
+    """First-time visitor popup to optionally collect name and contact."""
+    st.markdown("Help us understand who's using this tool. All fields are **optional**.")
+    first_name = st.text_input("First name", key="_dlg_first")
+    last_name = st.text_input("Last name", key="_dlg_last")
+    contact = st.text_input("Contact info / website (optional)", key="_dlg_contact")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Submit", use_container_width=True, type="primary"):
+            st.session_state["_visitor_first_name"] = first_name.strip() or None
+            st.session_state["_visitor_last_name"] = last_name.strip() or None
+            st.session_state["_visitor_contact_info"] = contact.strip() or None
+            st.session_state["_visitor_form_shown"] = True
+            st.rerun()
+    with col2:
+        if st.button("Skip", use_container_width=True):
+            st.session_state["_visitor_form_shown"] = True
+            st.rerun()
+
+
+# ─────────────────────────────────────────────
+# ADMIN PAGE
+# ─────────────────────────────────────────────
+
+def _render_admin_page():
+    """Password-protected admin page showing visitor and query logs."""
+    st.title("Admin Dashboard")
+
+    # Password gate
+    admin_pw = st.secrets.get("ADMIN_PASSWORD", "")
+    if not admin_pw:
+        st.warning("ADMIN_PASSWORD not configured in Streamlit secrets.")
+        return
+
+    if not st.session_state.get("_admin_authenticated"):
+        pw = st.text_input("Enter admin password", type="password", key="admin_pw_input")
+        if pw:
+            if pw == admin_pw:
+                st.session_state["_admin_authenticated"] = True
+                st.rerun()
+            else:
+                st.error("Incorrect password.")
+        return
+
+    # ── Token Tally ──
+    st.subheader("Token Tally")
+    tally = _load_token_tally()
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Queries", tally.get("queries", 0))
+    col2.metric("Page Views", tally.get("page_views", 0))
+    col3.metric("Unique IPs", len(tally.get("unique_ips", [])))
+    st.caption(f"Tracking since: {tally.get('since', 'unknown')}")
+    st.divider()
+
+    # ── Visitor Log ──
+    st.subheader("Visitor Log")
+    visitors = _read_log(_VISITOR_LOG_FILE)
+    if visitors:
+        import pandas as pd
+        df_v = pd.DataFrame(visitors)
+        # Reorder columns for readability
+        desired_cols = ["timestamp", "first_name", "last_name", "contact_info", "ip", "user_agent", "session_id", "ip_hash"]
+        cols = [c for c in desired_cols if c in df_v.columns] + [c for c in df_v.columns if c not in desired_cols]
+        df_v = df_v[cols]
+        st.dataframe(df_v, use_container_width=True, hide_index=True)
+        csv_v = df_v.to_csv(index=False)
+        st.download_button("Download Visitor Log CSV", csv_v, "visitor_log.csv", "text/csv", key="dl_visitor_csv")
+    else:
+        st.caption("No visitor records yet.")
+    st.divider()
+
+    # ── Query Log ──
+    st.subheader("Query Log")
+    queries = _read_log(_QUERY_LOG_FILE)
+    if queries:
+        import pandas as pd
+        df_q = pd.DataFrame(queries)
+        desired_cols = ["timestamp", "visitor_name", "query", "model", "flash_mode", "from_cache",
+                        "elapsed_s", "num_rules", "num_disciplines", "num_gaps", "ip", "session_id", "summary_preview"]
+        cols = [c for c in desired_cols if c in df_q.columns] + [c for c in df_q.columns if c not in desired_cols]
+        df_q = df_q[cols]
+        st.dataframe(df_q, use_container_width=True, hide_index=True)
+        csv_q = df_q.to_csv(index=False)
+        st.download_button("Download Query Log CSV", csv_q, "query_log.csv", "text/csv", key="dl_query_csv")
+    else:
+        st.caption("No query records yet.")
+
+
+# ─────────────────────────────────────────────
 # MAIN APP
 # ─────────────────────────────────────────────
 
@@ -2217,7 +2423,11 @@ def main():
     client = get_openai_client()
     example_cache = load_example_cache()
 
-    # Record visitor (once per session)
+    # Show welcome form for first-time visitors (before recording)
+    if not st.session_state.get("_visitor_form_shown"):
+        _visitor_welcome_dialog()
+
+    # Record visitor (once per session) -- after form so we capture name
     _record_visitor()
 
     if G is None:
@@ -2239,7 +2449,7 @@ def main():
         st.divider()
         page = st.radio(
             "Navigate",
-            ["\U0001f50d DFM Agent", "\U0001f578\ufe0f KG Explorer"],
+            ["\U0001f50d DFM Agent", "\U0001f578\ufe0f KG Explorer", "\U0001f4ca Admin"],
             label_visibility="collapsed",
             key="page_nav",
         )
@@ -2248,6 +2458,11 @@ def main():
     # ── KG Explorer page ──
     if page == "\U0001f578\ufe0f KG Explorer":
         _render_kg_explorer(G, stats)
+        return
+
+    # ── Admin page ──
+    if page == "\U0001f4ca Admin":
+        _render_admin_page()
         return
 
     # ── DFM Agent page (original) ──
@@ -2701,6 +2916,7 @@ def main():
 
             st.session_state.query_history.append(result)
             st.session_state.active_idx = len(st.session_state.query_history) - 1
+            _log_query(result)
 
         except Exception as e:
             progress_bar.empty()
@@ -2828,6 +3044,7 @@ def main():
                     }
                     st.session_state.query_history.append(result)
                     st.session_state.active_idx = len(st.session_state.query_history) - 1
+                    _log_query(result)
                     st.rerun()
                 else:
                     # Fall back to live query
