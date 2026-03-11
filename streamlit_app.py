@@ -2441,6 +2441,61 @@ def _visitor_welcome_dialog():
 # ADMIN PAGE
 # ─────────────────────────────────────────────
 
+def _make_admin_token():
+    """Create a signed admin token using ADMIN_PASSWORD as the secret."""
+    admin_pw = st.secrets.get("ADMIN_PASSWORD", "")
+    if not admin_pw:
+        return ""
+    return hashlib.sha256(f"dfm_admin_{admin_pw}".encode()).hexdigest()[:24]
+
+
+def _check_admin_token():
+    """Check if a valid admin token was passed via query param (from localStorage).
+
+    This allows persistent login across sessions without re-entering the password.
+    """
+    if st.session_state.get("_admin_authenticated"):
+        return True
+    token = st.query_params.get("_atok")
+    if token and token == _make_admin_token():
+        st.session_state["_admin_authenticated"] = True
+        # Clean the URL
+        del st.query_params["_atok"]
+        return True
+    return False
+
+
+def _inject_admin_persistence(logged_in=False):
+    """Inject JS to persist/restore admin login via localStorage."""
+    import streamlit.components.v1 as components
+    token = _make_admin_token()
+    if not token:
+        return
+    if logged_in:
+        # Just logged in -- save token to localStorage
+        components.html(
+            f"""<script>
+            localStorage.setItem('_dfm_admin_token', '{token}');
+            </script>""",
+            height=0,
+        )
+    else:
+        # Not logged in -- check localStorage and redirect with token if found
+        components.html(
+            f"""<script>
+            (function() {{
+                var t = localStorage.getItem('_dfm_admin_token');
+                if (t && !window.parent.location.search.includes('_atok=')) {{
+                    var url = new URL(window.parent.location.href);
+                    url.searchParams.set('_atok', t);
+                    window.parent.location.replace(url.toString());
+                }}
+            }})();
+            </script>""",
+            height=0,
+        )
+
+
 def _render_admin_page():
     """Password-protected admin page showing visitor and query logs."""
     st.title("Admin Dashboard")
@@ -2451,15 +2506,24 @@ def _render_admin_page():
         st.warning("ADMIN_PASSWORD not configured in Streamlit secrets.")
         return
 
+    # Check for persistent login token from localStorage
+    _check_admin_token()
+
     if not st.session_state.get("_admin_authenticated"):
+        # Try to restore from localStorage
+        _inject_admin_persistence(logged_in=False)
         pw = st.text_input("Enter admin password", type="password", key="admin_pw_input")
         if pw:
             if pw == admin_pw:
                 st.session_state["_admin_authenticated"] = True
+                _inject_admin_persistence(logged_in=True)
                 st.rerun()
             else:
                 st.error("Incorrect password.")
         return
+
+    # Save token on successful login (in case it's a fresh password entry)
+    _inject_admin_persistence(logged_in=True)
 
     # ── Token Tally ──
     st.subheader("Token Tally")
