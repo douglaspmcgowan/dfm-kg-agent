@@ -2461,7 +2461,7 @@ def main():
 
     # ── SIDEBAR (common) ──
     with st.sidebar:
-        st.title("\U0001f527 DFM KG Agent")
+        st.title("\U0001f5ff DFM KG Agent")
         st.caption(
             f"**{stats['frames']:,}** frames &nbsp;|&nbsp; "
             f"**{stats['semantic_edges']:,}** semantic edges\n\n"
