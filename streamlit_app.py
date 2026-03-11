@@ -516,15 +516,14 @@ def _get_session_id():
 
 
 def _log_query(result):
-    """Log a query and its summary stats to query_log.jsonl. Skips admin visits."""
-    if _is_admin_visitor():
-        return
+    """Log a query and its summary stats to query_log.jsonl."""
     report = result.get("report")
     visitor_name = None
     fn = st.session_state.get("_visitor_first_name", "")
     ln = st.session_state.get("_visitor_last_name", "")
     if fn or ln:
         visitor_name = f"{fn} {ln}".strip()
+    contact = st.session_state.get("_visitor_contact", "")
 
     summary_preview = ""
     if report and hasattr(report, "summary"):
@@ -534,7 +533,9 @@ def _log_query(result):
         "timestamp": _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
         "session_id": _get_session_id(),
         "ip": _get_visitor_ip(),
+        "is_admin": _is_admin_visitor(),
         "visitor_name": visitor_name,
+        "contact_info": contact or None,
         "query": result.get("query", ""),
         "model": "gpt-4.1-mini" if result.get("flash_mode") else (os.environ.get("OPENAI_MODEL", "gpt-5")),
         "flash_mode": bool(result.get("flash_mode")),
