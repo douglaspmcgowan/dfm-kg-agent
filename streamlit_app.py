@@ -25,6 +25,7 @@ from pathlib import Path
 import streamlit as st
 import networkx as nx
 import plotly.graph_objects as go
+import gspread
 
 # Import agent module first -- it handles the cp1252 encoding fix at load time.
 # Do NOT duplicate the fix here (double TextIOWrapper wrapping causes I/O errors).
@@ -256,6 +257,149 @@ init_session_state()
 
 
 # ─────────────────────────────────────────────
+# GOOGLE SHEETS PERSISTENCE
+# ─────────────────────────────────────────────
+
+@st.cache_resource
+def _get_gsheet_client():
+    """Get an authenticated gspread client using Streamlit secrets.
+
+    Returns None if credentials are not configured (falls back to local files).
+    """
+    try:
+        creds = st.secrets["gcp_service_account"]
+        gc = gspread.service_account_from_dict(dict(creds))
+        return gc
+    except Exception:
+        return None
+
+
+@st.cache_resource
+def _get_gsheet_spreadsheet():
+    """Open the logging spreadsheet. Returns None if not configured."""
+    gc = _get_gsheet_client()
+    if gc is None:
+        return None
+    try:
+        sheet_key = st.secrets.get("GSHEET_LOG_KEY", "")
+        if sheet_key:
+            return gc.open_by_key(sheet_key)
+        return None
+    except Exception:
+        return None
+
+
+def _gsheet_append_row(worksheet_name, row_dict, columns):
+    """Append a row to a Google Sheet worksheet. Creates the sheet if needed.
+
+    Args:
+        worksheet_name: Tab/worksheet name (e.g. "visitors", "queries")
+        row_dict: Dict of values to write
+        columns: Ordered list of column names (used for header row and ordering)
+    """
+    ss = _get_gsheet_spreadsheet()
+    if ss is None:
+        return False
+    try:
+        try:
+            ws = ss.worksheet(worksheet_name)
+        except gspread.exceptions.WorksheetNotFound:
+            ws = ss.add_worksheet(title=worksheet_name, rows=1000, cols=len(columns))
+            ws.append_row(columns, value_input_option="RAW")
+        row = [str(row_dict.get(c, "")) for c in columns]
+        ws.append_row(row, value_input_option="RAW")
+        return True
+    except Exception:
+        return False
+
+
+def _gsheet_read_all(worksheet_name):
+    """Read all rows from a worksheet as a list of dicts. Returns [] on failure."""
+    ss = _get_gsheet_spreadsheet()
+    if ss is None:
+        return []
+    try:
+        ws = ss.worksheet(worksheet_name)
+        return ws.get_all_records()
+    except Exception:
+        return []
+
+
+def _gsheet_read_cell(worksheet_name, cell):
+    """Read a single cell value. Returns None on failure."""
+    ss = _get_gsheet_spreadsheet()
+    if ss is None:
+        return None
+    try:
+        ws = ss.worksheet(worksheet_name)
+        return ws.acell(cell).value
+    except Exception:
+        return None
+
+
+def _gsheet_update_tally(tally_dict):
+    """Write the full token tally as a single-row key-value store in the 'tally' sheet."""
+    ss = _get_gsheet_spreadsheet()
+    if ss is None:
+        return False
+    try:
+        try:
+            ws = ss.worksheet("tally")
+        except gspread.exceptions.WorksheetNotFound:
+            ws = ss.add_worksheet(title="tally", rows=2, cols=20)
+        keys = list(tally_dict.keys())
+        vals = []
+        for k in keys:
+            v = tally_dict[k]
+            if isinstance(v, list):
+                v = json.dumps(v)
+            vals.append(str(v))
+        ws.clear()
+        ws.append_row(keys, value_input_option="RAW")
+        ws.append_row(vals, value_input_option="RAW")
+        return True
+    except Exception:
+        return False
+
+
+def _gsheet_read_tally():
+    """Read the token tally from the 'tally' sheet. Returns None if not available."""
+    ss = _get_gsheet_spreadsheet()
+    if ss is None:
+        return None
+    try:
+        ws = ss.worksheet("tally")
+        records = ws.get_all_records()
+        if not records:
+            return None
+        tally = records[0]
+        # Parse unique_ips back from JSON string
+        if "unique_ips" in tally and isinstance(tally["unique_ips"], str):
+            try:
+                tally["unique_ips"] = json.loads(tally["unique_ips"])
+            except (json.JSONDecodeError, ValueError):
+                tally["unique_ips"] = []
+        # Parse numeric fields
+        for k in ["prompt_tokens", "completion_tokens", "embedding_tokens", "total_tokens", "queries", "page_views"]:
+            if k in tally:
+                try:
+                    tally[k] = int(tally[k])
+                except (ValueError, TypeError):
+                    tally[k] = 0
+        return tally
+    except Exception:
+        return None
+
+
+# Columns for each log type
+_VISITOR_COLUMNS = ["timestamp", "session_id", "ip", "ip_hash", "user_agent", "first_name", "last_name", "contact_info"]
+_QUERY_COLUMNS = ["timestamp", "session_id", "ip", "is_admin", "visitor_name", "contact_info", "query",
+                   "model", "flash_mode", "from_cache", "elapsed_s", "token_usage",
+                   "num_rules", "num_disciplines", "num_gaps", "summary_preview"]
+_FEEDBACK_COLUMNS = ["timestamp", "name", "email", "message", "ip_hash"]
+
+
+# ─────────────────────────────────────────────
 # PERSISTENT TOKEN TALLY
 # ─────────────────────────────────────────────
 
@@ -263,7 +407,12 @@ _TOKEN_TALLY_FILE = Path(__file__).parent / "token_tally.json"
 
 
 def _load_token_tally():
-    """Load cumulative token tally from disk."""
+    """Load cumulative token tally from Google Sheets (primary) or local disk (fallback)."""
+    # Try Google Sheets first
+    tally = _gsheet_read_tally()
+    if tally is not None:
+        return tally
+    # Fallback to local file
     if _TOKEN_TALLY_FILE.exists():
         try:
             with open(_TOKEN_TALLY_FILE, "r") as f:
@@ -293,6 +442,8 @@ def _update_token_tally(token_usage):
     tally["queries"] += 1
     tally.setdefault("unique_ips", [])
     tally.setdefault("page_views", 0)
+    # Write to Google Sheets (primary) and local file (fallback)
+    _gsheet_update_tally(tally)
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
 
@@ -309,6 +460,7 @@ def _reset_token_tally():
         "unique_ips": [],
         "page_views": 0,
     }
+    _gsheet_update_tally(tally)
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
     return tally
@@ -362,8 +514,9 @@ def _inject_client_js():
     from ipify.org. The welcome-done flag is stored in localStorage so
     returning visitors skip the form entirely.
     """
-    # Already resolved everything this session
-    if st.session_state.get("_public_ip") and st.session_state.get("_visitor_form_shown"):
+    # Already resolved IP this session -- welcome form is handled by the dialog,
+    # not by JS, so we only need to gate on IP resolution to avoid redirect loops.
+    if st.session_state.get("_public_ip"):
         return
 
     # Read query params set by JS redirect
@@ -377,8 +530,8 @@ def _inject_client_js():
         st.session_state["_visitor_form_shown"] = True
         del st.query_params["_vf"]
 
-    # If both resolved, nothing more to do
-    if st.session_state.get("_public_ip") and st.session_state.get("_visitor_form_shown"):
+    # If IP resolved from params, nothing more to do
+    if st.session_state.get("_public_ip"):
         return
 
     # Inject single JS snippet that handles both IP + welcome check
@@ -481,16 +634,42 @@ _QUERY_LOG_FILE = Path(__file__).parent / "query_log.jsonl"
 
 
 def _append_log(filepath, entry):
-    """Append a JSON entry as one line to a JSONL file."""
+    """Append a JSON entry to a JSONL file and to Google Sheets."""
+    # Write to local file (fallback)
     try:
         with open(filepath, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     except Exception:
         pass  # Non-critical -- don't break the app
+    # Write to Google Sheets (primary / persistent)
+    try:
+        if filepath == _VISITOR_LOG_FILE:
+            _gsheet_append_row("visitors", entry, _VISITOR_COLUMNS)
+        elif filepath == _QUERY_LOG_FILE:
+            # Serialize nested dicts for Sheets
+            sheets_entry = dict(entry)
+            if "token_usage" in sheets_entry and isinstance(sheets_entry["token_usage"], dict):
+                sheets_entry["token_usage"] = json.dumps(sheets_entry["token_usage"])
+            _gsheet_append_row("queries", sheets_entry, _QUERY_COLUMNS)
+    except Exception:
+        pass
 
 
 def _read_log(filepath):
-    """Read a JSONL file into a list of dicts."""
+    """Read log entries from Google Sheets (primary) or local JSONL file (fallback)."""
+    # Try Google Sheets first
+    try:
+        if filepath == _VISITOR_LOG_FILE:
+            records = _gsheet_read_all("visitors")
+        elif filepath == _QUERY_LOG_FILE:
+            records = _gsheet_read_all("queries")
+        else:
+            records = []
+        if records:
+            return records
+    except Exception:
+        pass
+    # Fallback to local file
     entries = []
     if not filepath.exists():
         return entries
@@ -592,6 +771,7 @@ def _record_visitor():
     tally["page_views"] += 1
     if ip_hash and ip_hash not in tally["unique_ips"]:
         tally["unique_ips"].append(ip_hash)
+    _gsheet_update_tally(tally)
     with open(_TOKEN_TALLY_FILE, "w") as f:
         json.dump(tally, f, indent=2)
 
@@ -614,7 +794,9 @@ def _save_feedback(name, email, message):
         "ip_hash": _get_visitor_ip_hash(),
     }
 
-    # Save locally
+    # Save to Google Sheets (persistent)
+    _gsheet_append_row("feedback", entry, _FEEDBACK_COLUMNS)
+    # Save locally (fallback)
     feedback = []
     if _FEEDBACK_FILE.exists():
         try:
