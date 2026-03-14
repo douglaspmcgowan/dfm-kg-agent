@@ -2018,6 +2018,260 @@ def render_report(result, G, concise=False):
 
 
 # ─────────────────────────────────────────────
+# RESEARCH BACKGROUND
+# ─────────────────────────────────────────────
+
+def _render_research_background(stats):
+    """Render the Research Background page."""
+    st.title("Research Background")
+    st.caption(
+        "How this system works, why it exists, and how it connects to "
+        "ongoing research in design, manufacturing, and AI."
+    )
+
+    # ── The Problem ──
+    st.markdown("## The Problem: Late Manufacturing Feedback")
+    st.markdown(
+        "In mechanical product design, 70-80% of a product's lifecycle cost "
+        "is locked in during the early design stage. Despite this, most "
+        "manufacturability feedback arrives late -- after drawings reach the "
+        "shop floor. A machinist might flag a tolerance that can't be held, a "
+        "wall thickness that will chatter, or a pocket geometry that requires "
+        "special fixturing. By then, redesign is expensive.\n\n"
+        "Existing DFM tools (Siemens NX Checkmate, DFMPro, CoLab, etc.) "
+        "check geometric rules -- thin walls, deep pockets, small fillets -- "
+        "but these rules capture only a narrow slice of the manufacturing "
+        "knowledge that experienced practitioners carry. The harder problems -- "
+        "context-dependent process constraints, capability-specific limitations, "
+        "assembly-level conflicts -- live in the heads of machinists and "
+        "manufacturing engineers, not in rule databases."
+    )
+
+    # ── Tacit Knowledge ──
+    st.markdown("## Tacit Knowledge in Manufacturing")
+    st.markdown(
+        "A large portion of the knowledge used in manufacturing feedback is "
+        "**tacit** -- important and frequently referenced, but rarely written "
+        "down in a structured way. Machinists develop this knowledge through "
+        "years of hands-on experience: which materials behave unexpectedly at "
+        "certain speeds, how to fixture a thin part without distortion, when a "
+        "textbook tolerance is actually unrealistic on a given machine.\n\n"
+        "This knowledge is typically transferred informally -- through "
+        "mentorship, shop-floor conversation, and online forums where "
+        "practitioners help each other solve real problems. The result is a "
+        "vast body of practical expertise scattered across thousands of "
+        "discussions, largely invisible to the design tools that could use it.\n\n"
+        "Research on knowledge creation (Nonaka & Takeuchi, 1995) describes "
+        "how tacit knowledge moves through stages of socialization, "
+        "externalization, combination, and internalization. Forum discussions "
+        "represent a natural externalization process -- practitioners putting "
+        "experiential knowledge into words. The challenge is capturing and "
+        "structuring that externalized knowledge at scale."
+    )
+
+    # ── Knowledge Frames ──
+    st.markdown("## Knowledge Frames: Structuring Practitioner Expertise")
+    st.markdown(
+        "A **knowledge frame** is one distinct unit of design or manufacturing "
+        "knowledge, extracted from a forum post by a large language model. A "
+        "single post often contains multiple frames -- a machinist recounting "
+        "a failed job might share a universal lesson, a case-specific "
+        "observation, and a clever workaround all in the same paragraph.\n\n"
+        "Each frame is classified by type:"
+    )
+
+    frame_data = {
+        "Frame Type": [
+            "Risk", "Heuristic", "Principle", "Workaround",
+            "Observation", "Comparison", "Case"
+        ],
+        "What It Captures": [
+            "A condition that leads to failure or limitation",
+            "A practical rule of thumb or directed advice",
+            "A causal explanation of why something happens",
+            "A non-obvious fix for a known limitation",
+            "An empirical or factual claim",
+            "Two or more approaches weighed against each other",
+            "A specific real-world job or incident"
+        ],
+        "Example": [
+            "Thin walls under 2mm deflect under cutting forces, causing chatter",
+            "Keep pocket depth under 4x the tool diameter for rigidity",
+            "Aluminum's thermal expansion causes drift during long cuts",
+            "Fill thin-walled pockets with wax for support during machining",
+            "6061-T6 machines significantly better than 7075 at high speeds",
+            "Climb milling gives better finish; conventional is safer on older machines",
+            "Ran 500 parts with 0.5mm walls using vacuum fixture, zero scrap"
+        ]
+    }
+    st.table(frame_data)
+
+    st.markdown(
+        "Beyond the type classification, each frame carries structured "
+        "metadata: the **verbatim source quote**, the engineering discipline "
+        "it applies to (scope), how confident the author sounds (epistemic "
+        "stance), specific numbers or thresholds mentioned, and conditions "
+        "under which the knowledge applies. This metadata enables precise "
+        "retrieval and allows downstream systems to reason about the "
+        "knowledge rather than just pattern-match against it."
+    )
+
+    # ── Pipeline ──
+    st.markdown("## How the Knowledge Base Is Built")
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Forum Posts", f"{stats.get('posts', 1936):,}")
+    col2.metric("Unique Authors", f"{stats.get('authors', 1138):,}")
+    col3.metric("Knowledge Frames", f"{stats.get('frames', 3879):,}")
+    col4.metric("Semantic Edges", f"{stats.get('semantic_edges', 4272):,}")
+
+    st.markdown(
+        "The pipeline has four stages:\n\n"
+        "**1. Data Collection & Filtering.** "
+        "Forum threads are collected from five Stack Exchange communities "
+        "(Engineering, Mechanics, Woodworking, Electronics, Robotics) via "
+        "the public API. A keyword strategy spanning both design decisions and "
+        "machining failure modes captures posts where manufacturing knowledge "
+        "is likely to surface. An LLM filters out off-topic threads, reducing "
+        "~12,800 raw threads to ~1,400 relevant posts.\n\n"
+        "**2. Knowledge Frame Extraction.** "
+        "Each post is processed by a reasoning-capable LLM using a structured "
+        "schema. The model extracts multiple frames per post, each grounded in "
+        "a verbatim quote. A multi-step filtering pipeline checks epistemic "
+        "stance classification, deduplicates overlapping frames, and validates "
+        "source quotes against the original text.\n\n"
+        "**3. Multi-Vector Embedding.** "
+        "Each frame is embedded three ways: a *knowledge vector* (subject, "
+        "main point, context), a *language vector* (the raw source quote), "
+        "and a *metadata vector* (frame type, scope, stance). This enables "
+        "retrieval by semantic meaning, by linguistic similarity to practitioner "
+        "jargon, or by knowledge properties.\n\n"
+        "**4. Knowledge Graph Construction.** "
+        "A provenance graph links frames to their source posts, threads, and "
+        "authors. Then, for each frame, nearest neighbors in the embedding "
+        "space are evaluated and the LLM infers semantic relationships: one "
+        "frame might **specify** a general principle, **mitigate** a risk, "
+        "establish a **causal link**, or **contradict** another claim. This "
+        "produces a graph where retrieval can follow reasoning chains, not just "
+        "keyword matches."
+    )
+
+    # ── Validation ──
+    st.markdown("## Validation: Human Experts + Automated Review")
+    st.markdown(
+        "For a knowledge base like this to be useful in engineering, it "
+        "needs to be validated. The approach combines human expert review "
+        "with calibrated LLM-as-a-judge evaluation.\n\n"
+        "Professional machinists and designers reviewed a random sample of "
+        "frames across multiple quality dimensions -- extraction accuracy, "
+        "clarity, main point quality, and metadata correctness. The core "
+        "quality metrics showed strong inter-rater agreement "
+        "(Gwet's AC1 > 0.84), with 0 out of 26 sampled frames recommended "
+        "for removal.\n\n"
+        "An automated review pipeline was then calibrated against the human "
+        "ratings using in-context learning from the expert gold standard. "
+        "An interesting finding from this calibration: LLMs tend to be harsher "
+        "critics of tacit and experiential knowledge, defaulting to textbook "
+        "standards. The human expert ratings were needed to teach the model "
+        "that anecdotal, context-specific insights have genuine engineering "
+        "value.\n\n"
+        "This connects to a broader challenge in LLM-as-a-judge research -- "
+        "in expert domains, automated evaluation agreement with humans drops "
+        "to 60-68%, and more reasoning doesn't always help. The calibration "
+        "step is essential."
+    )
+
+    # ── How the Agent Works ──
+    st.markdown("## How the Agent Uses This Knowledge")
+    st.markdown(
+        "The DFM Agent on this site is a retrieval-augmented generation (RAG) "
+        "system built on top of the knowledge graph and embedding space. "
+        "When you ask a question, it:\n\n"
+        "1. **Decomposes** the query into sub-aspects (e.g., a question about "
+        "thin-walled aluminum parts might decompose into geometry constraints, "
+        "fixturing, thermal effects, and tool selection).\n"
+        "2. **Retrieves** relevant frames using multi-vector search across all "
+        "three embedding spaces.\n"
+        "3. **Traverses** the knowledge graph to find connected frames -- a "
+        "risk that has a known mitigation, a heuristic that contradicts another, "
+        "a principle that explains a workaround.\n"
+        "4. **Ranks** frames by a composite score combining embedding similarity, "
+        "author credibility, graph distance, and edge confidence.\n"
+        "5. **Synthesizes** a structured report with design rules, each citing "
+        "the practitioner knowledge it's based on.\n"
+        "6. **Identifies gaps** where the knowledge base lacks coverage and "
+        "fills them with general engineering guidance, clearly marked as such.\n\n"
+        "The key difference from a standard LLM query is grounding: every claim "
+        "traces back to a specific practitioner's statement in a real "
+        "discussion, not to the model's training data."
+    )
+
+    # ── Connections to Research ──
+    st.markdown("## Connections to Ongoing Research")
+    st.markdown(
+        "This work sits at the intersection of several active research areas:\n\n"
+        "**Knowledge graphs for manufacturing.** "
+        "Recent work has used ontological structures and knowledge graphs to "
+        "map design and manufacturing knowledge from structured documents "
+        "(Sanya & Shehab, 2023; Jia et al., 2024). This system extends that "
+        "approach to *unstructured* forum discourse, capturing knowledge that "
+        "doesn't appear in formal documentation.\n\n"
+        "**Experiential knowledge capture.** "
+        "Goridkov et al. (2023) demonstrated embedding experiential design "
+        "knowledge in interactive knowledge graphs through direct expert "
+        "elicitation. Bolanos et al. (2025) built multimodal datasets of "
+        "product failures for design risk analysis. This work complements "
+        "both by mining existing practitioner discussions at scale rather "
+        "than requiring direct expert participation.\n\n"
+        "**LLM-as-a-judge for expert domains.** "
+        "While LLM evaluation methods have shown strong results in general "
+        "NLP tasks (Zheng et al., 2023), agreement drops in expert domains "
+        "(Szymanski et al., 2025). This system's calibration approach -- using "
+        "human expert ratings as gold standards for in-context learning -- "
+        "offers one path forward for validating domain-specific knowledge.\n\n"
+        "**AI as design collaborator.** "
+        "Research on AI in design has shown that the tool's framing matters: "
+        "AI that provides information while preserving designer agency leads to "
+        "better outcomes than AI that generates solutions directly "
+        "(Chong et al., 2023; Zhang et al., 2021). This system is designed as "
+        "a knowledge retrieval tool, not a design generator -- it surfaces "
+        "practitioner expertise to inform decisions, not to make them."
+    )
+
+    # ── Generalizability ──
+    st.markdown("## Beyond Machining: A Generalizable Method")
+    st.markdown(
+        "While this prototype focuses on CNC machining knowledge from Stack "
+        "Exchange, the underlying method is domain-agnostic. The same pipeline "
+        "-- scrape practitioner discourse, extract structured knowledge frames, "
+        "embed and graph them -- could be applied to:\n\n"
+        "- **Other manufacturing processes** (welding, casting, additive "
+        "manufacturing, sheet metal)\n"
+        "- **Other engineering domains** (electrical, civil, software)\n"
+        "- **Other knowledge sources** (internal engineering wikis, "
+        "manufacturing reports, maintenance logs, supplier communications)\n\n"
+        "The frame schema would need domain-specific adaptation, but the "
+        "extraction, embedding, and graph construction stages are general. "
+        "The validation approach -- human expert calibration followed by "
+        "automated LLM review -- is also transferable to any domain where "
+        "expert knowledge needs to be captured and verified at scale.\n\n"
+        "Future directions include integrating visual data (CAD files, "
+        "engineering drawings) through vision-language models, expanding "
+        "the knowledge base with new data sources, and studying the impact "
+        "of this type of AI-assisted feedback on real design outcomes."
+    )
+
+    st.divider()
+    st.markdown(
+        "*This research is being conducted at UC Berkeley's "
+        "[Co-Design Lab](https://codesign.berkeley.edu/) by "
+        "[Douglas McGowan](https://www.linkedin.com/in/douglas-mcgowan/). "
+        "If you're interested in collaborating, have questions about the "
+        "methodology, or want to apply this approach to your domain, "
+        "please reach out via the feedback form in the sidebar or by email.*"
+    )
+
+
+# ─────────────────────────────────────────────
 # KG EXPLORER
 # ─────────────────────────────────────────────
 
@@ -2893,11 +3147,16 @@ def main():
         st.divider()
         page = st.radio(
             "Navigate",
-            ["\U0001f50d DFM Agent", "\U0001f578\ufe0f KG Explorer", "\U0001f4ca Admin"],
+            ["\U0001f50d DFM Agent", "\U0001f4d6 Research Background", "\U0001f578\ufe0f KG Explorer", "\U0001f4ca Admin"],
             label_visibility="collapsed",
             key="page_nav",
         )
         st.divider()
+
+    # ── Research Background page ──
+    if page == "\U0001f4d6 Research Background":
+        _render_research_background(stats)
+        return
 
     # ── KG Explorer page ──
     if page == "\U0001f578\ufe0f KG Explorer":
