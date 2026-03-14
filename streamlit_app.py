@@ -3423,28 +3423,29 @@ def main():
 
         st.markdown("### Getting Started")
         st.markdown(
-            "This tool answers manufacturing questions using a knowledge base "
-            "of **{:,} insights** extracted from real machinist and engineer "
-            "discussions. Think of it as asking an experienced shop floor -- "
-            "not a textbook.\n\n"
-            "**Try it in 30 seconds:**\n\n"
-            "1. Click one of the **example questions** below (they load "
-            "pre-computed results instantly -- no wait).\n"
-            "2. Scroll through the report -- each design rule cites the "
-            "practitioners whose experience it's based on.\n"
+            "This tool answers design & manufacturing questions using a "
+            "knowledge base of **3,879 insights** extracted from machinist "
+            "and engineer forums. It's a part of a UC Berkeley design "
+            "research project.\n\n"
+            "If you're interested in collaborating or learning more, give "
+            "some feedback (sidebar) or send me an email!\n\n"
+            "**To try it quickly:**\n\n"
+            "1. Click one of the **example questions** below.\n"
+            "2. Scroll through the report -- you can see the practitioners "
+            "whose experience each point is based on.\n"
             "3. Click any **frame ID** (e.g. F-1234) to see the original "
             "quote and source link.\n\n"
             "**Run your own query:**\n\n"
-            "1. Type a question in the box above -- anything about part "
-            "geometry, material selection, machining strategy, tolerances, "
-            "or fixturing.\n"
+            "1. Type a question in the box above -- anything about "
+            "mechanical design, material selection, machining strategy, "
+            "tolerances, etc.\n"
             "2. Pick an **analysis mode** in the sidebar "
             "(**Flash** is fastest at ~20 sec, **Deep Reasoning** is most "
             "thorough at 7-10 min).\n"
             "3. Click **Analyze** and the agent will search the knowledge "
             "graph, find relevant practitioner insights, and synthesize "
             "a report with actionable design rules."
-        .format(stats['frames']))
+        )
 
         st.markdown("**Example questions:**")
         examples = [
