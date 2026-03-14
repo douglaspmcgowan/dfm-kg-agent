@@ -70,6 +70,8 @@ from dfm_report_schema import (
 BASE_DIR     = Path(__file__).parent
 GRAPH_PICKLE = BASE_DIR / "provenance_graph.gpickle"
 QDRANT_PATH  = str(BASE_DIR / "qdrant_data")
+QDRANT_URL   = os.getenv("QDRANT_URL", "")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY", "")
 REPORTS_DIR  = BASE_DIR / "dfm_reports"
 
 MODEL           = os.getenv("OPENAI_MODEL", "gpt-5")
@@ -809,10 +811,21 @@ def query_dfm(question, top_k=None, max_frames=None, max_hops=2,
         )
         print(f"Graph: {n_frames} frames, {n_sem} semantic edges")
 
-    # Load Qdrant
-    if not os.path.exists(QDRANT_PATH):
-        raise FileNotFoundError(f"{QDRANT_PATH} not found. Run build_embeddings.py first.")
-    qdrant = QdrantClient(path=QDRANT_PATH)
+    # Load Qdrant -- prefer cloud URL, fall back to local path
+    _qurl = QDRANT_URL
+    _qkey = QDRANT_API_KEY
+    try:
+        import streamlit as _st
+        _qurl = _qurl or _st.secrets.get("QDRANT_URL", "")
+        _qkey = _qkey or _st.secrets.get("QDRANT_API_KEY", "")
+    except Exception:
+        pass
+    if _qurl:
+        qdrant = QdrantClient(url=_qurl, api_key=_qkey or None)
+    else:
+        if not os.path.exists(QDRANT_PATH):
+            raise FileNotFoundError(f"{QDRANT_PATH} not found. Run build_embeddings.py first.")
+        qdrant = QdrantClient(path=QDRANT_PATH)
 
     # Build dynamic step list based on toggles
     should_decompose = decompose if decompose is not None else (len(question.split()) > 5)
