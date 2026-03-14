@@ -25,7 +25,10 @@ from pathlib import Path
 import streamlit as st
 import networkx as nx
 import plotly.graph_objects as go
-import gspread
+try:
+    import gspread
+except ImportError:
+    gspread = None
 
 # Import agent module first -- it handles the cp1252 encoding fix at load time.
 # Do NOT duplicate the fix here (double TextIOWrapper wrapping causes I/O errors).
@@ -303,7 +306,7 @@ def _gsheet_append_row(worksheet_name, row_dict, columns):
     try:
         try:
             ws = ss.worksheet(worksheet_name)
-        except gspread.exceptions.WorksheetNotFound:
+        except Exception:  # WorksheetNotFound or gspread not installed
             ws = ss.add_worksheet(title=worksheet_name, rows=1000, cols=len(columns))
             ws.append_row(columns, value_input_option="RAW")
         row = [str(row_dict.get(c, "")) for c in columns]
@@ -345,7 +348,7 @@ def _gsheet_update_tally(tally_dict):
     try:
         try:
             ws = ss.worksheet("tally")
-        except gspread.exceptions.WorksheetNotFound:
+        except Exception:  # WorksheetNotFound or gspread not installed
             ws = ss.add_worksheet(title="tally", rows=2, cols=20)
         keys = list(tally_dict.keys())
         vals = []
