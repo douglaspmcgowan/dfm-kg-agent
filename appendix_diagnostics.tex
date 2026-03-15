@@ -1,0 +1,253 @@
+% appendix_diagnostics.tex
+% Self-contained appendix for ASME conference paper (asmeconf class).
+% Usage: place \input{appendix_diagnostics} after \appendix in the main document.
+
+\section{Pipeline Data Diagnostics}\label{appendix:diagnostics}
+
+This appendix summarizes the data volumes, distributions, and graph
+statistics produced by the DFM knowledge-extraction pipeline described
+in the main text.  All counts reflect the final, merged extraction
+output after deduplication and quality filtering.
+
+%% ----------------------------------------------------------------
+%% Pipeline Stage Summary
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Pipeline stage summary from raw scrape to knowledge graph.}
+\label{tab:pipeline-summary}
+\centering
+\begin{tabular}{lr}
+\toprule
+Stage & Count \\
+\midrule
+Raw threads scraped           & 12{,}805 \\
+Threads after GPT relevance filter & 639 \\
+Posts with answers             & 1{,}399 \\
+Posts sent to LLM extraction   & 1{,}936 \\
+Unique threads                 & 911 \\
+Unique authors                 & 1{,}138 \\
+Knowledge frames extracted     & 3{,}879 \\
+Avg.\ frames per post         & 3.22 \\
+Embedding vectors (3 collections) & 11{,}637 \\
+Graph nodes                    & 7{,}864 \\
+Structural edges               & 8{,}776 \\
+Semantic edges                 & 4{,}372 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The pipeline begins by scraping question threads from five Stack
+Exchange sites via the public API.  A GPT-based relevance filter
+retains only threads pertaining to design-for-manufacturability,
+reducing the corpus from 12{,}805 to 639 threads.  Each retained
+thread is normalized to plain text, and both questions and answers
+(1{,}936 posts total) are sent to a structured-output LLM call that
+extracts typed \emph{knowledge frames}.  The resulting frames,
+posts, authors, and threads form a provenance graph augmented with
+semantically inferred inter-frame edges.
+
+%% ----------------------------------------------------------------
+%% Frame Type Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Distribution of extracted knowledge frames by type.}
+\label{tab:frame-types}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Frame Type & Count & \% \\
+\midrule
+heuristic   & 1{,}401 & 36.1 \\
+observation & 1{,}345 & 34.7 \\
+risk        & 428     & 11.0 \\
+principle   & 396     & 10.2 \\
+comparison  & 149     &  3.8 \\
+workaround  & 145     &  3.7 \\
+case        &  15     &  0.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each frame is classified into one of seven substantive types (an
+eighth, \emph{other}, is reserved for edge cases and was not observed
+in the final dataset).  \textbf{Heuristics} capture personal
+practices, rules of thumb, or directed advice together with a
+rationale.  \textbf{Observations} record empirical, factual, or
+definitional claims that carry no explicit action or causal mechanism.
+\textbf{Risks} link a set of conditions to a failure mode or
+operational limitation.  \textbf{Principles} provide causal
+explanations of \emph{why} a phenomenon occurs.
+\textbf{Comparisons} weigh two or more alternatives against each
+other.  \textbf{Workarounds} describe non-standard fixes for stated
+limitations.  \textbf{Cases} are specific real-world job or incident
+narratives.
+
+%% ----------------------------------------------------------------
+%% Scope Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Distribution of extracted frames by scope domain.}
+\label{tab:scope-dist}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Scope Domain & Count & \% \\
+\midrule
+design\_geometry     & 1{,}166 & 30.1 \\
+machining\_process   & 581     & 15.0 \\
+other                & 512     & 13.2 \\
+machine\_capability  & 507     & 13.1 \\
+quality              & 235     &  6.1 \\
+programming          & 225     &  5.8 \\
+tooling              & 225     &  5.8 \\
+material             & 165     &  4.3 \\
+shop\_operations     & 141     &  3.6 \\
+cost                 & 122     &  3.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Scope domains indicate the primary technical area a frame addresses.
+The dominance of \emph{design\_geometry} (30.1\%) reflects the
+pipeline's focus on DFM: many frames concern feature tolerances,
+wall thicknesses, hole placement, and other geometry-driven
+constraints.  \emph{Machining\_process} and
+\emph{machine\_capability} together account for a further 28.1\%,
+covering feeds, speeds, tool paths, and machine-specific limitations.
+The \emph{other} category (13.2\%) captures frames whose scope spans
+multiple domains or falls outside the predefined taxonomy.
+
+%% ----------------------------------------------------------------
+%% Epistemic Stance Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Epistemic stance distribution across extracted frames.}
+\label{tab:epistemic-dist}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Epistemic Stance & Count & \% \\
+\midrule
+direct\_neutral           & 2{,}619 & 67.5 \\
+tentative\_subjective     & 1{,}022 & 26.4 \\
+hedged\_emphatic          & 127     &  3.3 \\
+absolute\_authoritative   &  94     &  2.4 \\
+narrative\_implied        &  17     &  0.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Epistemic stance captures the confidence and authority with which the
+original author presents a claim.  The majority of frames (67.5\%)
+are \emph{direct\_neutral}---stated matter-of-factly without hedging
+or strong emphasis.  \emph{Tentative\_subjective} frames (26.4\%)
+include qualifiers such as ``I think,'' ``usually,'' or ``in my
+experience.''  \emph{Hedged\_emphatic} frames combine hedging
+language with strong conviction, while
+\emph{absolute\_authoritative} frames present claims as definitive
+rules.  \emph{Narrative\_implied} captures knowledge embedded in
+storytelling rather than explicit assertion.
+
+%% ----------------------------------------------------------------
+%% Applicability Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Applicability levels assigned to extracted frames.}
+\label{tab:applicability-dist}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Applicability & Count & \% \\
+\midrule
+context\_dependent & 2{,}724 & 70.2 \\
+universal          & 1{,}115 & 28.7 \\
+situational        &    40  &  1.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Applicability indicates how broadly a frame generalizes.
+\emph{Context\_dependent} frames (70.2\%) apply only under specific
+conditions---such as a particular material, machine type, or feature
+geometry---and require an accompanying \texttt{example\_context}
+field.  \emph{Universal} frames (28.7\%) hold across a wide range of
+conditions without significant qualification.
+\emph{Situational} frames (1.0\%) are tied to a highly specific,
+one-off scenario.
+
+%% ----------------------------------------------------------------
+%% Edge Type Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Edge types in the provenance knowledge graph.}
+\label{tab:edge-types}
+\centering
+\begin{tabular}{llr}
+\toprule
+Edge Type & Category & Count \\
+\midrule
+POST\_CONTAINS\_FRAME   & Structural & 3{,}879 \\
+THREAD\_CONTAINS\_POST  & Structural & 1{,}936 \\
+POST\_AUTHORED\_BY      & Structural & 1{,}936 \\
+SE\_ANSWERS             & Structural & 1{,}025 \\
+\addlinespace
+SPECIFIES               & Semantic   & 2{,}159 \\
+MITIGATES               & Semantic   & 1{,}218 \\
+CAUSAL\_LINK            & Semantic   &   637 \\
+CONTRADICTS             & Semantic   &   358 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The knowledge graph contains two categories of edges.
+\textbf{Structural edges} encode provenance: which post a frame was
+extracted from, which thread contains the post, who authored it, and
+the question--answer relationship between Stack Exchange posts.
+\textbf{Semantic edges} are inferred by a separate LLM pass that
+classifies the relationship between pairs of frames sharing similar
+subjects or embeddings.  \emph{SPECIFIES} indicates that one frame
+adds detail or constraints to another.  \emph{MITIGATES} links a
+frame (typically a heuristic or workaround) to a risk it addresses.
+\emph{CAUSAL\_LINK} connects frames sharing a cause--effect
+relationship.  \emph{CONTRADICTS} flags frames that present
+conflicting claims, enabling downstream systems to surface
+disagreements.
+
+%% ----------------------------------------------------------------
+%% Source Site Distribution
+%% ----------------------------------------------------------------
+
+\begin{table}[t]
+\caption{Distribution of posts sent to extraction by Stack Exchange site.}
+\label{tab:source-sites}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Stack Exchange Site & Posts & \% \\
+\midrule
+Engineering        & 1{,}345 & 69.5 \\
+Electronics        &   276   & 14.3 \\
+Robotics           &   174   &  9.0 \\
+Woodworking        &   106   &  5.5 \\
+Mechanics          &    35   &  1.8 \\
+\addlinespace
+\textbf{Total}     & \textbf{1{,}936} & \textbf{100} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Posts were drawn from five Stack Exchange sites selected for their
+coverage of manufacturing, machining, and related engineering
+knowledge.  The \emph{Engineering} site contributes the majority of
+DFM-relevant content (69.5\%), while \emph{Electronics} and
+\emph{Robotics} provide complementary material on electromechanical
+integration and automation constraints.  \emph{Woodworking}
+contributes subtractive-manufacturing knowledge that transfers to
+CNC contexts, and \emph{Mechanics} provides foundational physics
+and materials content.

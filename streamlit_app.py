@@ -2738,7 +2738,7 @@ def _render_kg_explorer(G, stats):
     )
 
     # ── Overview metrics ──
-    tab_browse, tab_stats = st.tabs(["Browse Frames", "Graph Statistics"])
+    tab_browse, tab_stats, tab_diag = st.tabs(["Browse Frames", "Graph Statistics", "Data Diagnostics"])
 
     with tab_stats:
         st.markdown("### Frame Distributions")
@@ -2883,6 +2883,192 @@ def _render_kg_explorer(G, stats):
                 plot_bgcolor="rgba(0,0,0,0)",
             )
             st.plotly_chart(fig_topics, use_container_width=True)
+
+    with tab_diag:
+        # ── Pipeline Overview ──
+        st.markdown("### Pipeline Overview")
+        st.caption("End-to-end data flow from raw scrape to knowledge graph.")
+
+        po_cols = st.columns(4)
+        po_cols[0].metric("Raw Threads Scraped", "12,805")
+        po_cols[1].metric("After GPT Filtering", "639 questions")
+        po_cols[2].metric("Posts with Answers", "1,399")
+        po_cols[3].metric("Posts Sent to LLM", "1,936")
+
+        po_cols2 = st.columns(4)
+        po_cols2[0].metric("Threads Processed", "911")
+        po_cols2[1].metric("Frames Extracted", "3,879")
+        po_cols2[2].metric("Embedding Vectors", "11,637")
+        po_cols2[3].metric("Graph Nodes", "7,864")
+
+        po_cols3 = st.columns(3)
+        po_cols3[0].metric("Structural Edges", "8,776")
+        po_cols3[1].metric("Semantic Edges", "4,372")
+        po_cols3[2].metric("Total Edges", "13,148")
+
+        st.markdown("---")
+
+        # ── Post Role Distribution ──
+        st.markdown("### Post Role Distribution")
+        role_counts = {}
+        for f in frames:
+            pr = f.get("post_role", "?")
+            if pr and pr != "?":
+                role_counts[pr] = role_counts.get(pr, 0) + 1
+        if role_counts:
+            sorted_roles = sorted(role_counts.items(), key=lambda x: -x[1])
+            fig_roles = go.Figure(go.Bar(
+                x=[r[0] for r in sorted_roles],
+                y=[r[1] for r in sorted_roles],
+                marker_color="#e67e22",
+                text=[r[1] for r in sorted_roles],
+                textposition="outside",
+            ))
+            fig_roles.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                xaxis_tickangle=-30,
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_roles, use_container_width=True)
+
+        st.markdown("---")
+
+        diag_col1, diag_col2 = st.columns(2)
+
+        # ── Applicability Distribution ──
+        with diag_col1:
+            st.markdown("### Applicability Distribution")
+            app_data = [
+                ("context_dependent", 2724),
+                ("universal", 1115),
+                ("situational", 40),
+            ]
+            fig_app = go.Figure(go.Bar(
+                x=[a[0] for a in app_data],
+                y=[a[1] for a in app_data],
+                marker_color="#2ecc71",
+                text=[a[1] for a in app_data],
+                textposition="outside",
+            ))
+            fig_app.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="", yaxis_title="Count",
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_app, use_container_width=True)
+
+        # ── SE Site Distribution ──
+        with diag_col2:
+            st.markdown("### SE Site Distribution")
+            site_counts = {}
+            for f in frames:
+                site = f.get("se_site", "")
+                if site:
+                    site_counts[site] = site_counts.get(site, 0) + 1
+            if site_counts:
+                sorted_sites = sorted(site_counts.items(), key=lambda x: -x[1])
+                fig_sites = go.Figure(go.Bar(
+                    x=[s[0] for s in sorted_sites],
+                    y=[s[1] for s in sorted_sites],
+                    marker_color="#3498db",
+                    text=[s[1] for s in sorted_sites],
+                    textposition="outside",
+                ))
+                fig_sites.update_layout(
+                    height=350, margin=dict(l=20, r=20, t=20, b=40),
+                    xaxis_title="", yaxis_title="Frames",
+                    xaxis_tickangle=-30,
+                    plot_bgcolor="rgba(0,0,0,0)",
+                )
+                st.plotly_chart(fig_sites, use_container_width=True)
+
+        st.markdown("---")
+
+        # ── Edge Type Breakdown ──
+        st.markdown("### Edge Type Breakdown")
+        st.caption("Structural edges (blue) and semantic edges (orange).")
+
+        edge_labels = [
+            "POST_CONTAINS_FRAME", "THREAD_CONTAINS_POST",
+            "POST_AUTHORED_BY", "SE_ANSWERS",
+            "SPECIFIES", "MITIGATES",
+            "CAUSAL_LINK", "CONTRADICTS",
+        ]
+        edge_vals = [3879, 1936, 1936, 1025, 2159, 1218, 637, 358]
+        edge_colors = [
+            "#3498db", "#3498db", "#3498db", "#3498db",
+            "#e67e22", "#e67e22", "#e67e22", "#e67e22",
+        ]
+
+        fig_edges = go.Figure(go.Bar(
+            y=edge_labels[::-1],
+            x=edge_vals[::-1],
+            orientation="h",
+            marker_color=edge_colors[::-1],
+            text=edge_vals[::-1],
+            textposition="outside",
+        ))
+        fig_edges.update_layout(
+            height=350, margin=dict(l=180, r=40, t=20, b=40),
+            xaxis_title="Count", yaxis_title="",
+            plot_bgcolor="rgba(0,0,0,0)",
+        )
+        st.plotly_chart(fig_edges, use_container_width=True)
+
+        st.markdown("---")
+
+        # ── Frames per Post ──
+        st.markdown("### Frames per Post")
+
+        # Count frames per post from the graph
+        post_frame_counts = []
+        for nid, data in G.nodes(data=True):
+            if data.get("node_type") == "Post":
+                count = 0
+                for _, succ, edata in G.out_edges(nid, data=True):
+                    succ_data = G.nodes.get(succ, {})
+                    if succ_data.get("node_type") == "Frame":
+                        count += 1
+                if count > 0:
+                    post_frame_counts.append(count)
+
+        if post_frame_counts:
+            avg_fpp = sum(post_frame_counts) / len(post_frame_counts)
+            sorted_counts = sorted(post_frame_counts)
+            n = len(sorted_counts)
+            median_fpp = (sorted_counts[n // 2] if n % 2 == 1
+                          else (sorted_counts[n // 2 - 1] + sorted_counts[n // 2]) / 2)
+            max_fpp = max(post_frame_counts)
+
+            fpp_cols = st.columns(4)
+            fpp_cols[0].metric("Posts with Frames", f"{len(post_frame_counts):,}")
+            fpp_cols[1].metric("Average", f"{avg_fpp:.2f}")
+            fpp_cols[2].metric("Median", f"{median_fpp:.0f}")
+            fpp_cols[3].metric("Max", f"{max_fpp}")
+
+            # Build histogram bins
+            from collections import Counter
+            fpp_counter = Counter(post_frame_counts)
+            fpp_x = sorted(fpp_counter.keys())
+            fpp_y = [fpp_counter[k] for k in fpp_x]
+
+            fig_fpp = go.Figure(go.Bar(
+                x=fpp_x,
+                y=fpp_y,
+                marker_color="#9b59b6",
+                text=fpp_y,
+                textposition="outside",
+            ))
+            fig_fpp.update_layout(
+                height=350, margin=dict(l=20, r=20, t=20, b=40),
+                xaxis_title="Frames per Post",
+                yaxis_title="Number of Posts",
+                plot_bgcolor="rgba(0,0,0,0)",
+            )
+            st.plotly_chart(fig_fpp, use_container_width=True)
+        else:
+            st.info("No post-frame relationships found in graph.")
 
     with tab_browse:
         st.markdown(f"**{len(filtered):,}** frames match your filters")
