@@ -4069,6 +4069,44 @@ def main():
                     st.session_state["_auto_query"] = ex
                     st.rerun()
 
+        # ── Admin-only: Visitor & Query Logs at bottom of home page ──
+        if _is_admin_visitor():
+            st.markdown("---")
+            st.markdown("### Admin: Logs")
+
+            import pandas as pd
+
+            tab_v, tab_q = st.tabs(["Visitor Log", "Query Log"])
+
+            with tab_v:
+                visitors = _read_log(_VISITOR_LOG_FILE)
+                if visitors:
+                    df_v = pd.DataFrame(visitors)
+                    desired_cols = ["timestamp", "first_name", "last_name", "contact_info", "ip",
+                                    "user_agent", "session_id", "ip_hash"]
+                    cols = [c for c in desired_cols if c in df_v.columns] + [c for c in df_v.columns if c not in desired_cols]
+                    df_v = df_v[cols].iloc[::-1].reset_index(drop=True)
+                    st.dataframe(df_v, use_container_width=True, hide_index=True)
+                    st.download_button("Download Visitor Log CSV", df_v.to_csv(index=False),
+                                       "visitor_log.csv", "text/csv", key="home_dl_visitor_csv")
+                else:
+                    st.caption("No visitor records yet.")
+
+            with tab_q:
+                queries = _read_log(_QUERY_LOG_FILE)
+                if queries:
+                    df_q = pd.DataFrame(queries)
+                    desired_cols = ["timestamp", "visitor_name", "contact_info", "query", "model", "flash_mode",
+                                    "from_cache", "elapsed_s", "num_rules", "num_disciplines", "num_gaps",
+                                    "ip", "session_id", "summary_preview"]
+                    cols = [c for c in desired_cols if c in df_q.columns] + [c for c in df_q.columns if c not in desired_cols]
+                    df_q = df_q[cols].iloc[::-1].reset_index(drop=True)
+                    st.dataframe(df_q, use_container_width=True, hide_index=True)
+                    st.download_button("Download Query Log CSV", df_q.to_csv(index=False),
+                                       "query_log.csv", "text/csv", key="home_dl_query_csv")
+                else:
+                    st.caption("No query records yet.")
+
 
 if __name__ == "__main__":
     main()
