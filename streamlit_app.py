@@ -162,6 +162,57 @@ _CUSTOM_STYLES = """
     min-width: 60px !important;
     flex-shrink: 0 !important;
 }
+
+/* ── Pipeline animation (bouncing dots) ── */
+.dfm-anim { display: flex; justify-content: center; gap: 8px; padding: 16px 0; }
+.dfm-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #3498db; animation: dfm-bounce 1.4s ease-in-out infinite;
+}
+.dfm-dot:nth-child(2) { animation-delay: 0.2s; }
+.dfm-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dfm-bounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1.0); opacity: 1.0; }
+}
+
+/* ── Mobile responsiveness ── */
+@media (max-width: 768px) {
+    /* Stack columns on narrow screens */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+    }
+    /* Give narrow columns more room */
+    [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+        min-width: 80px !important;
+    }
+    /* Larger touch targets for popover buttons */
+    [data-testid="stPopoverButton"] {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.9rem !important;
+        min-height: 44px !important;
+    }
+    /* Constrain popover body */
+    [data-testid="stPopoverBody"] {
+        max-width: 90vw !important;
+        max-height: 70vh !important;
+        overflow-y: auto !important;
+    }
+    /* Readable metrics */
+    [data-testid="stMetricValue"] {
+        font-size: 1.2rem !important;
+    }
+    /* Bigger touch targets for buttons and inputs */
+    [data-testid="stDownloadButton"] button,
+    [data-testid="stTextInput"] input {
+        min-height: 44px !important;
+        font-size: 1rem !important;
+    }
+    /* Suggestion buttons: stack vertically */
+    .dfm-suggestions [data-testid="stHorizontalBlock"] {
+        flex-direction: column !important;
+    }
+}
 </style>
 """
 st.markdown(_CUSTOM_STYLES, unsafe_allow_html=True)
@@ -631,6 +682,26 @@ _PST = ZoneInfo("America/Los_Angeles")
 def _now_pst():
     """Get current time in Pacific time."""
     return datetime.datetime.now(_PST)
+
+
+def _relative_time(dt):
+    """Return human-readable relative time like 'Analyzed 2 min ago'."""
+    if dt is None:
+        return ""
+    delta = _now_pst() - dt
+    seconds = int(delta.total_seconds())
+    if seconds < 10:
+        return "Analyzed just now"
+    if seconds < 60:
+        return f"Analyzed {seconds}s ago"
+    minutes = seconds // 60
+    if minutes < 60:
+        return f"Analyzed {minutes} min ago"
+    hours = minutes // 60
+    if hours < 24:
+        return f"Analyzed {hours}h ago"
+    return f"Analyzed {dt.strftime('%I:%M %p')}"
+
 
 _VISITOR_LOG_FILE = Path(__file__).parent / "visitor_log.jsonl"
 _QUERY_LOG_FILE = Path(__file__).parent / "query_log.jsonl"
@@ -3563,7 +3634,8 @@ def main():
                 ts = res.get("timestamp", "")
                 is_active = (i == st.session_state.active_idx)
                 btn_type = "primary" if is_active else "secondary"
-                btn_label = f"{ts}  {q_short}" if ts else q_short
+                ts_rel = _relative_time(res.get("timestamp_dt"))
+                btn_label = f"{ts_rel}  {q_short}" if ts_rel else (f"{ts}  {q_short}" if ts else q_short)
                 if st.button(
                     btn_label,
                     key=f"hist_{i}",
@@ -3770,7 +3842,10 @@ def main():
             clock = f"{mins}:{secs:02d}" if mins else f"{secs}s"
             progress_bar.progress(frac, text=f"{icon} Step {step}/{total}  |  {clock} elapsed")
             step_container.markdown(
-                f"### {icon} Step {step} of {total}\n{label}"
+                '<div class="dfm-anim"><div class="dfm-dot"></div>'
+                '<div class="dfm-dot"></div><div class="dfm-dot"></div></div>'
+                f"### {icon} Step {step} of {total}\n{label}",
+                unsafe_allow_html=True,
             )
 
         _t0 = _time.time()
@@ -3903,6 +3978,7 @@ def main():
                 "backfill_result": backfill_result,
                 "frame_details": frame_details,
                 "timestamp": _now_pst().strftime("%I:%M:%S %p"),
+                "timestamp_dt": _now_pst(),
                 "elapsed_s": round(elapsed, 1),
                 "token_usage": token_usage,
                 "flash_mode": flash_on,
@@ -3948,10 +4024,15 @@ def main():
             result = st.session_state.query_history[idx]
             st.markdown(f"---")
 
-            # Query line + PDF download button
-            q_col, dl_col = st.columns([6, 1])
+            # Query line + relative timestamp + PDF download button
+            q_col, dl_col = st.columns([5, 1])
             with q_col:
-                st.markdown(f"**Query:** {result['query']}")
+                ts_label = _relative_time(result.get("timestamp_dt"))
+                if ts_label:
+                    st.markdown(f"**Query:** {result['query']}")
+                    st.caption(ts_label)
+                else:
+                    st.markdown(f"**Query:** {result['query']}")
             with dl_col:
                 pdf_bytes = generate_pdf_report(result)
                 st.download_button(
@@ -3963,6 +4044,29 @@ def main():
                 )
 
             render_report(result, G, concise=concise)
+
+            # ── Query suggestions from knowledge gaps ──
+            report = result.get("report")
+            if report and hasattr(report, "knowledge_gaps") and report.knowledge_gaps:
+                gaps = report.knowledge_gaps[:3]
+                st.markdown("---")
+                st.markdown("**Related questions you could ask:**")
+                suggestion_cols = st.columns(min(len(gaps), 3))
+                for i, gap in enumerate(gaps):
+                    # Convert gap text into a question
+                    q = gap.strip().rstrip(".")
+                    # Strip common prefixes
+                    for prefix in ["No coverage of ", "Limited data on ", "The knowledge graph lacks ",
+                                   "Missing ", "No data on ", "Insufficient coverage of "]:
+                        if q.lower().startswith(prefix.lower()):
+                            q = q[len(prefix):]
+                            break
+                    suggestion = f"What should I know about {q.lower()}?"
+                    with suggestion_cols[i]:
+                        if st.button(f"\U0001f4a1 {suggestion[:80]}", key=f"suggest_{idx}_{i}",
+                                     use_container_width=True):
+                            st.session_state["_auto_query"] = suggestion
+                            st.rerun()
 
             # Scroll to report if navigating from history
             if st.session_state.pop("_scroll_to_report", False):
@@ -4056,6 +4160,7 @@ def main():
                         "backfill_result": backfill,
                         "frame_details": cached.get("frame_details", []),
                         "timestamp": _now_pst().strftime("%I:%M:%S %p"),
+                        "timestamp_dt": _now_pst(),
                         "elapsed_s": cached.get("elapsed_s", 0),
                         "token_usage": cached.get("token_usage", {}),
                         "from_cache": True,
