@@ -3898,7 +3898,7 @@ def main():
             step_container.markdown(
                 '<div class="dfm-anim"><div class="dfm-dot"></div>'
                 '<div class="dfm-dot"></div><div class="dfm-dot"></div></div>'
-                f"### {icon} Step {step} of {total}\n{label}",
+                f"<h3>{icon} Step {step} of {total}</h3><p>{label}</p>",
                 unsafe_allow_html=True,
             )
 
