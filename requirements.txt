@@ -6,3 +6,4 @@ plotly>=6.5
 pydantic>=2.12
 fpdf2>=2.8
 gspread>=6.1.2
+google-auth>=2.20.0
