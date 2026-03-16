@@ -3461,8 +3461,62 @@ def _render_admin_page():
     else:
         st.caption("No query records yet.")
 
-    # Debug: show all headers for diagnosing IP issues
+    # Debug tools
     st.divider()
+    with st.expander("Debug: Google Sheets Connection"):
+        if st.button("Test Google Sheets", key="test_gsheet"):
+            # Step 1: Check gspread import
+            if gspread is None:
+                st.error("gspread not installed")
+            else:
+                st.success(f"gspread {gspread.__version__} installed")
+
+            # Step 2: Check credentials
+            try:
+                creds = st.secrets["gcp_service_account"]
+                st.success(f"Service account found: {dict(creds).get('client_email', 'unknown')}")
+            except Exception as e:
+                st.error(f"No gcp_service_account in secrets: {e}")
+                creds = None
+
+            # Step 3: Check sheet key
+            sheet_key = st.secrets.get("GSHEET_LOG_KEY", "")
+            if sheet_key:
+                st.success(f"GSHEET_LOG_KEY: {sheet_key[:10]}...")
+            else:
+                st.error("GSHEET_LOG_KEY not set in secrets")
+
+            # Step 4: Try to connect
+            if creds and sheet_key:
+                try:
+                    gc = gspread.service_account_from_dict(dict(creds))
+                    st.success("Authenticated with Google API")
+                except Exception as e:
+                    st.error(f"Auth failed: {e}")
+                    gc = None
+
+                if gc:
+                    try:
+                        ss = gc.open_by_key(sheet_key)
+                        st.success(f"Opened spreadsheet: {ss.title}")
+                        worksheets = [ws.title for ws in ss.worksheets()]
+                        st.info(f"Worksheets: {worksheets}")
+                    except Exception as e:
+                        st.error(f"Failed to open spreadsheet: {e}")
+
+                    # Step 5: Try a test write
+                    try:
+                        test_ws = ss.worksheet("_test")
+                    except Exception:
+                        test_ws = ss.add_worksheet(title="_test", rows=10, cols=3)
+                        test_ws.append_row(["timestamp", "status", "message"])
+                    test_ws.append_row([
+                        _now_pst().strftime("%Y-%m-%d %I:%M:%S %p PST"),
+                        "OK",
+                        "Connection test successful"
+                    ])
+                    st.success("Test row written to '_test' worksheet!")
+
     with st.expander("Debug: Request Headers"):
         try:
             headers = dict(st.context.headers)
