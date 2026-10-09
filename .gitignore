@@ -56,3 +56,23 @@ nul
 
 # Claude Code
 .claude/
+
+# Logs and scratch output
+*.log
+logs/
+tmp_*/
+result_Q*.json
+
+# Personal, third-party, or credential files: never commit
+Neo4j-*.txt
+_check_cred.ps1
+*.m4a
+Academic Summary*.pdf
+DRAFT-MD-*.pdf
+goridkov-*.pdf
+asme conf template.docx
+Reviewer 1 -- *.docx
+
+# Agent task state
+taskstate/
+.agents/
