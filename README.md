@@ -33,11 +33,11 @@ Clone with Git LFS installed (`git lfs install`) to get the Qdrant index.
 
 ## Data and attribution
 
-Source posts come from Stack Exchange (Engineering, Robotics, and Motor Vehicle Maintenance & Repair) via the Stack Exchange API. Raw post dumps and raw extraction files are not in this repo. The repo holds the derived frames: `provenance_graph.gpickle` and the Qdrant index cover all 3,879 frames, and `neo4j_import/` is an earlier CSV export.
+Source posts come from five Stack Exchange sites (Engineering, Electrical Engineering, Robotics, Woodworking, and Motor Vehicle Maintenance & Repair) via the Stack Exchange API. Raw post dumps and raw extraction files are not in this repo. The repo holds the derived frames: `provenance_graph.gpickle` and the Qdrant index cover all 3,879 frames, and `neo4j_import/` is an earlier CSV export.
 
 Stack Exchange content is licensed under [CC BY-SA](https://stackoverflow.com/help/licensing): 2.5 for posts before 2011-04-08, 3.0 until 2018-05-02, and 4.0 after that. Derived frames, including verbatim `source_quote` fields, are shared under the same license.
 
-- **Source:** every frame links to its post. Post IDs map to URLs: `se-engineering-51725` → `https://engineering.stackexchange.com/q/51725`, and `se-engineering-51725-a51726` → `https://engineering.stackexchange.com/a/51726` (`mechanics` = mechanics.stackexchange.com, `robotics` = robotics.stackexchange.com).
+- **Source:** every frame links to its post. Post IDs map to URLs: `se-engineering-51725` → `https://engineering.stackexchange.com/q/51725`, and `se-engineering-51725-a51726` → `https://engineering.stackexchange.com/a/51726` (the middle part is the site subdomain, e.g. `electronics.stackexchange.com`).
 - **Authors:** usernames and profile links are in the Author nodes (`neo4j_import/nodes_authors.csv`).
 - **Changes:** frames are LLM extractions and paraphrases of the posts; only `source_quote` is verbatim.
 
