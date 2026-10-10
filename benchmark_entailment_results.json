@@ -1,0 +1,802 @@
+[
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "neutral",
+    "rationale": "Premise states cutting forces are higher than in surgery, but does not mention machining explicitly or claim greater structural rigidity is required.",
+    "prompt_tokens": 302,
+    "completion_tokens": 307
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51725-a51726",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 296,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "neutral",
+    "rationale": "Premise only notes unspecified chip evacuation problems. Hypothesis adds context (continuum-robot machining, confined geometries) and a limitation claim not stated in the premise.",
+    "prompt_tokens": 280,
+    "completion_tokens": 124
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a54789",
+    "verdict": "neutral",
+    "rationale": "Hypothesis generalizes \u201cusually\u201d to all CNC machines and adds a causal claim about accurate positioning not explicitly stated in the premise.",
+    "prompt_tokens": 302,
+    "completion_tokens": 308
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "entailment",
+    "rationale": "The premise states 0.005\" is \u201creally sloppy\u201d by machining tolerances, which entails it is very loose by typical machining standards.",
+    "prompt_tokens": 276,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "entailment",
+    "rationale": "Premise asserts speed is essential to making money in CNC machining, supporting that cycle time/speed dominates economics and is critical for profitability.",
+    "prompt_tokens": 276,
+    "completion_tokens": 183
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a54789",
+    "verdict": "neutral",
+    "rationale": "Premise supports deformation-based movement and slower speed, but does not mention task durations or machining contexts. The hypothesis adds that they take longer for tasks.",
+    "prompt_tokens": 314,
+    "completion_tokens": 248
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "neutral",
+    "rationale": "Premise refers to unspecified devices lacking rigidity; hypothesis specifies continuum robots and machining generally. Added specificity not stated in the premise, so not entailed.",
+    "prompt_tokens": 312,
+    "completion_tokens": 248
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a54789",
+    "verdict": "neutral",
+    "rationale": "Premise says continuum robots usually require such components and are high-cost; hypothesis claims inherent necessity and adds machining deployment costs, which the premise does not state.",
+    "prompt_tokens": 305,
+    "completion_tokens": 185
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a63110",
+    "verdict": "entailment",
+    "rationale": "Hypothesis restates the premise: milling/turning need very high rigidity to control cutting forces and ensure machining/dimensional accuracy. No added unsupported details.",
+    "prompt_tokens": 287,
+    "completion_tokens": 123
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a53952",
+    "verdict": "neutral",
+    "rationale": "Premise notes no good way to meet machining tolerances but doesn\u2019t mention continuum robots, CNC, or label it a fundamental limitation. Added context not supported.",
+    "prompt_tokens": 306,
+    "completion_tokens": 250
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a63110",
+    "verdict": "entailment",
+    "rationale": "Paraphrase match: CNC needs sub-millimeter repeatability; continuum robots struggle to maintain it due to compliant/flexible structures and drive mechanisms.",
+    "prompt_tokens": 310,
+    "completion_tokens": 186
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a63110",
+    "verdict": "entailment",
+    "rationale": "Premise states continuum robots lack economic advantages in machining speed and system integration versus rigid CNC; the hypothesis is a faithful paraphrase.",
+    "prompt_tokens": 303,
+    "completion_tokens": 246
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a54789",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 322,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a63110",
+    "verdict": "entailment",
+    "rationale": "Premise states nonlinear flexible drives in continuum robots hinder path/toolpath planning, force control, and dynamic compensation for CNC, matching the hypothesis\u2019 claims.",
+    "prompt_tokens": 303,
+    "completion_tokens": 250
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-53951-a63110",
+    "verdict": "neutral",
+    "rationale": "Premise mentions instability during cutting and unspecified errors. Hypothesis generalizes to machining, specifies cutting loads, and claims dimensional errors\u2014details not stated in the premise.",
+    "prompt_tokens": 295,
+    "completion_tokens": 251
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "neutral",
+    "rationale": "Premise states a ring may not need radial tension, but doesn\u2019t specify retaining rings, general-duty applications, or functional adequacy. Added scope and purpose make it neutral.",
+    "prompt_tokens": 280,
+    "completion_tokens": 125
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734",
+    "verdict": "neutral",
+    "rationale": "Premise supports smaller free ID causing tension when installed, but doesn\u2019t specify external rings/shafts or that preload provides the retaining force.",
+    "prompt_tokens": 312,
+    "completion_tokens": 246
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-55872-a55873",
+    "verdict": "neutral",
+    "rationale": "Premise states no heat is generated or it\u2019s removed by fluid, but does not mention abrasive waterjet, \u201ccool machining,\u201d or explicitly avoiding thermal effects.",
+    "prompt_tokens": 310,
+    "completion_tokens": 314
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-55305",
+    "verdict": "neutral",
+    "rationale": "Premise states no contact and disregards hardness, but hypothesis adds comparison to conventional cutting and effectiveness claims not explicit in the premise.",
+    "prompt_tokens": 295,
+    "completion_tokens": 308
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a51191",
+    "verdict": "entailment",
+    "rationale": "The hypothesis rephrases the premise\u2019s definition using synonymous terms (\u201cdeepest cut\u201d/\u201cgreatest depth\u201d; \u201cone pass\u201d/\u201csingle pass\u201d). No extra claims are introduced.",
+    "prompt_tokens": 282,
+    "completion_tokens": 194
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-55305",
+    "verdict": "neutral",
+    "rationale": "Premise supports differing EDM rates and relative speeds for copper, aluminum, and lead, but does not specify wire EDM; adding that detail exceeds the premise.",
+    "prompt_tokens": 312,
+    "completion_tokens": 249
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "entailment",
+    "rationale": "Premise states a too-deep (small-diameter) groove lets the ring sink enough for something to slide off, matching the hypothesis\u2019 assertion about retained components.",
+    "prompt_tokens": 324,
+    "completion_tokens": 189
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734",
+    "verdict": "neutral",
+    "rationale": "Premise only states tolerances for grooves to be cut. Hypothesis adds specifics about catalog labels, shaft/snap ring context, and exclusion of ring dimensions not mentioned.",
+    "prompt_tokens": 312,
+    "completion_tokens": 188
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a51191",
+    "verdict": "entailment",
+    "rationale": "Premise states each machine has a safe maximum cutting depth without damage or harm, directly matching the hypothesis\u2019 claim.",
+    "prompt_tokens": 291,
+    "completion_tokens": 115
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a51191",
+    "verdict": "entailment",
+    "rationale": "Premise says if depth needed exceeds max, use multiple passes removing some material each time\u2014exactly what the hypothesis states.",
+    "prompt_tokens": 303,
+    "completion_tokens": 181
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "entailment",
+    "rationale": "Premise states an overly wide groove lets the ring tilt and be twisted off, matching the hypothesis that excessive width enables removal and defeats retention.",
+    "prompt_tokens": 304,
+    "completion_tokens": 248
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-55872-a55873",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 358,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a51191",
+    "verdict": "entailment",
+    "rationale": "Premise states shallower depth reduces machine stress and necessitates more passes. Hypothesis restates this trade-off without adding details. Fully supported.",
+    "prompt_tokens": 301,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a52781",
+    "verdict": "neutral",
+    "rationale": "Premise states travel speed equals feed per rev times spindle speed, but does not mention using it for time calculations. Extra claim not supported.",
+    "prompt_tokens": 292,
+    "completion_tokens": 182
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "entailment",
+    "rationale": "Premise states McMaster-Carr lists recommended groove and ring/groove tolerances to reference. Hypothesis advises consulting these listings for such tolerances; purpose is implicit.",
+    "prompt_tokens": 303,
+    "completion_tokens": 319
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "entailment",
+    "rationale": "Premise advises not assuming nominal thickness and to consider tolerance and desired fit, which supports adjusting groove spacing rather than using nominal width.",
+    "prompt_tokens": 315,
+    "completion_tokens": 438
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a51191",
+    "verdict": "neutral",
+    "rationale": "Premise says cutting too much causes dig-in and possible damage, but does not specify depth of cut. Hypothesis adds that specific detail.",
+    "prompt_tokens": 297,
+    "completion_tokens": 310
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-54734-a54736",
+    "verdict": "neutral",
+    "rationale": "Premise supports hands-on calibration and understanding lever-arm amplification, but does not state a contrast with \u2018relying only on numbers.\u2019 That added claim isn\u2019t explicit.",
+    "prompt_tokens": 396,
+    "completion_tokens": 379
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a52781",
+    "verdict": "entailment",
+    "rationale": "The premise explicitly computes spindle speed using n = v/(\u03c0\u00b7d) with units and values, directly matching the hypothesis formula.",
+    "prompt_tokens": 321,
+    "completion_tokens": 182
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a52781",
+    "verdict": "neutral",
+    "rationale": "Premise only says reducing depth allows adjusting cutting speed, without specifying higher speeds or conditions. Hypothesis adds direction (\u201chigher\u201d) and dependencies not stated.",
+    "prompt_tokens": 285,
+    "completion_tokens": 184
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a52781",
+    "verdict": "neutral",
+    "rationale": "Premise notes radius reduction and a specific total longitudinal cut (3 mm). Hypothesis generalizes to diameter-vs-radius (X \u2192 X/2) and measurement convention not stated.",
+    "prompt_tokens": 314,
+    "completion_tokens": 319
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "neutral",
+    "rationale": "Premise is vague and domain-agnostic. Hypothesis adds machining context, a workflow (start high-level), and conditional use of physics not stated in the premise.",
+    "prompt_tokens": 277,
+    "completion_tokens": 188
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "entailment",
+    "rationale": "Premise states drilling removes a cylindrical void centered at (x,y) with diameter d; hypothesis restates this geometric subtraction. No added details or contradictions.",
+    "prompt_tokens": 308,
+    "completion_tokens": 187
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "neutral",
+    "rationale": "Premise states most tools lack models, but says nothing about predictive simulations or practitioner reliance. The hypothesis adds these consequences, so it\u2019s not entailed.",
+    "prompt_tokens": 284,
+    "completion_tokens": 249
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "neutral",
+    "rationale": "Premise states machining models exist at multiple abstraction levels, but does not claim that the appropriate level depends on the questions being answered.",
+    "prompt_tokens": 295,
+    "completion_tokens": 180
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "entailment",
+    "rationale": "Premise advises measuring easily verifiable features, preferring mirror entities and diameters over centerlines/radii, matching the hypothesis\u2019s guidance for inspection-friendly dimensions.",
+    "prompt_tokens": 325,
+    "completion_tokens": 188
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51190-a52781",
+    "verdict": "neutral",
+    "rationale": "Premise shows r=d/2 and t=r/\u1e8b, but does not mention parting or the necessity of traversing from OD to centerline.",
+    "prompt_tokens": 343,
+    "completion_tokens": 378
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "entailment",
+    "rationale": "Premise states geometric models don\u2019t determine feed/rotation rates and require a lower-level model. Hypothesis restates this; example model types don\u2019t add required claims.",
+    "prompt_tokens": 319,
+    "completion_tokens": 318
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "neutral",
+    "rationale": "Premise supports measuring from the centerline when it\u2019s important, but does not mention datums or design intent. The added generalization is unstated.",
+    "prompt_tokens": 295,
+    "completion_tokens": 185
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "neutral",
+    "rationale": "Premise only says flipping may cause tolerance issues. Hypothesis adds specifics (second setup, alignment/stack-up, failing stated tolerances) not stated in the premise.",
+    "prompt_tokens": 298,
+    "completion_tokens": 188
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51403",
+    "verdict": "entailment",
+    "rationale": "If computers need formal representations to understand geometric objects, then computational reasoning about machining parts (geometric objects) also requires formal, not informal, representations.",
+    "prompt_tokens": 284,
+    "completion_tokens": 378
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24167",
+    "verdict": "entailment",
+    "rationale": "Premise states dimensions are for humans and software already knows geometry, implying annotations (e.g., baseline vs centerline) don\u2019t affect how the model is understood.",
+    "prompt_tokens": 331,
+    "completion_tokens": 253
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 291,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51416",
+    "verdict": "neutral",
+    "rationale": "Premise recommends examining and disassembling mini lathes, but doesn\u2019t claim they\u2019re \u2018proven\u2019 or that this avoids heavy theoretical modeling. Added rationale isn\u2019t supported.",
+    "prompt_tokens": 327,
+    "completion_tokens": 319
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-23439",
+    "verdict": "entailment",
+    "rationale": "Premise states machining causes deformation that creates residual stresses on the surface, matching the hypothesis about surface-concentrated residual stresses from machining-induced deformation.",
+    "prompt_tokens": 289,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51416",
+    "verdict": "neutral",
+    "rationale": "Premise supports lower concern for loads/vibrations in hobby plastic-cutting. It doesn\u2019t mention modeling prioritization or compare to industrial machines, which the Hypothesis adds.",
+    "prompt_tokens": 328,
+    "completion_tokens": 445
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24167",
+    "verdict": "entailment",
+    "rationale": "Premise says consider automatic vs human-guided operation order only after final design. This supports deferring sequencing to CAM/human guidance post-design, not during drawing.",
+    "prompt_tokens": 352,
+    "completion_tokens": 381
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-51401-a51416",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 338,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "neutral",
+    "rationale": "Premise only says the document serves as acceptance criteria if things go wrong. Hypothesis adds specifics about drawings, contractual status, and tolerances not stated.",
+    "prompt_tokens": 289,
+    "completion_tokens": 185
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24178",
+    "verdict": "neutral",
+    "rationale": "Premise supports matching baseline referencing, but does not mention reasons like tolerance stack-up. The hypothesis adds causal details not stated in the premise.",
+    "prompt_tokens": 318,
+    "completion_tokens": 246
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a10975",
+    "verdict": "neutral",
+    "rationale": "Premise supports uneven face removal causing warp on thinner plates (<1 inch) but does not specify aluminum. The material-specific detail is added by the Hypothesis.",
+    "prompt_tokens": 319,
+    "completion_tokens": 186
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a10975",
+    "verdict": "neutral",
+    "rationale": "Premise only states the machine may not be rigid enough; it does not mention distortion, flatness, or machining outcomes. The causal claim is added.",
+    "prompt_tokens": 279,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24178",
+    "verdict": "neutral",
+    "rationale": "Premise mentions referencing centerlines to minimize tolerance but doesn\u2019t specify a square pattern, baselines, or first locating two holes. Added procedural details aren\u2019t stated.",
+    "prompt_tokens": 344,
+    "completion_tokens": 251
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a10975",
+    "verdict": "neutral",
+    "rationale": "Premise supports that wrong feeds/speeds stop chips removing heat, but does not mention distortion or its likelihood. Added consequence is not entailed.",
+    "prompt_tokens": 293,
+    "completion_tokens": 184
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a10975",
+    "verdict": "neutral",
+    "rationale": "Premise supports a grain size gradient from outer to inner due to cooling and roller compression, but does not specify aluminum or plate, making added details unsupported.",
+    "prompt_tokens": 305,
+    "completion_tokens": 249
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18651-a18789",
+    "verdict": "neutral",
+    "rationale": "The premise states an unspecified \u201cit\u201d is mainly used to clean rust off a casting; it doesn\u2019t specify sand blasting. The hypothesis adds that detail.",
+    "prompt_tokens": 276,
+    "completion_tokens": 249
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a22437",
+    "verdict": "neutral",
+    "rationale": "Premise says to keep coolant below 28\u00b0C. Hypothesis adds a causal reason (controls cutting heat), which isn\u2019t stated in the premise.",
+    "prompt_tokens": 288,
+    "completion_tokens": 120
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a10975",
+    "verdict": "entailment",
+    "rationale": "Premise explicitly states the same procedure and purpose: skim, flip, break skin, then ~0.005 in spring cut with vice opened and light clamping for unstressed flatness.",
+    "prompt_tokens": 378,
+    "completion_tokens": 322
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-24165-a24168",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 313,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a22437",
+    "verdict": "neutral",
+    "rationale": "Premise only states heat is generated during machining due to shearing force. It doesn\u2019t specify tool\u2013work interface or coolant removal, which the Hypothesis adds.",
+    "prompt_tokens": 288,
+    "completion_tokens": 123
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18651-a18667",
+    "verdict": "neutral",
+    "rationale": "Premise is conditional and lacks mention of abrasive jet machining; hypothesis asserts an unconditional, process-specific and interpretive claim about capability differences.",
+    "prompt_tokens": 301,
+    "completion_tokens": 181
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "neutral",
+    "rationale": "Premise supports coating, mating, spotting, scraping, and repeating, but does not state achieving uniform contact or that it yields precise fits without gauges.",
+    "prompt_tokens": 334,
+    "completion_tokens": 248
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18651-a18789",
+    "verdict": "entailment",
+    "rationale": "Premise explicitly advises never using AJM to clean casting threads due to potential damage, matching the hypothesis\u2019s caution about damaging the thread form.",
+    "prompt_tokens": 288,
+    "completion_tokens": 184
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "entailment",
+    "rationale": "Premise states interchangeability for mass manufacture requires standardized measurement and tolerances, implying without them parts won\u2019t reliably substitute. Hypothesis restates this necessity.",
+    "prompt_tokens": 298,
+    "completion_tokens": 187
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13002",
+    "verdict": "neutral",
+    "rationale": "Premise states machinable wax has a bit more strength than paraffin. It doesn\u2019t mention temporary filler use, added rigidity needs, or being a better choice.",
+    "prompt_tokens": 296,
+    "completion_tokens": 187
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "neutral",
+    "rationale": "Premise mentions casting into a bearing and hand scraping to fit a shaft, but doesn\u2019t specify Babbitt, precision level, or lack of precision machines.",
+    "prompt_tokens": 298,
+    "completion_tokens": 250
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "entailment",
+    "rationale": "Premise states prioritizing relative fit over absolute measurements and that high absolute accuracy isn\u2019t necessary, which directly matches the hypothesis.",
+    "prompt_tokens": 301,
+    "completion_tokens": 117
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001",
+    "verdict": "neutral",
+    "rationale": "Premise only states PVC soldering rod didn\u2019t stick. Hypothesis adds specifics (aluminum slot, temporary filler, rigidity purpose) not supported by the Premise.",
+    "prompt_tokens": 308,
+    "completion_tokens": 124
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18651-a18789",
+    "verdict": "entailment",
+    "rationale": "Premise states sandblasting lacks velocity and has too large a jet for accurate machining, especially for intricate shapes in brittle materials\u2014matching the hypothesis\u2019 claims.",
+    "prompt_tokens": 337,
+    "completion_tokens": 252
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-9-a22437",
+    "verdict": "entailment",
+    "rationale": "Premise states reducing tool diameter reduces cutting force, which supports using smaller diameter tools to lower cutting load during machining.",
+    "prompt_tokens": 286,
+    "completion_tokens": 371
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "neutral",
+    "rationale": "Premise only suggests Wood\u2019s metal as a low-melting filler during machining. Hypothesis adds context (machinable wax, thin sections, easy melt-out) not stated.",
+    "prompt_tokens": 307,
+    "completion_tokens": 190
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "neutral",
+    "rationale": "Premise says lapping/honing tend to yield precise flats/bores without precision tools. Hypothesis adds a self-correcting mechanism and stronger certainty (\u201cvery true\u201d), not stated.",
+    "prompt_tokens": 312,
+    "completion_tokens": 256
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "neutral",
+    "rationale": "Premise claims measurements can exceed instrument precision, but gives no method. Hypothesis adds specific techniques (geometric references, simple tools) and applications, which aren\u2019t stated.",
+    "prompt_tokens": 308,
+    "completion_tokens": 253
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-18284-a18288",
+    "verdict": "neutral",
+    "rationale": "Premise implies non-interchangeability, but does not specify hand-fitting as the approach or discuss standardization/replacement implications. Added details exceed the premise.",
+    "prompt_tokens": 300,
+    "completion_tokens": 185
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "neutral",
+    "rationale": "The premise only states \u201c10% cadmium content\u201d without mentioning Wood\u2019s metal or standard composition, so the added specificity in the hypothesis isn\u2019t supported.",
+    "prompt_tokens": 269,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13002",
+    "verdict": "neutral",
+    "rationale": "Premise only states mixing paraffin wax with shredded polythene (15\u201325%). It doesn\u2019t mention strength, machinability, or that it\u2019s a wax filler.",
+    "prompt_tokens": 309,
+    "completion_tokens": 253
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "neutral",
+    "rationale": "Premise mentions qualitative maintainability ratings, not machinability, and says nothing about absence of quantitative measures. Thus the hypothesis adds unstated details.",
+    "prompt_tokens": 297,
+    "completion_tokens": 183
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "neutral",
+    "rationale": "Premise mentions something costing ~$50/lb at flexbar.com as expensive, but doesn\u2019t specify Wood\u2019s metal or characterize \u201cindustrial suppliers.\u201d",
+    "prompt_tokens": 275,
+    "completion_tokens": 120
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "neutral",
+    "rationale": "Premise says work hardening may be easy to mitigate with correct procedures if aware. Hypothesis adds \u201coften\u201d and specifies machining/operator context not stated.",
+    "prompt_tokens": 291,
+    "completion_tokens": 441
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "entailment",
+    "rationale": "Premise states molten Wood\u2019s metal fills tubes, solidifies to prevent collapse during bending, then is removed by heating, often in boiling water\u2014matching the hypothesis.",
+    "prompt_tokens": 348,
+    "completion_tokens": 317
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a10492",
+    "verdict": "neutral",
+    "rationale": "Premise mentions a comprehensive rating system and comparisons for aluminum alloys, but does not state it is about machinability or gauging relative machinability.",
+    "prompt_tokens": 289,
+    "completion_tokens": 183
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "neutral",
+    "rationale": "Premise discusses maintainability; hypothesis claims about machinability and alloys. Different concept and added specifics not supported by the premise.",
+    "prompt_tokens": 276,
+    "completion_tokens": 179
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "entailment",
+    "rationale": "Premise states long stringy swarf is a major problem in automation but only mildly inconvenient in one-off manual work, matching the hypothesis\u2019 claims.",
+    "prompt_tokens": 301,
+    "completion_tokens": 186
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13002",
+    "verdict": "parse_error",
+    "rationale": "",
+    "prompt_tokens": 329,
+    "completion_tokens": 512
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "neutral",
+    "rationale": "Premise notes cheaper/safer variants, mostly higher melting points with exceptions like Cerrolow, but it doesn\u2019t specify they\u2019re compared to Wood\u2019s metal.",
+    "prompt_tokens": 326,
+    "completion_tokens": 315
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "entailment",
+    "rationale": "The premise states many aluminum grades are reasonably machinable and have fewer severe issues than some stainless/high-alloy steels, matching the hypothesis\u2019 claims.",
+    "prompt_tokens": 308,
+    "completion_tokens": 121
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488",
+    "verdict": "neutral",
+    "rationale": "Premise only asserts MO-59\u2019s lead yields smooth cuts. Hypothesis generalizes to all leaded brass and infers a selection strategy, which the premise doesn\u2019t state.",
+    "prompt_tokens": 308,
+    "completion_tokens": 382
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488-a11795",
+    "verdict": "entailment",
+    "rationale": "The hypothesis paraphrases the premise: some alloys are easy to rough-machine but resist achieving a fine surface finish. No extra claims added.",
+    "prompt_tokens": 278,
+    "completion_tokens": 119
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-10488",
+    "verdict": "neutral",
+    "rationale": "Premise supports copper\u2019s poor machining finish vs brass, but does not specify leaded brass. The added \u2018leaded\u2019 detail isn\u2019t in the source.",
+    "prompt_tokens": 338,
+    "completion_tokens": 378
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-13001-a13036",
+    "verdict": "neutral",
+    "rationale": "Premise says \u201cit\u201d is less likely than wax to shift, but doesn\u2019t specify Wood\u2019s metal or filler use. The hypothesis adds that unstated detail.",
+    "prompt_tokens": 302,
+    "completion_tokens": 443
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-58655-a58658",
+    "verdict": "neutral",
+    "rationale": "Premise expects 100 of 20 mm parts in one run on most machines, but doesn\u2019t specify DMLS or build volumes. Hypothesis adds that specific context.",
+    "prompt_tokens": 303,
+    "completion_tokens": 316
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-42483",
+    "verdict": "neutral",
+    "rationale": "Premise states helium in an 8 mm gap can give up to 20 dB suppression, but does not specify the gap is between dual panes.",
+    "prompt_tokens": 310,
+    "completion_tokens": 313
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-42483",
+    "verdict": "entailment",
+    "rationale": "Premise states nitrile has low helium permeability and will be used to seal windows, implying suitability as a helium-retaining sealant.",
+    "prompt_tokens": 289,
+    "completion_tokens": 311
+  },
+  {
+    "frame_id": "",
+    "post_id": "se-engineering-58655-a58658",
+    "verdict": "neutral",
+    "rationale": "Premise describes a powder-bed, layer-by-layer sintering enabling complex shapes with minimal support, but does not specify DMLS/metal nor explicitly state unsintered powder provides support.",
+    "prompt_tokens": 347,
+    "completion_tokens": 447
+  }
+]
