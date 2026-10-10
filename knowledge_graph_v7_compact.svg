@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 22 980 370" font-family="Cambria, Georgia, 'Times New Roman', serif">
+
+  <!--
+  COMPACT LAYOUT:
+    AUTHOR_Q:  (120,  68) r=30
+    THREAD:    (450,  68) r=39
+    AUTHOR_A1: (590,  68) r=30
+    AUTHOR_A2: (860,  68) r=30
+
+    POST_Q:    (120, 203) r=33
+    POST_A1:   (450, 203) r=33
+    POST_A2:   (860, 203) r=33
+
+    FRAME_1:   (120, 345) r=34
+    FRAME_2:   (340, 345) r=34
+    FRAME_3:   (550, 345) r=34
+    FRAME_4:   (710, 345) r=34
+    FRAME_5:   (860, 345) r=34
+  -->
+
+  <rect x="10" y="22" width="980" height="370" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="a-thread"  markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#2471A3"/></marker>
+    <marker id="a-author"  markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#B7770D"/></marker>
+    <marker id="a-frame"   markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#B03A2E"/></marker>
+    <marker id="a-answers" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#1E8449"/></marker>
+    <marker id="a-sem"     markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#6C3483"/></marker>
+  </defs>
+
+  <!-- ═══════════════ EDGES ═══════════════ -->
+
+  <!-- AUTHOR_Q → POST_Q: vertical -->
+  <line x1="120" y1="98" x2="120" y2="170" stroke="#B7770D" stroke-width="1.6" marker-end="url(#a-author)"/>
+  <text x="108" y="134" text-anchor="end" font-size="10" fill="#B7770D" font-weight="bold">POST_AUTHORED_BY</text>
+
+  <!-- AUTHOR_A1(590,68) → POST_A1(450,203): angle=-44.0° -->
+  <line x1="568.4" y1="88.8" x2="473.8" y2="180.1" stroke="#B7770D" stroke-width="1.6" marker-end="url(#a-author)"/>
+  <text transform="translate(531,136) rotate(-44.0)" text-anchor="middle" font-size="10" fill="#B7770D" font-weight="bold">POST_AUTHORED_BY</text>
+
+  <!-- AUTHOR_A2 → POST_A2: vertical -->
+  <line x1="860" y1="98" x2="860" y2="170" stroke="#B7770D" stroke-width="1.6" marker-end="url(#a-author)"/>
+  <text x="872" y="134" font-size="10" fill="#B7770D" font-weight="bold">POST_AUTHORED_BY</text>
+
+  <!-- THREAD(450,68) → POST_Q(120,203): angle=-22.2° -->
+  <line x1="413.9" y1="82.8" x2="150.5" y2="190.5" stroke="#2471A3" stroke-width="1.6" marker-end="url(#a-thread)"/>
+  <text transform="translate(285,144) rotate(-22.2)" text-anchor="middle" font-size="10" fill="#2471A3" font-weight="bold">THREAD_CONTAINS_POST</text>
+
+  <!-- THREAD → POST_A1: vertical -->
+  <line x1="450" y1="107" x2="450" y2="170" stroke="#2471A3" stroke-width="1.6" marker-end="url(#a-thread)"/>
+  <text x="438" y="138" text-anchor="end" font-size="10" fill="#2471A3" font-weight="bold">THREAD_CONTAINS_POST</text>
+
+  <!-- THREAD(450,68) → POST_A2(860,203): angle=+18.2° -->
+  <line x1="487.0" y1="80.2" x2="828.7" y2="192.7" stroke="#2471A3" stroke-width="1.6" marker-end="url(#a-thread)"/>
+  <text transform="translate(655,144) rotate(18.2)" text-anchor="middle" font-size="10" fill="#2471A3" font-weight="bold">THREAD_CONTAINS_POST</text>
+
+  <!-- SE_ANSWERS: POST_Q → POST_A1 -->
+  <line x1="153" y1="193" x2="417" y2="193" stroke="#1E8449" stroke-width="1.6" marker-end="url(#a-answers)"/>
+  <text x="285" y="188" text-anchor="middle" font-size="10" fill="#1E8449" font-weight="bold">SE_ANSWERS</text>
+
+  <!-- SE_ANSWERS: POST_A1 → POST_A2 -->
+  <line x1="483" y1="193" x2="827" y2="193" stroke="#1E8449" stroke-width="1.6" marker-end="url(#a-answers)"/>
+  <text x="655" y="188" text-anchor="middle" font-size="10" fill="#1E8449" font-weight="bold">SE_ANSWERS</text>
+
+  <!-- POST_Q → FRAME_1: vertical dashed -->
+  <line x1="120" y1="236" x2="120" y2="311" stroke="#B03A2E" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#a-frame)"/>
+  <text x="132" y="274" font-size="10" fill="#B03A2E" font-weight="bold">POST_CONTAINS_FRAME</text>
+
+  <!-- POST_A1(450,203) → FRAME_2(340,345): angle=-52.2° dashed -->
+  <line x1="429.8" y1="229.1" x2="360.8" y2="318.1" stroke="#B03A2E" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#a-frame)"/>
+  <text transform="translate(409,270) rotate(-52.2)" text-anchor="middle" font-size="10" fill="#B03A2E" font-weight="bold">POST_CONTAINS_FRAME</text>
+
+  <!-- POST_A1(450,203) → FRAME_3(550,345): angle=+54.8° dashed -->
+  <line x1="469.0" y1="230.0" x2="530.4" y2="317.2" stroke="#B03A2E" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#a-frame)"/>
+  <text transform="translate(487,270) rotate(54.8)" text-anchor="middle" font-size="10" fill="#B03A2E" font-weight="bold">POST_CONTAINS_FRAME</text>
+
+  <!-- POST_A2(860,203) → FRAME_4(710,345): angle=-43.4° dashed -->
+  <line x1="836.0" y1="225.7" x2="734.7" y2="321.6" stroke="#B03A2E" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#a-frame)"/>
+  <text transform="translate(806,265) rotate(-43.4)" text-anchor="middle" font-size="10" fill="#B03A2E" font-weight="bold">POST_CONTAINS_FRAME</text>
+
+  <!-- POST_A2 → FRAME_5: vertical dashed -->
+  <line x1="860" y1="236" x2="860" y2="311" stroke="#B03A2E" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#a-frame)"/>
+  <text x="872" y="274" font-size="10" fill="#B03A2E" font-weight="bold">POST_CONTAINS_FRAME</text>
+
+  <!-- ═══════════════ SEMANTIC EDGES ═══════════════ -->
+
+  <!-- SPECIFIES -->
+  <line x1="154" y1="345" x2="306" y2="345" stroke="#6C3483" stroke-width="1.6" marker-end="url(#a-sem)"/>
+  <text x="230" y="336" text-anchor="middle" font-size="10" fill="#6C3483" font-weight="bold">SPECIFIES</text>
+
+  <!-- MITIGATES -->
+  <line x1="374" y1="345" x2="516" y2="345" stroke="#6C3483" stroke-width="1.6" marker-end="url(#a-sem)"/>
+  <text x="445" y="336" text-anchor="middle" font-size="10" fill="#6C3483" font-weight="bold">MITIGATES</text>
+
+  <!-- CAUSAL_LINK -->
+  <line x1="584" y1="345" x2="676" y2="345" stroke="#6C3483" stroke-width="1.6" marker-end="url(#a-sem)"/>
+  <text x="630" y="336" text-anchor="middle" font-size="10" fill="#6C3483" font-weight="bold">CAUSAL_LINK</text>
+
+  <!-- CONTRADICTS (curved arcs) -->
+  <path d="M 744 340 Q 785 310 826 340" stroke="#6C3483" stroke-width="1.6" fill="none" marker-end="url(#a-sem)"/>
+  <path d="M 826 350 Q 785 380 744 350" stroke="#6C3483" stroke-width="1.6" fill="none" marker-end="url(#a-sem)"/>
+  <text x="785" y="318" text-anchor="middle" font-size="10" fill="#6C3483" font-weight="bold">CONTRADICTS</text>
+
+  <!-- ═══════════════ NODES ═══════════════ -->
+
+  <!-- AUTHOR_Q (120, 68) r=30 -->
+  <circle cx="120" cy="68" r="30" fill="#FDEBD0" stroke="#B7770D" stroke-width="2"/>
+  <text x="120" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#784212">AUTHOR</text>
+  <text x="120" y="73" text-anchor="middle" font-size="9" fill="#B7770D">user_4821</text>
+  <text x="120" y="83" text-anchor="middle" font-size="8" fill="#B7770D">cred: low</text>
+
+  <!-- THREAD (450, 68) r=39 -->
+  <circle cx="450" cy="68" r="39" fill="#D6EAF8" stroke="#2471A3" stroke-width="2"/>
+  <text x="450" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">THREAD</text>
+  <text x="450" y="74" text-anchor="middle" font-size="9" fill="#2471A3">"Finish for</text>
+  <text x="450" y="84" text-anchor="middle" font-size="9" fill="#2471A3">aluminum bores?"</text>
+
+  <!-- AUTHOR_A1 (590, 68) r=30 -->
+  <circle cx="590" cy="68" r="30" fill="#FDEBD0" stroke="#B7770D" stroke-width="2"/>
+  <text x="590" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#784212">AUTHOR</text>
+  <text x="590" y="73" text-anchor="middle" font-size="9" fill="#B7770D">machinepro88</text>
+  <text x="590" y="83" text-anchor="middle" font-size="8" fill="#B7770D">cred: high</text>
+
+  <!-- AUTHOR_A2 (860, 68) r=30 -->
+  <circle cx="860" cy="68" r="30" fill="#FDEBD0" stroke="#B7770D" stroke-width="2"/>
+  <text x="860" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#784212">AUTHOR</text>
+  <text x="860" y="73" text-anchor="middle" font-size="9" fill="#B7770D">toolmaker_j</text>
+  <text x="860" y="83" text-anchor="middle" font-size="8" fill="#B7770D">cred: med</text>
+
+  <!-- POST_Q (120, 203) r=33 -->
+  <circle cx="120" cy="203" r="33" fill="#D5F5E3" stroke="#1E8449" stroke-width="2"/>
+  <text x="120" y="197" text-anchor="middle" font-size="12" font-weight="bold" fill="#145A32">POST</text>
+  <text x="120" y="209" text-anchor="middle" font-size="9" fill="#1E8449">Question</text>
+  <text x="120" y="219" text-anchor="middle" font-size="8" fill="#1E8449">role: question</text>
+
+  <!-- POST_A1 (450, 203) r=33 -->
+  <circle cx="450" cy="203" r="33" fill="#D5F5E3" stroke="#1E8449" stroke-width="2"/>
+  <text x="450" y="197" text-anchor="middle" font-size="12" font-weight="bold" fill="#145A32">POST</text>
+  <text x="450" y="209" text-anchor="middle" font-size="9" fill="#1E8449">Answer</text>
+  <text x="450" y="219" text-anchor="middle" font-size="8" fill="#1E8449">role: solution</text>
+
+  <!-- POST_A2 (860, 203) r=33 -->
+  <circle cx="860" cy="203" r="33" fill="#D5F5E3" stroke="#1E8449" stroke-width="2"/>
+  <text x="860" y="197" text-anchor="middle" font-size="12" font-weight="bold" fill="#145A32">POST</text>
+  <text x="860" y="209" text-anchor="middle" font-size="9" fill="#1E8449">Answer</text>
+  <text x="860" y="219" text-anchor="middle" font-size="8" fill="#1E8449">role: addition</text>
+
+  <!-- FRAME_1 (120, 345) r=34 -->
+  <circle cx="120" cy="345" r="34" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="120" y="338" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B241C">FRAME</text>
+  <text x="120" y="349" text-anchor="middle" font-size="9" fill="#B03A2E">type: risk</text>
+  <text x="120" y="359" text-anchor="middle" font-size="8" fill="#B03A2E">scope: geometry</text>
+
+  <!-- FRAME_2 (340, 345) r=34 -->
+  <circle cx="340" cy="345" r="34" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="340" y="338" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B241C">FRAME</text>
+  <text x="340" y="349" text-anchor="middle" font-size="9" fill="#B03A2E">type: heuristic</text>
+  <text x="340" y="359" text-anchor="middle" font-size="8" fill="#B03A2E">scope: geometry</text>
+
+  <!-- FRAME_3 (550, 345) r=34 -->
+  <circle cx="550" cy="345" r="34" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="550" y="338" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B241C">FRAME</text>
+  <text x="550" y="349" text-anchor="middle" font-size="9" fill="#B03A2E">type: principle</text>
+  <text x="550" y="359" text-anchor="middle" font-size="8" fill="#B03A2E">scope: material</text>
+
+  <!-- FRAME_4 (710, 345) r=34 -->
+  <circle cx="710" cy="345" r="34" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="710" y="338" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B241C">FRAME</text>
+  <text x="710" y="349" text-anchor="middle" font-size="9" fill="#B03A2E">type: observation</text>
+  <text x="710" y="359" text-anchor="middle" font-size="8" fill="#B03A2E">scope: tooling</text>
+
+  <!-- FRAME_5 (860, 345) r=34 -->
+  <circle cx="860" cy="345" r="34" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="860" y="338" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B241C">FRAME</text>
+  <text x="860" y="349" text-anchor="middle" font-size="9" fill="#B03A2E">type: workaround</text>
+  <text x="860" y="359" text-anchor="middle" font-size="8" fill="#B03A2E">scope: tooling</text>
+
+</svg>

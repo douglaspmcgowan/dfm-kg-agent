@@ -1,0 +1,396 @@
+{
+  "records": [
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q1",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 201.1,
+      "prompt_tokens": 11647,
+      "completion_tokens": 19220,
+      "n_cited_frames": 12,
+      "n_design_rules": 10,
+      "n_knowledge_gaps": 6,
+      "summary_word_count": 131,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Size thin walls/floors by a deflection limit using span and expected cutting loads; stiffness scales with t^3 so small thickness losses dramatically raise deflection.",
+          "Include dynamic cutting effects when sizing thin features; as a preliminary check, apply ~3× the static load to cover vibration and transient amplification.",
+          "Keep minimum slot/gap widths at least equal to the cutter diameter you expect to use; narrower features are unmachinable or will distort.",
+          "For thin tubes or bored parts, provide a mandrel-friendly bore or access so internal support can be used during OD finishing.",
+          "Balance material removal about neutral axes (e.g., pocket from both sides) to reduce residual-stress release and post-unclamp warpage.",
+          "For long delicate flanges, design intentional contact stops near the root so overload shifts load to the root in a benign way.",
+          "Provide backing/support surfaces or sacrificial features so thin sections can be rigidly secured during machining.",
+          "Select machines/fixtures with sufficient rigidity for metal cutting; inadequate stiffness increases chatter and degrades accuracy on thin walls.",
+          "Minimize overhangs and long flexible spans; higher stiffness/shorter spans raise natural frequency. Expect to vary spindle speed to avoid chatter bands.",
+          "Anticipate heat and thermal growth effects on accuracy in long, thin aluminum features; heavier engagements raise forces/temperature and shift dimensions."
+        ],
+        "knowledge_gaps": [
+          "No quantitative guidance on acceptable wall height-to-thickness (H/t) ratios for milled aluminum walls at various tolerance classes.",
+          "No data on clamping-induced distortion magnitudes versus clamp force for thin aluminum sections or recommended fixturing pad geometry.",
+          "No quantitative linkage between coolant flow/temperature control and dimensional accuracy for thin-walled aluminum during milling.",
+          "No minimum wall thickness tables for milling as a function of cutter diameter and reach (turning-with-mandrel is discussed, milling cases are not).",
+          "No guidance on post-process distortion from anodizing or heat treatment specific to thin aluminum geometries.",
+          "No chatter stability lobe data or tool overhang limits for predicting speed bands or allowable reach with thin features."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-46985-a46988-3",
+          "se-engineering-48831-a48833-3",
+          "se-engineering-47625-a47629-2",
+          "se-engineering-16706-a16708-8",
+          "se-engineering-61327-a61328-0",
+          "se-engineering-25920-a25921-1",
+          "se-engineering-62234-a62245-1",
+          "se-engineering-54936-a54939-2",
+          "se-robotics-4329-a4353-0",
+          "se-engineering-39323-a39326-0",
+          "se-engineering-39323-a39326-1",
+          "se-engineering-47736-a47741-1"
+        ],
+        "summary": "Thin-walled aluminum parts are limited mainly by stiffness and stability during machining. Size walls/floors by allowable deflection under cutting loads and include dynamic effects (use ~3× static as a preliminary factor). Keep minimum feature widths at least the tool diameter, and provide mandrel access for thin tubes. Balance stock removal to minimize residual-stress-induced distortion, and add contact stops at flange roots for benign overload behavior. Ensure rigid fixturing by designing backing/support surfaces, and use sufficiently stiff machines to suppress chatter. Reduce long spans/overhangs to raise natural frequency and be prepared to adjust spindle speed to avoid resonance. Anticipate heat-driven dimensional shifts in thin sections under heavy engagement. Key data gaps remain around acceptable H/t ratios, clamp-induced distortion, coolant–accuracy links, milling wall-thickness tables versus tool reach, post-process distortion, and stability lobe/overhang limits."
+      },
+      "pipeline_elapsed_s": 175.6,
+      "resynth_elapsed_s": 25.5
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q2",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 227.2,
+      "prompt_tokens": 11221,
+      "completion_tokens": 16509,
+      "n_cited_frames": 9,
+      "n_design_rules": 9,
+      "n_knowledge_gaps": 5,
+      "summary_word_count": 114,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Prefer climb milling when the machine uses backlash-free, preloaded ballscrews and the setup is rigid; otherwise favor conventional milling.",
+          "On flexible gantry/slide machines, use conventional milling or loosen positional tolerances/leave finishing stock to mitigate cutter pull-off under climb forces.",
+          "Avoid ultra-thin finishing passes as the only option; leave sufficient finishing stock so minimum chip load is maintained and the tool does not rub/burnish.",
+          "When tight positional accuracy is critical, require backlash-free axes (e.g., preloaded ballscrews) in supplier capability notes.",
+          "For features with ~0.007 in clearance or tighter, add explicit deburr/edge-break requirements to prevent assembly interference from small burrs.",
+          "For show surfaces, specify post-process finishing (e.g., polish, bead blast, anodize) rather than relying solely on milling for cosmetics.",
+          "When defining surface finish, set realistic Ra based on machine/tool capability and allow equivalent texture alternatives.",
+          "Expect slight finish differences across face-milled passes; avoid overconstraining cosmetic uniformity without post-processing.",
+          "For wood or wood-like materials, specify cutters matched to the material; for abrasive materials (e.g., MDF), set less aggressive cosmetic targets or protective veneers."
+        ],
+        "knowledge_gaps": [
+          "No quantitative backlash or stiffness thresholds to decide climb vs conventional with confidence.",
+          "No material-specific guidance (aluminum, steels, plastics) on built-up edge vs strategy choice.",
+          "No minimum chip thickness or feed-per-tooth values by material/tool to prevent rubbing in light passes.",
+          "No side-specific burr/finish data comparing climb vs conventional on common metals.",
+          "No direct comparative data on chip-thickness progression vs burr formation in metals for the two strategies."
+        ],
+        "cited_frame_ids": [
+          "se-electronics-514870-a514871-4",
+          "se-electronics-364080-a364100-2",
+          "se-engineering-55277-a55280-0",
+          "se-engineering-26547-a26548-3",
+          "se-engineering-24571-a24576-4",
+          "se-engineering-24571-a24576-1",
+          "se-engineering-24571-a24576-2",
+          "se-woodworking-939-a944-0",
+          "se-woodworking-3103-a3105-1"
+        ],
+        "summary": "Choose climb milling when axes are backlash-free (preloaded ballscrews) and the tool–workholding system is rigid, as it resists self-feeding errors and benefits from thick-to-thin chip formation. On machines with appreciable backlash or flexible gantries/slides, prefer conventional milling or relax tolerances/leave stock, because climb forces can pull the cutter off-path. Avoid ultra-light finishing passes that fall below minimum chip load; leave enough stock to prevent rubbing/burnishing. For tight fits (~0.007 in), specify deburr/edge-break to ensure assembly. Set surface finish requirements based on machine/tool capability and plan post-processing for high-cosmetic faces; expect slight finish variation across face-milled passes. Match cutter geometry to the material; for abrasive materials like MDF, temper cosmetic expectations or use protective veneers."
+      },
+      "pipeline_elapsed_s": 208.0,
+      "resynth_elapsed_s": 19.2
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q3",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 211.4,
+      "prompt_tokens": 10975,
+      "completion_tokens": 19143,
+      "n_cited_frames": 11,
+      "n_design_rules": 9,
+      "n_knowledge_gaps": 6,
+      "summary_word_count": 113,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Specify internal fillet radii at least as large as the cutter radius; rotating tools cannot make sharper inside corners.",
+          "Where a mating part seats into a pocket corner, add a corner relief so burrs/debris and the inherent fillet do not prevent full seating.",
+          "For tall, narrow ribs or thin walls, reduce unsupported span or increase thickness; deflection grows rapidly with span and thin sections.",
+          "For deep cavities, provide chip/coolant escape paths (e.g., through-holes or slots) to prevent chip accumulation and heat.",
+          "Avoid blind, dead-end pockets in deep features; add vents or breakout slots to prevent chip packing and overheating.",
+          "If a perfectly square internal corner seems required, use dog-bone/undercut reliefs instead of specifying sharp corners.",
+          "On heavily cored or pocketed parts, balance material removal symmetrically to reduce distortion from stress release when unclamped.",
+          "On drawings with many ribs, dimension only critical interfaces and strength-controlling features to avoid overconstraint.",
+          "For ribbed features on turned bodies, include a sectional view at rib mid-height so rib widths and positions are unambiguous."
+        ],
+        "knowledge_gaps": [
+          "Quantitative limits for endmill length-to-diameter (stickout) in deep pockets by material and tolerance.",
+          "Numeric design limits for rib/wall slenderness ratio (height/thickness) or buckling/deflection thresholds under machining loads.",
+          "Evidence-based recommendations for minimum pocket floor thickness vs. area/depth to avoid oil-canning or distortion.",
+          "Coolant/chip-evacuation geometry guidance (e.g., minimum vent/slot size or depth-to-width ratios) for deep metallic pockets.",
+          "Depth-dependent guidance linking minimum internal corner radius to acceptable tool deflection/chatter risk in deep pockets.",
+          "Process guidance on when to apply intermediate stress relief/heat treatment for deep-pocketed or heavily ribbed parts."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-13204-a13209-6",
+          "se-woodworking-3976-a3985-0",
+          "se-engineering-52120-a52121-1",
+          "se-engineering-48831-a48833-1",
+          "se-engineering-53951-a53952-2",
+          "se-woodworking-3103-a3122-3",
+          "se-engineering-14636-a22482-1",
+          "se-engineering-25920-a25921-1",
+          "se-engineering-25920-a25921-2",
+          "se-engineering-13204-a13229-2",
+          "se-engineering-13204-a13209-1"
+        ],
+        "summary": "For CNC parts with deep pockets and tall, narrow ribs, avoid unmachinable sharp internal corners by specifying fillets at least as large as the cutter radius or using dog-bone reliefs. Ensure mating pockets include corner reliefs. Control rib/wall deflection by shortening spans or increasing thickness. Deep cavities trap chips and heat; add through-escape paths or vents and avoid dead-end pockets. Balance material removal to minimize distortion from stress release. Keep drawings focused on critical interfaces and provide sectional views to clearly define rib geometry. Evidence gaps remain for quantitative limits on tool stickout, rib slenderness, minimum floor thickness, chip/coolant passage sizing, depth-linked corner radii vs. chatter risk, and when to schedule stress relief."
+      },
+      "pipeline_elapsed_s": 197.1,
+      "resynth_elapsed_s": 14.3
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q4",
+      "coverage": "sparse",
+      "model": "gpt-5",
+      "elapsed_s": 172.5,
+      "prompt_tokens": 11241,
+      "completion_tokens": 15926,
+      "n_cited_frames": 12,
+      "n_design_rules": 8,
+      "n_knowledge_gaps": 6,
+      "summary_word_count": 115,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Minimize unique chamfer sizes; each distinct edge spec adds CAM steps and possibly dedicated tooling that inflate setup cost.",
+          "Consolidate edge treatments on low-quantity parts so fixed setup is amortized over more features; setup dominates unit cost at small N.",
+          "Where function allows, use a generic “break sharp edges” note instead of tight chamfer dimensions to reduce secondary finishing and inspection burden.",
+          "For tight-clearance assemblies (~0.007 in), explicitly control edge breaks to prevent burrs from blocking fit.",
+          "Avoid ultra-small chamfers; set a minimum size that ensures cutting rather than rubbing to protect tools and surface finish.",
+          "For abrasive composites like FR‑4, omit cosmetic chamfers unless functional because edge machining markedly increases tool wear and cost.",
+          "Design for single-setup accessibility of external edges to avoid extra fixturing/handling driven by hard-to-reach chamfers.",
+          "For durability-critical long edge runs, choose robust edge-tool geometries (e.g., positive lead-angle concepts) to reduce wear."
+        ],
+        "knowledge_gaps": [
+          "Quantitative chamfer-milling cycle time per unit edge length by material and chamfer size for CNC metals.",
+          "Measured inspection time/cost deltas for dimensional chamfer callouts versus generic break-edge notes.",
+          "Data on fixturing/setup count increases specifically caused by edge-accessibility constraints for small metal parts.",
+          "Best-practice tolerancing (angle vs linear width) that minimizes inspection burden for chamfers.",
+          "Empirical minimum chip-thickness thresholds by material/tool size to size the smallest reliable chamfer without rubbing.",
+          "Comparative chatter incidence for small-diameter chamfer tools versus standard end mills in common alloys."
+        ],
+        "cited_frame_ids": [
+          "se-robotics-24357-a24369-1",
+          "se-electronics-552270-a552280-4",
+          "se-engineering-39856-a39865-4",
+          "se-engineering-53951-a53952-4",
+          "se-engineering-34995-a34999-1",
+          "se-engineering-55277-a55280-1",
+          "se-engineering-39323-a39326-0",
+          "se-woodworking-2089-a2090-4",
+          "se-woodworking-2089-a2090-1",
+          "se-electronics-29746-a29748-0",
+          "se-engineering-26547-a26548-3",
+          "se-engineering-49640-a49655-1"
+        ],
+        "summary": "On small-batch parts, chamfers and edge breaks raise unit cost mainly by increasing fixed setup and CAM programming effort that is poorly amortized at low quantities. They also add cycle time through extra approach/retract moves and edge-length toolpaths; even small time adds matter at shop hourly rates. Manual deburr and any inspection tied to dimensional chamfer callouts further increase labor cost. Accessibility limits on certain edges can force additional setups or handling. Very small chamfers risk rubbing and chatter, prompting slower feeds, rework, or tool damage. Abrasive materials (e.g., FR‑4) accelerate tool wear, increasing tooling expense and time. In tight-clearance assemblies, explicit edge control may be necessary to prevent burr-induced interference, which adds verification effort."
+      },
+      "pipeline_elapsed_s": 158.4,
+      "resynth_elapsed_s": 14.1
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q5",
+      "coverage": "sparse",
+      "model": "gpt-5",
+      "elapsed_s": 220.0,
+      "prompt_tokens": 10869,
+      "completion_tokens": 18797,
+      "n_cited_frames": 10,
+      "n_design_rules": 10,
+      "n_knowledge_gaps": 6,
+      "summary_word_count": 147,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Align CAD primary datums to the CNC workpiece zero so machine and drawing coordinates match.",
+          "Show a clear orthogonal XY reference on drawings and tie all positions/marks to it.",
+          "Set and reuse the same part feature to establish 0,0,0 in every setup to preserve orientation traceability.",
+          "Use dedicated jigs/fixtures to provide repeatable location and orientation across setups.",
+          "For coolant-exposed machining, specify permanent direct marking (e.g., engrave/dot‑peen) rather than inks/labels; marks must tolerate oil–water emulsions.",
+          "Place marks in low-stress regions; avoid small cross-sections and shoulders on load/fatigue‑critical parts.",
+          "Where marks must be near loaded areas, keep them shallow and with generous radii to reduce stress concentration.",
+          "Add a flat, hole, or keyed feature on round/spherical parts to enable reliable fixturing and consistent mark orientation.",
+          "Call out a minimum surface finish for the marking pad when optical/code readability matters.",
+          "Link each part’s serial number to the CAD/PDM revision in documentation and, where appropriate, on the part to preserve history."
+        ],
+        "knowledge_gaps": [
+          "Quantitative comparisons of direct marking methods (dot‑peen, laser, chemical etch, stamping) on fatigue (allowable depth vs. Kt by material).",
+          "Survivability of marks through post‑processes (heat treat, anodize, shot peen, passivation, solvent cleaning).",
+          "Barcode vs. RFID performance and durability in metal shop environments (coolant, chips, metal enclosures).",
+          "DataMatrix/QR readability on machined surfaces (minimum cell size vs. Ra, contrast by marking method).",
+          "Best practices for ERP/MES integration of serialization with CAD/PLM revisions and inspection records.",
+          "Limits for corrosion/staining from common coolants and impacts on automated code readers."
+        ],
+        "cited_frame_ids": [
+          "se-electronics-514870-a514871-2",
+          "se-electronics-514870-a514871-10",
+          "se-electronics-185271-a185737-2",
+          "se-engineering-30026-a30031-0",
+          "se-engineering-51010-a51030-1",
+          "se-engineering-45279-a45280-1",
+          "se-engineering-45585-a45588-1",
+          "se-robotics-21374-a21375-6",
+          "se-engineering-24571-a24576-1",
+          "se-engineering-37924-a37926-2"
+        ],
+        "summary": "Tie shop coordinates to design by aligning CAD datums with the CNC workpiece zero and showing a clear XY frame on drawings. Establish 0,0,0 from the same feature every setup and use dedicated fixtures to maintain repeatable orientation. Because machining exposes parts to oil–water coolants, specify permanent direct marking rather than inks or stickers, and define a suitable surface finish if optical codes must be read. Protect structural integrity by placing marks in low‑stress regions; if marks are near loaded areas, keep them shallow with generous radii to minimize stress concentration. For round or spherical parts, add a flat, hole, or key to enable reliable fixturing and consistent mark orientation. Preserve traceability across releases by linking each part’s serial number to the CAD/PDM revision. Key gaps remain around marking method fatigue impacts, post‑process survivability, code readability vs. surface finish, shop‑floor data integration, and coolant‑induced degradation of marks."
+      },
+      "pipeline_elapsed_s": 197.1,
+      "resynth_elapsed_s": 22.9
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q6",
+      "coverage": "sparse",
+      "model": "gpt-5",
+      "elapsed_s": 237.9,
+      "prompt_tokens": 10895,
+      "completion_tokens": 17825,
+      "n_cited_frames": 10,
+      "n_design_rules": 8,
+      "n_knowledge_gaps": 5,
+      "summary_word_count": 132,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Specify bearing-seat fits per bearing-maker recommendations so interference lands in the intended application range.",
+          "For rotating inner races, avoid clearance fits on the shaft to prevent fretting and scoring.",
+          "Design the cold-state interference for shrink/press fits; heating/cooling only eases assembly and cannot compensate for undersize parts.",
+          "Define a reference temperature and require equalized part temperatures for close fits to avoid temperature-induced misfits.",
+          "Control axial location: datum and tolerance the bearing-shoulder and provide a locknut seat so the axial stack is constrained.",
+          "On multi-journal shafts, add concentricity/runout callouts to a common datum to limit axis misalignment between journals.",
+          "For consistent press fits, specify surface roughness and roundness limits to ensure continuous contact pressure.",
+          "Use thermal methods (heat bearing or cool shaft) as standard practice to assemble designed interference fits without damage."
+        ],
+        "knowledge_gaps": [
+          "No quantification linking shaft/bearing diameter tolerance to resulting bearing preload torque and life change.",
+          "No explicit data tying lathe tool wear to journal taper magnitude and its statistical effect on fit variability.",
+          "No numeric guidance for roundness and roughness classes on turned bearing seats to achieve consistent press-fit performance.",
+          "No explicit tolerance-stack example for concentricity/runout on straight multi-journal shafts; cited evidence is from crankshaft practice.",
+          "No tabulated thermal-mismatch data (bearing steel vs common shaft/housing alloys) converting shop temperature swings into interference change in µm."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-43163-a43248-1",
+          "se-engineering-43163-a43164-1",
+          "se-engineering-11178-a11180-0",
+          "se-engineering-26547-a26548-1",
+          "se-engineering-51786-a51789-2",
+          "se-mechanics-40799-1",
+          "se-engineering-53583-a53593-4",
+          "se-engineering-43163-a43164-2",
+          "se-engineering-62163-a62164-0",
+          "se-engineering-25920-a25921-0"
+        ],
+        "summary": "A turned steel motor shaft carries two deep-groove ball bearings located by a shoulder and locknut. One bearing seat was at the high end of its tolerance while the bearing ID was at the low end, creating excessive interference and preload; the other seat was effectively looser. The shop heated only one bearing and assembled in a cold room, so unequal temperatures shifted the intended fits. A small datum bias on the lathe shortened the shoulder position, adding unintended endplay. Separate setups for the two journals introduced misalignment/runout between them. A rougher-than-specified seat finish reduced effective contact, further altering press-fit behavior. The outcome: one bearing ran hot with heavy preload, the other fretted and scored, and the assembly bound intermittently—a classic stack-up where each feature measured “in tolerance,” yet the assembly failed."
+      },
+      "pipeline_elapsed_s": 214.8,
+      "resynth_elapsed_s": 23.1
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q7",
+      "coverage": "out-of-scope",
+      "model": "gpt-5",
+      "elapsed_s": 169.3,
+      "prompt_tokens": 10074,
+      "completion_tokens": 12942,
+      "n_cited_frames": 7,
+      "n_design_rules": 7,
+      "n_knowledge_gaps": 6,
+      "summary_word_count": 116,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Set minimum inside bend radius based on allowable outer-fiber strain from material ductility (reduction of area), not a fixed chart value.",
+          "Permit controlled overbend to counter springback; the required overbend equals the curvature difference between the loaded and target radii.",
+          "Keep cutouts, notches, and sharp corners away from bend lines; discontinuities create stress concentrations that can initiate cracks.",
+          "If holes or slots must be near a bend, add generous edge radii or relief features to reduce local strain amplification.",
+          "Use larger internal corner radii at transitions adjacent to bends to lower peak stresses.",
+          "Avoid thinning or notching at the outer bend edge; maintain full cross-section through the bend to prevent inner-edge overstress.",
+          "Add small bend-relief slits at the ends of long bend lines to arrest potential tear propagation."
+        ],
+        "knowledge_gaps": [
+          "No numeric minimum bend radius values by stainless grade/temper (e.g., 304/316 annealed vs. half-hard) for 16‑gauge.",
+          "No guidance on grain direction effects (along vs. across rolling direction) on cracking risk in stainless bends.",
+          "No V-die opening recommendations for 16‑gauge stainless (e.g., typical V/t ratios for air bending).",
+          "No punch tip radius selection guidelines for stainless in air bending.",
+          "No stainless-specific springback magnitudes or overbend angles by grade/temper.",
+          "No press-brake tonnage per foot calculation constants for stainless in air bending."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-17907-a17931-0",
+          "se-engineering-53478-a53511-4",
+          "se-engineering-45585-a45588-1",
+          "se-engineering-61937-a62058-0",
+          "se-engineering-45279-a45280-0",
+          "se-engineering-18726-a18729-1",
+          "se-engineering-37854-a37855-3"
+        ],
+        "summary": "There is no single minimum bend radius for 16‑gauge stainless in air bending. The minimum inside radius must be derived from allowable outer-fiber strain based on the material’s ductility (e.g., reduction of area). Overbend is required to offset springback; specify the target angle/radius and permit controlled overbend. Stress raisers near the bend—holes, notches, sharp corners, or thinning—elevate local strain and crack risk; use generous radii and reliefs, and keep cutouts away from bend lines. Add bend-relief slits at bend ends to arrest potential tears. The report lacks grade-specific numeric radii, die opening and punch radius guidance, springback magnitudes, grain-direction effects, and tonnage data, so final values should be validated by tryout using the material’s ductility data."
+      },
+      "pipeline_elapsed_s": 159.1,
+      "resynth_elapsed_s": 10.2
+    },
+    {
+      "config": "C_full_pipeline",
+      "query_id": "Q8",
+      "coverage": "out-of-scope",
+      "model": "gpt-5",
+      "elapsed_s": 219.8,
+      "prompt_tokens": 10252,
+      "completion_tokens": 17121,
+      "n_cited_frames": 6,
+      "n_design_rules": 5,
+      "n_knowledge_gaps": 7,
+      "summary_word_count": 123,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "For overhangs where appearance or fit matters, design to deflection limits, not just strength, so visible sag is controlled.",
+          "For broad lips, ledges, or roofs that would otherwise be edge-supported, add ribs or shorten unsupported spans to limit droop.",
+          "For thin roofs or panels likely to be supported only at edges, increase thickness or add intermediate supports to reduce out-of-plane flex after printing.",
+          "Provide sufficient internal-corner relief at interfaces so mating features can fully seat on intended bearing faces after fabrication; slight over-relief will not weaken primary bearing faces.",
+          "Adapt allowable overhang geometry to PLA’s properties rather than assuming cross-material equivalence."
+        ],
+        "knowledge_gaps": [
+          "PLA-specific self-support angle thresholds for overhangs greater than 45 degrees and how they vary with temperature and cooling.",
+          "Quantitative guidance on cooling airflow placement and intensity needed to solidify PLA overhangs before sag occurs.",
+          "Data quantifying nozzle diameter and layer height effects on maximum printable overhang angle or bridge length in PLA.",
+          "Rules for support–part interface gap sizing in PLA to balance surface scarring versus support reliability.",
+          "Evidence on support density and pattern tradeoffs versus removal force and surface damage in PLA.",
+          "Quantitative orientation strategies for minimizing supports while protecting cosmetic faces in PLA parts.",
+          "Data linking interlayer adhesion changes (from temperature or fan settings) to overhang failure or delamination in PLA."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-46985-a46988-4",
+          "se-woodworking-3976-a3984-5",
+          "se-woodworking-3976-a3977-4",
+          "se-woodworking-7420-a7422-1",
+          "se-woodworking-7420-a7422-2",
+          "se-engineering-38535-a38539-1"
+        ],
+        "summary": "Evidence supports treating FDM overhang behavior as a deflection-limited problem: PLA overhangs steeper than roughly 45 degrees often sag visually unless spans are reduced or supported. To control droop, shorten unsupported lengths with ribs or thicker sections, especially for broad lips, roofs, and edge-supported panels. Where features must mate after printing, include adequate internal-corner relief so bearing faces seat properly; modest over-relief does not harm strength. Adapt geometry to PLA’s properties rather than relying on cross-material rules. However, the frames provide no PLA/FDM-specific numbers for support setup. Key gaps include quantitative self-support angles beyond 45 degrees, effects of cooling, nozzle and layer settings, support interface gaps, support density/pattern tradeoffs, orientation strategy metrics, and links between process settings, adhesion, and overhang failure in PLA."
+      },
+      "pipeline_elapsed_s": 205.7,
+      "resynth_elapsed_s": 14.1
+    }
+  ],
+  "model": "gpt-5",
+  "cap": 4096
+}

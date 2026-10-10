@@ -1,0 +1,243 @@
+{
+  "records": [
+    {
+      "config": "A_llm_only",
+      "query_id": "Q1",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 107.5,
+      "prompt_tokens": 173,
+      "completion_tokens": 1975,
+      "n_cited_frames": 0,
+      "n_design_rules": 10,
+      "n_knowledge_gaps": 10,
+      "summary_word_count": 134,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Wall thickness and aspect ratio: target t ≥ 1.5–2.0 mm for side walls (absolute minimum ~1.0 mm if very short); wall height/thickness ≤10:1 during roughing and ≤15:1 after finishing; pocket floors ≥1.0–1.5 mm.",
+          "Internal radii and tool access: avoid sharp inside corners; use internal corner radii ≥ tool radius + 0.5 mm (practical minimum ~1.0 mm). Prefer generous fillets; add external fillets to reduce chatter and stress.",
+          "Pocket/slot depth vs tool diameter: limit effective cutting depth to ≤3× tool diameter; design for the largest possible tool; make pockets open-ended or add reliefs for tool entry/exit.",
+          "Uniform sections: keep wall thickness as uniform as possible; balance material removal across the part to minimize distortion; avoid isolated thin ‘islands’.",
+          "Stiffening features: add ribs/webs to support thin walls (rib thickness ~0.6–1.0× adjacent wall, spaced 20–40 mm); use bosses or thicker pads around holes; avoid threading directly into thin walls—use inserts or increased thickness.",
+          "Feature edge distances: keep hole/slot edge distance ≥2× diameter (absolute minimum ~1.5×); maintain spacing between adjacent holes ≥1× diameter.",
+          "Tolerances and finish: tighten only where functional; expect flatness/parallelism to degrade with size and thinness; economical Ra ≈ 1.6–3.2 µm; specify break-edges/chamfers and allowable burr condition.",
+          "Manufacturing allowances: design fixturing tabs or sacrificial stock; provide consistent datums; allow 0.2–0.5 mm finish stock on thin features; include lead-in/out reliefs for entry without wall push-off.",
+          "Tool reach and deflection: avoid deep, narrow features requiring >8–10× diameter stick-out; provide side access; consider 5-axis accessibility to reduce long-reach tools and improve stability.",
+          "Distortion control: choose stable, stress-relieved plate and suitable temper (e.g., 6061‑T6, 7075‑T6); plan intermediate stress relief for heavy stock removal; use light finishing passes and controlled coolant to limit thermal distortion."
+        ],
+        "knowledge_gaps": [
+          "Alloy and temper (e.g., 6061‑T6 vs 7075‑T6) and stock form (plate, extrusion, forging).",
+          "Minimum permissible wall and floor thicknesses by function and any critical stiffness targets.",
+          "Critical tolerances (size, flatness, parallelism) and which surfaces/features control assembly.",
+          "Overall part envelope, maximum feature depths, and access directions available.",
+          "Surface finish requirements and post-processes (anodize, chem film, paint) that affect allowances.",
+          "Thread specifications, insert preferences, and pull-out/strength requirements near thin walls.",
+          "Production volume and cost/lead-time priorities (prototype vs series) impacting tooling/fixturing choices.",
+          "Available machine capabilities (3-axis vs 5-axis), maximum tool length, spindle/tooling limits.",
+          "Fixturing constraints, datum strategy, and whether sacrificial tabs or soft jaws are acceptable.",
+          "Thermal/mechanical service loads and inspection method (CMM, functional gages) influencing tolerances."
+        ],
+        "cited_frame_ids": [],
+        "summary": "Thin-walled aluminum parts are prone to chatter, deflection, and distortion. Favor uniform, adequately thick walls (≥1.5–2.0 mm) with controlled aspect ratios, generous internal radii, and shallow pockets sized for large, stiff tools. Add ribs, bosses, and thicker pads where loads or threads occur, and keep holes away from edges (≥2× diameter). Apply tight tolerances and fine finishes only where necessary; expect flatness to worsen as parts get thinner and larger. Enable stable machining with consistent datums, sacrificial stock/tabs, reliefs for tool entry, and 0.2–0.5 mm finish stock for light, stable finishing passes. Minimize long tool reach (≤8–10× diameter) or provide 5-axis access. Use stress-relieved plate and suitable tempers, consider stress relief between roughing and finishing, and use light finishing to control distortion. Share alloy, tolerances, size, finish, and machine constraints to refine these rules."
+      }
+    },
+    {
+      "config": "B_llm_rag",
+      "query_id": "Q1",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 95.5,
+      "prompt_tokens": 460,
+      "completion_tokens": 1686,
+      "n_cited_frames": 12,
+      "n_design_rules": 6,
+      "n_knowledge_gaps": 10,
+      "summary_word_count": 95,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Consult machining-process heuristics before finalizing thin-wall geometries to align designs with process capabilities [se-engineering-32359-a32426-3] [se-engineering-32359-a32426-4] [se-engineering-52120-a52150-1] [se-engineering-13204-a13209-5].",
+          "Evaluate machining risks identified in the corpus when planning features that may be sensitive to process variation or stability [se-engineering-9-a10975-0] [se-robotics-4329-1].",
+          "Account for tooling-related constraints and risks when choosing cutter types, sizes, and setups for thin sections [se-engineering-32359-a32426-5] [se-woodworking-3103-a7919-2].",
+          "Apply design-geometry heuristics that improve manufacturability and stability of delicate features [se-engineering-5576-a5699-0] [se-woodworking-6544-a6546-5].",
+          "Incorporate general engineering heuristics that affect decision-making for processes and setups in this context [se-engineering-45822-a60958-0].",
+          "Leverage practical observations from machining-process experience to inform setup sequencing and process choices [se-engineering-31608-a31609-8]."
+        ],
+        "knowledge_gaps": [
+          "Quantitative guidance on minimum wall thickness and rib/web dimensions for CNC-machined aluminum thin walls.",
+          "Recommended tool diameter-to-wall-thickness ratios and length-to-diameter limits to avoid instability.",
+          "Fixture and workholding strategies (e.g., soft jaws, vacuum, sacrificial supports) specific to thin-walled aluminum.",
+          "Roughing vs. finishing pass strategies and allowable stock for finish to reduce part distortion.",
+          "Suggested internal corner radii, relief features, and slot widths that improve machinability of thin sections.",
+          "Expected tolerances and surface finish achievable on thin walls and how they depend on process choices.",
+          "Chatter/deflection mitigation tactics (feeds/speeds ranges, step-down/step-over, toolpath types) for aluminum.",
+          "Thermal and residual stress considerations (coolant, heat input, stress relief) to prevent warping.",
+          "Burr control and edge-break strategies suitable for fragile thin edges.",
+          "Inspection/measurement approaches for thin features (contact vs. non-contact) and fixturing during metrology."
+        ],
+        "cited_frame_ids": [
+          "se-engineering-32359-a32426-5",
+          "se-engineering-32359-a32426-3",
+          "se-engineering-52120-a52150-1",
+          "se-woodworking-3103-a7919-2",
+          "se-engineering-13204-a13209-5",
+          "se-engineering-45822-a60958-0",
+          "se-engineering-32359-a32426-4",
+          "se-robotics-4329-1",
+          "se-engineering-31608-a31609-8",
+          "se-woodworking-6544-a6546-5",
+          "se-engineering-5576-a5699-0",
+          "se-engineering-9-a10975-0"
+        ],
+        "summary": "The retrieved frames indicate relevant categories: machining-process heuristics, design-geometry heuristics, tooling considerations, risks (including quality/process risks), and practical observations. However, they do not provide specific, actionable guidance for thin-walled aluminum CNC parts. To complete a design-for-manufacturing checklist, we need quantitative limits (wall thickness, tool ratios), concrete toolpath and pass strategies, fixturing methods, recommended corner radii, tolerance/finish expectations, stability and chatter mitigation, thermal/stress management, burr control, and metrology practices. Until such details are available, use the cited heuristic, tooling, and risk frames as high-level prompts to validate process choices and geometry and to plan risk-reduction experiments."
+      },
+      "embedding_tokens": 15,
+      "retrieved_frame_ids": [
+        "se-engineering-32359-a32426-5",
+        "se-engineering-32359-a32426-3",
+        "se-engineering-52120-a52150-1",
+        "se-woodworking-3103-a7919-2",
+        "se-engineering-13204-a13209-5",
+        "se-engineering-45822-a60958-0",
+        "se-engineering-32359-a32426-4",
+        "se-robotics-4329-1",
+        "se-engineering-31608-a31609-8",
+        "se-woodworking-6544-a6546-5",
+        "se-engineering-5576-a5699-0",
+        "se-engineering-9-a10975-0"
+      ],
+      "n_retrieved": 12
+    },
+    {
+      "config": "A_llm_only",
+      "query_id": "Q2",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 23.8,
+      "prompt_tokens": 168,
+      "completion_tokens": 1409,
+      "n_cited_frames": 0,
+      "n_design_rules": 10,
+      "n_knowledge_gaps": 10,
+      "summary_word_count": 132,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [
+          "Default to climb milling on modern CNC/ball-screw machines with minimal backlash; it yields better surface finish, dimensional accuracy, and lower cutting forces due to thick-to-thin chip formation.",
+          "Use conventional milling on manual/older machines or any setup with noticeable backlash to prevent the cutter from pulling the table/work into the cut.",
+          "Prioritize conventional milling for the first roughing pass on cast skin, flame-cut edges, scale, or abrasive surfaces; finish with climb to improve accuracy and finish.",
+          "For work-hardening or gummy materials (e.g., stainless, nickel alloys, aluminum), prefer climb to minimize rubbing and work-hardening; ensure rigid fixturing.",
+          "For abrasive/brittle materials (e.g., cast iron or composites), consider conventional for roughing to protect the cutting edge; climb for finishing if the setup is rigid.",
+          "On thin walls or flexible parts, use light radial engagement climb passes to reduce burrs and deflection; if pull-in risk exists, switch to conventional or improve fixturing.",
+          "During full-width slotting, rough conventionally to avoid grabbing, then offset and finish each wall with a light climb pass.",
+          "Carbide tools generally benefit from climb milling; HSS tools on less rigid machines may fare better with conventional to avoid edge chipping from pull-in.",
+          "If chatter or poor finish appears in climb due to insufficient rigidity, reduce radial engagement, increase feed per tooth slightly, or switch to conventional for stability.",
+          "Plan burr location: climb tends to form burrs at entry, conventional at exit; choose direction to move burrs to a non-critical edge."
+        ],
+        "knowledge_gaps": [
+          "What machine type is used (CNC with ball screws vs manual/older lead-screw) and measured backlash?",
+          "How rigid is the workholding/fixture and part (thin walls, overhangs, clamping strategy)?",
+          "What material and condition (presence of mill scale, cast skin, heat-affected edge)?",
+          "Tooling details: cutter material (carbide/HSS), diameter, flute count, edge prep, and coating?",
+          "Operation type: profiling, pocketing, finishing, or full-width slotting?",
+          "Cut parameters: radial and axial depth of cut, feed per tooth, and spindle speed?",
+          "Tolerance and surface finish requirements; which faces are critical?",
+          "Coolant or MQL availability; dry vs wet cutting preference?",
+          "Part geometry sensitivities (burr-critical edges, thin features, entry/exit constraints)?",
+          "Stability factors: tool stick-out, spindle condition, and machine rigidity class?"
+        ],
+        "cited_frame_ids": [],
+        "summary": "Choose climb milling on rigid, low-backlash CNC setups—especially for finishing, aluminum, and work-hardening alloys—because the chip goes thick-to-thin, reducing rubbing, improving finish, and lowering tool wear. Use conventional milling when backlash or poor rigidity risks the cutter pulling the work, and for the first pass on scale, cast skin, or abrasive edges. For slotting, rough conventionally, then finish walls with light climb passes. Thin or flexible parts benefit from light radial climb if well-fixtured; otherwise switch to conventional. Carbide favors climb; HSS on less rigid machines may prefer conventional. Manage burr location by choosing direction: climb burrs at entry, conventional at exit. If climb chatters, decrease radial engagement, ensure proper feed per tooth, or revert to conventional. Provide machine type/backlash, material/condition, fixturing rigidity, tool details, and cut parameters to finalize the recommendation."
+      }
+    },
+    {
+      "config": "B_llm_rag",
+      "query_id": "Q2",
+      "coverage": "well-covered",
+      "model": "gpt-5",
+      "elapsed_s": 42.1,
+      "prompt_tokens": 464,
+      "completion_tokens": 1008,
+      "n_cited_frames": 0,
+      "n_design_rules": 0,
+      "n_knowledge_gaps": 10,
+      "summary_word_count": 64,
+      "refusal_flag": false,
+      "answer_json": {
+        "design_rules": [],
+        "knowledge_gaps": [
+          "Definitions and distinguishing features of climb milling versus conventional milling in the retrieved frames are missing.",
+          "Guidance on how machine rigidity and backlash affect the choice between climb and conventional milling is not provided in the retrieved frames.",
+          "Recommendations for material-specific selection (e.g., aluminum, steel, plastics, wood) between climb and conventional milling are absent.",
+          "Information about surface finish, tool life, and dimensional accuracy differences between climb and conventional milling is not present.",
+          "Heuristics for selection based on tool diameter, depth of cut, width of cut, and feed per tooth are not available.",
+          "Risk considerations such as workpiece pull-in, workholding security, and chatter tendencies for each method are not documented.",
+          "Machine capability constraints (manual vs CNC, presence of ball screws, backlash compensation) relevant to the choice are not included.",
+          "Tooling considerations (coatings, helix angle, sharpness) that influence the preferred milling direction are missing.",
+          "Recommendations for special cases (thin walls, slotting, interrupted cuts, climb finishing passes) are not found.",
+          "Setup considerations (workholding type, fixturing stiffness, spindle direction, conventional vs climb on upcut vs downcut) are not described."
+        ],
+        "cited_frame_ids": [],
+        "summary": "The retrieved frames do not provide the necessary details to determine when to use climb versus conventional milling. Key information is missing on definitions, machine and setup factors, material-dependent recommendations, tooling considerations, and risks. The knowledge_gaps list outlines the specific data needed to give actionable guidance. Please supply frames that explicitly address climb versus conventional milling so design rules can be derived and cited."
+      },
+      "embedding_tokens": 10,
+      "retrieved_frame_ids": [
+        "se-electronics-364080-a364100-2",
+        "se-woodworking-14525-a14532-2",
+        "se-engineering-52120-a52121-3",
+        "se-robotics-8184-a22795-1",
+        "se-engineering-52120-a52150-2",
+        "se-electronics-185271-a185737-1",
+        "se-engineering-52120-a52121-5",
+        "se-robotics-3206-a3217-2",
+        "se-engineering-32455-a32456-0",
+        "se-electronics-524881-a524882-1",
+        "se-engineering-52120-a52121-6",
+        "se-electronics-30577-a30624-0"
+      ],
+      "n_retrieved": 12
+    }
+  ],
+  "summary": {
+    "per_config": {
+      "A_llm_only": {
+        "n": 2,
+        "mean_completion_tokens": 1692,
+        "mean_prompt_tokens": 170,
+        "mean_latency_s": 65.65,
+        "mean_cost_usd": 0.02,
+        "mean_rules": 10.0,
+        "mean_gaps": 10.0,
+        "mean_summary_words": 133.0,
+        "refusal_count": 0,
+        "refusal_oos": 0,
+        "n_oos": 0
+      },
+      "B_llm_rag": {
+        "n": 2,
+        "mean_completion_tokens": 1347,
+        "mean_prompt_tokens": 462,
+        "mean_latency_s": 68.8,
+        "mean_cost_usd": 0.01,
+        "mean_rules": 3.0,
+        "mean_gaps": 10.0,
+        "mean_summary_words": 79.5,
+        "refusal_count": 0,
+        "refusal_oos": 0,
+        "n_oos": 0
+      }
+    },
+    "tuned_caps": {
+      "A_llm_only": 4096,
+      "B_llm_rag": 4096,
+      "C_full_pipeline": 4096
+    }
+  },
+  "tuned_caps": {
+    "A_llm_only": 4096,
+    "B_llm_rag": 4096,
+    "C_full_pipeline": 4096
+  },
+  "model": "gpt-5"
+}

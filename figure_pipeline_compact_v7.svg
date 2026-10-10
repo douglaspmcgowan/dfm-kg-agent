@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 350" font-family="Cambria, Georgia, 'Times New Roman', serif">
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L10,3.5 z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <rect width="1500" height="350" fill="#ffffff"/>
+
+  <!-- ═══ COLUMN 1: DATA COLLECTION ═══ -->
+  <rect x="10" y="10" width="345" height="330" rx="10" fill="white" stroke="#000000" stroke-width="2"/>
+  <path d="M10,20 Q10,10 20,10 L345,10 Q355,10 355,20 L355,50 L10,50 Z" fill="#000000"/>
+  <text x="183" y="37" text-anchor="middle" font-size="16" fill="white" font-weight="bold" letter-spacing="2">DATA COLLECTION</text>
+
+  <rect x="30" y="62" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="183" y="84" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Stack Exchange API</text>
+  <text x="183" y="104" text-anchor="middle" font-size="13" fill="#000000">engineering · woodworking · electronics</text>
+  <text x="183" y="119" text-anchor="middle" font-size="13" fill="#000000">5 SE sites · 12,805 questions scraped</text>
+
+  <line x1="183" y1="129" x2="183" y2="141" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="30" y="147" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="183" y="169" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Keyword-Based Scraping</text>
+  <text x="183" y="189" text-anchor="middle" font-size="13" fill="#000000">DFM and machining keywords</text>
+  <text x="183" y="204" text-anchor="middle" font-size="13" fill="#000000">across all communities</text>
+
+  <line x1="183" y1="214" x2="183" y2="226" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="30" y="232" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="183" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Relevance Filtering</text>
+  <text x="183" y="274" text-anchor="middle" font-size="13" fill="#000000">LLM binary keep / discard</text>
+  <text x="183" y="289" text-anchor="middle" font-size="13" fill="#000000">topic relevance to DFM</text>
+
+  <!-- ═══ COLUMN 2: EXTRACTION ═══ -->
+  <rect x="375" y="10" width="345" height="330" rx="10" fill="white" stroke="#000000" stroke-width="2"/>
+  <path d="M375,20 Q375,10 385,10 L710,10 Q720,10 720,20 L720,50 L375,50 Z" fill="#000000"/>
+  <text x="548" y="37" text-anchor="middle" font-size="16" fill="white" font-weight="bold" letter-spacing="2">EXTRACTION</text>
+
+  <rect x="395" y="62" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="548" y="84" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Frame Schema</text>
+  <text x="548" y="104" text-anchor="middle" font-size="13" fill="#000000">frame types · scope domains</text>
+  <text x="548" y="119" text-anchor="middle" font-size="13" fill="#000000">epistemic levels · source quote</text>
+
+  <line x1="548" y1="129" x2="548" y2="141" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="395" y="147" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="548" y="169" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">LLM Frame Extraction</text>
+  <text x="548" y="189" text-anchor="middle" font-size="13" fill="#000000">multi-frame per post · backpropagation</text>
+  <text x="548" y="204" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">in-context learning examples</text>
+
+  <line x1="548" y1="214" x2="548" y2="226" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="395" y="232" width="305" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="548" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">LLM-as-Judge Refinement</text>
+  <text x="548" y="274" text-anchor="middle" font-size="13" fill="#000000">reasoning model evaluates extractions</text>
+  <text x="548" y="289" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">human iterations refine schema and ICL</text>
+
+  <!-- Dashed feedback loop: LLM-as-Judge → Frame Schema -->
+  <path d="M 395 264 L 375 264 L 375 87 L 395 87" stroke="#000000" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arr)"/>
+
+  <!-- ═══ COLUMN 3: EMBEDDING ═══ -->
+  <rect x="740" y="10" width="345" height="330" rx="10" fill="white" stroke="#000000" stroke-width="2"/>
+  <path d="M740,20 Q740,10 750,10 L1075,10 Q1085,10 1085,20 L1085,50 L740,50 Z" fill="#000000"/>
+  <text x="913" y="37" text-anchor="middle" font-size="16" fill="white" font-weight="bold" letter-spacing="2">EMBEDDING</text>
+
+  <rect x="760" y="62" width="305" height="50" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="913" y="82" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Embedding Model</text>
+  <text x="913" y="100" text-anchor="middle" font-size="13" fill="#000000">text-embedding-3-large · Qdrant</text>
+
+  <line x1="913" y1="114" x2="913" y2="126" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="760" y="132" width="305" height="50" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="913" y="152" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">frames_knowledge</text>
+  <text x="913" y="170" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">semantic DFM retrieval</text>
+
+  <line x1="913" y1="184" x2="913" y2="196" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="760" y="202" width="305" height="50" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="913" y="222" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">frames_language</text>
+  <text x="913" y="240" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">jargon / vernacular matching</text>
+
+  <line x1="913" y1="254" x2="913" y2="266" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="760" y="272" width="305" height="50" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="913" y="292" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">frames_metadata</text>
+  <text x="913" y="310" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">property-based filtering</text>
+
+  <!-- ═══ COLUMN 4: KNOWLEDGE GRAPH ═══ -->
+  <rect x="1105" y="10" width="385" height="330" rx="10" fill="#000000" stroke="#000000" stroke-width="2"/>
+  <path d="M1105,20 Q1105,10 1115,10 L1480,10 Q1490,10 1490,20 L1490,50 L1105,50 Z" fill="#000000"/>
+  <text x="1298" y="37" text-anchor="middle" font-size="16" fill="white" font-weight="bold" letter-spacing="2">KNOWLEDGE GRAPH</text>
+
+  <rect x="1125" y="62" width="345" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="1298" y="84" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Provenance Graph</text>
+  <text x="1298" y="104" text-anchor="middle" font-size="13" fill="#000000">Thread · Post · Author · Frame</text>
+  <text x="1298" y="119" text-anchor="middle" font-size="13" fill="#000000">discourse structure · NetworkX -> Neo4j</text>
+
+  <line x1="1298" y1="129" x2="1298" y2="141" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="1125" y="147" width="345" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="1298" y="169" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Semantic Edge Inference</text>
+  <text x="1298" y="189" text-anchor="middle" font-size="13" fill="#000000">nearest-neighbor pairs · LLM classification</text>
+  <text x="1298" y="204" text-anchor="middle" font-size="13" fill="#000000">SPECIFIES · MITIGATES · CAUSAL_LINK · CONTRADICTS</text>
+
+  <line x1="1298" y1="214" x2="1298" y2="226" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="1125" y="232" width="345" height="65" rx="8" fill="#F0F0F0" stroke="#000000" stroke-width="1.5"/>
+  <text x="1298" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#000000">Neo4j Knowledge Graph</text>
+  <text x="1298" y="274" text-anchor="middle" font-size="13" fill="#000000">provenance + semantic unified</text>
+  <text x="1298" y="289" text-anchor="middle" font-size="13" fill="#000000" font-style="italic">queryable by designer agent</text>
+
+  <!-- ═══ INTER-COLUMN ARROWS ═══ -->
+
+  <!-- Col 1 → Col 2: dashed -->
+  <line x1="335" y1="180" x2="395" y2="180" stroke="#000000" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+
+  <!-- Col 2 → Col 3: right-angle -->
+  <path d="M 700 180 L 730 180 L 730 87 L 760 87" stroke="#000000" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Col 3 → Col 4: right-angle -->
+  <path d="M 1065 87 L 1095 87 L 1095 94 L 1125 94" stroke="#000000" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+</svg>

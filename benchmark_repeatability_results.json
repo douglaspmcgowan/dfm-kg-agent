@@ -1,0 +1,617 @@
+{
+  "sample": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "results": [
+    {
+      "frame_idx": 0,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 3,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 293,
+      "completion_tokens": 545,
+      "elapsed_s": 29.3
+    },
+    {
+      "frame_idx": 0,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 3,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 293,
+      "completion_tokens": 609,
+      "elapsed_s": 29.5
+    },
+    {
+      "frame_idx": 0,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 1,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 293,
+      "completion_tokens": 674,
+      "elapsed_s": 8.3
+    },
+    {
+      "frame_idx": 1,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 3,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 276,
+      "completion_tokens": 609,
+      "elapsed_s": 41.1
+    },
+    {
+      "frame_idx": 1,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 2,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 276,
+      "completion_tokens": 738,
+      "elapsed_s": 46.4
+    },
+    {
+      "frame_idx": 1,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 3,
+        "main_point_quality": 4,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 276,
+      "completion_tokens": 802,
+      "elapsed_s": 48.6
+    },
+    {
+      "frame_idx": 2,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 1,
+        "applicability": 5,
+        "main_point_quality": 3,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 610,
+      "elapsed_s": 39.7
+    },
+    {
+      "frame_idx": 2,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 1,
+        "applicability": 5,
+        "main_point_quality": 4,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 738,
+      "elapsed_s": 43.5
+    },
+    {
+      "frame_idx": 2,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 1,
+        "applicability": 5,
+        "main_point_quality": 4,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 610,
+      "elapsed_s": 32.0
+    },
+    {
+      "frame_idx": 3,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 3,
+        "post_role": 3,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "subject": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 313,
+      "completion_tokens": 616,
+      "elapsed_s": 8.6
+    },
+    {
+      "frame_idx": 3,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 4,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 313,
+      "completion_tokens": 545,
+      "elapsed_s": 35.9
+    },
+    {
+      "frame_idx": 3,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 4,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 313,
+      "completion_tokens": 801,
+      "elapsed_s": 42.0
+    },
+    {
+      "frame_idx": 4,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 3,
+        "scope": 4,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 268,
+      "completion_tokens": 673,
+      "elapsed_s": 46.4
+    },
+    {
+      "frame_idx": 4,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 3,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 268,
+      "completion_tokens": 481,
+      "elapsed_s": 34.2
+    },
+    {
+      "frame_idx": 4,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 4,
+        "scope": 4,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 268,
+      "completion_tokens": 609,
+      "elapsed_s": 27.1
+    },
+    {
+      "frame_idx": 5,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 4,
+        "post_role": 5,
+        "scope": 4,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 274,
+      "completion_tokens": 545,
+      "elapsed_s": 5.7
+    },
+    {
+      "frame_idx": 5,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 2,
+        "clarity": 3,
+        "frame_type": 3,
+        "post_role": 5,
+        "scope": 4,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 274,
+      "completion_tokens": 865,
+      "elapsed_s": 12.3
+    },
+    {
+      "frame_idx": 5,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 3,
+        "post_role": 5,
+        "scope": 4,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 274,
+      "completion_tokens": 865,
+      "elapsed_s": 49.1
+    },
+    {
+      "frame_idx": 6,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 1,
+        "scope": 3,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 546,
+      "elapsed_s": 28.8
+    },
+    {
+      "frame_idx": 6,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 3,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 417,
+      "elapsed_s": 16.4
+    },
+    {
+      "frame_idx": 6,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 1,
+        "scope": 3,
+        "applicability": 5,
+        "main_point_quality": 5,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 295,
+      "completion_tokens": 610,
+      "elapsed_s": 27.5
+    },
+    {
+      "frame_idx": 7,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 4,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 4,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 282,
+      "completion_tokens": 609,
+      "elapsed_s": 48.5
+    },
+    {
+      "frame_idx": 7,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 1,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 3,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 3,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 282,
+      "completion_tokens": 674,
+      "elapsed_s": 47.0
+    },
+    {
+      "frame_idx": 7,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 2,
+        "clarity": 3,
+        "frame_type": 3,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 4,
+        "epistemic_stance": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 282,
+      "completion_tokens": 609,
+      "elapsed_s": 34.9
+    },
+    {
+      "frame_idx": 8,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 2,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 270,
+      "completion_tokens": 738,
+      "elapsed_s": 44.4
+    },
+    {
+      "frame_idx": 8,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 3,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "epistemic_stance": 5,
+        "main_point_quality": 5,
+        "overall": "Keep"
+      },
+      "prompt_tokens": 270,
+      "completion_tokens": 481,
+      "elapsed_s": 32.5
+    },
+    {
+      "frame_idx": 8,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 3,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 270,
+      "completion_tokens": 674,
+      "elapsed_s": 7.5
+    },
+    {
+      "frame_idx": 9,
+      "frame_id": "",
+      "run": 0,
+      "rating": {
+        "extraction_accuracy": 1,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 4,
+        "scope": 5,
+        "applicability": 4,
+        "main_point_quality": 2,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 267,
+      "completion_tokens": 738,
+      "elapsed_s": 32.8
+    },
+    {
+      "frame_idx": 9,
+      "frame_id": "",
+      "run": 1,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 3,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 267,
+      "completion_tokens": 802,
+      "elapsed_s": 30.1
+    },
+    {
+      "frame_idx": 9,
+      "frame_id": "",
+      "run": 2,
+      "rating": {
+        "extraction_accuracy": 2,
+        "tribal_knowledge": 3,
+        "clarity": 3,
+        "frame_type": 5,
+        "post_role": 5,
+        "scope": 5,
+        "applicability": 5,
+        "main_point_quality": 3,
+        "epistemic_stance": 5,
+        "overall": "Revise"
+      },
+      "prompt_tokens": 267,
+      "completion_tokens": 546,
+      "elapsed_s": 25.3
+    }
+  ]
+}

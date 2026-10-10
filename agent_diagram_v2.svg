@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 590" font-family="'Helvetica Neue', Arial, sans-serif">
+
+  <!--
+  ═══════════════════════════════════════════════════════
+  GRID (all computed, no guessing)
+
+  Left col   cx=140   boxes x=50..230   w=180
+  Center col cx=430   boxes x=325..535  w=210
+  Right col  cx=880   boxes x=775..985  w=210
+
+  BOX TOPS:
+    designer       y=48   h=62  → bottom=110
+    decomp         y=138  h=68  → bottom=206
+    retrieval      y=48   h=90  → bottom=138
+    traversal      y=166  h=72  → bottom=238
+    ranking        y=266  h=72  → bottom=338
+    gap            y=366  h=64  → bottom=430
+    synthesis      y=266  h=82  → bottom=348
+    report         y=376  h=60  → bottom=436
+    unpack         y=464  h=44  → bottom=508
+    provenance     y=376  h=54  → bottom=430
+
+  VERTICAL ARROW GAPS (clear of boxes):
+    designer→decomp:       y=110 → y=138  (28px gap, arrow from 112 to 136)
+    retrieval→traversal:   y=138 → y=166  (28px gap, arrow from 140 to 164)
+    traversal→ranking:     y=238 → y=266  (28px gap, arrow from 240 to 264)
+    ranking→gap:           y=338 → y=366  (28px gap, arrow from 340 to 364)
+    synthesis→report:      y=348 → y=376  (28px gap, arrow from 350 to 374)
+
+  HORIZONTAL ARROWS:
+    decomp → retrieval:    y=172  x=230 → x=325  (label above at y=166)
+    gap+ranking → synthesis: elbow route to avoid diagonal clutter:
+      from gap right side (535, 398) → right to x=645 → up to y=307 → right to synthesis left (775, 307)
+      label on horizontal segment above it
+
+  FOLLOW-UP LOOPS (elbow paths, clear of all boxes):
+    report → unpack:       straight down y=436→y=464 at x=880
+    "context" path:        report left (775,410) → x=660 → down to y=550 → left to x=430 → up to provenance bottom (430,430)
+    provenance → designer: left out of provenance (325,403) → x=240 → up to y=172 → into decomp bottom (140,206)
+    DFM return to designer: report left (775,406) → x=680 → up to y=86 → left to designer right (230,86)
+  ═══════════════════════════════════════════════════════
+  -->
+
+  <rect width="1060" height="590" fill="#FAFAFA"/>
+
+  <defs>
+    <marker id="arr-blue"   markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#2471A3"/></marker>
+    <marker id="arr-green"  markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#1E8449"/></marker>
+    <marker id="arr-red"    markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#B03A2E"/></marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#6C3483"/></marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#B7770D"/></marker>
+    <marker id="arr-gray"   markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#888"/></marker>
+  </defs>
+
+  <!-- ── COLUMN HEADERS ── -->
+  <text x="140" y="30" text-anchor="middle" font-size="9" fill="#AAA" font-weight="bold" letter-spacing="1">INPUT</text>
+  <text x="430" y="30" text-anchor="middle" font-size="9" fill="#AAA" font-weight="bold" letter-spacing="1">RETRIEVAL &amp; PROCESSING</text>
+  <text x="880" y="30" text-anchor="middle" font-size="9" fill="#AAA" font-weight="bold" letter-spacing="1">OUTPUT</text>
+  <line x1="275" y1="36" x2="275" y2="545" stroke="#E8E8E8" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="660" y1="36" x2="660" y2="545" stroke="#E8E8E8" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- BOXES — drawn AFTER edges so nodes sit on top             -->
+  <!-- (edges drawn first below, then boxes, then text)          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PRIMARY FLOW ARROWS (all clear of boxes)                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- 1. designer bottom (140,110) → decomp top (140,138) -->
+  <line x1="140" y1="112" x2="140" y2="136" stroke="#2471A3" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <!-- label: right of arrow -->
+  <text x="150" y="128" font-size="7.5" fill="#2471A3">query</text>
+
+  <!-- 2. decomp right (230,172) → retrieval left (325,172) -->
+  <line x1="232" y1="172" x2="323" y2="172" stroke="#6C3483" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+  <!-- label: above the arrow -->
+  <text x="278" y="166" text-anchor="middle" font-size="7.5" fill="#6C3483">sub-queries</text>
+
+  <!-- 3. retrieval bottom (430,138) → traversal top (430,166) -->
+  <line x1="430" y1="140" x2="430" y2="164" stroke="#1E8449" stroke-width="1.8" marker-end="url(#arr-green)"/>
+  <!-- label: right of arrow -->
+  <text x="440" y="156" font-size="7.5" fill="#1E8449">5 seed frames</text>
+
+  <!-- 4. traversal bottom (430,238) → ranking top (430,266) -->
+  <line x1="430" y1="240" x2="430" y2="264" stroke="#B03A2E" stroke-width="1.8" marker-end="url(#arr-red)"/>
+  <!-- label: right of arrow -->
+  <text x="440" y="256" font-size="7.5" fill="#B03A2E">~20 frames</text>
+
+  <!-- 5. ranking bottom (430,338) → gap top (430,366) -->
+  <line x1="430" y1="340" x2="430" y2="364" stroke="#6C3483" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+  <!-- label: right of arrow -->
+  <text x="440" y="356" font-size="7.5" fill="#6C3483">ranked frames</text>
+
+  <!-- 6. gap+ranking → synthesis: elbow route
+       From gap right edge (535, 398) → right to x=645 → up to y=307 → right to synthesis left (775, 307) -->
+  <polyline points="535,398 645,398 645,307 773,307" stroke="#888" stroke-width="1.8" fill="none" marker-end="url(#arr-gray)"/>
+  <!-- label on top horizontal segment, above line -->
+  <text x="709" y="300" text-anchor="middle" font-size="7.5" fill="#555">ranked frames + gap fill</text>
+
+  <!-- 7. synthesis bottom (880,348) → report top (880,376) -->
+  <line x1="880" y1="350" x2="880" y2="374" stroke="#B7770D" stroke-width="1.8" marker-end="url(#arr-orange)"/>
+  <!-- label: right -->
+  <text x="890" y="366" font-size="7.5" fill="#B7770D">DFM report</text>
+
+  <!-- 8. report bottom (880,436) → unpack top (880,464) -->
+  <line x1="880" y1="438" x2="880" y2="462" stroke="#2471A3" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <!-- label: right -->
+  <text x="890" y="454" font-size="7.5" fill="#2471A3">"unpack"</text>
+
+  <!-- ── FOLLOW-UP: "context" loop ──
+       report left (775,406) → left to x=660 → down to y=520 → left to x=430 → up to provenance bottom (430,430) -->
+  <polyline points="773,406 660,406 660,520 430,520 430,432" stroke="#1E8449" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arr-green)"/>
+  <!-- label on top horizontal segment -->
+  <text x="716" y="400" text-anchor="middle" font-size="7.5" fill="#1E8449" font-style="italic">"context" query</text>
+
+  <!-- ── FOLLOW-UP: provenance → designer return ──
+       provenance left (325,403) → x=255 → up to y=172 → into decomp right (230,172) 
+       (goes back into the same horizontal level as decomp mid) -->
+  <polyline points="323,403 255,403 255,220 232,220" stroke="#1E8449" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <!-- label on left vertical segment -->
+  <text x="244" y="315" text-anchor="middle" font-size="7.5" fill="#555" font-style="italic" transform="rotate(-90,244,315)">context summary</text>
+
+  <!-- ── FOLLOW-UP: DFM report return to designer ──
+       report left (775,388) → x=680 → up to y=79 → left to designer right (232,79) -->
+  <polyline points="773,388 680,388 680,79 232,79" stroke="#B7770D" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <!-- label on top horizontal segment -->
+  <text x="456" y="72" text-anchor="middle" font-size="7.5" fill="#B7770D" font-style="italic">DFM report returned to designer</text>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- BOXES (drawn over edges)                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- LEFT: DESIGNER QUERY  y=48 h=62 -->
+  <rect x="50" y="48" width="180" height="62" rx="7" fill="#D6EAF8" stroke="#2471A3" stroke-width="2"/>
+  <text x="140" y="69" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1A5276">DESIGNER QUERY</text>
+  <text x="140" y="83" text-anchor="middle" font-size="7.5" fill="#2471A3">"What tolerances should I spec</text>
+  <text x="140" y="95" text-anchor="middle" font-size="7.5" fill="#2471A3">for this aluminum bore?"</text>
+
+  <!-- LEFT: QUERY DECOMPOSITION  y=138 h=68 -->
+  <rect x="50" y="138" width="180" height="68" rx="7" fill="#F3E8FB" stroke="#6C3483" stroke-width="2"/>
+  <text x="140" y="158" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4A235A">QUERY DECOMPOSITION</text>
+  <text x="140" y="172" text-anchor="middle" font-size="7.5" fill="#6C3483">sub-aspect 1: tolerances</text>
+  <text x="140" y="184" text-anchor="middle" font-size="7.5" fill="#6C3483">sub-aspect 2: aluminum machin.</text>
+  <text x="140" y="196" text-anchor="middle" font-size="7.5" fill="#6C3483">sub-aspect 3: boring ops</text>
+
+  <!-- CENTER: VECTOR RETRIEVAL  y=48 h=90 -->
+  <rect x="325" y="48" width="210" height="90" rx="7" fill="#D5F5E3" stroke="#1E8449" stroke-width="2"/>
+  <text x="430" y="69" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#145A32">VECTOR RETRIEVAL</text>
+  <text x="430" y="83" text-anchor="middle" font-size="7.5" fill="#1E8449">Qdrant — 3 embedding collections</text>
+  <rect x="335" y="90" width="56" height="13" rx="3" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="363" y="100" text-anchor="middle" font-size="6.5" fill="#145A32">knowledge</text>
+  <rect x="399" y="90" width="50" height="13" rx="3" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="424" y="100" text-anchor="middle" font-size="6.5" fill="#145A32">language</text>
+  <rect x="457" y="90" width="50" height="13" rx="3" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="482" y="100" text-anchor="middle" font-size="6.5" fill="#145A32">metadata</text>
+  <text x="430" y="126" text-anchor="middle" font-size="7.5" fill="#145A32">→ top-5 frames per sub-query</text>
+
+  <!-- CENTER: GRAPH TRAVERSAL  y=166 h=72 -->
+  <rect x="325" y="166" width="210" height="72" rx="7" fill="#FDEDEC" stroke="#B03A2E" stroke-width="2"/>
+  <text x="430" y="186" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7B241C">GRAPH TRAVERSAL</text>
+  <text x="430" y="200" text-anchor="middle" font-size="7.5" fill="#B03A2E">Semantic edge walk per frame</text>
+  <text x="430" y="212" text-anchor="middle" font-size="7.5" fill="#B03A2E">SPECIFIES · MITIGATES · CAUSAL_LINK</text>
+  <text x="430" y="224" text-anchor="middle" font-size="7.5" fill="#B03A2E">→ +15 related frames per seed</text>
+
+  <!-- CENTER: FRAME RANKING  y=266 h=72 -->
+  <rect x="325" y="266" width="210" height="72" rx="7" fill="#F3E8FB" stroke="#6C3483" stroke-width="2"/>
+  <text x="430" y="286" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4A235A">FRAME RANKING</text>
+  <text x="430" y="300" text-anchor="middle" font-size="7.5" fill="#6C3483">relevance score</text>
+  <text x="430" y="312" text-anchor="middle" font-size="7.5" fill="#6C3483">× author credibility tier</text>
+  <text x="430" y="324" text-anchor="middle" font-size="7.5" fill="#6C3483">× edge confidence</text>
+
+  <!-- CENTER: GAP DETECTION  y=366 h=64 -->
+  <rect x="325" y="366" width="210" height="64" rx="7" fill="#F0F0F0" stroke="#999" stroke-width="1.8"/>
+  <text x="430" y="386" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#444">GAP DETECTION</text>
+  <text x="430" y="400" text-anchor="middle" font-size="7.5" fill="#555">sub-aspects with no frame coverage</text>
+  <text x="430" y="412" text-anchor="middle" font-size="7.5" fill="#555">→ fallback: textbook heuristics</text>
+  <text x="430" y="424" text-anchor="middle" font-size="7.5" fill="#888" font-style="italic">tribal + formal knowledge combined</text>
+
+  <!-- RIGHT: LLM SYNTHESIS  y=266 h=82 -->
+  <rect x="775" y="266" width="210" height="82" rx="7" fill="#F3E8FB" stroke="#6C3483" stroke-width="2"/>
+  <text x="880" y="287" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4A235A">LLM SYNTHESIS</text>
+  <text x="880" y="301" text-anchor="middle" font-size="7.5" fill="#6C3483">Discipline-organized DFM report</text>
+  <text x="880" y="313" text-anchor="middle" font-size="7.5" fill="#6C3483">with reasoning chains</text>
+  <text x="880" y="325" text-anchor="middle" font-size="7.5" fill="#6C3483">Frame IDs cited inline</text>
+  <text x="880" y="337" text-anchor="middle" font-size="7.5" fill="#6C3483">Gaps filled with standard rules</text>
+
+  <!-- RIGHT: DFM REPORT  y=376 h=60 -->
+  <rect x="775" y="376" width="210" height="60" rx="7" fill="#FDEBD0" stroke="#B7770D" stroke-width="2"/>
+  <text x="880" y="397" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#784212">DFM REPORT</text>
+  <text x="880" y="411" text-anchor="middle" font-size="7.5" fill="#B7770D">Concise response with frame IDs</text>
+  <text x="880" y="423" text-anchor="middle" font-size="7.5" fill="#B7770D">returned to designer</text>
+
+  <!-- RIGHT: UNPACK  y=464 h=44 -->
+  <rect x="775" y="464" width="210" height="44" rx="7" fill="#D6EAF8" stroke="#2471A3" stroke-width="1.8"/>
+  <text x="880" y="483" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1A5276">"unpack" response</text>
+  <text x="880" y="497" text-anchor="middle" font-size="7.5" fill="#2471A3">Full frame citations + rationale</text>
+
+  <!-- CENTER-BOTTOM: PROVENANCE LOOKUP  y=376 h=54 -->
+  <rect x="325" y="466" width="210" height="54" rx="7" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.8"/>
+  <text x="430" y="486" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#145A32">PROVENANCE LOOKUP</text>
+  <text x="430" y="499" text-anchor="middle" font-size="7.5" fill="#1E8449">Author credibility tier</text>
+  <text x="430" y="511" text-anchor="middle" font-size="7.5" fill="#1E8449">Original thread + post context</text>
+
+  <!-- ── TITLE ── -->
+  <text x="530" y="572" text-anchor="middle" font-size="10" fill="#BBBBBB" letter-spacing="0.5">Agentic RAG System — DFM Query Pipeline</text>
+
+</svg>
