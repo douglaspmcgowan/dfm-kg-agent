@@ -43,7 +43,7 @@ Stack Exchange content is licensed under [CC BY-SA](https://stackoverflow.com/he
 - **Authors:** usernames and profile links are in the Author nodes (`neo4j_import/nodes_authors.csv`).
 - **Changes:** frames are LLM extractions and paraphrases of the posts; only `source_quote` is verbatim.
 
-Human-panel ratings in `reviewer_docs/` are labeled by rater number. We found no direct identifiers in them, but that is not a guarantee of anonymity. `scripts/compute_irr_supplemental.py` reproduces the agreement statistics from them, and `scripts/ablation_token_accounting.py` reproduces the ablation token totals.
+Human-panel ratings in `reviewer_docs/` are labeled by rater number. We found no direct identifiers in them, but that is not a guarantee of anonymity. `scripts/compute_irr_supplemental.py` reproduces the agreement statistics from them and the original 26-frame LLM-judge vs pooled-human comparison (Frame 27 has no LLM observation), and `scripts/ablation_token_accounting.py` reproduces the ablation token totals.
 
 ## Citation
 
