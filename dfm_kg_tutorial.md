@@ -500,7 +500,7 @@ kg_extractor = SchemaLLMPathExtractor(
 # --- Step 3: Connect to Neo4j and build graph ---
 graph_store = Neo4jPropertyGraphStore(
     username=NEO4J_USER,
-    password=NEO4J_PASSWORD,
+    password=os.environ["NEO4J_PASSWORD"],
     url=NEO4J_URL
 )
 
