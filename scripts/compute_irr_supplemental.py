@@ -27,6 +27,16 @@ Categories
   Good (4-5). Gwet's AC1 uses K = 3 categories in both cases, and the chance
   term includes every category, including ones that never occur.
 
+LLM judge comparison (n=26 only)
+  reviewer_docs/llm_review.json holds the LLM judge's ratings for the original
+  26 frames. Records are aligned to the human slots by frame_num, and the
+  alignment is validated (same frame set, no duplicates) before use. Frame 27
+  has no LLM observation in this source, so the comparison is n=26 and never
+  fabricates a Frame 27 LLM value. Per field, only frames where the LLM and
+  all three human slots have a value enter the means; the pooled human mean
+  is over every human rating on those frames. Frames dropped for a missing
+  value are listed.
+
 Usage
   python scripts/compute_irr_supplemental.py
   python scripts/compute_irr_supplemental.py --input-dir reviewer_docs --output reviewer_docs/irr_metrics.json
@@ -47,6 +57,7 @@ SLOT_FILES = {
     "r4": "reviewer_4_review.json",
 }
 FRAME27_FILE = "frame27_supplemental_ratings.json"
+LLM_FILE = "llm_review.json"
 
 FIELDS_1TO3 = ["extraction_accuracy", "tribal_knowledge", "clarity"]
 FIELDS_1TO5 = [
@@ -222,6 +233,74 @@ def overall_summary(panel):
     return {"per_rater": per_rater, "majority": majority, "majority_revise_frames": revise_frames}
 
 
+def align_llm(panel, llm_records):
+    """Align LLM records to the human panel by frame_num; raise on any mismatch.
+
+    Returns (llm_by_index, mapping) where llm_by_index[i] is the LLM record for
+    the panel frame at position i and mapping lists each frame_num pair.
+    """
+    raters = list(panel)
+    llm_by_frame = {}
+    for rec in llm_records:
+        fn = rec.get("frame_num")
+        if fn in llm_by_frame:
+            raise ValueError(f"duplicate LLM frame_num {fn}")
+        llm_by_frame[fn] = rec
+    aligned, mapping = [], []
+    for i, rec in enumerate(panel[raters[0]]):
+        fn = rec["frame_num"]
+        for r in raters:
+            if panel[r][i]["frame_num"] != fn:
+                raise ValueError(f"human slots disagree on frame_num at position {i}")
+        if fn not in llm_by_frame:
+            raise ValueError(f"no LLM record for frame_num {fn}")
+        aligned.append(llm_by_frame[fn])
+        mapping.append({"frame_num": fn, "llm_frame_num": llm_by_frame[fn]["frame_num"]})
+    extra = sorted(set(llm_by_frame) - {m["frame_num"] for m in mapping})
+    if extra:
+        raise ValueError(f"LLM frames with no human counterpart: {extra}")
+    return aligned, mapping
+
+
+def llm_vs_human(panel, llm_records):
+    """LLM judge vs pooled human raters: per-field means, deltas and denominators."""
+    raters = list(panel)
+    aligned, mapping = align_llm(panel, llm_records)
+    out = {"n_frames": len(aligned), "human_slots": raters,
+           "frame_mapping": mapping, "fields": {}}
+    for field in FIELDS:
+        used, dropped = [], []
+        for i, rec in enumerate(aligned):
+            vals = [panel[r][i].get(field) for r in raters]
+            if rec.get(field) is None or any(v is None for v in vals):
+                dropped.append(rec["frame_num"])
+            else:
+                used.append(i)
+        llm_vals = [aligned[i][field] for i in used]
+        human_vals = [panel[r][i][field] for i in used for r in raters]
+        llm_mean, human_mean = mean(llm_vals), mean(human_vals)
+        out["fields"][field] = {
+            "frames_used": len(used),
+            "llm_ratings": len(llm_vals),
+            "pooled_human_ratings": len(human_vals),
+            "frames_dropped_missing": dropped,
+            "llm_mean": llm_mean,
+            "pooled_human_mean": human_mean,
+            "llm_minus_human": llm_mean - human_mean,
+        }
+    llm_overall = [str(r["overall"]).title() for r in aligned if r.get("overall") is not None]
+    keep = sum(1 for v in llm_overall if v == "Keep")
+    maj = overall_summary(panel)["majority"]
+    out["overall"] = {
+        "llm_keep": keep, "llm_observed": len(llm_overall),
+        "llm_keep_rate": keep / len(llm_overall) if llm_overall else float("nan"),
+        "human_majority_keep": maj["Keep"], "human_majority_frames": len(aligned),
+        "human_majority_keep_rate": maj["Keep"] / len(aligned),
+    }
+    out["frame27_llm_observation"] = "unavailable in this source; comparison is n=26 only"
+    return out
+
+
 def compute(panel):
     metrics = {"n_frames": len(panel["r1"]), "raters": list(panel), "fields": {}}
     for field in FIELDS:
@@ -267,6 +346,18 @@ def print_report(label, metrics, missing):
         print(f"  slot={m['slot']} frame={m['frame_num']} field={m['field']}")
 
 
+def print_llm_comparison(cmp_):
+    print(f"\n--- LLM judge vs pooled human (n={cmp_['n_frames']}; Frame 27 LLM observation unavailable) ---")
+    print(f"{'field':<26}{'frames':>7}{'llm':>10}{'human':>10}{'delta':>10}  dropped")
+    for field in FIELDS:
+        f = cmp_["fields"][field]
+        print(f"{field:<26}{f['frames_used']:>7}{fmt(f['llm_mean']):>10}"
+              f"{fmt(f['pooled_human_mean']):>10}{fmt(f['llm_minus_human']):>10}  {f['frames_dropped_missing']}")
+    o = cmp_["overall"]
+    print(f"LLM Keep {o['llm_keep']}/{o['llm_observed']}; human majority Keep "
+          f"{o['human_majority_keep']}/{o['human_majority_frames']}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--input-dir", type=Path, default=DEFAULT_INPUT_DIR)
@@ -287,6 +378,12 @@ def main(argv=None):
         metrics["missing_ratings"] = missing
         results["n26" if not include27 else "n27"] = metrics
         print_report(label, metrics, missing)
+        if not include27:
+            llm_path = input_dir / LLM_FILE
+            if llm_path.is_file():
+                cmp_ = llm_vs_human(panel, load_json(llm_path))
+                results["llm_vs_human_n26"] = cmp_
+                print_llm_comparison(cmp_)
 
     if str(args.output) != "-":
         out = args.output.resolve()

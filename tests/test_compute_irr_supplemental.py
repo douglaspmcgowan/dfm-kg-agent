@@ -156,8 +156,62 @@ class CommandLine(unittest.TestCase):
             self.assertEqual(proc.returncode, 0, proc.stderr)
             self.assertIn("slot=r2 frame=17 field=extraction_accuracy", proc.stdout)
             data = json.loads(out.read_text(encoding="utf-8"))
-        self.assertEqual(sorted(data), ["n26", "n27"])
+        self.assertEqual(sorted(data), ["llm_vs_human_n26", "n26", "n27"])
         self.assertEqual(data["n27"]["missing_ratings"][0]["frame_num"], 17)
+
+
+class LlmVsHuman(unittest.TestCase):
+    """Alignment by frame_num and the missing-value denominator."""
+
+    def _panel(self):
+        return {slot: [{"frame_num": n, "clarity": v, "overall": "Keep"}
+                       for n, v in zip((1, 2, 3), vals)]
+                for slot, vals in {"r1": [3, 2, 1], "r2": [3, 2, 2], "r4": [3, 3, 3]}.items()}
+
+    def test_hand_computed_deltas_and_alignment_by_frame_num(self):
+        # LLM records deliberately out of order: alignment must use frame_num, not position.
+        llm = [{"frame_num": 3, "clarity": 1, "overall": "Revise"},
+               {"frame_num": 1, "clarity": 3, "overall": "Keep"},
+               {"frame_num": 2, "clarity": 2, "overall": "Keep"}]
+        out = irr.llm_vs_human(self._panel(), llm)
+        f = out["fields"]["clarity"]
+        # LLM mean (3+2+1)/3 = 2; pooled human = (3+3+3+2+2+3+1+2+3)/9 = 22/9.
+        self.assertEqual(f["frames_used"], 3)
+        self.assertEqual(f["pooled_human_ratings"], 9)
+        self.assertAlmostEqual(f["llm_mean"], 2.0)
+        self.assertAlmostEqual(f["pooled_human_mean"], 22 / 9)
+        self.assertAlmostEqual(f["llm_minus_human"], 2 - 22 / 9)
+        self.assertEqual(out["overall"]["llm_keep"], 2)
+
+    def test_missing_value_shrinks_denominator(self):
+        llm = [{"frame_num": 1, "clarity": 3, "overall": "Keep"},
+               {"frame_num": 2, "clarity": None, "overall": "Keep"},
+               {"frame_num": 3, "clarity": 1, "overall": "Keep"}]
+        f = irr.llm_vs_human(self._panel(), llm)["fields"]["clarity"]
+        self.assertEqual(f["frames_used"], 2)
+        self.assertEqual(f["pooled_human_ratings"], 6)
+        self.assertEqual(f["frames_dropped_missing"], [2])
+        self.assertAlmostEqual(f["llm_mean"], 2.0)
+        self.assertAlmostEqual(f["pooled_human_mean"], (3 + 3 + 3 + 1 + 2 + 3) / 6)
+
+    def test_alignment_rejects_missing_or_extra_frames(self):
+        base = [{"frame_num": n, "clarity": 1, "overall": "Keep"} for n in (1, 2, 3)]
+        with self.assertRaises(ValueError):
+            irr.llm_vs_human(self._panel(), base[:2])
+        with self.assertRaises(ValueError):
+            irr.llm_vs_human(self._panel(), base + [{"frame_num": 27, "clarity": 1, "overall": "Keep"}])
+        with self.assertRaises(ValueError):
+            irr.llm_vs_human(self._panel(), base + [base[0]])
+
+    def test_original_panel_reported_values(self):
+        panel, _ = irr.load_panel(irr.DEFAULT_INPUT_DIR, False)
+        out = irr.llm_vs_human(panel, irr.load_json(irr.DEFAULT_INPUT_DIR / irr.LLM_FILE))
+        self.assertEqual(out["n_frames"], 26)
+        self.assertEqual(out["overall"]["llm_keep"], 12)
+        self.assertEqual(out["overall"]["human_majority_keep"], 24)
+        self.assertAlmostEqual(out["fields"]["scope_rating"]["llm_minus_human"], -0.858974, places=6)
+        self.assertAlmostEqual(out["fields"]["clarity"]["llm_minus_human"], 0.012821, places=6)
+        self.assertAlmostEqual(out["fields"]["post_role_rating"]["llm_minus_human"], 0.384615, places=6)
 
 
 if __name__ == "__main__":
