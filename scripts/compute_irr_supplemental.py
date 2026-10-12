@@ -15,8 +15,10 @@ Missing data
   A rating that is absent or null is never imputed. For each dimension:
   * AC1 and pairwise agreement use complete-case items: an item enters a
     dimension only when every rater has a value for it.
-  * Proportions (tier distributions, Good rates, exact agreement) use each
-    rater's observed ratings as the denominator.
+  * Per-rater proportions (tier distributions, Good rates) use each rater's
+    observed ratings as the denominator.
+  * Exact all-three agreement is a cross-rater measure, so it uses the same
+    complete-case items as AC1 and pairwise agreement.
   Every missing rating is listed with its slot, frame number and field.
 
 Categories
