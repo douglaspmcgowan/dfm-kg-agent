@@ -1,0 +1,80 @@
+{
+  "sources": [
+    "benchmark_ablation_v2_AB.json",
+    "benchmark_ablation_v2_C_only.json"
+  ],
+  "configs": {
+    "A_llm_only": {
+      "queries": 8,
+      "prompt_tokens_total": 1395,
+      "prompt_tokens_mean": 174.375,
+      "completion_tokens_total": 9694,
+      "completion_tokens_mean": 1211.75,
+      "completion_tokens_per_query": [
+        1099,
+        920,
+        1406,
+        1267,
+        1502,
+        947,
+        1411,
+        1142
+      ],
+      "elapsed_s_mean": 82.6875,
+      "refusals": 0,
+      "unavailable_components": [
+        "visible_completion_tokens",
+        "reasoning_completion_tokens",
+        "per_call_overhead_tokens"
+      ]
+    },
+    "B_llm_rag": {
+      "queries": 8,
+      "prompt_tokens_total": 3691,
+      "prompt_tokens_mean": 461.375,
+      "completion_tokens_total": 9000,
+      "completion_tokens_mean": 1125.0,
+      "completion_tokens_per_query": [
+        1009,
+        2009,
+        822,
+        1110,
+        1224,
+        1115,
+        856,
+        855
+      ],
+      "elapsed_s_mean": 156.17499999999998,
+      "refusals": 0,
+      "unavailable_components": [
+        "visible_completion_tokens",
+        "reasoning_completion_tokens",
+        "per_call_overhead_tokens"
+      ]
+    },
+    "C_full_pipeline": {
+      "queries": 8,
+      "prompt_tokens_total": 87174,
+      "prompt_tokens_mean": 10896.75,
+      "completion_tokens_total": 137483,
+      "completion_tokens_mean": 17185.375,
+      "completion_tokens_per_query": [
+        19220,
+        16509,
+        19143,
+        15926,
+        18797,
+        17825,
+        12942,
+        17121
+      ],
+      "elapsed_s_mean": 207.4,
+      "refusals": 0,
+      "unavailable_components": [
+        "visible_completion_tokens",
+        "reasoning_completion_tokens",
+        "per_call_overhead_tokens"
+      ]
+    }
+  }
+}
