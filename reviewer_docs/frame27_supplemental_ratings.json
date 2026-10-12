@@ -1,0 +1,44 @@
+{
+  "frame_num": 27,
+  "provenance": "Three supplemental Frame 27 rating records, carried from the supplemental review documents in the Drive source and reported as independently checked against it (2026-10-12). The Drive source was not reachable from the build machine, so these values were not re-opened during this change. Rater identities are withheld; records are referenced only by slot.",
+  "slot_mapping": "Disclosed constant-strictness assumption: the three supplemental records are mapped onto the original rater slots r1, r2 and r4 by position. This is a slot mapping, not an identity claim.",
+  "missing_policy": "No value in this file is imputed. A null means the rating is absent in the source.",
+  "ratings": {
+    "r1": {
+      "extraction_accuracy": 3,
+      "tribal_knowledge": 3,
+      "clarity": 3,
+      "frame_type_rating": 3,
+      "post_role_rating": 4,
+      "scope_rating": 5,
+      "applicability_rating": 5,
+      "main_point_quality": 5,
+      "epistemic_stance_rating": 5,
+      "overall": "Keep"
+    },
+    "r2": {
+      "extraction_accuracy": 3,
+      "tribal_knowledge": 1,
+      "clarity": 3,
+      "frame_type_rating": 5,
+      "post_role_rating": 4,
+      "scope_rating": 5,
+      "applicability_rating": 3,
+      "main_point_quality": 5,
+      "epistemic_stance_rating": 5,
+      "overall": "Keep"
+    },
+    "r4": {
+      "extraction_accuracy": 3,
+      "tribal_knowledge": 2,
+      "clarity": 3,
+      "frame_type_rating": 4,
+      "post_role_rating": 5,
+      "scope_rating": 4,
+      "applicability_rating": 4,
+      "main_point_quality": 5,
+      "epistemic_stance_rating": 5,
+      "overall": "Keep"
+    }
+  }
+}

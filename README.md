@@ -17,8 +17,10 @@ The pipeline pulls design-for-manufacturing (DFM) discussions from Stack Exchang
 | 7. LLM-as-a-judge review | `review_all.py`, `llm_reviewer.py`, `llm_batch_review.py`, `schema_review.py`, `reviewer_rubric.md` | `reviews_all.json` |
 | 8. Revise flagged frames | `revise_frames.py` | `revision_changelog_reviews_all.json` |
 | 9. Human panel and agreement | `generate_reviewer_docs.py`, `analyze_reviews.py`, `benchmark_irr.py`, `benchmark_tiered_irr.py`, `benchmark_3rater.py` | `reviewer_docs/` |
-| 10. Agent and app | `dfm_agent.py`, `dfm_report_schema.py`, `streamlit_app.py` | `eval_results/` |
-| Export | `export_gephi.py`, `export_neo4j_csv.py`, `push_to_neo4j.py`, `push_to_qdrant_cloud.py` | `neo4j_import/` |
+| 10. Agent and app | `dfm_agent.py`, `dfm_report_schema.py`, `streamlit_app.py` | `dfm_reports/` (JSON reports from `dfm_agent.py`); the Streamlit app writes token and feedback logs |
+| Export | `export_neo4j_csv.py` | `neo4j_import/` |
+| Export | `export_gephi.py` | `provenance_graph*.gexf` |
+| Upload | `push_to_neo4j.py`, `push_to_qdrant_cloud.py` | uploads to Neo4j and Qdrant Cloud; writes no repository files |
 
 ## Run
 
@@ -33,7 +35,7 @@ Clone with Git LFS installed (`git lfs install`) to get the Qdrant index.
 
 ## Data and attribution
 
-Source posts come from five Stack Exchange sites (Engineering, Electrical Engineering, Robotics, Woodworking, and Motor Vehicle Maintenance & Repair) via the Stack Exchange API. Raw post dumps and raw extraction files are not in this repo. The repo holds the derived frames: `provenance_graph.gpickle` and the Qdrant index cover all 3,879 frames, and `neo4j_import/` is an earlier CSV export.
+Source posts come from five Stack Exchange sites (Engineering, Electrical Engineering (`electronics`), Robotics, Woodworking, and Motor Vehicle Maintenance & Repair (`mechanics`)) via the Stack Exchange API. Raw post dumps and raw extraction files are not in this repo. The repo holds the derived frames: `provenance_graph.gpickle` and the Qdrant index cover all 3,879 frames, and `neo4j_import/` is an earlier CSV export.
 
 Stack Exchange content is licensed under [CC BY-SA](https://stackoverflow.com/help/licensing): 2.5 for posts before 2011-04-08, 3.0 until 2018-05-02, and 4.0 after that. Derived frames, including verbatim `source_quote` fields, are shared under the same license.
 
@@ -41,7 +43,7 @@ Stack Exchange content is licensed under [CC BY-SA](https://stackoverflow.com/he
 - **Authors:** usernames and profile links are in the Author nodes (`neo4j_import/nodes_authors.csv`).
 - **Changes:** frames are LLM extractions and paraphrases of the posts; only `source_quote` is verbatim.
 
-Human-panel ratings in `reviewer_docs/` are anonymized by rater number.
+Human-panel ratings in `reviewer_docs/` are labeled by rater number. We found no direct identifiers in them, but that is not a guarantee of anonymity. `scripts/compute_irr_supplemental.py` reproduces the agreement statistics from them and the original 26-frame LLM-judge vs pooled-human comparison (Frame 27 has no LLM observation), and `scripts/ablation_token_accounting.py` reproduces the ablation token totals.
 
 ## Citation
 
